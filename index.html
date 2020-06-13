@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap-Vue -->
+    <!--<link rel="stylesheet" type="text/css"
+          href="bootstrap/css/bootstrap.css">-->
+    <link rel="stylesheet" type="text/css"
+          href="css/custom.css">
+    <!--<link rel="stylesheet" type="text/css" 
+          href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" type="text/css" 
+          href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+    <script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+
+    <!-- Site styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="style.css"/>-->
+
+    <title>Inquisitor: Martyr Enchant Viewer</title>
+  </head>
+  <body>
+<!---------------------------------------------------------------------------->
+
+  <b-container id="app">
+    <b-row>
+      <b-col>
+      <h1>W40K: Inquisitor Enchant Viewer</h1>
+      <!--<h3>Item enchant tool for Warhammer 40K: Inquisitor</h3>-->
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col col id="fixed_column">
+        <div id="slots">
+          <b-img src="slotmap.jpg" usemap="#slotmap"></b-img>
+          <a id="A_neural_implant" class="area area_square"
+             @click="select_slot('neural_implant');"></a>
+          <a id="A_eye_implant" class="area area_square"
+             @click="select_slot('eye_implant');"></a>
+          <a id="A_main_implant" class="area area_rect"
+             @click="select_slot('main_implant');"></a>
+          <a id="A_purity_seal" class="area area_square"
+             @click="select_slot('purity_seal');"></a>
+          <a id="A_belt" class="area area_square"
+             @click="select_slot('belt');"></a>
+          <a id="A_body_armour" class="area area_rect"
+             @click="select_slot('body_armour');"></a>
+          <a id="A_inoculator" class="area area_rect"
+             @click="select_slot('inoculator');"></a>
+          <a id="A_weapon1" class="area area_rect"
+             @click="select_slot('weapon1');"></a>
+          <a id="A_signum1" class="area area_square"
+             @click="select_slot('signum1');"></a>
+          <a id="A_signum2" class="area area_square"
+             @click="select_slot('signum2');"></a>
+          <a id="A_weapon2" class="area area_rect"
+             @click="select_slot('weapon2');"></a>
+        </div>
+      </b-col>
+      <b-col col>
+        <!-- Need to also disable all active filter control buttons.
+        <p>
+          <button type="button" class="btn btn-dark"
+                  v-on:click="clear_filter()">
+            Clear Filters</button>
+        </p>-->
+        <p>
+          Enchant can roll on: 
+          <button type="button" class="btn btn-outline-primary shadow-none active"
+                  @click="select_quality($event, 'primary')">
+            Primary</button>
+          <button type="button" class="btn btn-outline-secondary shadow-none"
+                  @click="select_quality($event, 'secondary')">
+            Secondary</button>
+          <button type="button" class="btn btn-outline-relic shadow-none"
+                  @click="select_quality($event, 'relic')">
+            Relic</button>
+          <button type="button" class="btn btn-outline-morality shadow-none"
+                  @click="select_quality($event, 'morality')">
+            Morality</button>
+        </p>
+        <b-table id="enchants"
+                 small
+                 selectable
+                 select-mode="single"
+                 :fields="enchant_fields"
+                 :items="enchants"
+                 :filter="current_filter"
+                 :filter-function="filter_function"
+                 @row-clicked="select_enchant">
+        </b-table>
+      </b-col>
+    </b-row>
+  </b-container>
+
+<!---------------------------------------------------------------------------->
+  </body>
+
+  <!-- Pre-computed 40K data -->
+  <script src="data.js"></script>
+  <!-- Vue App -->
+  <script src="app.js"></script>
+
+</html>

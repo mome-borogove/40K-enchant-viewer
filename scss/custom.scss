@@ -1,0 +1,74 @@
+// Site colors
+$blackish: rgb(26,26,26); // 10%
+$whiteish: rgb(229,229,229); // 90%
+$grayish: rgb(178,178,178); // 75%
+
+$teal_dark: rgb(31,90,86);
+$teal_light: rgb(187,254,250);
+$artifact: rgb(80,26,131);
+$archeo: rgb(184,49,47);
+$ancient: rgb(243,121,52);
+$relic: rgb(198,151,97);
+$morality: rgb(37,169,132);
+
+$body-bg: $blackish;
+$body-color: $whiteish;
+
+$theme-colors: (
+  'primary': $teal_light,
+  'secondary': $teal_dark,
+  'relic': $relic,
+  'artifact': $artifact,
+  'archeo': $archeo,
+  'ancient': $ancient,
+  'morality': $morality,
+);
+
+@import '../bootstrap/scss/bootstrap';
+@import '../bootstrap-vue/src/index.scss';
+
+h1 {
+  font-family: Orbitron, "Open Sans", sans-serif;
+}
+h3 {
+  font-family: Orbitron, "Open Sans", sans-serif;
+  color: $grayish;
+}
+
+// Slot image map and highlighting
+#fixed_column {
+  max-width: 259px;
+  padding: 0;
+}
+
+.area {
+  display: block;
+  position: absolute;
+  width: 48px;
+  border: 1px solid $teal_dark;
+}
+.area_square {
+  height: 48px;
+}
+.area_rect {
+  height: 98px;
+}
+#A_neural_implant { left:  27px; top:  52px; }
+#A_eye_implant    { left:  79px; top:  52px; }
+#A_main_implant   { left: 136px; top:  52px; }
+#A_purity_seal    { left:  27px; top: 220px; }
+#A_belt           { left:  79px; top: 220px; }
+#A_body_armour    { left: 136px; top: 220px; }
+#A_inoculator     { left: 136px; top: 389px; }
+#A_weapon1        { left:  23px; top: 558px; }
+#A_signum1        { left:  79px; top: 558px; }
+#A_signum2        { left: 132px; top: 558px; }
+#A_weapon2        { left: 188px; top: 558px; }
+
+.area_selected {
+  background: $teal_light;
+}
+
+.area:hover {
+  background: $teal_dark;
+}
