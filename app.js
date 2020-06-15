@@ -16,29 +16,19 @@ var app = new Vue({
   },
   methods: {
     filter_function(enchant, filter) {
-      console.log('FILTERING...');
-      console.log(enchant);
-      console.log('  with filter:');
-      console.log(filter);
       // Filter by quality
       if (!filter.quality.has(enchant.quality)) {
-        console.log('Quality reject');
         return false;
       }
       // Filter by slot
       if ((filter.slot!==null) && (!enchant.slots.includes(filter.slot))) {
-        console.log('Slot reject');
         return false;
       }
 
       return true; // Display if not filtered out
     },
     clear_filter() {
-      console.log('Before clearing: ');
-      console.log(this.current_filter);
       this.current_filter = empty_filter;
-      console.log('After clearing: ');
-      console.log(this.current_filter);
     },
     select_quality(event, quality) {
       // Update control
