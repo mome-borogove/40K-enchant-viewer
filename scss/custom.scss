@@ -35,6 +35,15 @@ h3 {
   color: $grayish;
 }
 
+.page-contained {
+  height: 677px !important;
+  width: 100%;
+  overflow-y: scroll;
+}
+div.page-contained,table {
+  margin: 0;
+  padding: 0; }
+
 // Slot image map and highlighting
 #fixed_column {
   max-width: 259px;

@@ -69,7 +69,7 @@
             Clear Filters</button>
         </p>-->
         <p>
-          Enchant can roll on: 
+          Enchant type: 
           <button type="button" class="btn btn-outline-primary shadow-none active"
                   @click="select_quality($event, 'primary')">
             Primary</button>
@@ -83,16 +83,18 @@
                   @click="select_quality($event, 'morality')">
             Morality</button>
         </p>
-        <b-table id="enchants"
-                 small
-                 selectable
-                 select-mode="single"
-                 :fields="enchant_fields"
-                 :items="enchants"
-                 :filter="current_filter"
-                 :filter-function="filter_function"
-                 @row-clicked="select_enchant">
-        </b-table>
+        <div class="page-contained">
+          <b-table id="enchants"
+                   small
+                   selectable
+                   select-mode="single"
+                   :fields="enchant_fields"
+                   :items="enchants"
+                   :filter="current_filter"
+                   :filter-function="filter_function"
+                   @row-clicked="select_enchant">
+          </b-table>
+        </div>
       </b-col>
     </b-row>
   </b-container>

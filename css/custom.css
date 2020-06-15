@@ -13240,6 +13240,17 @@ h3 {
   color: #b2b2b2;
 }
 
+.page-contained {
+  height: 677px !important;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+div.page-contained, table {
+  margin: 0;
+  padding: 0;
+}
+
 #fixed_column {
   max-width: 259px;
   padding: 0;
