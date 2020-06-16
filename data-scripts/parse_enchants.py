@@ -14,7 +14,7 @@ class Enchant():
     self.slots = [] # [str, ...]
     self.quality = None # str
     self.groups = [] # [str, ...]
-    self.range = None # (low, high) # FIXME: @100 right now
+    self.range = None # (low, high)
 
   def __str__(self):
     s = '<Enchant '+self.name+' '+str((self.desc,self.desc_repl,self.slots,self.quality,self.groups,self.range))+'>'
@@ -39,6 +39,11 @@ def commit_enchant(M,D):
   return _S.TOP
 def set_range(M,D):
   D['temp'].range = float(M[0]), float(M[1])
+def set_item(M,D):
+  if M[0]=='':
+    D['temp'].slots = []
+  else:
+    D['temp'].slots = M[0].split(',')
 
 machine = {
   _S.TOP: [
@@ -56,7 +61,7 @@ machine = {
     (r'Name=(.*)', create_enchant),
     (r'NameID=(.*)', lambda M,D: setattr(D['temp'],'desc',str.lower(M[0]))),
     (r'Property=(.*)', lambda M,D: setattr(D['temp'],'desc_repl',M[0])),
-    (r'ArtifactTypes=(.*)', lambda M,D: setattr(D['temp'],'slots',M[0].split(','))),
+    (r'ArtifactTypes=(.*)', set_item),
     (r'EnchantQuality=(.*)', translate_quality),
     (r'Groups=(.*)', lambda M,D: setattr(D['temp'],'groups',M[0].split(','))),
     (r'Values$', lambda: _S.VALUES),
@@ -65,7 +70,7 @@ machine = {
   ],
   _S.VALUES: [
     (r'100=(.*),(.*)', set_range),
-    (r'(.*)=(.*),(.*)', None), # FIXME: interpolation is NYI
+    (r'(.*)=(.*),(.*)', None), # FIXME: item level interpolation is NYI (@100)
     (r'}', lambda: _S.ENCHANT),
     (r'.*', None),
   ]

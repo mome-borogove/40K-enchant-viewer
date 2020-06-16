@@ -38,27 +38,27 @@
         <div id="slots">
           <b-img src="slotmap.jpg" usemap="#slotmap"></b-img>
           <a id="A_neural_implant" class="area area_square"
-             @click="select_slot('neural_implant');"></a>
+             @click="select_slot($event,'neural_implant');"></a>
           <a id="A_eye_implant" class="area area_square"
-             @click="select_slot('eye_implant');"></a>
+             @click="select_slot($event,'eye_implant');"></a>
           <a id="A_main_implant" class="area area_rect"
-             @click="select_slot('main_implant');"></a>
+             @click="select_slot($event,'main_implant');"></a>
           <a id="A_purity_seal" class="area area_square"
-             @click="select_slot('purity_seal');"></a>
+             @click="select_slot($event,'purity_seal');"></a>
           <a id="A_belt" class="area area_square"
-             @click="select_slot('belt');"></a>
-          <a id="A_body_armour" class="area area_rect"
-             @click="select_slot('body_armour');"></a>
+             @click="select_slot($event,'belt');"></a>
+          <a id="A_body" class="area area_rect"
+             @click="select_slot($event,'body');"></a>
           <a id="A_inoculator" class="area area_rect"
-             @click="select_slot('inoculator');"></a>
-          <a id="A_weapon1" class="area area_rect"
-             @click="select_slot('weapon1');"></a>
-          <a id="A_signum1" class="area area_square"
-             @click="select_slot('signum1');"></a>
-          <a id="A_signum2" class="area area_square"
-             @click="select_slot('signum2');"></a>
-          <a id="A_weapon2" class="area area_rect"
-             @click="select_slot('weapon2');"></a>
+             @click="select_slot($event,'inoculator');"></a>
+          <a id="A_weapon" class="area area_rect"
+             @click="select_slot($event,'weapon');"></a>
+          <a id="A_signum" class="area area_square"
+             @click="select_slot($event,'signum');"></a>
+          <!--<a id="A_signum2" class="area area_square"
+             @click="select_slot($event,'signum2');"></a>-->
+          <a id="A_offhand" class="area area_rect"
+             @click="select_slot($event,'offhand');"></a>
         </div>
       </b-col>
       <b-col col>
@@ -76,12 +76,12 @@
           <button type="button" class="btn btn-outline-secondary shadow-none"
                   @click="select_quality($event, 'secondary')">
             Secondary</button>
-          <button type="button" class="btn btn-outline-relic shadow-none"
+          <!--<button type="button" class="btn btn-outline-relic shadow-none"
                   @click="select_quality($event, 'relic')">
-            Relic</button>
-          <button type="button" class="btn btn-outline-morality shadow-none"
+            Relic</button>-->
+          <!--<button type="button" class="btn btn-outline-morality shadow-none"
                   @click="select_quality($event, 'morality')">
-            Morality</button>
+            Morality</button>-->
         </p>
         <div class="page-contained">
           <b-table id="enchants"
@@ -93,6 +93,25 @@
                    :filter="current_filter"
                    :filter-function="filter_function"
                    @row-clicked="select_enchant">
+            <template v-slot:cell(quality)="row">
+              <button class="btn pill shadow-none" :class="'btn-'+row.item.quality"></button>
+            </template>
+            <template v-slot:cell(show_details)="row">
+              <b-button size="sm" @click="row.toggleDetails" class="mr-2">
+                {{ row.detailsShowing ? 'Less' : 'More'}}
+              </b-button>
+            </template>
+            <template v-slot:row-details="row">
+              <div class="details">
+                <p>Enchant ID: {{ row.item.name }}</p>
+                <p>Slots: {{
+                     (row.item.slots==undefined)?"(undefined)":row.item.slots.join(", ")
+                  }}</p>
+                <p>Exclusion Groups: {{
+                     (row.item.groups==undefined)?"N/A":row.item.groups.join(", ")
+                }}</p>
+              </div>
+            </template>
           </b-table>
         </div>
       </b-col>

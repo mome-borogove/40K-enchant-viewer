@@ -13251,6 +13251,17 @@ div.page-contained, table {
   padding: 0;
 }
 
+div.details {
+  padding: 5px;
+  margin: 0px 10px 5px 10px;
+  border: 1px solid #1f5a56;
+  border-radius: 4px;
+}
+
+div.details p {
+  margin: 0px;
+}
+
 #fixed_column {
   max-width: 259px;
   padding: 0;
@@ -13260,7 +13271,8 @@ div.page-contained, table {
   display: block;
   position: absolute;
   width: 48px;
-  border: 1px solid #1f5a56;
+  border: 1px none #1f5a56;
+  border-radius: 4px;
 }
 
 .area_square {
@@ -13296,7 +13308,7 @@ div.page-contained, table {
   top: 220px;
 }
 
-#A_body_armour {
+#A_body {
   left: 136px;
   top: 220px;
 }
@@ -13306,32 +13318,28 @@ div.page-contained, table {
   top: 389px;
 }
 
-#A_weapon1 {
+#A_weapon {
   left: 23px;
   top: 558px;
 }
 
-#A_signum1 {
+#A_signum {
   left: 79px;
   top: 558px;
 }
 
-#A_signum2 {
-  left: 132px;
-  top: 558px;
-}
-
-#A_weapon2 {
+#A_offhand {
   left: 188px;
   top: 558px;
 }
 
-.area_selected {
-  background: #bbfefa;
+.area.active {
+  background: #1f5a56;
 }
 
 .area:hover {
-  background: #1f5a56;
+  border-style: solid;
+  border-color: #bbfefa;
 }
 
 /*# sourceMappingURL=custom.css.map */

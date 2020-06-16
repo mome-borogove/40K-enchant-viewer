@@ -35,6 +35,8 @@ h3 {
   color: $grayish;
 }
 
+// Table-related formatting
+
 .page-contained {
   height: 677px !important;
   width: 100%;
@@ -44,7 +46,18 @@ div.page-contained,table {
   margin: 0;
   padding: 0; }
 
+div.details {
+  padding: 5px;
+  margin: 0px 10px 5px 10px;
+  border: 1px solid $teal_dark;
+  border-radius: 4px;
+}
+div.details p {
+  margin: 0px;
+}
+
 // Slot image map and highlighting
+
 #fixed_column {
   max-width: 259px;
   padding: 0;
@@ -54,7 +67,8 @@ div.page-contained,table {
   display: block;
   position: absolute;
   width: 48px;
-  border: 1px solid $teal_dark;
+  border: 1px none $teal_dark;
+  border-radius: 4px;
 }
 .area_square {
   height: 48px;
@@ -67,17 +81,18 @@ div.page-contained,table {
 #A_main_implant   { left: 136px; top:  52px; }
 #A_purity_seal    { left:  27px; top: 220px; }
 #A_belt           { left:  79px; top: 220px; }
-#A_body_armour    { left: 136px; top: 220px; }
+#A_body           { left: 136px; top: 220px; }
 #A_inoculator     { left: 136px; top: 389px; }
-#A_weapon1        { left:  23px; top: 558px; }
-#A_signum1        { left:  79px; top: 558px; }
-#A_signum2        { left: 132px; top: 558px; }
-#A_weapon2        { left: 188px; top: 558px; }
+#A_weapon         { left:  23px; top: 558px; }
+#A_signum         { left:  79px; top: 558px; }
+//#A_signum2        { left: 132px; top: 558px; }
+#A_offhand        { left: 188px; top: 558px; }
 
-.area_selected {
-  background: $teal_light;
+.area.active {
+  background: $teal_dark;
 }
 
 .area:hover {
-  background: $teal_dark;
+  border-style: solid;
+  border-color: $teal_light;
 }

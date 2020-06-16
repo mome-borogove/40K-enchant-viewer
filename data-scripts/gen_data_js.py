@@ -6,6 +6,11 @@ import sys
 from parse_enchants import parse_enchants
 from parse_langs import parse_langs
 
+SLOTS=[
+  'neural_implant','eye_implant','main_implant','purity_seal', 'belt', 'body',
+  'inoculator','weapon','signum','offhand',
+]
+
 def preformat_str(s):
   '''Replace markup information in lang strings.'''
   #s = re.sub(r'\[[0-9A-Fa-f]{2}([0-9A-Fa-f]{6})\]',r"<font color='#\1'>",s)
@@ -16,7 +21,41 @@ def preformat_str(s):
   return s
 
 def construct_slot_map(items):
-  return {} # { shortcut : [slot, ...], ... }
+  # A "slot map" maps specific items and their group-shortcuts to one of the
+  # 10 basic slots. (signums count as one "slot")
+  #   { 'lasgun' => 'weapon1',
+  #     'weapon_1h_ammo' => 'weapon1',
+  #     'shields' => 'belt'
+  # This is a bit of a manual process...
+  slot_map = {}
+  # Fill out the 1:1 slots
+  for slot in ['neural_implant','eye_implant','main_implant','purity_seal',
+               'inoculator','signum','construct']:
+    slot_map[slot] = [slot]
+  # Still don't know what this one is
+  slot_map['inoculator_start'] = ['inoculator']
+  # *sigh* construct gear doesn't have a shortcut...
+  for item in items['all_item']:
+    if 'techadeptsummon' in item:
+      slot_map[item] = ['construct']
+  # Now for the N:1 slots...
+  def map_all_to(shortcut, slot):
+    for item in items[shortcut]:
+      slot_map[item] = [slot]
+    slot_map[shortcut] = [slot]
+  map_all_to('belts', 'belt')
+  map_all_to('shields', 'belt')
+  map_all_to('armors','body')
+  for k in items.keys():
+    if 'weapon_' in k:
+      map_all_to(k, 'weapon')
+  # Now the 1:N slots...
+  slot_map['all_item'] = [_ for _ in SLOTS]
+
+  for k in items.keys():
+    assert k in slot_map, k+' not mapped'  
+
+  return slot_map
 
 def construct_group_map(enchants):
   return {} # { group : [ench, ...], ... }
@@ -30,14 +69,23 @@ def format_group_map(group_map):
     s += GROUP_TEMPLATE.format(group=group, enchants=enchants)
   return s
 
-def expand_slots(enchant, slot_map):
-  # expand shortcuts and unique-ify slots
+def fix_slots(enchant, slot_map):
+  '''Slots specified by config files use shortcuts and can be wrong. Fix them.'''
+
+  # Expand item shortcuts and unique-ify slots
+  unique_slots = set()
+  for item in enchant.slots:
+    if item not in slot_map:
+      print('Warning: Enchant '+str(enchant.name)+' is missing a slot map for '+str(item)+'\n'+str(enchant))
+    else:
+      unique_slots.update(slot_map[item])
+  enchant.slots = list(unique_slots)
   return enchant
 
 def format_enchant_desc(enchant, s_map):
   key = enchant.desc
   if key not in s_map:
-    return "<div class='error'>Enchant description missing</div>"
+    return '(No name found:) '+str(key)
   s = s_map[enchant.desc]
   # Add numeric values to enchant description
   # {prop} => str
@@ -47,19 +95,30 @@ def format_enchant_desc(enchant, s_map):
   # 'artifact_enchant' in the strings which don't have Property set correctly.
   if prop=='null' or prop=='undefined':
     prop = 'artifact_enchant'
+
+  # FIXME: Movement speed in specific is screwed up. It's not listed as a %, but 
+  # sometimes it is. But not always. Yay.
+  # So if the string is {movement_speed}, it's actually a broken % value
+  # If it's {movement_speed,100}, it's a normal not-broken % value
+
+  # Replace the actual numeric property
   if re.search(r'{'+prop,s):
-    if enchant.range[0]==enchant.range[1]:
-      s = re.sub(r'\{'+prop+r'\}', str(enchant.range[0]), s)
-      s = re.sub(r'\{'+prop+r',100\}', str(enchant.range[0])+'%', s)
+    decimal_places = 2
+    if round(enchant.range[0],4)==round(enchant.range[1],4): # yay floating point
+      s = re.sub(r'\{'+prop+r'\}',
+                 str(round(enchant.range[0],decimal_places)), s)
+      s = re.sub(r'\{'+prop+r',100\}',
+                 str(round(100*enchant.range[0],decimal_places))+'%', s)
     else:
       s = re.sub(r'\{'+prop+r'\}',
-                 str(enchant.range[0])+' to '+str(enchant.range[1]),
+                 str(round(enchant.range[0],decimal_places))+' to '+str(round(enchant.range[1],decimal_places)),
                  s)
       s = re.sub(r'\{'+prop+r',100\}',
-                 str(100*enchant.range[0])+'% to '+str(100*enchant.range[1])+'%',
+                 str(round(100*enchant.range[0],decimal_places))+'% to '+str(round(100*enchant.range[1],decimal_places))+'%',
                  s)
-  
-  # FIXME: substitute numerics
+  # FIXME: abilities are indexed improperly. Lang entry is listed as:
+  # "{ability_X} {ability}" but the enchant property is {ability_X}, so when
+  # we substitute, we're left with an ambiguous {ability}.
   return s
 
 def format_enchant(enchant, s_map):
@@ -93,12 +152,11 @@ var slots = [
   Slot('main_implant'),
   Slot('purity_seal'),
   Slot('belt'),
-  Slot('body_armour'),
+  Slot('body'),
   Slot('inoculator'),
-  Slot('weapon1'),
-  Slot('signum1'),
-  Slot('signum2'),
-  Slot('weapon2')
+  Slot('weapon'),
+  Slot('signum'),
+  Slot('offhand')
 ];
 
 // Object constructor
@@ -131,7 +189,7 @@ def main(enchant_file, lang_file, output_file):
 
   s_map = {k:preformat_str(v) for k,v in s_map.items()}
   slot_map = construct_slot_map(items)
-  enchants = [expand_slots(ench,slot_map) for ench in enchants]
+  enchants = [fix_slots(ench,slot_map) for ench in enchants]
 
   enchant_data = ''
   for enchant in enchants:
