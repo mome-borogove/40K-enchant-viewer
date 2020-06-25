@@ -44,7 +44,7 @@ def construct_slot_map(items):
       slot_map[item] = [slot]
     slot_map[shortcut] = [slot]
   map_all_to('belts', 'belt')
-  map_all_to('shields', 'belt')
+  map_all_to('shields', 'offhand')
   map_all_to('armors','body')
   for k in items.keys():
     if 'weapon_' in k:
@@ -79,7 +79,7 @@ def fix_slots(enchant, slot_map):
       print('Warning: Enchant '+str(enchant.name)+' is missing a slot map for '+str(item)+'\n'+str(enchant))
     else:
       unique_slots.update(slot_map[item])
-  enchant.slots = list(unique_slots)
+  enchant.slots = sorted(list(unique_slots))
   return enchant
 
 def format_enchant_desc(enchant, s_map):

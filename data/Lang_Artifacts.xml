@@ -1980,6 +1980,61 @@
 					<eng>Inoculator</eng>
 				</Name>
 			</Wardrug_start>
+			<s1_sash_of_melting>
+				<Name>
+					<eng>Sash of Melting</eng>
+				</Name>
+			</s1_sash_of_melting>
+			<s1_eye_of_combustion>
+				<Name>
+					<eng>Eye of Combustion</eng>
+				</Name>
+			</s1_eye_of_combustion>
+			<s1_incandescence>
+				<Name>
+					<eng>Ultimatum</eng>
+				</Name>
+			</s1_incandescence>
+			<s1_conflag_implant>
+				<Name>
+					<eng>Conflagration Implant</eng>
+				</Name>
+			</s1_conflag_implant>
+			<s1_blazing_echo>
+				<Name>
+					<eng>Blazing Echo</eng>
+				</Name>
+			</s1_blazing_echo>
+			<s1_firethorns_armor>
+				<Name>
+					<eng>Firethorns Armour</eng>
+				</Name>
+			</s1_firethorns_armor>
+			<s1_scorching_ire>
+				<Name>
+					<eng>Scorching Ire</eng>
+				</Name>
+			</s1_scorching_ire>
+			<s1_erupting_sentiment>
+				<Name>
+					<eng>Erupting Sentiment</eng>
+				</Name>
+			</s1_erupting_sentiment>
+			<s1_avenger_emblem>
+				<Name>
+					<eng>Avenger Emblem</eng>
+				</Name>
+			</s1_avenger_emblem>
+			<s1_lingering_embers>
+				<Name>
+					<eng>Lingering Embers</eng>
+				</Name>
+			</s1_lingering_embers>
+			<s1_bonesearer>
+				<Name>
+					<eng>Bonesearer</eng>
+				</Name>
+			</s1_bonesearer>
 
 			<Normal_Zacsi>
 				<Name>
@@ -2127,6 +2182,26 @@
 					<eng>Leaderboard Top 50 Reward</eng>
 				</Name>
 			</GloryReward_leaderboard_11_50_Zacsi>
+			<GloryReward_leaderboard_6_10_Zacsi>
+				<Name>
+					<eng>Leaderboard Top 10 Reward</eng>
+				</Name>
+			</GloryReward_leaderboard_6_10_Zacsi>
+			<GloryReward_leaderboard_4_5_Zacsi>
+				<Name>
+					<eng>Leaderboard Top 10 Reward</eng>
+				</Name>
+			</GloryReward_leaderboard_4_5_Zacsi>
+			<GloryReward_leaderboard_3_Zacsi>
+				<Name>
+					<eng>Leaderboard Top 10 Reward</eng>
+				</Name>
+			</GloryReward_leaderboard_3_Zacsi>
+			<GloryReward_leaderboard_2_Zacsi>
+				<Name>
+					<eng>Leaderboard Top 10 Reward</eng>
+				</Name>
+			</GloryReward_leaderboard_2_Zacsi>
 			<GloryReward_leaderboard_2_10_Zacsi>
 				<Name>
 					<eng>Leaderboard Top 10 Reward</eng>
@@ -2443,6 +2518,46 @@
 					<eng>Contains 50 Electro Fragment</eng>
 				</desc>
 			</electro_fragment_zacsi>
+			<season_1_reward_1_zacsi>
+				<Name>
+					<eng>Epsylon Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_1_reward_1_zacsi>
+			<season_1_reward_2_zacsi>
+				<Name>
+					<eng>Delta Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_1_reward_2_zacsi>
+			<season_1_reward_3_zacsi>
+				<Name>
+					<eng>Omega Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_1_reward_3_zacsi>
+			<season_1_reward_4_zacsi>
+				<Name>
+					<eng>Beta Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_1_reward_4_zacsi>
+			<season_1_reward_5_zacsi>
+				<Name>
+					<eng>Alpha Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_1_reward_5_zacsi>
 			<Consumable_InstantCraft>
 				<Name>
 					<eng>Immediate Crafting</eng>
@@ -2483,6 +2598,30 @@
 					<eng>Doubles the chance of finding a Relic item in the next 5 Tarot missions.</eng>
 				</desc>
 			</Consumable_GodlikeChance>
+			<Consumable_GodlikeBetterChance>
+				<Name>
+					<eng>Litany of Serendipity</eng>
+				</Name>
+				<desc>
+					<eng>Significantly increases the chance of finding Relic items in the next 3 missions.</eng>
+				</desc>
+			</Consumable_GodlikeBetterChance>
+			<Consumable_LootChance>
+				<Name>
+					<eng>Benediction of Abundance</eng>
+				</Name>
+				<desc>
+					<eng>Significantly increases the amount of items dropped in the next 3 missions.</eng>
+				</desc>
+			</Consumable_LootChance>
+			<Consumable_LootQuality>
+				<Name>
+					<eng>Ultimate Fortune</eng>
+				</Name>
+				<desc>
+					<eng>Significantly increases the chance of finding higher tier items in the next 3 missions.</eng>
+				</desc>
+			</Consumable_LootQuality>
 			<Consumable_favour>
 				<Name>
 					<eng>Favour Boost</eng>
@@ -2699,6 +2838,31 @@
 					<eng>Cognis Shard V</eng>
 				</Name>
 			</gem8_5>
+			<gem_s1_1>
+				<Name>
+					<eng>Inferno Shard</eng>
+				</Name>
+			</gem_s1_1>
+			<gem_s1_2>
+				<Name>
+					<eng>Inferno Shard II</eng>
+				</Name>
+			</gem_s1_2>
+			<gem_s1_3>
+				<Name>
+					<eng>Inferno Shard III</eng>
+				</Name>
+			</gem_s1_3>
+			<gem_s1_4>
+				<Name>
+					<eng>Inferno Shard IV</eng>
+				</Name>
+			</gem_s1_4>
+			<gem_s1_5>
+				<Name>
+					<eng>Inferno Shard V</eng>
+				</Name>
+			</gem_s1_5>
 			<Rune1>
 				<Name>
 					<eng>Hermeticon Psalm</eng>
@@ -3088,6 +3252,11 @@
 					<eng>Azure Void Shard</eng>
 				</Name>
 			</Map_shard_Azure>
+			<Map_shard_Zircon>
+				<Name>
+					<eng>Zircon Void Shard</eng>
+				</Name>
+			</Map_shard_Zircon>
 			<intel>
 				<Name>
 					<eng>Intel</eng>
@@ -3134,7 +3303,7 @@
 				<desc>
 					<eng>Remnants of mysterious machines, possibly from the Dark Age of Technology.\nCan be exchanged for Favour with Custodian Rebus.</eng>
 				</desc>
-			</token_scrap>
+			</token_scrap>			
 		</Items>
 		<Enchantment>
 			<critical_hit_chance>
@@ -3157,6 +3326,16 @@
 					<eng>{heat_resist} Heat Resistance</eng>
 				</desc>
 			</resistance_heat>
+			<damage_heat>
+				<desc>
+					<eng>{heat_damage,100} Heat Damage Bonus</eng>
+				</desc>
+			</damage_heat>
+			<heat_reflect>
+				<desc>
+					<eng>{heat_reflect,100} Heat Damage Reflection</eng>
+				</desc>
+			</heat_reflect>
 			<resistance_warp>
 				<desc>
 					<eng>{warp_resist} Warp Resistance</eng>
@@ -3247,11 +3426,11 @@
 					<eng>{damage,100} Damage Bonus for the Bio Lightning Psychic Power</eng>
 				</desc>
 			</Damage_Bonus_PP_Bio_Lightning>
-			<Damage_Bonus_PP_Bio_Lightning>
+			<Damage_Bonus_PP_Telekinesis_Shockwave>
 				<desc>
 					<eng>{damage,100} Damage Bonus for the Shockwave Psychic Power</eng>
 				</desc>
-			</Damage_Bonus_PP_Bio_Lightning>
+			</Damage_Bonus_PP_Telekinesis_Shockwave>
 			<MaxHP_Percentage>
 				<desc>
 					<eng>{hp_max} HP</eng>
@@ -4083,6 +4262,51 @@
 					<eng>{artifact_enchant,100} Damage Bonus for [fffffdcb]AoE[/fffffdcb] Psychic Powers</eng>
 				</desc>
 			</Aoe_damage_bonus_to_Spells>
+			<Damage_against_Inferno>
+				<desc>
+					<eng>[ff2bede6]+10%[/ff2bede6] Damage bonus against enemies affected by [fffe7272]Inferno[/fffe7272]</eng>
+				</desc>
+			</Damage_against_Inferno>
+			<Minion_chance_to_burn_on_hit>
+				<desc>
+					<eng>All Construct Heat attacks apply [fffe7272]Inferno[/fffe7272] on Hit with a [ff2bede6]+15%[/ff2bede6] chance</eng>
+				</desc>
+			</Minion_chance_to_burn_on_hit>
+			<Enrage_on_Inferno>
+				<desc>
+					<eng>[ff2bede6]+40%[/ff2bede6] chance to get an [fffffdcb]Enrage[/fffffdcb] token for each [fffe7272]Inferno[/fffe7272] applied.</eng>
+				</desc>
+			</Enrage_on_Inferno>
+			<Berserk_on_Inferno>
+				<desc>
+					<eng>[ff2bede6]+40%[/ff2bede6] chance to get a [fffffdcb]Berserk[/fffffdcb] token for each [fffe7272]Inferno[/fffe7272] applied.</eng>
+				</desc>
+			</Berserk_on_Inferno>
+			<Suppression_against_Inferno>
+				<desc>
+					<eng>{per_target_suppression_damage_bonus,100} Suppression Damage Bonus against [fffffdcb]Burning[/fffffdcb] enemies.</eng>
+				</desc>
+			</Suppression_against_Inferno>
+			<Vulnerability_duration_bonus>
+				<desc>
+					<eng>{skill_duration} seconds to all [fffffdcb]Vulnerability[/fffffdcb] effect duration</eng>
+				</desc>
+			</Vulnerability_duration_bonus>
+			<Halved_heat_resist>
+				<desc>
+					<eng>Enemies have halved resistances against heat attacks</eng>
+				</desc>
+			</Halved_heat_resist>
+			<Area_Inferno_on_Damage>
+				<desc>
+					<eng>Hitting an enemy affected by [fffe7272]Inferno[/fffe7272] has an 5% chance to deal 100% of the original hit’s damage in a small area, applying [fffe7272]Inferno[/fffe7272]</eng>
+				</desc>
+			</Area_Inferno_on_Damage>		
+			<shieldhp_regen>
+				<desc>
+					<eng>{shield_hp_regeneration,100} regeneration of the Energy Shield</eng>
+				</desc>
+			</shieldhp_regen>
 			<dot_damage>
 				<desc>
 					<eng>{dot_damage,100} [fffffdcb]DoT[/fffffdcb] Damage</eng>
@@ -4090,12 +4314,12 @@
 			</dot_damage>
 			<damage_reflect>
 				<desc>
-					<eng>{damage_reflect_fix,100} Damage Reflected back to the attacker</eng>
+					<eng>{damage_reflect,100} Damage Reflected back to the attacker</eng>
 				</desc>
 			</damage_reflect>
 			<shield_hp>
 				<desc>
-					<eng>{shield_hp_max,100} Energy Shield</eng>
+					<eng>{shield_efficiency,100} Energy Shield Efficiency</eng>
 				</desc>
 			</shield_hp>
 			<Rune_1>
@@ -5339,6 +5563,21 @@
 					<eng>{artifact_enchant,100} Warp Heat Reduction value for Psyker Weapons when [fffffdcb]Surrounded[/fffffdcb]</eng>
 				</desc>
 			</Godlike_Warp_Heat_reduction_in_threat>
+			<Godlike_Heat_Vulnerability_efficiency>
+				<desc>
+					<eng>[ff2bede6]25%[/ff2bede6] increased effect of Heat Vulnerability</eng>
+				</desc>
+			</Godlike_Heat_Vulnerability_efficiency>
+			<Godlike_Convert_Dmg_To_Fire>
+				<desc>
+					<eng>[ff2bede6]25%[/ff2bede6] of All Damage is converted to Fire Damage</eng>
+				</desc>
+			</Godlike_Convert_Dmg_To_Fire>
+			<Fix_inferno_on_critical_hit_taken>
+				<desc>
+					<eng>{artifact_enchant,100} chance to apply [fffe7272]Inferno[/fffe7272] for 5 seconds after taking Critical damage</eng>
+				</desc>
+			</Fix_inferno_on_critical_hit_taken>
 
 
 			<Demonic_Weapon_Temporary_Cellrot_On_Hit>
@@ -5638,7 +5877,7 @@
 			</Minion_HP_regen>
 			<shield_hp_fix>
 				<desc>
-					<eng>{shield_hp_max} Energy Shield</eng>
+					<eng>{shield_hp_max} max Energy Shield for regenerating shields.</eng>
 				</desc>
 			</shield_hp_fix>
 			<Minion_Shield_regen>
