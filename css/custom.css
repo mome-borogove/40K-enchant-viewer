@@ -27,6 +27,7 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --ui: #b2b2b2;
   --relic: #c69761;
   --artifact: #501a83;
   --archeo: #b8312f;
@@ -1885,6 +1886,26 @@ pre code {
   background-color: #b9bbbe;
 }
 
+.table-ui,
+.table-ui > th,
+.table-ui > td {
+  background-color: #e9e9e9;
+}
+.table-ui th,
+.table-ui td,
+.table-ui thead th,
+.table-ui tbody + tbody {
+  border-color: #d7d7d7;
+}
+
+.table-hover .table-ui:hover {
+  background-color: gainsboro;
+}
+.table-hover .table-ui:hover > td,
+.table-hover .table-ui:hover > th {
+  background-color: gainsboro;
+}
+
 .table-relic,
 .table-relic > th,
 .table-relic > td {
@@ -2773,6 +2794,36 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
+.btn-ui {
+  color: #212529;
+  background-color: #b2b2b2;
+  border-color: #b2b2b2;
+}
+.btn-ui:hover {
+  color: #212529;
+  background-color: #9f9f9f;
+  border-color: #999999;
+}
+.btn-ui:focus, .btn-ui.focus {
+  color: #212529;
+  background-color: #9f9f9f;
+  border-color: #999999;
+  box-shadow: 0 0 0 0.2rem rgba(156, 157, 157, 0.5);
+}
+.btn-ui.disabled, .btn-ui:disabled {
+  color: #212529;
+  background-color: #b2b2b2;
+  border-color: #b2b2b2;
+}
+.btn-ui:not(:disabled):not(.disabled):active, .btn-ui:not(:disabled):not(.disabled).active, .show > .btn-ui.dropdown-toggle {
+  color: #212529;
+  background-color: #999999;
+  border-color: #929292;
+}
+.btn-ui:not(:disabled):not(.disabled):active:focus, .btn-ui:not(:disabled):not(.disabled).active:focus, .show > .btn-ui.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(156, 157, 157, 0.5);
+}
+
 .btn-relic {
   color: #212529;
   background-color: #c69761;
@@ -3121,6 +3172,31 @@ fieldset:disabled a.btn {
 }
 .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.btn-outline-ui {
+  color: #b2b2b2;
+  border-color: #b2b2b2;
+}
+.btn-outline-ui:hover {
+  color: #212529;
+  background-color: #b2b2b2;
+  border-color: #b2b2b2;
+}
+.btn-outline-ui:focus, .btn-outline-ui.focus {
+  box-shadow: 0 0 0 0.2rem rgba(178, 178, 178, 0.5);
+}
+.btn-outline-ui.disabled, .btn-outline-ui:disabled {
+  color: #b2b2b2;
+  background-color: transparent;
+}
+.btn-outline-ui:not(:disabled):not(.disabled):active, .btn-outline-ui:not(:disabled):not(.disabled).active, .show > .btn-outline-ui.dropdown-toggle {
+  color: #212529;
+  background-color: #b2b2b2;
+  border-color: #b2b2b2;
+}
+.btn-outline-ui:not(:disabled):not(.disabled):active:focus, .btn-outline-ui:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-ui.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(178, 178, 178, 0.5);
 }
 
 .btn-outline-relic {
@@ -5123,6 +5199,19 @@ a.badge-dark:focus, a.badge-dark.focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
+.badge-ui {
+  color: #212529;
+  background-color: #b2b2b2;
+}
+a.badge-ui:hover, a.badge-ui:focus {
+  color: #212529;
+  background-color: #999999;
+}
+a.badge-ui:focus, a.badge-ui.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(178, 178, 178, 0.5);
+}
+
 .badge-relic {
   color: #212529;
   background-color: #c69761;
@@ -5327,6 +5416,18 @@ a.badge-morality:focus, a.badge-morality.focus {
 }
 .alert-dark .alert-link {
   color: #040505;
+}
+
+.alert-ui {
+  color: #5d5d5d;
+  background-color: #f0f0f0;
+  border-color: #e9e9e9;
+}
+.alert-ui hr {
+  border-top-color: gainsboro;
+}
+.alert-ui .alert-link {
+  color: #444444;
 }
 
 .alert-relic {
@@ -5746,6 +5847,20 @@ a.badge-morality:focus, a.badge-morality.focus {
   border-color: #1b1e21;
 }
 
+.list-group-item-ui {
+  color: #5d5d5d;
+  background-color: #e9e9e9;
+}
+.list-group-item-ui.list-group-item-action:hover, .list-group-item-ui.list-group-item-action:focus {
+  color: #5d5d5d;
+  background-color: gainsboro;
+}
+.list-group-item-ui.list-group-item-action.active {
+  color: #fff;
+  background-color: #5d5d5d;
+  border-color: #5d5d5d;
+}
+
 .list-group-item-relic {
   color: #674f32;
   background-color: #efe2d3;
@@ -6114,53 +6229,53 @@ a.close.disabled {
   border-style: solid;
 }
 
-.bs-tooltip-top, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=top], .bs-tooltip-auto[x-placement^=top] {
+.bs-tooltip-top, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=top], .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=top], .bs-tooltip-auto[x-placement^=top] {
   padding: 0.4rem 0;
 }
-.bs-tooltip-top .arrow, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=top] .arrow, .bs-tooltip-auto[x-placement^=top] .arrow {
+.bs-tooltip-top .arrow, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=top] .arrow, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=top] .arrow, .bs-tooltip-auto[x-placement^=top] .arrow {
   bottom: 0;
 }
-.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before {
+.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before {
   top: 0;
   border-width: 0.4rem 0.4rem 0;
   border-top-color: #000;
 }
 
-.bs-tooltip-right, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=right], .bs-tooltip-auto[x-placement^=right] {
+.bs-tooltip-right, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=right], .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=right], .bs-tooltip-auto[x-placement^=right] {
   padding: 0 0.4rem;
 }
-.bs-tooltip-right .arrow, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=right] .arrow, .bs-tooltip-auto[x-placement^=right] .arrow {
+.bs-tooltip-right .arrow, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=right] .arrow, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=right] .arrow, .bs-tooltip-auto[x-placement^=right] .arrow {
   left: 0;
   width: 0.4rem;
   height: 0.8rem;
 }
-.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-auto[x-placement^=right] .arrow::before {
+.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-auto[x-placement^=right] .arrow::before {
   right: 0;
   border-width: 0.4rem 0.4rem 0.4rem 0;
   border-right-color: #000;
 }
 
-.bs-tooltip-bottom, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=bottom], .bs-tooltip-auto[x-placement^=bottom] {
+.bs-tooltip-bottom, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=bottom], .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=bottom], .bs-tooltip-auto[x-placement^=bottom] {
   padding: 0.4rem 0;
 }
-.bs-tooltip-bottom .arrow, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=bottom] .arrow, .bs-tooltip-auto[x-placement^=bottom] .arrow {
+.bs-tooltip-bottom .arrow, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=bottom] .arrow, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=bottom] .arrow, .bs-tooltip-auto[x-placement^=bottom] .arrow {
   top: 0;
 }
-.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-auto[x-placement^=bottom] .arrow::before {
+.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-auto[x-placement^=bottom] .arrow::before {
   bottom: 0;
   border-width: 0 0.4rem 0.4rem;
   border-bottom-color: #000;
 }
 
-.bs-tooltip-left, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=left], .bs-tooltip-auto[x-placement^=left] {
+.bs-tooltip-left, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=left], .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=left], .bs-tooltip-auto[x-placement^=left] {
   padding: 0 0.4rem;
 }
-.bs-tooltip-left .arrow, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=left] .arrow, .bs-tooltip-auto[x-placement^=left] .arrow {
+.bs-tooltip-left .arrow, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=left] .arrow, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=left] .arrow, .bs-tooltip-auto[x-placement^=left] .arrow {
   right: 0;
   width: 0.4rem;
   height: 0.8rem;
 }
-.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=left] .arrow::before, .bs-tooltip-auto[x-placement^=left] .arrow::before {
+.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-morality.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-ancient.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-archeo.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-artifact.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=left] .arrow::before, .bs-tooltip-auto[x-placement^=left] .arrow::before {
   left: 0;
   border-width: 0.4rem 0 0.4rem 0.4rem;
   border-left-color: #000;
@@ -6218,7 +6333,7 @@ a.close.disabled {
   border-style: solid;
 }
 
-.bs-popover-top, .b-popover-morality.bs-popover-auto[x-placement^=top], .b-popover-ancient.bs-popover-auto[x-placement^=top], .b-popover-archeo.bs-popover-auto[x-placement^=top], .b-popover-artifact.bs-popover-auto[x-placement^=top], .b-popover-relic.bs-popover-auto[x-placement^=top], .b-popover-dark.bs-popover-auto[x-placement^=top], .b-popover-light.bs-popover-auto[x-placement^=top], .b-popover-danger.bs-popover-auto[x-placement^=top], .b-popover-warning.bs-popover-auto[x-placement^=top], .b-popover-info.bs-popover-auto[x-placement^=top], .b-popover-success.bs-popover-auto[x-placement^=top], .b-popover-secondary.bs-popover-auto[x-placement^=top], .b-popover-primary.bs-popover-auto[x-placement^=top], .bs-popover-auto[x-placement^=top] {
+.bs-popover-top, .b-popover-morality.bs-popover-auto[x-placement^=top], .b-popover-ancient.bs-popover-auto[x-placement^=top], .b-popover-archeo.bs-popover-auto[x-placement^=top], .b-popover-artifact.bs-popover-auto[x-placement^=top], .b-popover-relic.bs-popover-auto[x-placement^=top], .b-popover-ui.bs-popover-auto[x-placement^=top], .b-popover-dark.bs-popover-auto[x-placement^=top], .b-popover-light.bs-popover-auto[x-placement^=top], .b-popover-danger.bs-popover-auto[x-placement^=top], .b-popover-warning.bs-popover-auto[x-placement^=top], .b-popover-info.bs-popover-auto[x-placement^=top], .b-popover-success.bs-popover-auto[x-placement^=top], .b-popover-secondary.bs-popover-auto[x-placement^=top], .b-popover-primary.bs-popover-auto[x-placement^=top], .bs-popover-auto[x-placement^=top] {
   margin-bottom: 0.5rem;
 }
 .bs-popover-top > .arrow, .bs-popover-auto[x-placement^=top] > .arrow {
@@ -6235,7 +6350,7 @@ a.close.disabled {
   border-top-color: #fff;
 }
 
-.bs-popover-right, .b-popover-morality.bs-popover-auto[x-placement^=right], .b-popover-ancient.bs-popover-auto[x-placement^=right], .b-popover-archeo.bs-popover-auto[x-placement^=right], .b-popover-artifact.bs-popover-auto[x-placement^=right], .b-popover-relic.bs-popover-auto[x-placement^=right], .b-popover-dark.bs-popover-auto[x-placement^=right], .b-popover-light.bs-popover-auto[x-placement^=right], .b-popover-danger.bs-popover-auto[x-placement^=right], .b-popover-warning.bs-popover-auto[x-placement^=right], .b-popover-info.bs-popover-auto[x-placement^=right], .b-popover-success.bs-popover-auto[x-placement^=right], .b-popover-secondary.bs-popover-auto[x-placement^=right], .b-popover-primary.bs-popover-auto[x-placement^=right], .bs-popover-auto[x-placement^=right] {
+.bs-popover-right, .b-popover-morality.bs-popover-auto[x-placement^=right], .b-popover-ancient.bs-popover-auto[x-placement^=right], .b-popover-archeo.bs-popover-auto[x-placement^=right], .b-popover-artifact.bs-popover-auto[x-placement^=right], .b-popover-relic.bs-popover-auto[x-placement^=right], .b-popover-ui.bs-popover-auto[x-placement^=right], .b-popover-dark.bs-popover-auto[x-placement^=right], .b-popover-light.bs-popover-auto[x-placement^=right], .b-popover-danger.bs-popover-auto[x-placement^=right], .b-popover-warning.bs-popover-auto[x-placement^=right], .b-popover-info.bs-popover-auto[x-placement^=right], .b-popover-success.bs-popover-auto[x-placement^=right], .b-popover-secondary.bs-popover-auto[x-placement^=right], .b-popover-primary.bs-popover-auto[x-placement^=right], .bs-popover-auto[x-placement^=right] {
   margin-left: 0.5rem;
 }
 .bs-popover-right > .arrow, .bs-popover-auto[x-placement^=right] > .arrow {
@@ -6255,7 +6370,7 @@ a.close.disabled {
   border-right-color: #fff;
 }
 
-.bs-popover-bottom, .b-popover-morality.bs-popover-auto[x-placement^=bottom], .b-popover-ancient.bs-popover-auto[x-placement^=bottom], .b-popover-archeo.bs-popover-auto[x-placement^=bottom], .b-popover-artifact.bs-popover-auto[x-placement^=bottom], .b-popover-relic.bs-popover-auto[x-placement^=bottom], .b-popover-dark.bs-popover-auto[x-placement^=bottom], .b-popover-light.bs-popover-auto[x-placement^=bottom], .b-popover-danger.bs-popover-auto[x-placement^=bottom], .b-popover-warning.bs-popover-auto[x-placement^=bottom], .b-popover-info.bs-popover-auto[x-placement^=bottom], .b-popover-success.bs-popover-auto[x-placement^=bottom], .b-popover-secondary.bs-popover-auto[x-placement^=bottom], .b-popover-primary.bs-popover-auto[x-placement^=bottom], .bs-popover-auto[x-placement^=bottom] {
+.bs-popover-bottom, .b-popover-morality.bs-popover-auto[x-placement^=bottom], .b-popover-ancient.bs-popover-auto[x-placement^=bottom], .b-popover-archeo.bs-popover-auto[x-placement^=bottom], .b-popover-artifact.bs-popover-auto[x-placement^=bottom], .b-popover-relic.bs-popover-auto[x-placement^=bottom], .b-popover-ui.bs-popover-auto[x-placement^=bottom], .b-popover-dark.bs-popover-auto[x-placement^=bottom], .b-popover-light.bs-popover-auto[x-placement^=bottom], .b-popover-danger.bs-popover-auto[x-placement^=bottom], .b-popover-warning.bs-popover-auto[x-placement^=bottom], .b-popover-info.bs-popover-auto[x-placement^=bottom], .b-popover-success.bs-popover-auto[x-placement^=bottom], .b-popover-secondary.bs-popover-auto[x-placement^=bottom], .b-popover-primary.bs-popover-auto[x-placement^=bottom], .bs-popover-auto[x-placement^=bottom] {
   margin-top: 0.5rem;
 }
 .bs-popover-bottom > .arrow, .bs-popover-auto[x-placement^=bottom] > .arrow {
@@ -6282,7 +6397,7 @@ a.close.disabled {
   border-bottom: 1px solid #f7f7f7;
 }
 
-.bs-popover-left, .b-popover-morality.bs-popover-auto[x-placement^=left], .b-popover-ancient.bs-popover-auto[x-placement^=left], .b-popover-archeo.bs-popover-auto[x-placement^=left], .b-popover-artifact.bs-popover-auto[x-placement^=left], .b-popover-relic.bs-popover-auto[x-placement^=left], .b-popover-dark.bs-popover-auto[x-placement^=left], .b-popover-light.bs-popover-auto[x-placement^=left], .b-popover-danger.bs-popover-auto[x-placement^=left], .b-popover-warning.bs-popover-auto[x-placement^=left], .b-popover-info.bs-popover-auto[x-placement^=left], .b-popover-success.bs-popover-auto[x-placement^=left], .b-popover-secondary.bs-popover-auto[x-placement^=left], .b-popover-primary.bs-popover-auto[x-placement^=left], .bs-popover-auto[x-placement^=left] {
+.bs-popover-left, .b-popover-morality.bs-popover-auto[x-placement^=left], .b-popover-ancient.bs-popover-auto[x-placement^=left], .b-popover-archeo.bs-popover-auto[x-placement^=left], .b-popover-artifact.bs-popover-auto[x-placement^=left], .b-popover-relic.bs-popover-auto[x-placement^=left], .b-popover-ui.bs-popover-auto[x-placement^=left], .b-popover-dark.bs-popover-auto[x-placement^=left], .b-popover-light.bs-popover-auto[x-placement^=left], .b-popover-danger.bs-popover-auto[x-placement^=left], .b-popover-warning.bs-popover-auto[x-placement^=left], .b-popover-info.bs-popover-auto[x-placement^=left], .b-popover-success.bs-popover-auto[x-placement^=left], .b-popover-secondary.bs-popover-auto[x-placement^=left], .b-popover-primary.bs-popover-auto[x-placement^=left], .bs-popover-auto[x-placement^=left] {
   margin-right: 0.5rem;
 }
 .bs-popover-left > .arrow, .bs-popover-auto[x-placement^=left] > .arrow {
@@ -6648,6 +6763,16 @@ button.bg-dark:focus {
   background-color: #1d2124 !important;
 }
 
+.bg-ui {
+  background-color: #b2b2b2 !important;
+}
+
+a.bg-ui:hover, a.bg-ui:focus,
+button.bg-ui:hover,
+button.bg-ui:focus {
+  background-color: #999999 !important;
+}
+
 .bg-relic {
   background-color: #c69761 !important;
 }
@@ -6776,6 +6901,10 @@ button.bg-morality:focus {
 
 .border-dark {
   border-color: #343a40 !important;
+}
+
+.border-ui {
+  border-color: #b2b2b2 !important;
 }
 
 .border-relic {
@@ -10381,6 +10510,14 @@ a.text-dark:hover, a.text-dark:focus {
   color: #121416 !important;
 }
 
+.text-ui {
+  color: #b2b2b2 !important;
+}
+
+a.text-ui:hover, a.text-ui:focus {
+  color: #8c8c8c !important;
+}
+
 .text-relic {
   color: #c69761 !important;
 }
@@ -11775,6 +11912,46 @@ input[type=color].form-control:disabled {
   color: #1b1e21;
 }
 
+.b-popover-ui.popover {
+  background-color: #f0f0f0;
+  border-color: #e9e9e9;
+}
+.b-popover-ui.bs-popover-top > .arrow::before, .b-popover-ui.bs-popover-auto[x-placement^=top] > .arrow::before {
+  border-top-color: #e9e9e9;
+}
+.b-popover-ui.bs-popover-top > .arrow::after, .b-popover-ui.bs-popover-auto[x-placement^=top] > .arrow::after {
+  border-top-color: #f0f0f0;
+}
+.b-popover-ui.bs-popover-right > .arrow::before, .b-popover-ui.bs-popover-auto[x-placement^=right] > .arrow::before {
+  border-right-color: #e9e9e9;
+}
+.b-popover-ui.bs-popover-right > .arrow::after, .b-popover-ui.bs-popover-auto[x-placement^=right] > .arrow::after {
+  border-right-color: #f0f0f0;
+}
+.b-popover-ui.bs-popover-bottom > .arrow::before, .b-popover-ui.bs-popover-auto[x-placement^=bottom] > .arrow::before {
+  border-bottom-color: #e9e9e9;
+}
+.b-popover-ui.bs-popover-bottom > .arrow::after, .b-popover-ui.bs-popover-auto[x-placement^=bottom] > .arrow::after {
+  border-bottom-color: #e8e8e8;
+}
+.b-popover-ui.bs-popover-bottom .popover-header::before, .b-popover-ui.bs-popover-auto[x-placement^=bottom] .popover-header::before {
+  border-bottom-color: #e8e8e8;
+}
+.b-popover-ui.bs-popover-left > .arrow::before, .b-popover-ui.bs-popover-auto[x-placement^=left] > .arrow::before {
+  border-left-color: #e9e9e9;
+}
+.b-popover-ui.bs-popover-left > .arrow::after, .b-popover-ui.bs-popover-auto[x-placement^=left] > .arrow::after {
+  border-left-color: #f0f0f0;
+}
+.b-popover-ui .popover-header {
+  color: #212529;
+  background-color: #e8e8e8;
+  border-bottom-color: gainsboro;
+}
+.b-popover-ui .popover-body {
+  color: #5d5d5d;
+}
+
 .b-popover-relic.popover {
   background-color: #f4eadf;
   border-color: #efe2d3;
@@ -12718,6 +12895,20 @@ input[type=color].form-control:disabled {
   background-color: #e3e5e5;
 }
 
+.b-toast-ui .toast {
+  background-color: rgba(253, 253, 253, 0.85);
+  border-color: rgba(233, 233, 233, 0.85);
+  color: #5d5d5d;
+}
+.b-toast-ui .toast .toast-header {
+  color: #5d5d5d;
+  background-color: rgba(240, 240, 240, 0.85);
+  border-bottom-color: rgba(233, 233, 233, 0.85);
+}
+.b-toast-ui.b-toast-solid .toast {
+  background-color: #fdfdfd;
+}
+
 .b-toast-relic .toast {
   background-color: rgba(251, 246, 242, 0.85);
   border-color: rgba(239, 226, 211, 0.85);
@@ -13015,6 +13206,23 @@ input[type=color].form-control:disabled {
 .tooltip.b-tooltip-dark .tooltip-inner {
   color: #fff;
   background-color: #343a40;
+}
+
+.tooltip.b-tooltip-ui.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=top] .arrow::before {
+  border-top-color: #b2b2b2;
+}
+.tooltip.b-tooltip-ui.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=right] .arrow::before {
+  border-right-color: #b2b2b2;
+}
+.tooltip.b-tooltip-ui.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=bottom] .arrow::before {
+  border-bottom-color: #b2b2b2;
+}
+.tooltip.b-tooltip-ui.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-ui.bs-tooltip-auto[x-placement^=left] .arrow::before {
+  border-left-color: #b2b2b2;
+}
+.tooltip.b-tooltip-ui .tooltip-inner {
+  color: #212529;
+  background-color: #b2b2b2;
 }
 
 .tooltip.b-tooltip-relic.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-relic.bs-tooltip-auto[x-placement^=top] .arrow::before {

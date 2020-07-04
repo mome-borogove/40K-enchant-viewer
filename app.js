@@ -1,12 +1,12 @@
 // Define a filter object. This provides the enchant table everything it
 // needs to down-select the desired enchants.
-function Filter(str, slots, qualities) {
-  this.str = str;
+function Filter(pattern, slots, qualities) {
+  this.pattern = pattern;
   this.slots = slots;
   this.qualities = qualities;
 }
 
-var empty_filter = new Filter(null, new Set([]), new Set(['primary']));
+var empty_filter = new Filter("", new Set([]), new Set(['primary']));
 
 function toggle_control_status(control, tag='active') {
   control.classList.toggle(tag);
@@ -24,6 +24,7 @@ var app = new Vue({
   data: {
     enchants: enchants,
     current_filter: empty_filter,
+    pattern: null, // always all-lowercase
     enchant_fields: [
       { key:'quality', label: '', sortable:false },
       { key:'str', label:'Enchant Name', sortable:true },
@@ -42,11 +43,24 @@ var app = new Vue({
           return false;
         }
       }
+      // Filter by text
+      if (filter.pattern &&
+         !enchant.str.toLowerCase().includes(filter.pattern)) {
+        return false;
+      }
 
       return true; // Display if not filtered out
     },
     clear_filter() {
       this.current_filter = empty_filter;
+    },
+    select_pattern(pattern) {
+      this.current_filter.pattern = pattern.toLowerCase();
+      refresh_table(this);
+    },
+    clear_pattern(pattern) {
+      this.pattern = null;
+      this.select_pattern("");
     },
     select_quality(event, quality) {
       let button = event.target;
@@ -73,7 +87,7 @@ var app = new Vue({
       refresh_table(this);
     },
     select_enchant(enchant, idx, event) {
-      console.log(enchant);
+      //console.log(enchant);
     }
   }
 });
