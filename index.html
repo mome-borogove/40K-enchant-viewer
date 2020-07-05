@@ -15,7 +15,10 @@
     <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap">
+    <link rel="stylesheet" type="text/css"
+          href="css/fa.min.css">
 
     <title>Inquisitor: Martyr Enchant Viewer</title>
   </head>
@@ -98,17 +101,15 @@
         <div class="page-contained">
           <b-table id="enchants"
                    small
-                   selectable
-                   select-mode="single"
+                   thead-tr-class="d-none"
                    :fields="enchant_fields"
                    :items="enchants"
                    :filter="current_filter"
                    :filter-function="filter_function"
                    @row-clicked="select_enchant">
-            <template v-slot:cell(quality)="row">
-              <button class="btn pill shadow-none" :class="'btn-'+row.item.quality"></button>
-            </template>
             <template v-slot:cell(str)="row">
+              <span :class="'text-'+row.item.quality"><i class="fas fa-square"></i></span>
+              <span class="row-spacer"></span>
               <span v-html="row.item.str"></span>
             </template>
             <template v-slot:cell(show_details)="row">

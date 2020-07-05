@@ -37,6 +37,9 @@ h3 {
 }
 
 // Table-related formatting
+#enchants td {
+  border-top-color: $teal_dark;
+}
 
 .page-contained {
   height: 677px !important;
@@ -57,11 +60,17 @@ div.details p {
   margin: 0px;
 }
 
+.row-spacer {
+  display: inline-block;
+  min-width: 4px;
+}
+
 // Slot image map and highlighting
 
 #fixed_column {
-  max-width: 259px;
+  max-width: 261px;
   padding: 0;
+  border: 1px solid $teal_dark;
 }
 
 .area {

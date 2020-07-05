@@ -26,8 +26,7 @@ var app = new Vue({
     current_filter: empty_filter,
     pattern: null, // always all-lowercase
     enchant_fields: [
-      { key:'quality', label: '', sortable:false },
-      { key:'str', label:'Enchant Name', sortable:true },
+      { key:'str', label:'Enchant Name', sortable:false },
       { key:'show_details', label:'', sortable:false },
     ],
   },
