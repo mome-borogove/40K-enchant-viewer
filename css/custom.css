@@ -13452,7 +13452,7 @@ h3 {
   color: #b2b2b2;
 }
 
-@media (hover: hover) {
+@media (hover: none) {
   .btn:hover {
     color: inherit;
     background-color: inherit;
