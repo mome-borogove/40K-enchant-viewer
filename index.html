@@ -108,6 +108,9 @@
             <template v-slot:cell(quality)="row">
               <button class="btn pill shadow-none" :class="'btn-'+row.item.quality"></button>
             </template>
+            <template v-slot:cell(str)="row">
+              <span v-html="row.item.str"></span>
+            </template>
             <template v-slot:cell(show_details)="row">
               <b-button size="sm" @click="row.toggleDetails" class="mr-2">
                 {{ row.detailsShowing ? 'Less' : 'More'}}
@@ -116,8 +119,8 @@
             <template v-slot:row-details="row">
               <div class="details">
                 <p>Enchant ID: {{ row.item.name }}</p>
-                <p>Slots: {{
-                     (row.item.slots==undefined)?"(undefined)":row.item.slots.join(", ")
+                <p>Valid Items: {{
+                     (row.item.items==undefined)?"(undefined)":row.item.items.join(", ")
                   }}</p>
                 <p>Exclusion Groups: {{
                      (row.item.groups==undefined)?"N/A":row.item.groups.join(", ")

@@ -124,3 +124,12 @@ class FSM(object):
       return True
     raise FSMError('Premature termination in state '+str(self._current_state))
 
+  def parse(self, file):
+    while True:
+      rawline = file.readline()
+      if rawline=='':
+        self.terminate()
+        return self.data
+      line = rawline.strip()
+      self(line)
+    raise Exception('Unknown error: file parsing failed.')

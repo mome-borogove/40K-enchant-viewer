@@ -20,7 +20,3 @@ if __name__=='__main__':
     print(str(len(string_map))+' strings mapped')
     for k in ['critical_hit_chance','critical_damage_bonus','blessed_weapon_damage_against_demons']:
       print(k,string_map[k])
-
-    #for k,v in string_map.items():
-    #  if v.count('{')>1:
-    #    print(k,v)
