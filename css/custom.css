@@ -13452,6 +13452,12 @@ h3 {
   color: #b2b2b2;
 }
 
+@media (hover: hover) {
+  .btn:hover {
+    color: inherit;
+    background-color: inherit;
+  }
+}
 #enchants td {
   border-top-color: #1f5a56;
 }

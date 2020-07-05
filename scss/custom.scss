@@ -40,6 +40,17 @@ h3 {
   color: $grayish;
 }
 
+// Pressing buttons on mobile leaves the "cursor" hovering over the button.
+// Since bootstrap's hover css is identical to the active state, this makes
+// toggling the button indistinguishable from just hovering---which is always
+// for a mobile device. This removes the hover behavior for mobile devices.
+@media (hover: none) {
+  .btn:hover {
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
 // Table-related formatting
 #enchants td {
   border-top-color: $teal_dark;
