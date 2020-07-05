@@ -6,13 +6,22 @@ from xml.etree import ElementTree as ETree
 def parse_langs(file):
   root = ETree.parse(file)
   artifacts = root.find('Artifacts')
+
+  # Build the enchant string map
   enchants = artifacts.find('Enchantment')
-  smap = {}
+  ench_str_map = {}
   for ench in enchants:
     if str.lower(ench.tag) in enchants:
-      print('AARGH!',ench.tag)
-    smap[str.lower(ench.tag)] = ench.find('desc').find('eng').text
-  return smap
+      print('Duplicate enchant string description',ench.tag)
+    ench_str_map[str.lower(ench.tag)] = ench.find('desc').find('eng').text
+
+  # Build the item type string map
+  item_types = artifacts.find('Types')
+  item_type_map = {}
+  for item_type in item_types:
+    item_type_map[str.lower(item_type.tag)] = item_type.find('eng').text
+
+  return ench_str_map, item_type_map
 
 if __name__=='__main__':
   with open('Lang_Artifacts.xml') as f:

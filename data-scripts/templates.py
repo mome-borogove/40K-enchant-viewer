@@ -28,8 +28,10 @@ var enchants = [
 {enchants}
 ];
 
-var enchant_groups = new Map();
-{enchant_groups}
+var slot_items = new Map([
+{item_types}
+]);
+
 '''
 
 ################################################################################

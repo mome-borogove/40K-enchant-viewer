@@ -24,11 +24,17 @@ var app = new Vue({
   data: {
     enchants: enchants,
     current_filter: empty_filter,
+    selected_slots: [],
     pattern: null, // always all-lowercase
     enchant_fields: [
       { key:'str', label:'Enchant Name', sortable:false },
       { key:'show_details', label:'', sortable:false },
     ],
+  },
+  computed: {
+    selected_item_types: function() {
+      
+    }
   },
   methods: {
     filter_function(enchant, filter) {
@@ -80,14 +86,16 @@ var app = new Vue({
       // Update filter
       if (get_control_status(button)) {
         this.current_filter.slots.add(slot);
+        this.selected_slots.push(slot);
       } else {
         this.current_filter.slots.delete(slot);
+        this.selected_slots.splice(this.selected_slots.indexOf(slot), 1);
       }
       refresh_table(this);
     },
-    select_enchant(enchant, idx, event) {
-      //console.log(enchant);
-    }
+    items_for_selected_slot(slot) {
+      return slot_items.get(slot);
+    },
   }
 });
 

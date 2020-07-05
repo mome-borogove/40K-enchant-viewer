@@ -105,8 +105,7 @@
                    :fields="enchant_fields"
                    :items="enchants"
                    :filter="current_filter"
-                   :filter-function="filter_function"
-                   @row-clicked="select_enchant">
+                   :filter-function="filter_function">
             <template v-slot:cell(str)="row">
               <span :class="'text-'+row.item.quality"><i class="fas fa-square"></i></span>
               <span class="row-spacer"></span>
@@ -119,16 +118,30 @@
             </template>
             <template v-slot:row-details="row">
               <div class="details">
-                <p>Enchant ID: {{ row.item.name }}</p>
-                <p>Valid Items: {{
+                <p><span class="detail-header">Enchant ID:</span> {{ row.item.name }}</p>
+                <p><span class="detail-header">Valid Items:</span> {{
                      (row.item.items==undefined)?"(undefined)":row.item.items.join(", ")
                   }}</p>
-                <p>Exclusion Groups: {{
+                <p><span class="detail-header">Exclusion Groups:</span> {{
                      (row.item.groups==undefined)?"N/A":row.item.groups.join(", ")
                 }}</p>
               </div>
             </template>
           </b-table>
+        </div>
+      </b-col>
+    </b-row>
+    <b-row v-if="selected_slots.length>0" id="enabled_box">
+      <b-col>
+        <div>
+          <span v-if="selected_slots.length>0" class="enabled_header">
+            Filtered item types:
+          </span>
+          <span v-for="(slot,index) in selected_slots" class="enabled_items">
+            {{
+              items_for_selected_slot(slot) 
+            }}<span v-if="index != selected_slots.length-1">, </span>
+          </span>
         </div>
       </b-col>
     </b-row>

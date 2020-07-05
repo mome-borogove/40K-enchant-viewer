@@ -2,6 +2,8 @@
 
 import re
 
+from templates import ENCHANT_TEMPLATE
+
 def preformat_str(s):
   '''Replace markup information in lang strings.'''
   s = re.sub(r'\[[0-9A-Fa-f]{2}([0-9A-Fa-f]{6})\]',r"<font color='#\1'>",s)
@@ -11,6 +13,16 @@ def preformat_str(s):
   #s = re.sub(r'\[/[0-9A-Fa-f]{8}\]',r'',s)
   return s
 
+def format_item_types(item_types, item_type_map):
+  return [item_type_map[i] for i in item_types if i in item_type_map]
+
+def format_item_type_map(slot_to_item_types, item_type_map):
+  def format_slot_item(slot,item_types):
+    s = '[ "'+str(slot)+'"'
+    s+= ', '
+    s+= '"' + ', '.join(format_item_types(item_types, item_type_map)) + '" ]'
+    return s
+  return ',\n'.join([format_slot_item(*_) for _ in slot_to_item_types.items()])
 
 def format_enchant_desc(enchant, slot_map):
   key = enchant.desc
@@ -64,5 +76,21 @@ def format_enchant_desc(enchant, slot_map):
                  str(round(100*enchant.range[0],decimal_places))+'% to '+str(round(100*enchant.range[1],decimal_places))+'%',
                  s)  
 
+  return s
+
+
+def format_enchant(enchant, s_map):
+  desc_fmt = format_enchant_desc(enchant, s_map)
+  items = ','.join(["'"+str(item)+"'" for item in enchant.items])
+  slots = ','.join(["'"+str(slot)+"'" for slot in enchant.slots])
+  groups = ','.join(["'"+str(group)+"'" for group in enchant.groups])
+
+  s = ENCHANT_TEMPLATE.format(
+    name=enchant.name,
+    desc=desc_fmt,
+    items=items,
+    slots=slots,
+    quality=enchant.quality,
+    groups=groups)
   return s
 

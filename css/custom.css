@@ -13439,6 +13439,10 @@ input[type=color].form-control:disabled {
   vertical-align: text-bottom;
 }
 
+body {
+  font-weight: 300;
+}
+
 h1 {
   font-family: Orbitron, "Open Sans", sans-serif;
 }
@@ -13474,9 +13478,31 @@ div.details p {
   margin: 0px;
 }
 
+.detail-header {
+  color: #bbfefa;
+  font-weight: 400;
+}
+
 .row-spacer {
   display: inline-block;
   min-width: 4px;
+}
+
+#enabled_box {
+  margin-top: 10px;
+  border: 1px solid #1f5a56;
+}
+
+#enabled_box .col {
+  padding: 10px;
+}
+
+.enabled_header {
+  color: #bbfefa;
+}
+
+.enabled_items {
+  color: #b2b2b2;
 }
 
 #fixed_column {
