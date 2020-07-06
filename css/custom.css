@@ -13447,17 +13447,23 @@ h1 {
   font-family: Orbitron, "Open Sans", sans-serif;
 }
 
-h3 {
-  font-family: Orbitron, "Open Sans", sans-serif;
+.title {
+  padding-bottom: 10px;
+}
+
+.subtitle {
   color: #b2b2b2;
 }
 
-@media (hover: none) {
-  .btn:hover {
-    color: inherit;
-    background-color: inherit;
-  }
+.version {
+  color: #bbfefa;
 }
+
+.btn:hover {
+  color: inherit;
+  background-color: inherit;
+}
+
 #enchants td {
   border-top-color: #1f5a56;
 }

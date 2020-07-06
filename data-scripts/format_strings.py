@@ -8,9 +8,6 @@ def preformat_str(s):
   '''Replace markup information in lang strings.'''
   s = re.sub(r'\[[0-9A-Fa-f]{2}([0-9A-Fa-f]{6})\]',r"<font color='#\1'>",s)
   s = re.sub(r'\[/[0-9A-Fa-f]{8}\]',r"</font>",s)
-  #FIXME: NYI, just delete them
-  #s = re.sub(r'\[[0-9A-Fa-f]{8}\]',r'',s)
-  #s = re.sub(r'\[/[0-9A-Fa-f]{8}\]',r'',s)
   return s
 
 def format_item_types(item_types, item_type_map):
@@ -40,10 +37,24 @@ def format_enchant_desc(enchant, slot_map):
   if prop=='null' or prop=='undefined':
     prop = 'artifact_enchant'
 
+  # Neocore assumes an implicit '+' in front of most numbers. When they don't
+  # want one to show up, the string 'nembonusz' is added to the replacement
+  # pattern (Hungarian for 'no bonus'). We never add '+' to anything, so
+  # we remove the nembonusz where it appears.
+  s = re.sub(r'{nembonusz;', r'{', s)
+
   # FIXME: Movement speed in specific is screwed up. It's not listed as a %,
   # but sometimes it is. But not always. Yay.
-  # So if the string is {movement_speed}, it's actually a broken % value
-  # If it's {movement_speed,100}, it's a normal not-broken % value
+  #   movement_speed_in_green: 0.16, {movement_speed,100}
+  #   movement_speed_in_exposed: 0.16, {movement_speed}
+  # I have no idea how they're implementing this, but I don't seem to have the
+  # right information. So here's what we're doing:
+  # There are no enchants I'm aware of that give less than 1% movement speed.
+  # So we're going to ignore the format string altogether for movement speed.
+  # If it's less than 1, we're multiplying by 100. If not, leave it.
+  if re.search(r'{movement_speed}', s):
+    if enchant.range[1]<1:
+      s = re.sub(r'{movement_speed}', r'{movement_speed,100}', s)
 
   # Abilities are indexed improperly. The Lang entry is listed as:
   # "{ability_X} {ability}" but the enchant property is {ability_X}, so if we
@@ -58,21 +69,31 @@ def format_enchant_desc(enchant, slot_map):
     s = re.sub(r'{ability}', 'Virtue/Bloodlust/Psy Focus/Mindlink', s)
 
   # {deflect} really means "Deflect or Dodge"
-  s = re.sub(r'{deflect}', 'Deflect/Dodge', s)
+  s = re.sub(r'{deflect}', r'Deflect/Dodge', s)
+
+  # {resource} really means the class-specific zeal 
+  s = re.sub(r'{resource}', r'Focus/Adrenaline/Data-flux', s)
 
   # Replace the actual numeric property
+  # FIXME: The regex pattern '\*?' before the 100 multiplier is to fix a Neocore
+  # bug in loot_quality and loot_quantity which are improperly formatted as
+  # {loot_quality,*100} instead of {loot_quality,100}. We just ignore the
+  # extraneous '*'. When this is fixed upstream, this can be removed.
   if re.search(r'{'+prop,s):
     decimal_places = 2
-    if round(enchant.range[0],4)==round(enchant.range[1],4): # yay floating point
+    # We want to collapse ranges that are identical. But it's floating point.
+    if round(enchant.range[0],4)==round(enchant.range[1],4):
+      # Single value
       s = re.sub(r'\{'+prop+r'\}',
                  str(round(enchant.range[0],decimal_places)), s)
-      s = re.sub(r'\{'+prop+r',100\}',
+      s = re.sub(r'\{'+prop+r',\*?100\}',
                  str(round(100*enchant.range[0],decimal_places))+'%', s)
     else: 
+      # Range of values
       s = re.sub(r'\{'+prop+r'\}',
                  str(round(enchant.range[0],decimal_places))+' to '+str(round(enchant.range[1],decimal_places)),
                  s)  
-      s = re.sub(r'\{'+prop+r',100\}',
+      s = re.sub(r'\{'+prop+r',\*?100\}',
                  str(round(100*enchant.range[0],decimal_places))+'% to '+str(round(100*enchant.range[1],decimal_places))+'%',
                  s)  
 
@@ -84,6 +105,10 @@ def format_enchant(enchant, s_map):
   items = ','.join(["'"+str(item)+"'" for item in enchant.items])
   slots = ','.join(["'"+str(slot)+"'" for slot in enchant.slots])
   groups = ','.join(["'"+str(group)+"'" for group in enchant.groups])
+  if enchant.doubled:
+    doubled = 'true'
+  else:
+    doubled = 'false';
 
   s = ENCHANT_TEMPLATE.format(
     name=enchant.name,
@@ -91,6 +116,7 @@ def format_enchant(enchant, s_map):
     items=items,
     slots=slots,
     quality=enchant.quality,
+    doubled=doubled,
     groups=groups)
   return s
 

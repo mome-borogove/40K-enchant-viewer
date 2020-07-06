@@ -5,6 +5,8 @@
 ################################################################################
 
 DATA_TEMPLATE='''
+var __version__ = "{version}";
+
 function Slot(name) {{
   this.name = name
 }}
@@ -14,12 +16,13 @@ var slots = [
 ];
 
 // Object constructor
-function Enchant(name, str, items, slots, quality, groups, range) {{
+function Enchant(name, str, items, slots, quality, doubled, groups, range) {{
   this.name = name;
   this.str = str;
   this.items = items;
   this.slots = slots;
   this.quality = quality;
+  this.doubled = doubled;
   this.groups = groups;
   this.range = range;
 }}
@@ -41,5 +44,6 @@ ENCHANT_TEMPLATE='''new Enchant('{name}',
               [{items}],
               [{slots}],
               '{quality}',
+              {doubled},
               [{groups}]),
 '''

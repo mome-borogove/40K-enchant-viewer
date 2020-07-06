@@ -27,8 +27,19 @@
 
   <b-container id="app">
     <b-row>
-      <b-col>
-      <h1>W40K: Inquisitor Enchant Viewer</h1>
+      <b-col class="title">
+      <h1>40K: Inquisitor Enchant Viewer</h1>
+      <p><span class="subtitle">
+        By Mome Borogove,
+        updated for <span class="version">{{version}}</span>.
+        For questions, visit the 
+          <a href="https://discord.gg/inquisitor40k">
+          40K: Inquisitor Discord</a>.
+        For bugs and feedback, submit an issue on 
+          <a href="https://github.com/mome-borogove/40K-enchant-viewer/issues">
+          Github <i class="fab fa-github"></i>
+          </a>.
+      </p>
       </b-col>
     </b-row>
     <b-row>
@@ -67,19 +78,19 @@
             Clear Filters</button>
         </p>-->
         <p>
-          Enchant type: 
+          <!--Enchant type:-->
           <button type="button" class="btn btn-outline-primary shadow-none active"
                   @click="select_quality($event, 'primary')">
             Primary</button>
           <button type="button" class="btn btn-outline-secondary shadow-none"
                   @click="select_quality($event, 'secondary')">
             Secondary</button>
-          <!--<button type="button" class="btn btn-outline-relic shadow-none"
+          <button type="button" class="btn btn-outline-relic shadow-none"
                   @click="select_quality($event, 'relic')">
-            Relic</button>-->
-          <!--<button type="button" class="btn btn-outline-morality shadow-none"
+            Relic</button>
+          <button type="button" class="btn btn-outline-morality shadow-none"
                   @click="select_quality($event, 'morality')">
-            Morality</button>-->
+            Morality</button>
         </p>
         <p>
           <b-input-group prepend="Filter:">
@@ -118,6 +129,9 @@
             </template>
             <template v-slot:row-details="row">
               <div class="details">
+                <p v-if="row.item.doubled">
+                  <span class="detail-header">Values doubled if on a two-handed weapon.</span>
+                </p>
                 <p><span class="detail-header">Enchant ID:</span> {{ row.item.name }}</p>
                 <p><span class="detail-header">Valid Items:</span> {{
                      (row.item.items==undefined)?"(undefined)":row.item.items.join(", ")

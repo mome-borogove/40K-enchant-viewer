@@ -94,7 +94,7 @@ class FSM(object):
     for regex,func in self._machine[self._current_state]:
       m = re.match(regex,input)
       if m is not None:
-        self._trace('Matched '+str(regex))
+        self._trace('Matched '+str(regex)+' and executing '+str(func))
         # Allow people to define thunks when there's no logic needed
         if func is None:
           next_state = None

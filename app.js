@@ -32,8 +32,8 @@ var app = new Vue({
     ],
   },
   computed: {
-    selected_item_types: function() {
-      
+    version: function() {
+      return __version__; // defined in data.js
     }
   },
   methods: {

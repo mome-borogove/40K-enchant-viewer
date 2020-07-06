@@ -10,11 +10,13 @@ class Enchant():
   def __init__(self, name):
     self.name = name # str
     self.desc = None # str
+    self.skill = None # str
     self.desc_repl = None # str
     self.shortcuts = [] # [str, ...]
     self.slots = [] # [str, ...]
     self.items = [] # [str, ...]
     self.quality = None # str
+    self.doubled = False
     self.groups = [] # [str, ...]
     self.range = None # (low, high)
 
@@ -29,7 +31,7 @@ def capture_item(M,D):
   D['shortcuts'][M[0]] = M[1].split(',')
 
 def create_enchant(M,D):
-  D['temp'] = Enchant(M[0])
+  D['temp'] = Enchant(str.lower(M[0]))
 
 def translate_quality(M,D):
   qual = M[0]
@@ -70,6 +72,8 @@ machine = {
     (r'Property=(.*)', lambda M,D: setattr(D['temp'],'desc_repl',M[0])),
     (r'ArtifactTypes=(.*)', set_shortcuts),
     (r'EnchantQuality=(.*)', translate_quality),
+    (r'TwoHandedDouble=[^0]', lambda M,D: setattr(D['temp'],'doubled',True)),
+    (r'Skill=(.*)', lambda M,D: setattr(D['temp'],'skill',str.lower(M[0]))),
     (r'Groups=(.*)', lambda M,D: setattr(D['temp'],'groups',M[0].split(','))),
     (r'Values$', lambda: _S.VALUES),
     (r'}', commit_enchant),
