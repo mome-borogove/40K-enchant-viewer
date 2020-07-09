@@ -118,16 +118,16 @@
 				<eng>Boiling</eng>
 			</Burn_weapon>
 			<Crit_Slowgroup_armour>
-				<eng>Opression</eng>
+				<eng>Oppression</eng>
 			</Crit_Slowgroup_armour>
 			<Crit_Slowgroup_neural>
-				<eng>Opression</eng>
+				<eng>Oppression</eng>
 			</Crit_Slowgroup_neural>
 			<Crit_Slowgroup_signum>
-				<eng>Opression</eng>
+				<eng>Oppression</eng>
 			</Crit_Slowgroup_signum>
 			<Crit_Slowgroup_weapon>
-				<eng>Opression</eng>
+				<eng>Oppression</eng>
 			</Crit_Slowgroup_weapon>
 			<Crithit_armour>
 				<eng>Stride</eng>
@@ -373,8 +373,63 @@
 				<eng>Shattering</eng>
 			</Vulnerability_weapon>
 			<XP_Bonus_Signum>
-				<eng></eng>
+				<eng>Wisdom</eng>
 			</XP_Bonus_Signum>
+			<TA_Burner>
+				<eng>Scorching</eng>
+			</TA_Burner>
+			<TA_Combustor>
+				<eng>Combustion</eng>
+			</TA_Combustor>
+			<TA_Destroyer>
+				<eng>The Destroyer</eng>
+			</TA_Destroyer>
+			<TA_ElectroShield1>
+				<eng>Recycling</eng>
+			</TA_ElectroShield1>
+			<TA_Frontline>
+				<eng>the Vanguard</eng>
+			</TA_Frontline>
+			<TA_Kastelan>
+				<eng>Robotics</eng>
+			</TA_Kastelan>
+			<TA_Legion>
+				<eng>the Legion</eng>
+			</TA_Legion>
+			<TA_MinionDmg>
+				<eng>Control</eng>
+			</TA_MinionDmg>
+			<TA_MinionHP>
+				<eng>Leadership</eng>
+			</TA_MinionHP>
+			<TA_Necro>
+				<eng>Unity</eng>
+			</TA_Necro>
+			<TA_Omni1>
+				<eng>Wisdom</eng>
+			</TA_Omni1>
+			<TA_Omni2>
+				<eng>Attrition</eng>
+			</TA_Omni2>
+			<TA_Poison>
+				<eng>Force</eng>
+			</TA_Poison>
+			<TA_Stun>
+				<eng>Stampede</eng>
+			</TA_Stun>
+			<TA_Technomar>
+				<eng>Leadership</eng>
+			</TA_Technomar>
+			<TA_Turret>
+				<eng>Turreter</eng>
+			</TA_Turret>
+			<TA_Vivisector>
+				<eng>Bombing</eng>
+			</TA_Vivisector>
+
+
+
+
 		</Ancient>
 		<Blueprint>
 			<Format>
@@ -1050,6 +1105,9 @@
 			<techadeptsummon_buff_damage_reduce>
 				<eng>Equipment Module</eng>
 			</techadeptsummon_buff_damage_reduce>
+			<techadeptsummon_buff_damage>
+				<eng>Equipment Module</eng>
+			</techadeptsummon_buff_damage>
 			<techadeptsummon_buff_hp>
 				<eng>Equipment Module</eng>
 			</techadeptsummon_buff_hp>
@@ -1062,7 +1120,6 @@
 			<techadeptsummon_buff_shield>
 				<eng>Equipment Module</eng>
 			</techadeptsummon_buff_shield>
-
 
 			<TechAdeptSummon_Cremator_Crawler_weapon>
 				<eng>Weapon Module</eng>
@@ -1874,7 +1931,7 @@
 					<eng>Aether Blade</eng>
 				</Name>
 				<desc>
-					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6]. </eng>
+					<eng>[ff2bede6]One-Handed[/ff2bede6] weapon. Can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6]. </eng>
 				</desc>
 				<Journal>
 					<eng>A blade with a great mobility Skill, and a slot for a Psychic Power. Combine it with a Force Rod type weapon for maximum effect.</eng>
@@ -2619,7 +2676,7 @@
 					<eng>Ultimate Fortune</eng>
 				</Name>
 				<desc>
-					<eng>Significantly increases the chance of finding higher tier items in the next 3 missions.</eng>
+					<eng>Significantly increases the values of enchants on items found during the next 3 missions.</eng>
 				</desc>
 			</Consumable_LootQuality>
 			<Consumable_favour>
@@ -3303,7 +3360,7 @@
 				<desc>
 					<eng>Remnants of mysterious machines, possibly from the Dark Age of Technology.\nCan be exchanged for Favour with Custodian Rebus.</eng>
 				</desc>
-			</token_scrap>			
+			</token_scrap>
 		</Items>
 		<Enchantment>
 			<critical_hit_chance>
@@ -4234,7 +4291,7 @@
 			</Reflect_damage_based_on_Warp_heat>
 			<Chance_to_Area_damage_based_on_Warp_Heat>
 				<desc>
-					<eng>[ff2bede6]+1%[/ff2bede6] Chance for every 5 points of Current Warp Heat for enemies to explode on Kill</eng>
+					<eng>[ff2bede6]+1%[/ff2bede6] Chance for every 5 points of Current Warp Heat for enemies to explode on Kill dealing [ff2bede6]100%[/ff2bede6] of the Killing Blow's damage</eng>
 				</desc>
 			</Chance_to_Area_damage_based_on_Warp_Heat>
 			<Chance_to_reduce_Warp_Heat_Cost>
@@ -4301,7 +4358,7 @@
 				<desc>
 					<eng>Hitting an enemy affected by [fffe7272]Inferno[/fffe7272] has an 5% chance to deal 100% of the original hit’s damage in a small area, applying [fffe7272]Inferno[/fffe7272]</eng>
 				</desc>
-			</Area_Inferno_on_Damage>		
+			</Area_Inferno_on_Damage>
 			<shieldhp_regen>
 				<desc>
 					<eng>{shield_hp_regeneration,100} regeneration of the Energy Shield</eng>
@@ -4621,7 +4678,7 @@
 			</Runeword_5_5>
 			<Runeword_5_6>
 				<desc>
-					<eng>The [fffffdcb]Spread[/fffffdcb] of any skill is reduced to {fix_shot_spread}� .</eng>
+					<eng>The [fffffdcb]Spread[/fffffdcb] of any skill is reduced to {fix_shot_spread}</eng>
 				</desc>
 			</Runeword_5_6>
 			<Runeword_5_7>
@@ -4672,7 +4729,7 @@
 			</Runeword_6_8>
 			<Runeword_6_9>
 				<desc>
-					<eng>Damage is halved for Physical Damage Projectiles, but 3 projectiles are fired instead of 1 on Skill use.</eng>
+					<eng>For each projectile with Physical Damage, two additional projectiles are created in a 10° cone but Critical Hit chance is reduced by 30% (this effect is not marked on the character sheet)</eng>
 				</desc>
 			</Runeword_6_9>
 

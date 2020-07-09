@@ -24,7 +24,7 @@ def format_item_type_map(slot_to_item_types, item_type_map):
 def format_enchant_desc(enchant, slot_map):
   key = enchant.desc
   if key not in slot_map:
-    return '(No name found:) '+str(key)
+    return '(No name found) '+str(key)
   s = slot_map[enchant.desc]
 
   # Add numeric values to enchant description
