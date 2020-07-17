@@ -11,13 +11,13 @@ def preformat_str(s):
   return s
 
 def format_item_types(item_types, item_type_map):
-  return [item_type_map[i] for i in item_types if i in item_type_map]
+  return [str(item_type_map[i]) for i in item_types if i in item_type_map]
 
 def format_item_type_map(slot_to_item_types, item_type_map):
   def format_slot_item(slot,item_types):
     s = '[ "'+str(slot)+'"'
     s+= ', '
-    s+= '"' + ', '.join(format_item_types(item_types, item_type_map)) + '" ]'
+    s+= '[' + ', '.join(['"'+s+'"' for s in format_item_types(item_types, item_type_map)]) + '] ]'
     return s
   return ',\n'.join([format_slot_item(*_) for _ in slot_to_item_types.items()])
 

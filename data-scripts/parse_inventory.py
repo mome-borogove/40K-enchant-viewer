@@ -27,6 +27,8 @@ def commit_item(M,D):
     # Keep relic enchants
     if (('godlike' in item['quality']) and ('enchants' in item)):
       D['relic'].append(item)
+    elif (('biggodlike' in item['quality']) and ('enchants' in item)):
+      D['archeo'].append(item)
     elif (('morality' in item['quality']) and ('enchants' in item)):
       D['morality'].append(item)
   # default: drop the entry
@@ -66,11 +68,11 @@ machine = {
 def parse_inventory(file):
   fsm = FSM(_S, _S.TOP, [_S.TOP], machine)
   fsm.reset()
-  fsm.data = {'current_item': {}, 'relic': [], 'morality': []}
+  fsm.data = {'current_item': {}, 'relic': [], 'morality': [], 'archeo': []}
   #fsm.tracing(True)
 
   fsm.parse(file)
-  return fsm.data['relic'], fsm.data['morality']
+  return fsm.data['relic'], fsm.data['archeo'], fsm.data['morality']
 
 
 if __name__=='__main__':

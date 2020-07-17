@@ -7,12 +7,16 @@
 DATA_TEMPLATE='''
 var __version__ = "{version}";
 
-function Slot(name) {{
-  this.name = name
-}}
-
-var slots = [
+var SLOTS = [
 {slots}
+];
+
+var RECT_SLOTS = [
+  "main_implant",
+  "body",
+  "inoculator",
+  "weapon",
+  "offhand",
 ];
 
 // Object constructor

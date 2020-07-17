@@ -14,43 +14,64 @@ function toggle_control_status(control, tag='active') {
 function get_control_status(control, tag='active') {
   return control.classList.contains(tag);
 }
-function refresh_table(app) {
-  // Vue doesn't detect object mutation. Manually trigger refresh.
-  app.$root.$emit('bv::refresh::table', 'enchants');
-}
 
 var app = new Vue({
   el: "#app",
   data: {
     enchants: enchants,
-    current_filter: empty_filter,
-    selected_slots: [],
-    pattern: null, // always all-lowercase
+    F_pattern: "",
+    F_slots: [],
+    F_qualities: ['primary'],
+    F_items: [],
     enchant_fields: [
       { key:'str', label:'Enchant Name', sortable:false },
       { key:'show_details', label:'', sortable:false },
     ],
   },
   computed: {
+    all_slots: function() {
+      return SLOTS;
+    },
+    rect_slots: function() {
+      return RECT_SLOTS;
+    },
     version: function() {
       return __version__; // defined in data.js
+    },
+    current_items: function() {
+      return this.F_slots
+                 .map(s => slot_items.get(s))
+                 .flat()
+                 .filter((s,i,a) => a.indexOf(s)==i)
+                 .sort();
     }
   },
   methods: {
-    filter_function(enchant, filter) {
+    filter_function(enchant, args) {
+      let pattern=args[0];
+      let slots=args[1];
+      let qualities=args[2];
+      let items=args[3];
       // Filter by quality
-      if (!filter.qualities.has(enchant.quality)) {
+      if (!qualities.includes(enchant.quality)) {
         return false;
       }
       // Filter by slot
-      if (filter.slots.size>0) {
-        if (!enchant.slots.some(x => filter.slots.has(x))) {
-          return false;
+      if (slots.length>0) {
+        // Filter by item if any are selected
+        if (items.length>0) {
+          if (!enchant.items.some(x => items.includes(x))) {
+            return false;
+          }
+        } else {
+          if (!enchant.slots.some(x => slots.includes(x))) {
+            return false;
+          }
         }
       }
       // Filter by text
-      if (filter.pattern &&
-         !enchant.str.toLowerCase().includes(filter.pattern)) {
+      if (pattern &&
+         !enchant.str.toLowerCase().includes(pattern.toLowerCase())) {
         return false;
       }
 
@@ -60,38 +81,40 @@ var app = new Vue({
       this.current_filter = empty_filter;
     },
     select_pattern(pattern) {
-      this.current_filter.pattern = pattern.toLowerCase();
-      refresh_table(this);
+      this.F_pattern = pattern.toLowerCase();
     },
     clear_pattern(pattern) {
-      this.pattern = null;
-      this.select_pattern("");
+      this.F_pattern = "";
     },
-    select_quality(event, quality) {
-      let button = event.target;
-      // Update control
-      toggle_control_status(button);
+    toggle_quality(quality) {
       // Update filter
-      if (get_control_status(button)) {
-        this.current_filter.qualities.add(quality);
+      if (this.F_qualities.includes(quality)) {
+        this.F_qualities.splice(this.F_qualities.indexOf(quality), 1);
       } else {
-        this.current_filter.qualities.delete(quality);
+        this.F_qualities.push(quality);
       }
-      refresh_table(this);
     },
-    select_slot(event, slot) {
-      let button = event.target;
-      // Update control
-      toggle_control_status(button);
-      // Update filter
-      if (get_control_status(button)) {
-        this.current_filter.slots.add(slot);
-        this.selected_slots.push(slot);
+    toggle_slot(slot) {
+      if (this.F_slots.includes(slot)) {
+        this.F_slots.splice(this.F_slots.indexOf(slot), 1);
+        // Also remove all selected items from this slot.
+        let items = this.items_for_selected_slot(slot);
+        for(let i=0; i<items.length; i++) {
+          let index = this.F_items.indexOf(items[i]);
+          if (index>=0) {
+            this.F_items.splice(index,1);
+          }
+        }
       } else {
-        this.current_filter.slots.delete(slot);
-        this.selected_slots.splice(this.selected_slots.indexOf(slot), 1);
+        this.F_slots.push(slot);
       }
-      refresh_table(this);
+    },
+    toggle_item(item) {
+      if (this.F_items.includes(item)) {
+        this.F_items.splice(this.F_items.indexOf(item), 1);
+      } else {
+        this.F_items.push(item);
+      }
     },
     items_for_selected_slot(slot) {
       return slot_items.get(slot);

@@ -55,11 +55,10 @@ h1 {
 // FIXME: This apparently still isn't working, so I'm disabling *all* button
 //        hover effects until I understand the faulty interaction.
 //@media (hover: none) {
-  .btn:hover {
-    color: inherit;
-    background-color: inherit;
-  }
-//}
+.btn:hover {
+  color: inherit;
+  background-color: inherit;
+}
 
 // Table-related formatting
 #enchants td {
@@ -110,14 +109,22 @@ div.details p {
   color: $teal_light;
 }
 
-.enabled_items {
-  color: $grayish;
+
+.item-button {
+  font-size: 75%;
+  line-height: 1;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 10rem;
 }
 
 // Slot image map and highlighting
 
 #fixed_column {
   max-width: 261px;
+  min-height: 700px; // leave enough space for the reset button
   padding: 0;
   border: 1px solid $teal_dark;
 }
@@ -156,3 +163,9 @@ div.details p {
   border-color: $teal_light;
 }
 
+.clear-slots {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin: 5px;
+}

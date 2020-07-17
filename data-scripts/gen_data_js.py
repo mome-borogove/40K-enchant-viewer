@@ -6,7 +6,7 @@ import sys
 from slots import SLOTS, all_items, construct_slot_map, expand_items, items_from_slots, slots_from_items, filter_shortcuts
 from format_strings import preformat_str, format_enchant_desc, format_enchant, format_item_types, format_item_type_map
 from templates import DATA_TEMPLATE
-from parse_enchants import parse_enchants
+from parse_enchants import parse_enchants, Enchant
 from parse_langs import parse_langs
 from parse_inventory import parse_inventory
 
@@ -18,11 +18,12 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   with open(lang_file) as f:
     ench_str_map,item_type_map = parse_langs(f)
   with open(inventory_file) as f:
-    relic_items, morality_items = parse_inventory(f)
+    relic_items, archeo_items, morality_items = parse_inventory(f)
 
   print(len(enchants),'enchants inloaded')
   print(len(ench_str_map),'strings inloaded')
   print(len(relic_items),'relic items inloaded')
+  print(len(archeo_items),'archeo items inloaded')
   print(len(morality_items),'morality items inloaded')
 
   # Filter out some item types (i.e., TA construct items)
@@ -34,38 +35,73 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   # Relic and morality enchants are invalid in enchantments.cfg. Instead, we
   # have to reconstruct them from the individual items in inventoryitems.cfg.
   for enchant in enchants:
-    if enchant.quality=='relic' or enchant.quality=='morality':
+    if enchant.quality=='godlike' or enchant.quality=='morality':
       enchant.shortcuts = [] # First, blow away all false maps
-  # Create an enchant map for relic and morality items
-  special_enchant_map = {}
-  for item in relic_items+morality_items:
-    for enchant in item['enchants']:
-      if enchant not in special_enchant_map:
-        special_enchant_map[enchant] = []
-      special_enchant_map[enchant].append(item['Type'])
-  
+  # Create enchant maps for relic, archeo, and morality items
+  relic_enchant_map = {}
+  archeo_enchant_map = {}
+  morality_enchant_map = {}
+  for map,items in [(relic_enchant_map,relic_items),
+                   (archeo_enchant_map,archeo_items),
+                   (morality_enchant_map,morality_items)]:
+    for item in items:
+      for enchant in item['enchants']:
+        if enchant not in map:
+          map[enchant] = []
+        map[enchant].append(item['Type'])
+  print('relic map:',len(relic_enchant_map),'enchant types')
+  print('archeo map:',len(archeo_enchant_map),'enchant types')
+  print('morality map:',len(morality_enchant_map),'enchant types')
+
+  new_enchants = []
   for enchant in enchants:
-    if enchant.quality=='relic' or enchant.quality=='morality':
-      if enchant.name in special_enchant_map:
-        enchant.items = special_enchant_map[enchant.name]
-        if enchant.quality=='morality':
-          print(enchant)
+    if enchant.quality=='godlike':
+      if enchant.name in relic_enchant_map:
+        enchant.items = relic_enchant_map[enchant.name]
+        enchant.quality = 'relic'
+        new_enchants.append(enchant)
+      if enchant.name in archeo_enchant_map:
+        # We create a whole separate enchant for archeotech enchants,
+        # otherwise we can't distinguish between relic and archeo enchants.
+        e = Enchant.copy(enchant)
+        e.items = archeo_enchant_map[enchant.name]
+        e.quality = 'archeo'
+        new_enchants.append(e)
+      if enchant.name not in relic_enchant_map and enchant.name not in archeo_enchant_map:
+        # Enchants that are ancient-only or simply left unused in the game
+        # appear here.
+        enchant.items = []
+        print('Warning: ignoring unused enchant '+str(enchant.name))
+    elif enchant.quality=='morality':
+      if enchant.name in morality_enchant_map:
+        enchant.items = morality_enchant_map[enchant.name]
+        new_enchants.append(enchant)
       else:
-        # Neocore doesn't distinguish between 'godlike' and 'biggodlike'
-        # enchants in enchantments.cfg, but they *do* distinguish items
-        # in inventoryitems.cfg, so some 'godlike' enchants only appear
-        # on 'biggodlike' items.
+        # Enchants that are ancient-only or simply left unused in the game
+        # appear here.
         enchant.items = []
         print('Warning: ignoring unused enchant '+str(enchant.name))
     elif enchant.quality=='primary' or enchant.quality=='secondary':
       enchant.items = expand_items(enchant.shortcuts, shortcuts)
+      new_enchants.append(enchant)
     else:
+      # Enchants that are ancient-only or simply left unused in the game
+      # appear here.
       enchant.items = []
+      print('Warning: ignoring unused enchant '+str(enchant.name))
+
+  # Technically, we only needed to add the new archeo ones here, but if we did
+  # that, all the archeotech items appear at the bottom of the list. I kind of
+  # like keeping it in Neocore-order.
+  enchants = new_enchants
+
+  for enchant in enchants:
     enchant.slots = slots_from_items(enchant.items, slot_map)
     enchant.items = format_item_types(enchant.items, item_type_map)
 
+
   # Filter out enchants that no longer have any valid item types. These will
-  # just confuse people. (They do exist, but just on archeo or ancient items)
+  # just confuse people.
   enchants = [_ for _ in enchants if len(_.items)>0]
 
   enchant_data = ''
@@ -73,7 +109,7 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
     enchant_data += format_enchant(enchant, ench_str_map)
 
   # format each slot for javascript
-  slot_strings = '\n'.join(["  Slot('{0}'),".format(s) for s in SLOTS])
+  slot_strings = '\n'.join(['  "'+s+'",' for s in SLOTS])
 
   # create the slot->item types javascript map
   slot_to_item_types = {s:items_from_slots([s], slot_map, shortcuts) for s in SLOTS}

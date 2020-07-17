@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
+from copy import deepcopy
 from enum import Enum
 from fsm import FSM
 
 # Exclude psalms, etc.
-VALID_QUALITY=['primary','secondary','relic','morality']
+VALID_QUALITY=['primary','secondary','godlike','morality']
 
 class Enchant():
   def __init__(self, name):
@@ -20,6 +21,13 @@ class Enchant():
     self.groups = [] # [str, ...]
     self.range = None # (low, high)
 
+  @classmethod
+  def copy(Cls, enchant):
+    e = Cls(enchant.name)
+    for attr in ['desc','skill','desc_repl','shortcuts','slots','items','quality','doubled','groups','range']:
+      setattr(e, attr, deepcopy(getattr(enchant, attr)))
+    return e
+
   def __str__(self):
     s = '<Enchant '+self.name+' '+str((self.desc,self.desc_repl,self.shortcuts,self.quality,self.groups,self.range))+'>'
     return s
@@ -33,12 +41,12 @@ def capture_item(M,D):
 def create_enchant(M,D):
   D['temp'] = Enchant(str.lower(M[0]))
 
-def translate_quality(M,D):
-  qual = M[0]
-  T = { 'godlike':'relic' }
-  if qual in T:
-    qual = T[qual]
-  D['temp'].quality = qual
+def set_value(k,v,D):
+  setattr(D['temp'],k,v)
+
+#def translate_quality(M,D):
+#  qual = M[0]
+#  D['temp'].quality = qual
 
 def commit_enchant(M,D):
   if D['temp'].quality in VALID_QUALITY:
@@ -68,13 +76,13 @@ machine = {
   _S.ENCHANT: [
     (r'{', None),
     (r'Name=(.*)', create_enchant),
-    (r'NameID=(.*)', lambda M,D: setattr(D['temp'],'desc',str.lower(M[0]))),
+    (r'NameID=(.*)', lambda M,D: set_value('desc',str.lower(M[0]),D)),
     (r'Property=(.*)', lambda M,D: setattr(D['temp'],'desc_repl',M[0])),
     (r'ArtifactTypes=(.*)', set_shortcuts),
-    (r'EnchantQuality=(.*)', translate_quality),
-    (r'TwoHandedDouble=[^0]', lambda M,D: setattr(D['temp'],'doubled',True)),
-    (r'Skill=(.*)', lambda M,D: setattr(D['temp'],'skill',str.lower(M[0]))),
-    (r'Groups=(.*)', lambda M,D: setattr(D['temp'],'groups',M[0].split(','))),
+    (r'EnchantQuality=(.*)', lambda M,D: set_value('quality',str.lower(M[0]),D)),
+    (r'TwoHandedDouble=[^0]', lambda M,D: set_value('doubled',True,D)),
+    (r'Skill=(.*)', lambda M,D: set_value('skill',str.lower(M[0]),D)),
+    (r'Groups=(.*)', lambda M,D: set_value('groups',M[0].split(','),D)),
     (r'Values$', lambda: _S.VALUES),
     (r'}', commit_enchant),
     (r'.*', None),

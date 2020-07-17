@@ -13513,12 +13513,19 @@ div.details p {
   color: #bbfefa;
 }
 
-.enabled_items {
-  color: #b2b2b2;
+.item-button {
+  font-size: 75%;
+  line-height: 1;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 10rem;
 }
 
 #fixed_column {
   max-width: 261px;
+  min-height: 700px;
   padding: 0;
   border: 1px solid #1f5a56;
 }
@@ -13596,6 +13603,13 @@ div.details p {
 .area:hover {
   border-style: solid;
   border-color: #bbfefa;
+}
+
+.clear-slots {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=custom.css.map */
