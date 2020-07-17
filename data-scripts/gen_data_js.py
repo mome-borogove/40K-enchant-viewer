@@ -48,7 +48,10 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
       for enchant in item['enchants']:
         if enchant not in map:
           map[enchant] = []
-        map[enchant].append(item['Type'])
+        t = item['Type']
+        # Thanks to PsyHo_GK for reporting this bug
+        if t not in map[enchant]:
+          map[enchant].append(t)
   print('relic map:',len(relic_enchant_map),'enchant types')
   print('archeo map:',len(archeo_enchant_map),'enchant types')
   print('morality map:',len(morality_enchant_map),'enchant types')
