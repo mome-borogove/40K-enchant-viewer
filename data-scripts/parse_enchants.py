@@ -20,6 +20,7 @@ class Enchant():
     self.doubled = False
     self.groups = [] # [str, ...]
     self.range = None # (low, high)
+    self.no_roll = False
 
   @classmethod
   def copy(Cls, enchant):
@@ -42,6 +43,8 @@ def create_enchant(M,D):
   D['temp'] = Enchant(str.lower(M[0]))
 
 def set_value(k,v,D):
+  if k=='no_roll':
+    print('No roll:',D['temp'].name)
   setattr(D['temp'],k,v)
 
 #def translate_quality(M,D):
@@ -83,6 +86,7 @@ machine = {
     (r'TwoHandedDouble=[^0]', lambda M,D: set_value('doubled',True,D)),
     (r'Skill=(.*)', lambda M,D: set_value('skill',str.lower(M[0]),D)),
     (r'Groups=(.*)', lambda M,D: set_value('groups',M[0].split(','),D)),
+    (r'NoRoll=1', lambda M,D: set_value('no_roll',True,D)),
     (r'Values$', lambda: _S.VALUES),
     (r'}', commit_enchant),
     (r'.*', None),

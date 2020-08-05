@@ -107,6 +107,9 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   # just confuse people.
   enchants = [_ for _ in enchants if len(_.items)>0]
 
+  # Also filter out enchants that cannot roll. No sense in listing them.
+  enchants = [_ for _ in enchants if not _.no_roll]
+
   enchant_data = ''
   for enchant in enchants:
     enchant_data += format_enchant(enchant, ench_str_map)
