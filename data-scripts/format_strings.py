@@ -74,6 +74,14 @@ def format_enchant_desc(enchant, slot_map):
   # {resource} really means the class-specific zeal 
   s = re.sub(r'{resource}', r'Focus/Adrenaline/Data-flux', s)
 
+  # FIXME: Neocore released a bug in 2.3.1 where the string for an AoE effect
+  # has the wrong substitution string. This should be changed when it gets
+  # fixed, but hopefully I've written it defensively so it won't break if I
+  # forget to do it.
+  if (str.lower(enchant.name)=='aoe_damage_bonus_major' and
+      re.search(r'{aoe_damage_bonus,100}',s)):
+    s = re.sub(r'{aoe_damage_bonus,100}', r'{damage,100}', s)
+
   # Replace the actual numeric property
   # FIXME: The regex pattern '\*?' before the 100 multiplier is to fix a Neocore
   # bug in loot_quality and loot_quantity which are improperly formatted as
@@ -96,6 +104,9 @@ def format_enchant_desc(enchant, slot_map):
       s = re.sub(r'\{'+prop+r',\*?100\}',
                  str(round(100*enchant.range[0],decimal_places))+'% to '+str(round(100*enchant.range[1],decimal_places))+'%',
                  s)  
+
+  if '{' in s or '}' in s:
+    print('WARNING: Unsubstituted value in string:',s)
 
   return s
 

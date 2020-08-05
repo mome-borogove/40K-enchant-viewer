@@ -1254,7 +1254,7 @@
 					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a one handed [ff2bede6]Melee or Psyker Weapon[/ff2bede6] or a [ff2bede6]Shield[/ff2bede6]. </eng>
 				</desc>
 				<Journal>
-					<eng>A decent weapon for most single target engagements, even though it lacks the punch to knock down armored enemies, it still has some CC capabilities.</eng>
+					<eng>A decent weapon for most single target engagements, even though it lacks the punch to knock down armoured enemies, it still has some CC capabilities.</eng>
 				</Journal>
 			</Autopistol>
 			<Bolt_Pistol>
@@ -1265,7 +1265,7 @@
 					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a one handed [ff2bede6]Melee or Psyker Weapon[/ff2bede6] or a [ff2bede6]Shield[/ff2bede6]. </eng>
 				</desc>
 				<Journal>
-					<eng>The big brother of Autopistol, can even be useful against armored. Though it's still limited by its size, dual wielding it can compensate any weakness it might have.</eng>
+					<eng>The big brother of Autopistol, can even be useful against armoured. Though it's still limited by its size, dual wielding it can compensate any weakness it might have.</eng>
 				</Journal>
 			</Bolt_Pistol>
 			<Hand_flamer>
@@ -1292,7 +1292,7 @@
 					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a one handed [ff2bede6]Melee or Psyker Weapon[/ff2bede6] or a [ff2bede6]Shield[/ff2bede6]. </eng>
 				</desc>
 				<Journal>
-					<eng>A well rounded basic weapon, it can be used against most targets though it sorely lacks armor piercing and CC capabilities.</eng>
+					<eng>A well rounded basic weapon, it can be used against most targets though it sorely lacks armour piercing and CC capabilities.</eng>
 				</Journal>
 			</Laspistol>
 			<Grav_pistol>
@@ -1303,7 +1303,7 @@
 					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a one handed [ff2bede6]Melee or Psyker Weapon[/ff2bede6] or a [ff2bede6]Shield[/ff2bede6]. </eng>
 				</desc>
 				<Journal>
-					<eng>An anti-armor weapon that can rip even the toughest opponents to shreds. Augmented with good CC capabilities, its only weakness might be a big crowd of attackers.</eng>
+					<eng>An anti-armour weapon that can rip even the toughest opponents to shreds. Augmented with good CC capabilities, its only weakness might be a big crowd of attackers.</eng>
 				</Journal>
 			</Grav_pistol>
 			<Inferno_pistol>
@@ -1331,7 +1331,7 @@
 					<eng>Power Axe</eng>
 				</Name>
 				<Journal>
-					<eng>A versatile one handed weapon with decent damage against both armored and unarmored targets but it sorely lacks CC.</eng>
+					<eng>A versatile one handed weapon with decent damage against both armoured and unarmoured targets but it sorely lacks CC.</eng>
 				</Journal>
 			</Power_axe>
 			<Power_hammer>
@@ -1350,7 +1350,7 @@
 					<eng>Chainsword</eng>
 				</Name>
 				<Journal>
-					<eng>A very effective weapon against unarmored enemies but struggles against armored enemies.</eng>
+					<eng>A very effective weapon against unarmoured enemies but struggles against armoured enemies.</eng>
 				</Journal>
 			</Chainsword>
 			<Storm_shield>
@@ -1375,7 +1375,7 @@
 					<eng>Death Cult Blade</eng>
 				</Name>
 				<Journal>
-					<eng>A balanced melee weapon, it is really useful for clearing out soft targets, though it can have problems when faceing heavily armored opponents.</eng>
+					<eng>A balanced melee weapon, it is really useful for clearing out soft targets, though it can have problems when faceing heavily armoured opponents.</eng>
 				</Journal>
 			</Death_cult_blade>
 			<Arc_blade>
@@ -1383,7 +1383,7 @@
 				<eng>Arc Blade</eng>
 				</Name>
 				<Journal>
-					<eng>A good balance between single and multitarget combat, with a speck of mobility. Can be used in almost every combination though it's not really effective against armor.</eng>
+					<eng>A good balance between single and multitarget combat, with a speck of mobility. Can be used in almost every combination though it's not really effective against armour.</eng>
 				</Journal>
 			</Arc_blade>
 			<Null_rod>
@@ -1391,7 +1391,7 @@
 					<eng>Null Rod</eng>
 				</Name>
 				<Journal>
-					<eng>An anti-Psyker weapon that excels in controlling enemies with all kinds of negative effect. It has good damage potential against unarmored targets.</eng>
+					<eng>An anti-Psyker weapon that excels in controlling enemies with all kinds of negative effect. It has good damage potential against unarmoured targets.</eng>
 				</Journal>
 			</Null_rod>
 
@@ -1400,7 +1400,7 @@
 					<eng>Autogun</eng>
 				</Name>
 				<Journal>
-					<eng>A basic gun that is good against unarmored crowds but can be extremely weak against armored enemies.</eng>
+					<eng>A basic gun that is good against unarmoured crowds but can be extremely weak against armoured enemies.</eng>
 				</Journal>
 			</Autogun>
 			<Shotgun>
@@ -1408,7 +1408,7 @@
 					<eng>Shotgun</eng>
 				</Name>
 				<Journal>
-					<eng>Close-range weapon with a massive amount of CC skills. Extremely potent against hordes of enemies, but not really useful against distant and/or armored enemies.</eng>
+					<eng>Close-range weapon with a massive amount of CC skills. Extremely potent against hordes of enemies, but not really useful against distant and/or armoured enemies.</eng>
 				</Journal>
 			</Shotgun>
 			<Boltgun>
@@ -1416,7 +1416,7 @@
 					<eng>Boltgun</eng>
 				</Name>
 				<Journal>
-					<eng>A good balance between single and multitarget combat, with a speck of mobility. Can be used in almost every combination though it's not really effective against armor.</eng>
+					<eng>A good balance between single and multitarget combat, with a speck of mobility. Can be used in almost every combination though it's not really effective against armour.</eng>
 				</Journal>
 			</Boltgun>
 			<Plasma_gun>
@@ -1432,7 +1432,7 @@
 					<eng>Grav-Gun</eng>
 				</Name>
 				<Journal>
-					<eng>An anti-armor weapon that can rip even the toughest opponenst to shreds. Augmented with good CC capabilities, its only weakness might be a big crowd of attackers.</eng>
+					<eng>An anti-armour weapon that can rip even the toughest opponenst to shreds. Augmented with good CC capabilities, its only weakness might be a big crowd of attackers.</eng>
 				</Journal>
 			</Grav_gun>
 			<Lasgun>
@@ -1440,7 +1440,7 @@
 					<eng>Lasgun</eng>
 				</Name>
 				<Journal>
-					<eng>A well rounded basic gun, it can be useful in most situations though it sorely lacks armor piercing and CC capabilities.</eng>
+					<eng>A well rounded basic gun, it can be useful in most situations though it sorely lacks armour piercing and CC capabilities.</eng>
 				</Journal>
 			</Lasgun>
 			<Melta_gun>
@@ -1448,7 +1448,7 @@
 					<eng>Melta Gun</eng>
 				</Name>
 				<Journal>
-					<eng>Medium range anti-armor gun that also excels at burning away the unwanted members of the enemy force. </eng>
+					<eng>Medium range anti-armour gun that also excels at burning away the unwanted members of the enemy force. </eng>
 				</Journal>
 			</Melta_gun>
 
@@ -1490,7 +1490,7 @@
 					<eng>Assassin Power Sword</eng>
 				</Name>
 				<Journal>
-					<eng>A combo attack based weapon, using it to utilize the combos even compensates its weakness against armor.</eng>
+					<eng>A combo attack based weapon, using it to utilize the combos even compensates its weakness against armour.</eng>
 				</Journal>
 			</Assassin_power_sword>
 			<Carthean_sword>
@@ -1506,7 +1506,7 @@
 					<eng>Arc Sword</eng>
 				</Name>
 				<Journal>
-					<eng>A good balance between single and multitarget combat, with a speck of mobility. Can be used in almost every combination though it's not really effective against armor.</eng>
+					<eng>A good balance between single and multitarget combat, with a speck of mobility. Can be used in almost every combination though it's not really effective against armour.</eng>
 				</Journal>
 			</Arc_sword>
 
@@ -1523,7 +1523,7 @@
 					<eng>Eviscerator</eng>
 				</Name>
 				<Journal>
-					<eng>A powerful anti-infantry weapon, can wreak havoc among unarmored bodies, but suffers against armored opponents.</eng>
+					<eng>A powerful anti-infantry weapon, can wreak havoc among unarmoured bodies, but suffers against armoured opponents.</eng>
 				</Journal>
 			</Eviscerator>
 			<Greataxe>
@@ -1531,7 +1531,7 @@
 					<eng>Greataxe</eng>
 				</Name>
 				<Journal>
-					<eng>A powerful anti-infantry weapon, can wreak havoc among unarmored bodies, but suffers against armored opponents.</eng>
+					<eng>A powerful anti-infantry weapon, can wreak havoc among unarmoured bodies, but suffers against armoured opponents.</eng>
 				</Journal>
 			</Greataxe>
 			<Greatsword>
@@ -1539,7 +1539,7 @@
 					<eng>Greatsword</eng>
 				</Name>
 				<Journal>
-					<eng>A reliable close combat weapon that can be excellent against crowds of enemies, as well as armored bosses, but it lacks mobility and CC abilities. </eng>
+					<eng>A reliable close combat weapon that can be excellent against crowds of enemies, as well as armoured bosses, but it lacks mobility and CC abilities. </eng>
 				</Journal>
 			</Greatsword>
 			<Terran_greatsword_warzone>
@@ -1681,7 +1681,7 @@
 					<eng>Multi-Melta</eng>
 				</Name>
 				<Journal>
-					<eng>A massive anti-armor gun that breaks even the heavies machinery the enemy can deploy. Excellent armor piercing and area damage, but lacking in terms of mobility and CC.</eng>
+					<eng>A massive anti-armour gun that breaks even the heavies machinery the enemy can deploy. Excellent armour piercing and area damage, but lacking in terms of mobility and CC.</eng>
 				</Journal>
 			</Multi_melta>
 			<Signum>
@@ -1879,7 +1879,7 @@
 					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Melee Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6]. </eng>
 				</desc>
 				<Journal>
-					<eng>A basic Psyker weapon that should not be overlooked. Its powerful ranged abilities can wreak quite a havoc among weaker enemies, if augmented with armor piercing Psychic Powers, it can excel in any situation.</eng>
+					<eng>A basic Psyker weapon that should not be overlooked. Its powerful ranged abilities can wreak quite a havoc among weaker enemies, if augmented with armour piercing Psychic Powers, it can excel in any situation.</eng>
 				</Journal>
 			</Force_rod>
 			<Force_rod_2>
@@ -1890,7 +1890,7 @@
 					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Melee Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6]. </eng>
 				</desc>
 				<Journal>
-					<eng>Long range area clearing monster. With the decent combination of shorter ranged and/or armor piercing Psychic Powers its weaknesses can be compensated.</eng>
+					<eng>Long range area clearing monster. With the decent combination of shorter ranged and/or armour piercing Psychic Powers its weaknesses can be compensated.</eng>
 				</Journal>
 			</Force_rod_2>
 			<Force_rod_3>
@@ -1901,7 +1901,7 @@
 					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Melee Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6]. </eng>
 				</desc>
 				<Journal>
-					<eng>Excellent weapon for clearing huge groups of enemies, support its abilites with single target/armor piercing Psychic Powers to get an unbeatable combination of Skills.</eng>
+					<eng>Excellent weapon for clearing huge groups of enemies, support its abilites with single target/armour piercing Psychic Powers to get an unbeatable combination of Skills.</eng>
 				</Journal>
 			</Force_rod_3>
 			<Force_sword>
@@ -1909,7 +1909,7 @@
 					<eng>Force Sword</eng>
 				</Name>
 				<desc>
-					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6]. </eng>
+					<eng>[ff2bede6]One-Handed[/ff2bede6] weapon. Can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6].</eng>
 				</desc>
 				<Journal>
 					<eng>A weapon with a Skill that deals massive single target damage and a slot for a Psychic Power. Combine it with a Force Rod type weapon for maximum effect.</eng>
@@ -1920,7 +1920,7 @@
 					<eng>Biomantic Sword</eng>
 				</Name>
 				<desc>
-					<eng>Can be [ff2bede6]Dual-Wielded[/ff2bede6] to access the 3rd and 4th Skill or can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6]. </eng>
+					<eng>[ff2bede6]One-Handed[/ff2bede6] weapon. Can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6].</eng>
 				</desc>
 				<Journal>
 					<eng>A sword with a decent Shock Skill, and a slot for a Psychic Power. Combine it with a Force Rod type weapon for maximum effect.</eng>
@@ -1931,7 +1931,7 @@
 					<eng>Aether Blade</eng>
 				</Name>
 				<desc>
-					<eng>[ff2bede6]One-Handed[/ff2bede6] weapon. Can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6]. </eng>
+					<eng>[ff2bede6]One-Handed[/ff2bede6] weapon. Can be [ff2bede6]used[/ff2bede6] with a [ff2bede6]Psyker Weapon[/ff2bede6] or a [ff2bede6]Pistol[/ff2bede6].</eng>
 				</desc>
 				<Journal>
 					<eng>A blade with a great mobility Skill, and a slot for a Psychic Power. Combine it with a Force Rod type weapon for maximum effect.</eng>
@@ -1942,7 +1942,7 @@
 					<eng>Force Staff</eng>
 				</Name>
 				<Journal>
-					<eng>Excellent choice against armored enemies and for playstyles that favor more Psychic Powers.</eng>
+					<eng>Excellent choice against armoured enemies and for playstyles that favor more Psychic Powers.</eng>
 				</Journal>
 			</Force_staff>
 			<Force_staff_2>
@@ -1999,7 +1999,7 @@
 					<eng>Omnissian Axe Alpha</eng>
 				</Name>
 				<Journal>
-					<eng>It can effectively fell armored enemies and it also provides a good deal of Construct summoning slots.</eng>
+					<eng>It can effectively fell armoured enemies and it also provides a good deal of Construct summoning slots.</eng>
 				</Journal>
 			</Omnissian_Axe_1Skill>
 			<Omnissian_Axe_2Skill>
@@ -2121,7 +2121,7 @@
 			</bounty_reward_2_zacsi>
 			<bounty_reward_3_zacsi>
 				<Name>
-					<eng>Gift from the Armory</eng>
+					<eng>Gift from the Armoury</eng>
 				</Name>
 			</bounty_reward_3_zacsi>
 
@@ -3314,6 +3314,11 @@
 					<eng>Zircon Void Shard</eng>
 				</Name>
 			</Map_shard_Zircon>
+			<Map_shard_Violet>
+				<Name>
+					<eng>Violet Void Shard</eng>
+				</Name>
+			</Map_shard_Violet>
 			<intel>
 				<Name>
 					<eng>Intel</eng>
@@ -3632,7 +3637,7 @@
 			</single_target_skills_damage>
 			<area_and_large_area_tag_skills_damage>
 				<desc>
-					<eng>{damage,100} Damage Bonus for [ff2bede5]Area Effect[/ff2bede5] Skills </eng>
+					<eng>{damage,100} Damage Bonus for [ff2bede5]AoE[/ff2bede5] Skills </eng>
 				</desc>
 			</area_and_large_area_tag_skills_damage>
 			<armour_breaking_and_armor_piercing_tag_skills_damage>
@@ -3707,7 +3712,7 @@
 			</damage_bonus_in_crowd>
 			<AOE_damage_bonus>
 				<desc>
-					<eng>{aoe_damage_bonus,100} Damage Bonus for AoE Skills</eng>
+					<eng>{aoe_damage_bonus,100} Damage Bonus for [ff2bede5]AoE[/ff2bede5] Skills</eng>
 				</desc>
 			</AOE_damage_bonus>
 			<Increase_all_warp_damage_percent>
@@ -4486,7 +4491,7 @@
 			</Rune_25>
 			<Runeword_3_1>
 				<desc>
-					<eng>All Warp Damage becomes [fffffdcb]Armor Breaking[/fffffdcb]</eng>
+					<eng>All Warp Damage becomes [fffffdcb]Armour Breaking[/fffffdcb]</eng>
 				</desc>
 			</Runeword_3_1>
 			<Runeword_3_3>
@@ -5843,7 +5848,7 @@
 			</Godlike_HP_on_minion_kill>
 			<Godlike_Damage_for_summoned>
 				<desc>
-					<eng>{minion_damage_boost_from_artifact,100} Damage Bonus to Constructs summoned from the Armor slot</eng>
+					<eng>{minion_damage_boost_from_artifact,100} Damage Bonus to Constructs summoned from the Armour slot</eng>
 				</desc>
 			</Godlike_Damage_for_summoned>
 			<Godlike_Damage_reduce_per_Minion>
@@ -6037,6 +6042,11 @@
 					<eng>{damage,100} Ranged Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff]</eng>
 				</desc>
 			</TA_ranged_damage_percent>
+			<TA_melee_damage_percent>
+				<desc>
+					<eng>{damage,100} Melee Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff]</eng>
+				</desc>
+			</TA_melee_damage_percent>
 			<TA_Increase_all_heat_damage_percent>
 				<desc>
 					<eng>{heat_damage,100} Heat Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff]</eng>
@@ -6176,7 +6186,7 @@
 			</Minion_TA_Tarantula_flamer>
 			<Minion_TA_Damage_alone>
 				<desc>
-					<eng>{damage,100} Damage Bonus for all [ff00a1ff]Constructs[/ff00a1ff]when there is no enemy within 5 meters</eng>
+					<eng>{damage,100} Damage Bonus for all [ff00a1ff]Constructs[/ff00a1ff] when there is no enemy within 5 meters</eng>
 				</desc>
 			</Minion_TA_Damage_alone>
 			<Minion_TA_Tarantula_launcher>
