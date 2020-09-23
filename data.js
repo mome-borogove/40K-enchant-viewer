@@ -1,5 +1,5 @@
 
-var __version__ = "v2.3.1";
+var __version__ = "v2.3.2";
 
 var SLOTS = [
   "neural_implant",
@@ -4118,12 +4118,12 @@ var slot_items = new Map([
 [ "eye_implant", ["Eye Implant"] ],
 [ "main_implant", ["Main Implant"] ],
 [ "purity_seal", ["Purity Seal"] ],
-[ "belt", ["Psychic Focus", "Belt Equipment", "Archeotech Item", "Mine", "Force Field", "Grenade"] ],
-[ "body", ["Light Armour", "Power Armour", "Synskin Armour", "Tech-adept Armour"] ],
+[ "belt", ["Force Field", "Belt Equipment", "Grenade", "Psychic Focus", "Mine", "Archeotech Item"] ],
+[ "body", ["Light Armour", "Power Armour", "Tech-adept Armour", "Synskin Armour"] ],
 [ "inoculator", ["Inoculator"] ],
-[ "weapon", ["Grenade Launcher", "Greatsword", "Boltgun", "Heavy Flamer", "Telekinetic Rod", "Plasma Pistol", "Power Sword", "Pyrokinetic Staff", "Lasgun", "Sniper Rifle", "Force Staff", "Shock Maul", "Multi-Melta", "Carthean Sword", "Heavy Bolter", "Power Axe", "Arc Blade", "Needler Sniper Rifle", "Exitus Rifle", "Warp Rod", "Voltaic Axe", "Plasma Caliver", "Plasma Gun", "Grav-Gun", "Assassin Power Sword", "Bolt Pistol", "Shotgun", "Inferno Pistol", "Wyrdvane Staff", "Force Sword", "Thunder Hammer", "Longlas Rifle", "Force Rod", "Plasma Cannon", "Melta Gun", "Arc Sword", "Radium Carbine", "Chainsword", "Null Rod", "Omnissian Axe", "Grav-Pistol", "Biomantic Sword", "Autopistol", "Death Cult Blade", "Laspistol", "Aether Blade", "Power Hammer", "Eviscerator", "Autogun", "Greataxe"] ],
+[ "weapon", ["Inferno Pistol", "Chainsword", "Force Sword", "Lasgun", "Plasma Cannon", "Greataxe", "Autogun", "Grav-Pistol", "Carthean Sword", "Assassin Power Sword", "Aether Blade", "Pyrokinetic Staff", "Wyrdvane Staff", "Arc Blade", "Eviscerator", "Force Staff", "Autopistol", "Boltgun", "Telekinetic Rod", "Force Rod", "Warp Rod", "Power Axe", "Melta Gun", "Death Cult Blade", "Power Hammer", "Arc Sword", "Needler Sniper Rifle", "Null Rod", "Biomantic Sword", "Thunder Hammer", "Omnissian Axe", "Voltaic Axe", "Laspistol", "Grenade Launcher", "Sniper Rifle", "Shock Maul", "Plasma Pistol", "Shotgun", "Heavy Bolter", "Radium Carbine", "Grav-Gun", "Plasma Gun", "Multi-Melta", "Greatsword", "Bolt Pistol", "Plasma Caliver", "Power Sword", "Heavy Flamer", "Longlas Rifle", "Exitus Rifle"] ],
 [ "signum", ["Signum"] ],
-[ "offhand", ["Storm Shield", "Suppression Shield"] ],
+[ "offhand", ["Suppression Shield", "Storm Shield"] ],
 [ "construct", [] ]
 ]);
 

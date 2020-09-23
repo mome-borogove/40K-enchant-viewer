@@ -2920,6 +2920,31 @@
 					<eng>Inferno Shard V</eng>
 				</Name>
 			</gem_s1_5>
+			<gem_s2_1>
+				<Name>
+					<eng>Warp Shard</eng>
+				</Name>
+			</gem_s2_1>
+			<gem_s2_2>
+				<Name>
+					<eng>Warp Shard II</eng>
+				</Name>
+			</gem_s2_2>
+			<gem_s2_3>
+				<Name>
+					<eng>Warp Shard III</eng>
+				</Name>
+			</gem_s2_3>
+			<gem_s2_4>
+				<Name>
+					<eng>Warp Shard IV</eng>
+				</Name>
+			</gem_s2_4>
+			<gem_s2_5>
+				<Name>
+					<eng>Warp Shard V</eng>
+				</Name>
+			</gem_s2_5>
 			<Rune1>
 				<Name>
 					<eng>Hermeticon Psalm</eng>
@@ -3319,6 +3344,11 @@
 					<eng>Violet Void Shard</eng>
 				</Name>
 			</Map_shard_Violet>
+			<Map_shard_Crimson>
+				<Name>
+					<eng>Crimson Void Shard</eng>
+				</Name>
+			</Map_shard_Crimson>
 			<intel>
 				<Name>
 					<eng>Intel</eng>
@@ -3712,7 +3742,7 @@
 			</damage_bonus_in_crowd>
 			<AOE_damage_bonus>
 				<desc>
-					<eng>{aoe_damage_bonus,100} Damage Bonus for [ff2bede5]AoE[/ff2bede5] Skills</eng>
+					<eng>{damage,100} Damage Bonus for [ff2bede5]AoE[/ff2bede5] Skills</eng>
 				</desc>
 			</AOE_damage_bonus>
 			<Increase_all_warp_damage_percent>
@@ -6231,7 +6261,7 @@
 			</minion_movement_speed>
 			<Minion_TA_HP_minor>
 				<desc>
-					<eng>{hp_max} HP for [ff00A1FF]Contructs[/ff00A1FF] </eng>
+					<eng>{hp_max} HP for [ff00A1FF]Constructs[/ff00A1FF] </eng>
 				</desc>
 			</Minion_TA_HP_minor>
 			<Minion_TA_HP_Vivisector>
