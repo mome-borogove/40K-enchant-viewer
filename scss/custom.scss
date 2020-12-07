@@ -10,6 +10,8 @@ $archeo: rgb(184,49,47);
 $ancient: rgb(243,121,52);
 $relic: rgb(198,151,97);
 $morality: rgb(37,169,132);
+$season1: rgb(254,114,114);
+$season2: rgb(198,103,252);
 
 $body-bg: $blackish;
 $body-color: $whiteish;
@@ -23,6 +25,8 @@ $theme-colors: (
   'archeo': $archeo,
   'ancient': $ancient,
   'morality': $morality,
+  'season1': $season1,
+  'season2': $season2,
 );
 
 @import '../bootstrap/scss/bootstrap';
@@ -61,7 +65,13 @@ h1 {
 }
 
 // Table-related formatting
-#enchants td {
+#enchants tr, #enchants td {
+  border: none;
+}
+#enchants tbody {
+  border: none;
+  border-top-style: solid;
+  border-top-width: 1px;
   border-top-color: $teal_dark;
 }
 

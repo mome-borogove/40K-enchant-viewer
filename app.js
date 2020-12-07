@@ -44,7 +44,10 @@ var app = new Vue({
                  .flat()
                  .filter((s,i,a) => a.indexOf(s)==i)
                  .sort();
-    }
+    },
+    filtered_enchants: function() {
+      return this.enchants.filter(e => this.filter_function(e, [this.F_pattern, this.F_slots, this.F_qualities, this.F_items]));
+    },
   },
   methods: {
     filter_function(enchant, args) {
@@ -76,6 +79,14 @@ var app = new Vue({
       }
 
       return true; // Display if not filtered out
+    },
+    is_seasonal(enchant) {
+      if( (enchant.seasons!=undefined) &&
+          (enchant.seasons.length>0) &&
+          (!enchant.seasons.includes(0)) ) {
+        return true;
+      }
+      return false;
     },
     clear_filter() {
       this.current_filter = empty_filter;

@@ -21,6 +21,7 @@ class Enchant():
     self.groups = [] # [str, ...]
     self.range = None # (low, high)
     self.no_roll = False
+    self.seasons = [0] # [int, ...]
 
   @classmethod
   def copy(Cls, enchant):
@@ -59,6 +60,15 @@ def commit_enchant(M,D):
 def set_range(M,D):
   D['temp'].range = float(M[0]), float(M[1])
 
+def set_season(M,D):
+  # Enchants are not seasonally-unique, meaning they can be on both non-seasonal
+  # and seasonal items. This is problematic, but in *this* file, we can 
+  # side-step the issue. The `Season` property is always an integer. (So relic
+  # enchants are always one or the other.) So we can afford to just overwrite
+  # the property in this case. Still needs to be a list, though, since we may
+  # add to it later.
+  D['temp'].seasons = [ int(M[0]) ]
+
 def set_shortcuts(M,D):
   if M[0]=='':
     D['temp'].shortcuts = []
@@ -84,6 +94,7 @@ machine = {
     (r'ArtifactTypes=(.*)', set_shortcuts),
     (r'EnchantQuality=(.*)', lambda M,D: set_value('quality',str.lower(M[0]),D)),
     (r'TwoHandedDouble=[^0]', lambda M,D: set_value('doubled',True,D)),
+    (r'Season=(.*)', set_season),
     (r'Skill=(.*)', lambda M,D: set_value('skill',str.lower(M[0]),D)),
     (r'Groups=(.*)', lambda M,D: set_value('groups',M[0].split(','),D)),
     (r'NoRoll=1', lambda M,D: set_value('no_roll',True,D)),

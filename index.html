@@ -5,14 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap-Vue -->
+    <!-- Custom Bootstrap CSS -->
     <link rel="stylesheet" type="text/css"
           href="css/custom.css">
-    <link rel="stylesheet" type="text/css" 
-          href="https://unpkg.com/bootstrap-vue@2.19.0/dist/bootstrap-vue.css"/>
 
-    <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
-    <script src="https://unpkg.com/bootstrap-vue@2.19.0/dist/bootstrap-vue.js"></script>
+    <!-- Vue JS -->
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css"
@@ -26,36 +24,36 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'UA-29492860-9');
     </script>
 
-    <title>Inquisitor: Martyr Enchant Viewer</title>
+    <title>40K: Inquisitor - Enchant Viewer</title>
   </head>
   <body>
-<!---------------------------------------------------------------------------->
+  <!-- -------------------------------------------------------------------- -->
 
-  <b-container id="app">
-    <b-row>
-      <b-col class="title">
-      <h1>40K: Inquisitor Enchant Viewer</h1>
-      <p><span class="subtitle">
-        By <a href="https://mome-borogove.github.io/">Mome Borogove</a>,
-        updated for <span class="version">{{version}}</span>.
-        For questions, visit the 
-          <a href="https://discord.gg/inquisitor40k">
-          40K: Inquisitor Discord</a>.
-        For bugs and feedback, submit an issue on 
-          <a href="https://github.com/mome-borogove/40K-enchant-viewer/issues">
-          Github <i class="fab fa-github"></i>
-          </a>.
-      </p>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col col id="fixed_column">
+  <div class="container-xl" id="app">
+    <div class="row">
+      <div class="col title">
+        <h1>40K: Inquisitor - Enchant Viewer</h1>
+        <p><span class="subtitle">
+          By <a href="https://mome-borogove.github.io/">Mome Borogove</a>,
+          updated for <span class="version">{{version}}</span>.
+          For questions, visit the 
+            <a href="https://discord.gg/inquisitor40k">
+            40K: Inquisitor Discord</a>.
+          For bugs and feedback, submit an issue on 
+            <a href="https://github.com/mome-borogove/40K-enchant-viewer/issues">
+            Github <i class="fab fa-github"></i>
+            </a>.
+        </p>
+      </div>
+    </div> <!-- /title row -->
+
+    <div class="row"> <!-- main row -->
+      <div class="col" id="fixed_column">
         <div id="slots">
-          <b-img src="slotmap.jpg" usemap="#slotmap"></b-img>
+          <img src="slotmap.jpg" usemap="#slotmap"></img>
           <a v-for="slot in all_slots"
              :id="'A_'+String(slot)"
              class="area area_square"
@@ -63,12 +61,13 @@
                        'area_rect': rect_slots.includes(slot),
                        'area_square': !rect_slots.includes(slot) }"
              @click="toggle_slot(slot)"></a>
-          <button class="btn btn-sm btn-ui shadow-none clear-slots" @click="F_slots=[]; F_items=[];">Clear</button>
-        </div>
-      </b-col>
-      <b-col col>
+          <button class="btn btn-sm btn-ui shadow-none clear-slots"
+                  @click="F_slots=[]; F_items=[];">Clear</button>
+        </div> <!-- /slots -->
+      </div> <!-- /fixed_column -->
+      <div class="col">
         <p>
-          <!--Enchant type:-->
+          <!-- enchant type: -->
           <button type="button" class="btn btn-outline-primary shadow-none"
                   v-bind:class="{ 'active': F_qualities.includes('primary') }"
                   @click="toggle_quality('primary')">
@@ -90,83 +89,112 @@
                   @click="toggle_quality('morality')">
             Morality</button>
         </p>
+        <!-- text filter -->
         <p>
-          <b-input-group prepend="Filter:">
-            <b-form-input id="text_filter_pattern"
-                          prepend="test"
-                          v-model="F_pattern"
-                          debounce="100"
-                          trim
-                          autofocus>
-            </b-form-input>
-            <b-input-group-append>
-              <b-button variant="ui"
-                        @click="clear_pattern">
-                Clear
-              </b-button>
-            </b-input-group-append>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Filter:</span>
+            </div> 
+              <input id="text_filter_pattern"
+                     class="form-control"
+                     type="text"
+                     v-model="F_pattern"
+                     >
+              <!-- FIXME debounce="100" and trim flags are missing -->
+            <div class="input-group-append">
+              <button class="btn btn-ui" @click="clear_pattern">Clear</button>
+            </div>
+          </div>
         </p>
+        <!-- enchant table -->
         <div class="page-contained">
-          <b-table id="enchants"
-                   small
-                   thead-tr-class="d-none"
-                   :fields="enchant_fields"
-                   :items="enchants"
-                   :filter="[F_pattern, F_slots, F_qualities, F_items]"
-                   :filter-function="filter_function">
-            <template v-slot:cell(str)="row">
-              <span :class="'text-'+row.item.quality"><i class="fas fa-square"></i></span>
-              <span class="row-spacer"></span>
-              <span v-html="row.item.str"></span>
-            </template>
-            <template v-slot:cell(show_details)="row">
-              <b-button size="sm" @click="row.toggleDetails" class="mr-2">
-                {{ row.detailsShowing ? 'Less' : 'More'}}
-              </b-button>
-            </template>
-            <template v-slot:row-details="row">
-              <div class="details">
-                <p v-if="row.item.doubled">
-                  <span class="detail-header">Values doubled if on a two-handed weapon.</span>
-                </p>
-                <p><span class="detail-header">Enchant ID:</span> {{ row.item.name }}</p>
-                <p><span class="detail-header">Valid Items:</span> {{
-                     (row.item.items==undefined)?"(undefined)":row.item.items.join(", ")
-                  }}</p>
-                <p><span class="detail-header">Exclusion Groups:</span> {{
-                     (row.item.groups==undefined)?"N/A":row.item.groups.join(", ")
-                }}</p>
-              </div>
-            </template>
-          </b-table>
-        </div>
-      </b-col>
-    </b-row>
-    <b-row v-if="F_slots.length>0" id="enabled_box">
-      <b-col>
-        <div>
-          <span v-if="F_slots.length>0" class="enabled_header">
-            Item-Specific Filters:
-          </span>
-          <span v-for="(item,index) in current_items" class="enabled_items">
-            <button type="button" class="btn btn-sm btn-outline-ui item-button shadow-none"
-                    :class="{
-                      'active': F_items.includes(item),
-                    }"
-                    @click="toggle_item(item)"
-              >{{ item }}</button> <span v-if="index != current_items.length-1"></span>
-          </span>
-        </div>
-      </b-col>
-    </b-row>
-  </b-container>
+          <table class="table table-sm" id="enchants">
+            <tbody v-for="(enchant,index) in filtered_enchants">
+            <tr class="entry">
+              <td>
+                <span :class="'text-'+enchant.quality"><i class="fas fa-square"></i></span>
+                <span class="row-spacer"></span>
+                <span v-if="is_seasonal(enchant)">
+                  <span v-for="season in enchant.seasons"
+                        class="badge"
+                        :class=" 'badge-season'+season">Season {{season}}</span>
+                </span>
+                <span v-html="enchant.str"></span>
+              </td><td>
+                <button type="button"
+                        class="btn btn-sm btn-secondary"
+                        data-toggle="collapse"
+                        :data-target="'#details-'+enchant.name+'-'+index"
+                        aria-expanded="false"
+                        >
+                  {{ "Details" }}
+                </button>
+              </td>
+            </tr> <!-- /enchant entry -->
+            <tr class="collapse details"
+                :id="'details-'+enchant.name+'-'+index">
+              <td colspan="2">
+                <div class="details">
+                  <p v-if="enchant.doubled"><span class="detail-header">
+                      Values doubled if on a two-handed weapon.
+                  </span></p>
+                  <p><span class="detail-header">Enchant ID:</span>
+                    {{ enchant.name }}
+                  </p>
+                  <p><span class="detail-header">Valid Items:</span>
+                    {{
+                       (enchant.items==undefined) ?
+                       "(undefined)" :
+                       enchant.items.join(", ")
+                    }}
+                  </p>
+                  <p><span class="detail-header">Exclusion Groups:</span>
+                    {{
+                       (enchant.groups==undefined) ?
+                       "N/A" :
+                       enchant.groups.join(", ")
+                    }}
+                  </p>
+                </div>
+              </td>
+            </tr> <!-- /details -->
+            </tbody>
+          </table>
+        </div> <!-- /enchant table -->
+      </div>
+    </div> <!-- main row -->
 
-<!---------------------------------------------------------------------------->
+    <div class="row" v-if="F_slots.length>0" id="enabled_box">
+      <div class="col">
+        <span v-if="F_slots.length>0" class="enabled_header">
+          Item-Specific Filters:
+        </span>
+        <span v-for="(item,index) in current_items" class="enabled_items">
+          <button type="button"
+                  class="btn btn-sm btn-outline-ui item-button shadow-none"
+                  :class="{
+                    'active': F_items.includes(item),
+                  }"
+                  @click="toggle_item(item)"
+            >{{ item }}</button>
+          <span v-if="index != current_items.length-1"></span>
+        </span>
+      </div> <!-- col -->
+    </div> <!-- footer row -->
+
+  </div>
+
+  <!-- -------------------------------------------------------------------- -->
   </body>
 
-  <!-- Pre-computed 40K data -->
+  <!-- Pre-computed 40K data and app logic -->
   <script src="data.js"></script>
-  <!-- Vue App -->
   <script src="app.js"></script>
+
+  <!-- Extra Bootstrap Javascript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 
 </html>

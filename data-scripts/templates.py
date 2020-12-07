@@ -20,7 +20,7 @@ var RECT_SLOTS = [
 ];
 
 // Object constructor
-function Enchant(name, str, items, slots, quality, doubled, groups, range) {{
+function Enchant(name, str, items, slots, quality, doubled, groups, seasons) {{
   this.name = name;
   this.str = str;
   this.items = items;
@@ -28,7 +28,7 @@ function Enchant(name, str, items, slots, quality, doubled, groups, range) {{
   this.quality = quality;
   this.doubled = doubled;
   this.groups = groups;
-  this.range = range;
+  this.seasons = seasons;
 }}
 
 var enchants = [
@@ -49,5 +49,6 @@ ENCHANT_TEMPLATE='''new Enchant('{name}',
               [{slots}],
               '{quality}',
               {doubled},
-              [{groups}]),
+              [{groups}],
+              [{seasons}]),
 '''

@@ -116,6 +116,7 @@ def format_enchant(enchant, s_map):
   items = ','.join(["'"+str(item)+"'" for item in enchant.items])
   slots = ','.join(["'"+str(slot)+"'" for slot in enchant.slots])
   groups = ','.join(["'"+str(group)+"'" for group in enchant.groups])
+  seasons = ','.join([str(season) for season in enchant.seasons])
   if enchant.doubled:
     doubled = 'true'
   else:
@@ -128,6 +129,7 @@ def format_enchant(enchant, s_map):
     slots=slots,
     quality=enchant.quality,
     doubled=doubled,
-    groups=groups)
+    groups=groups,
+    seasons=seasons)
   return s
 
