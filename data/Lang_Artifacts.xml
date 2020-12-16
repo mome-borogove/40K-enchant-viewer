@@ -469,6 +469,9 @@
 			<tarot_seal>
 				<eng>+1 [ff2bede6]%s[/ff2bede6] Empyrean Seal</eng>
 			</tarot_seal>
+			<multi_tarot_card>
+				<eng>%d Tarot Cards used</eng>
+			</multi_tarot_card>
 		</Tarotcard>
 		<Tags>
 			<melee>
@@ -537,7 +540,7 @@
 				<eng>Capacity</eng>
 			</Medkit_Capacity>
 			<suppression>
-				<eng>Suppression Resistance</eng>
+				<eng>Max Suppression</eng>
 			</suppression>
 			<health>
 				<eng>Max HP</eng>
@@ -1070,6 +1073,9 @@
 			</tarotseal_ordo>
 			<Rune>
 				<eng>Psalm-Code</eng>
+				<desc>
+					<eng>Combine Psalm-Codes into Psalm-Doctrines for powerful effects.\nDuplicate Psalm-Codes within the same item only provide their benefit once.</eng>
+				</desc>
 			</Rune>
 			<map_shard>
 				<eng>Void Shard</eng>
@@ -2092,6 +2098,81 @@
 					<eng>Bonesearer</eng>
 				</Name>
 			</s1_bonesearer>
+			<S2_Omnissian_Axe>
+				<Name>
+					<eng>Omicron's Enigma</eng>
+				</Name>
+			</S2_Omnissian_Axe>
+			<S2_neural_implant>
+				<Name>
+					<eng>The Bleak Coil</eng>
+				</Name>
+			</S2_neural_implant>
+			<S2_main_implant>
+				<Name>
+					<eng>Heart of Darkness</eng>
+				</Name>
+			</S2_main_implant>
+			<S2_CrusaderMelee>
+				<Name>
+					<eng>Hell's Gullet</eng>
+				</Name>
+			</S2_CrusaderMelee>
+			<S2_HeavyBolter>
+				<Name>
+					<eng>Storms of Judgement</eng>
+				</Name>
+			</S2_HeavyBolter>
+			<S2_Teleporter>
+				<Name>
+					<eng>Warpsmith's Fury</eng>
+				</Name>
+			</S2_Teleporter>
+			<S2_Inoculator>
+				<Name>
+					<eng>Refugee's Wail</eng>
+				</Name>
+			</S2_Inoculator>
+			<S2_Eye_Implant>
+				<Name>
+					<eng>Vortex of Despair</eng>
+				</Name>
+			</S2_Eye_Implant>
+			<S2_Warp_Rod>
+				<Name>
+					<eng>The Dark Maw</eng>
+				</Name>
+			</S2_Warp_Rod>
+			<S2_signum>
+				<Name>
+					<eng>Desperation's Futility</eng>
+				</Name>
+			</S2_signum>
+			<S2_rosarius>
+				<Name>
+					<eng>Celtor's Flux</eng>
+				</Name>
+			</S2_rosarius>
+			<S2_Digital_Weapons>
+				<Name>
+					<eng>Vortex of Rapidity</eng>
+				</Name>
+			</S2_Digital_Weapons>
+			<S2_neural_implant>
+				<Name>
+					<eng>The Bleak Coil</eng>
+				</Name>
+			</S2_neural_implant>
+			<S2_Purity_Seal>
+				<Name>
+					<eng>Annihilus Seal</eng>
+				</Name>
+			</S2_Purity_Seal>
+			<S2_Death_Cult_Blade>
+				<Name>
+					<eng>Siren's Storm</eng>
+				</Name>
+			</S2_Death_Cult_Blade>
 
 			<Normal_Zacsi>
 				<Name>
@@ -2615,6 +2696,46 @@
 					<eng></eng>
 				</desc>
 			</season_1_reward_5_zacsi>
+			<season_2_reward_1_zacsi>
+				<Name>
+					<eng>Epsylon Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_2_reward_1_zacsi>
+			<season_2_reward_2_zacsi>
+				<Name>
+					<eng>Delta Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_2_reward_2_zacsi>
+			<season_2_reward_3_zacsi>
+				<Name>
+					<eng>Omega Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_2_reward_3_zacsi>
+			<season_2_reward_4_zacsi>
+				<Name>
+					<eng>Beta Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_2_reward_4_zacsi>
+			<season_2_reward_5_zacsi>
+				<Name>
+					<eng>Alpha Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_2_reward_5_zacsi>
 			<Consumable_InstantCraft>
 				<Name>
 					<eng>Immediate Crafting</eng>
@@ -3353,6 +3474,9 @@
 				<Name>
 					<eng>Intel</eng>
 				</Name>
+				<desc_s2>
+					<eng>[ffc667fc]This item may spawn a special Warp Tainted Mission![/ffc667fc]</eng>
+				</desc_s2>
 			</intel>
 			<TarotCard>
 				<Name>
@@ -3582,7 +3706,7 @@
 			</skill_damage_percent>
 			<skill_cooldown_percent>
 				<desc>
-					<eng>{cooldown,100} Cooldown Reduction for {skill}</eng>
+					<eng>{cooldown_hardcap,100} Supreme Cooldown Reduction for {skill}</eng>
 				</desc>
 			</skill_cooldown_percent>
 			<Allskill_cooldown_percent>
@@ -3740,6 +3864,11 @@
 					<eng>{damage,100} Damage Bonus when [ff2bede5]Surrounded[/ff2bede5]</eng>
 				</desc>
 			</damage_bonus_in_crowd>
+			<minion_damage_bonus_in_crowd>
+				<desc>
+					<eng>{damage,100} Damage Bonus when [ff2bede5]Surrounded[/ff2bede5] for [ff00A1FF]Constructs[/ff00A1FF]</eng>
+				</desc>
+			</minion_damage_bonus_in_crowd>
 			<AOE_damage_bonus>
 				<desc>
 					<eng>{damage,100} Damage Bonus for [ff2bede5]AoE[/ff2bede5] Skills</eng>
@@ -3968,7 +4097,7 @@
 			</Chance_to_give_vulnerability_on_hit>
 			<Area_damage_when_stunned_enemy_killed>
 				<desc>
-					<eng>[fffffdcb]Stunned[/fffffdcb] enemies explode on Kill, dealing area damage equivalent to {artifact_enchant,100} of the killing blow's Damage</eng>
+					<eng>[fffffdcb]Stunned[/fffffdcb] enemies explode on Kill, dealing area damage equivalent to {artifact_enchant,100} of the weapons's Damage</eng>
 				</desc>
 			</Area_damage_when_stunned_enemy_killed>
 			<Chance_knockback_and_slow_on_hit>
@@ -3983,7 +4112,7 @@
 			</Chance_to_shock_per_hit>
 			<Toxin_token_on_hit>
 				<desc>
-					<eng>{artifact_enchant,100} Damage Done reduction for the target on Hit. Stacks up to 10 times.</eng>
+					<eng>{artifact_enchant,100} Damage for Enemies on hit. Stacks up to 10 times.</eng>
 				</desc>
 			</Toxin_token_on_hit>
 			<Chance_to_avoid_enemy_attacks_and_reflect_damage>
@@ -4060,7 +4189,7 @@
 			</Reflect_Damage_Percent>
 			<Deflect_Bonus_after_Shield_Block>
 				<desc>
-					<eng>{artifact_enchant,100} {deflect} for 5 seconds after blocking an attack with Shield Block</eng>
+					<eng>{artifact_enchant,100} Supreme {deflect} for 5 seconds after blocking an attack with Shield Block</eng>
 				</desc>
 			</Deflect_Bonus_after_Shield_Block>
 			<Chance_to_AP_Based_on_Deflect>
@@ -4172,7 +4301,7 @@
 			</Suppression_per_deflect>
 			<Crit_chance_and_strenght_on_slow_group>
 				<desc>
-					<eng>[ff2bede6]+5%[/ff2bede6] Critical Hit Chance and [ff2bede6]+10[/ff2bede6] Critical Hit Strength against [ff2bede6]Slowed[/ff2bede6], [ff2bede6]Shocked[/ff2bede6], [ff2bede6]Stunned[/ff2bede6] or [ff2bede6]Frozen[/ff2bede6] targets.</eng>
+					<eng>[ff2bede6]+5%[/ff2bede6] Supreme Critical Hit Chance and [ff2bede6]+10[/ff2bede6] Critical Hit Strength against [ff2bede6]Slowed[/ff2bede6], [ff2bede6]Shocked[/ff2bede6], [ff2bede6]Stunned[/ff2bede6] or [ff2bede6]Frozen[/ff2bede6] targets.</eng>
 				</desc>
 			</Crit_chance_and_strenght_on_slow_group>
 
@@ -4269,12 +4398,12 @@
 			</Sniper_shot_gain_Dot_poison>
 			<Bonus_dot_damage_long_cooldown_skills>
 				<desc>
-					<eng>Doubles the Damage for [fffffdcb]DoT[/fffffdcb] Skills with at least 5 seconds Cooldown</eng>
+					<eng>{artifact_enchant,100} Damage Bonus for [fffffdcb]DoT[/fffffdcb] Effects applied by skills with at least 3 seconds Cooldown</eng>
 				</desc>
 			</Bonus_dot_damage_long_cooldown_skills>
 			<Bonus_Crit_in_Surprise>
 				<desc>
-					<eng>[ff2bede6]+5%[/ff2bede6] Critical Hit Chance and [ff2bede6]+10[/ff2bede6] Critical Hit Strength in [fffffdcb]Surprise[/fffffdcb] State</eng>
+					<eng>[ff2bede6]+5%[/ff2bede6] Supreme Critical Hit Chance and [ff2bede6]+10[/ff2bede6] Critical Hit Strength in [fffffdcb]Surprise[/fffffdcb] State</eng>
 				</desc>
 			</Bonus_Crit_in_Surprise>
 			<Bonus_damage_based_on_Warp_heat>
@@ -4399,6 +4528,16 @@
 					<eng>{shield_hp_regeneration,100} regeneration of the Energy Shield</eng>
 				</desc>
 			</shieldhp_regen>
+			<shield_leech_percent>
+				<desc>
+					<eng>{shield_hp_per_hit_percent}% of damage dealt is gained as Shield Charge</eng>
+				</desc>
+			</shield_leech_percent>
+			<hp_leech_percent>
+				<desc>
+					<eng>{hp_per_hit_percent}% of damage dealt is gained as HP</eng>
+				</desc>
+			</hp_leech_percent>
 			<dot_damage>
 				<desc>
 					<eng>{dot_damage,100} [fffffdcb]DoT[/fffffdcb] Damage</eng>
@@ -4416,7 +4555,7 @@
 			</shield_hp>
 			<Rune_1>
 				<desc>
-					<eng>[ff2bede6]+3%[/ff2bede6] Damage Reduction for 2 seconds on Kill</eng>
+					<eng>[ff2bede6]+3%[/ff2bede6] Supreme Damage Reduction for 2 seconds on Kill</eng>
 				</desc>
 			</Rune_1>
 			<Rune_2>
@@ -4431,12 +4570,12 @@
 			</Rune_3>
 			<Rune_4>
 				<desc>
-					<eng>[ff2bede6]5%[/ff2bede6] chance to reset Cooldown for all skills on Kill</eng>
+					<eng>[ff2bede6]1%[/ff2bede6] chance to reset Cooldown for all skills on Kill</eng>
 				</desc>
 			</Rune_4>
 			<Rune_5>
 				<desc>
-					<eng>[ff2bede6]1%[/ff2bede6] Critical Chance and [ff2bede6]1%[/ff2bede6] Critical Strength for 2 seconds on Kill</eng>
+					<eng>[ff2bede6]1%[/ff2bede6] Supreme Critical Chance and [ff2bede6]1%[/ff2bede6] Critical Strength for 2 seconds on Kill</eng>
 				</desc>
 			</Rune_5>
 			<slow_shock_duration_percent>
@@ -4481,7 +4620,7 @@
 			</damage_percent_against_blind_halu_enemies>
 			<Rune_18>
 				<desc>
-					<eng>[ff2bede6]5%[/ff2bede6] Damage Reduction for 2 seconds on Hit Taken</eng>
+					<eng>[ff2bede6]5%[/ff2bede6] Supreme Damage Reduction for 2 seconds on Hit Taken</eng>
 				</desc>
 			</Rune_18>
 			<rune_duration_percent>
@@ -4526,7 +4665,7 @@
 			</Runeword_3_1>
 			<Runeword_3_3>
 				<desc>
-					<eng>[ff2bede6]+50%[/ff2bede6] Damage Bonus and [ff2bede6]+30%[/ff2bede6] {deflect} when in [fffffdcb]Surprise[/fffffdcb] state</eng>
+					<eng>[ff2bede6]+50%[/ff2bede6] Damage Bonus and [ff2bede6]+30%[/ff2bede6] Supreme {deflect} when in [fffffdcb]Surprise[/fffffdcb] state</eng>
 				</desc>
 			</Runeword_3_3>
 			<Runeword_3_5>
@@ -4546,7 +4685,7 @@
 			</Runeword_3_7>
 			<Runeword_3_8>
 				<desc>
-					<eng>[ff2bede6]-50%[/ff2bede6] from the remaining Cooldown of Skills on Kill</eng>
+					<eng>[ff2bede6]-50%[/ff2bede6] from the remaining Cooldown on Single Target Skill Kill</eng>
 				</desc>
 			</Runeword_3_8>
 			<Runeword_3_9>
@@ -4780,7 +4919,7 @@
 			</Damage_reduce_in_Exposed>
 			<Damage_reduce_hardcap_in_Exposed>
 				<desc>
-					<eng>{damage_reduce_hardcap}[ff2bede6]%[/ff2bede6] Damage Reduction in [fffffdcb]Exposed[/fffffdcb] state (can exceed cap)</eng>
+					<eng>{damage_reduce_hardcap}[ff2bede6]%[/ff2bede6] Supreme Damage Reduction in [fffffdcb]Exposed[/fffffdcb] state</eng>
 				</desc>
 			</Damage_reduce_hardcap_in_Exposed>
 			<Damage_in_Exposed>
@@ -4900,17 +5039,17 @@
 			</Shock_on_hit>
 			<Vulnerability_on_hit_heat>
                 <desc>
-                    <eng>{artifact_enchant,100} chance to add [ff2bede6]Heat Vulnerability[/ff2bede6] on Heat Skill Hit</eng>
+                    <eng>{artifact_enchant,100} chance to add [ff2bede6]Heat Vulnerability[/ff2bede6] on Heat Damage dealt</eng>
                 </desc>
             </Vulnerability_on_hit_heat>
 			<Vulnerability_on_hit_physical>
                 <desc>
-                    <eng>{artifact_enchant,100} chance to add [ff2bede6]Physical Vulnerability[/ff2bede6] on Physical Skill Hit</eng>
+                    <eng>{artifact_enchant,100} chance to add [ff2bede6]Physical Vulnerability[/ff2bede6] on Physical Damage dealt</eng>
                 </desc>
             </Vulnerability_on_hit_physical>
 			<Vulnerability_on_hit_warp>
                 <desc>
-                    <eng>{artifact_enchant,100} chance to add [ff2bede6]Warp Vulnerability[/ff2bede6] on Warp Skill Hit</eng>
+                    <eng>{artifact_enchant,100} chance to add [ff2bede6]Warp Vulnerability[/ff2bede6] on Warp Damage dealt</eng>
                 </desc>
             </Vulnerability_on_hit_warp>
 			<Vulnerability_on_bleed>
@@ -4942,12 +5081,17 @@
                 <desc>
                     <eng>{artifact_enchant,100} chance to [ff2bede6]Fear[/ff2bede6] on Hit</eng>
                 </desc>
-            </Fear_on_Hit>
+      </Fear_on_Hit>
+			<Minion_Fear_on_Hit>
+                <desc>
+                    <eng>{artifact_enchant,100} chance to [ff2bede6]Fear[/ff2bede6] on Hit</eng>
+                </desc>
+      </Minion_Fear_on_Hit>
 			<Fear_on_Crit>
                 <desc>
                     <eng>{artifact_enchant,100} chance to [ff2bede6]Fear[/ff2bede6] on Critical Hit </eng>
                 </desc>
-            </Fear_on_Crit>
+      </Fear_on_Crit>
 			<Fear_duration>
 				<desc>
 					<eng>{skill_duration} seconds to [ff2bede6]Fear[/ff2bede6] duration</eng>
@@ -5040,7 +5184,7 @@
 			</Damage_reduce_in_threat>
 			<Damage_reduce_hardcap_in_threat>
 				<desc>
-					<eng>{damage_reduce_hardcap}[ff2bede5]%[/ff2bede5] Damage Reduction when [ff2bede5]Surrounded[/ff2bede5] (can exceed cap)</eng>
+					<eng>{damage_reduce_hardcap}[ff2bede5]%[/ff2bede5] Supreme Damage Reduction when [ff2bede5]Surrounded[/ff2bede5]</eng>
 				</desc>
 			</Damage_reduce_hardcap_in_threat>
 			<Movement_speed_in_threat>
@@ -5087,7 +5231,7 @@
 			</Godlike_HP_per_hit_per_Enraged>
 			<Godlike_Crit_Chance_per_Enraged>
 				<desc>
-					<eng>{critical_hit_chance,100} Critical Hit Chance per [fffffdcb]Enraged[/fffffdcb] token</eng>
+					<eng>{critical_hit_chance,100} Critical Hit Chance in [fffffdcb]Enraged[/fffffdcb] state</eng>
 				</desc>
 			</Godlike_Crit_Chance_per_Enraged>
 			<Godlike_Shock_Aura_in_Enraged>
@@ -5152,7 +5296,7 @@
 			</Godlike_Exposed_bonus>
 			<Godlike_Physical_resist_in_Exposed>
 				<desc>
-					<eng>{physical_resist_hardcap} Physical Resistance in [fffffdcb]Exposed[/fffffdcb] state (can exceed cap)</eng>
+					<eng>{physical_resist_hardcap} Supreme Physical Resistance in [fffffdcb]Exposed[/fffffdcb] state</eng>
 				</desc>
 			</Godlike_Physical_resist_in_Exposed>
 			<Godlike_HP_per_hit_in_Exposed>
@@ -5230,6 +5374,11 @@
 					<eng>{hp_regeneration} HP regeneration per [fffffdcb]Berserk[/fffffdcb] token</eng>
 				</desc>
 			</Godlike_HP_regen_per_Berserk>
+			<Godlike_life_leech_per_Berserk>
+				<desc>
+					<eng>{hp_regeneration} % of damage dealt is gained as HP per [fffffdcb]Berserk[/fffffdcb] token</eng>
+				</desc>
+			</Godlike_life_leech_per_Berserk>
 			<Godlike_Resist_equalizer_in_Berserk>
 				<desc>
 					<eng>In [fffffdcb]Berserk[/fffffdcb] state all resistances are equal to the highest resistance</eng>
@@ -5442,7 +5591,7 @@
 			</Godlike_Damage_against_Stunned>
 			<Godlike_Shock_on_Stun>
 				<desc>
-					<eng>{artifact_enchant,100} chance to [fffffdcb]Shock[/fffffdcb] on [fffffdcb]Stun[/fffffdcb] Skill Hit </eng>
+					<eng>{artifact_enchant,100} chance to automatically [fffffdcb]Shock[/fffffdcb] the enemy after it recovers from the [fffffdcb]Stun[/fffffdcb] debuff </eng>
 				</desc>
 			</Godlike_Shock_on_Stun>
 			<Godlike_Shock_on_hit_against_Vulnerable>
@@ -5632,7 +5781,7 @@
 			</Godlike_Movement_HP_regen_buff_on_Big_Struck>
 			<Godlike_Damage_reduce_on_Big_Struck>
 				<desc>
-					<eng>{artifact_enchant}[ff2bede6]%[/ff2bede6] Damage Reduction for 3 seconds on losing at least [ff2bede6]20%[/ff2bede6] HP on Hit Taken</eng>
+					<eng>[ff2bede6]20%[/ff2bede6] Supreme Damage Reduction for 3 seconds on losing at least {artifact_enchant}[ff2bede6]%[/ff2bede6] HP on Hit Taken</eng>
 				</desc>
 			</Godlike_Damage_reduce_on_Big_Struck>
 			<Godlike_Damage_in_threat>
@@ -5699,7 +5848,7 @@
 			</Demonic_Weapon_Halucination_On_Hit>
 			<Demonic_Weapon_Buff_on_Multikill>
 				<desc>
-					<eng>Every 10th Kill grants a buff that gives [ff2bede6]+100%[/ff2bede6] Damage Bonus and [ff2bede6]50%[/ff2bede6] HP gained on Hit and lasts for 3 seconds</eng>
+					<eng>Every 10th Kill grants a buff that gives [ff2bede6]+100%[/ff2bede6] Damage Bonus and [ff2bede6]50[/ff2bede6] HP gained on Hit and lasts for 3 seconds</eng>
 				</desc>
 			</Demonic_Weapon_Buff_on_Multikill>
 			<Demonic_Weapon_Warp_damage>
@@ -5750,7 +5899,7 @@
 			</Demonic_Armour_Stealth_cheat>
 			<Demonic_Armour_Dodge_on_Dodge>
 				<desc>
-					<eng>+30 {deflect} for 3 seconds on Dodge Move use (non-stacking)</eng>
+					<eng>+30 Supreme {deflect} for 3 seconds on Dodge Move use (non-stacking)</eng>
 				</desc>
 			</Demonic_Armour_Dodge_on_Dodge>
 			<Demonic_Armour_Flee_on_Death>
@@ -5760,7 +5909,7 @@
 			</Demonic_Armour_Flee_on_Death>
 			<Demonic_Armour_Low_HP_DR>
 				<desc>
-					<eng>{damage_reduce_hardcap}[ff2bede6]%[/ff2bede6] Damage Reduction when in [fffffdcb]Exposed[/fffffdcb] state (can exceed cap)</eng>
+					<eng>{damage_reduce_hardcap}[ff2bede6]%[/ff2bede6] Supreme Damage Reduction when in [fffffdcb]Exposed[/fffffdcb] state</eng>
 				</desc>
 			</Demonic_Armour_Low_HP_DR>
 			<Demonic_Armour_HP_Regen>
@@ -5806,7 +5955,7 @@
 			</Blessed_Weapon_Damage_Against_Types>
 			<Blessed_Weapon_Crit_Chance_nocap>
 				<desc>
-					<eng>+10% Critical Hit Chance (can exceed cap by 5%)</eng>
+					<eng>+15% Supreme Critical Hit Chance</eng>
 				</desc>
 			</Blessed_Weapon_Crit_Chance_nocap>
 			<Blessed_Weapon_Surprise_Buff>
@@ -5827,7 +5976,7 @@
 			</Blessed_Armour_HP_on_Kill_specific>
 			<Blessed_Armour_DR_nocap>
 				<desc>
-					<eng>{damage_reduce_hardcap}[ff2bede6]%[/ff2bede6] Damage Reduction (can exceed cap)</eng>
+					<eng>{damage_reduce_hardcap}[ff2bede6]%[/ff2bede6] Supreme Damage Reduction</eng>
 				</desc>
 			</Blessed_Armour_DR_nocap>
 			<Blessed_Armour_Invulnerability_on_Kill>
@@ -5847,7 +5996,7 @@
 			</Blessed_Armour_Low_Warp_Damage>
 			<Blessed_Armour_Blind_Plus_Dodge_on_Struck>
 				<desc>
-					<eng>{artifact_enchant,100} {deflect} and {artifact_enchant,100} chance to [fffffdcb]Blind[/fffffdcb] nearby enemies on {deflect}</eng>
+					<eng>{artifact_enchant,100} Supreme {deflect} and {artifact_enchant,100} chance to [fffffdcb]Blind[/fffffdcb] nearby enemies on {deflect}</eng>
 				</desc>
 			</Blessed_Armour_Blind_Plus_Dodge_on_Struck>
 			<Blessed_Armour_Damage_per_Enemy>
@@ -6723,8 +6872,131 @@
 					<eng>{artifact_enchant,100} chance to get an [fffffdcb]Enraged[/fffffdcb] token on Hit</eng>
 				</desc>
 			</skull_event_enchant_6>
-
-
+			<warp_resist>
+				<desc>
+					<eng>{warp_resist} Warp Resistance</eng>
+				</desc>
+			</warp_resist>
+			<s2_warp_resist>
+				<desc>
+					<eng>{warp_resist_hardcap}[ff2bede6]%[/ff2bede6] Supreme Warp Resistance</eng>
+				</desc>
+			</s2_warp_resist>
+			<warp_damage>
+				<desc>
+					<eng>{warp_damage,100} Warp Damage Bonus</eng>
+				</desc>
+			</warp_damage>
+			<warp_reflect>
+				<desc>
+					<eng>{warp_reflect,100} Warp Damage Reflection</eng>
+				</desc>
+			</warp_reflect>
+			<Godlike_All_resist_per_Minion>
+				<desc>
+					<eng>[ff2bede6]+2.5%[/ff2bede6] All Resist for each active [ff00a1ff]Construct[/ff00a1ff]</eng>
+				</desc>
+			</Godlike_All_resist_per_Minion>
+			<Godlike_Xp_Bonus_on_kill>
+				<desc>
+					<eng>Killing an enemy increases XP gain by [ff2bede6]2%[/ff2bede6] for [ff2bede6]5[/ff2bede6] seconds. Stacks up to [ff2bede6]20[/ff2bede6] times.</eng>
+				</desc>
+			</Godlike_Xp_Bonus_on_kill>
+			<Godlike_Blind_enemies_on_hit_taken>
+				<desc>
+					<eng>{artifact_enchant,100} chance on Hit Taken to [ff2bede6]Blind[/ff2bede6] enemies around the player and gain a [fffffdcb]Berserk[/fffffdcb] token</eng>
+				</desc>
+			</Godlike_Blind_enemies_on_hit_taken>
+			<Movement_speed_on_orb_pickup>
+				<desc>
+					<eng>Picking up [ffc667fc]Warp Flecks[/ffc667fc] also increases your movement speed by [ff2bede6]15%[/ff2bede6] for [ff2bede6]35[/ff2bede6] seconds</eng>
+				</desc>
+			</Movement_speed_on_orb_pickup>
+			<Spawn_orb_on_Medium_Kill>
+				<desc>
+					<eng>{artifact_enchant,100} chance to spawn a [ffc667fc]Warp Fleck[/ffc667fc] on killing a Champion enemy</eng>
+				</desc>
+			</Spawn_orb_on_Medium_Kill>
+			<Godlike_Chance_to_gain_Inoculator_on_kill>
+				<desc>
+					<eng>{artifact_enchant,100} chance on kill to gain an [ff2bede6]Inoculator Charge[/ff2bede6]</eng>
+				</desc>
+			</Godlike_Chance_to_gain_Inoculator_on_kill>
+			<Godlike_Damage_buff_to_next_spell_on_personal_teleporter_use>
+				<desc>
+					<eng>Using the Personal Teleporter gives you a [ff2bede6]+200%[/ff2bede6] Damage bonus for the next [ff2bede6]2[/ff2bede6] seconds</eng>
+				</desc>
+			</Godlike_Damage_buff_to_next_spell_on_personal_teleporter_use>
+			<Godlike_Chance_to_gain_Personal_Void_Shield_on_Inoculator_use>
+				<desc>
+					<eng>{artifact_enchant,100} chance to gain a [ff2bede6]Personal Void Shield[/ff2bede6] upon using the Inoculator</eng>
+				</desc>
+			</Godlike_Chance_to_gain_Personal_Void_Shield_on_Inoculator_use>
+			<Godlike_Convert_Dmg_To_Warp>
+				<desc>
+					<eng>[ff2bede6]50%[/ff2bede6] of All Damage is converted to Warp Damage</eng>
+				</desc>
+			</Godlike_Convert_Dmg_To_Warp>
+			<Godlike_Chance_to_Guaranteed_Crit_on_hit>
+				<desc>
+					<eng>{artifact_enchant,100} chance on hit: All strikes are guaranteed critical strikes for [ff2bede6]3[/ff2bede6] seconds</eng>
+				</desc>
+			</Godlike_Chance_to_Guaranteed_Crit_on_hit>
+			<Godlike_Gain_Innoculator_on_Massacre>
+				<desc>
+					<eng>Gaining a Killstreak or a Massacre grants an [ff2bede6]Inoculator Charge[/ff2bede6]</eng>
+				</desc>
+			</Godlike_Gain_Innoculator_on_Massacre>
+			<Godlike_Loot_Bonus_on_anomaly_interact>
+				<desc>
+					<eng>Interacting with [ffc667fc]Warp Anomalies[/ffc667fc] increases Loot Rarity from monsters by [ff2bede6]5%[/ff2bede6] for [ff2bede6]15[/ff2bede6] seconds. Stacks up to [ff2bede6]5[/ff2bede6] times</eng>
+				</desc>
+			</Godlike_Loot_Bonus_on_anomaly_interact>
+			<Godlike_Focused_on_anomaly_interact>
+				<desc>
+					<eng>Interacting with a [ffc667fc]Warp Anomaly[/ffc667fc] gives [fffffdcb]Focused[/fffffdcb] state for [ff2bede6]20[/ff2bede6] seconds.</eng>
+				</desc>
+			</Godlike_Focused_on_anomaly_interact>
+			<Godlike_Area_damage_over_time_on_anomaly_interacted>
+				<desc>
+					<eng>Upon interacting with a [ffc667fc]Warp Anomaly[/ffc667fc], gain an Aura that causes [ff2bede6]150%[/ff2bede6] Weapon Damage as Warp Damage every second for [ff2bede6]12[/ff2bede6] seconds. Stacks up to [ff2bede6]5[/ff2bede6] times.</eng>
+				</desc>
+			</Godlike_Area_damage_over_time_on_anomaly_interacted>
+			<Godlike_Movement_speed_on_Orb_Pickup_orb_time>
+				<desc>
+					<eng>Picking up [ffc667fc]Wrap Flecks[/ffc667fc] grants [ff2bede6]+25%[/ff2bede6] movement speed for [ff2bede6]10[/ff2bede6] seconds</eng>
+				</desc>
+			</Godlike_Movement_speed_on_Orb_Pickup_orb_time>
+			<Godlike_Shock_Aura_on_Phasing_Assault_use>
+				<desc>
+					<eng>Using the [fffffdcb]Phasing Assault[/fffffdcb] skill has a [ff2bede6]50%[/ff2bede6] chance to trigger a [fffffdcb]Shock Nova[/fffffdcb] on arrival</eng>
+				</desc>
+			</Godlike_Shock_Aura_on_Phasing_Assault_use>
+			<Rosarius_duration_on_kill>
+				<desc>
+					<eng>Killing an enemy extends the duration of the Rosarius Field by [ff2bede6]0.5[/ff2bede6] seconds, up to a maximum of [ff2bede6]10[/ff2bede6] seconds.</eng>
+				</desc>
+			</Rosarius_duration_on_kill>
+			<Godlike_Lifesteal_or_Bonus_Suppression_Damage_on_orb_pickup>
+				<desc>
+					<eng>Picking up a [ffc667fc]Corpus Fleck[/ffc667fc] grants you Lifesteal for [ff2bede6]10[/ff2bede6] seconds; Picking up an [ffc667fc]Elemental Fleck[/ffc667fc] grants you {artifact_enchant,100} Suppression Damage for [ff2bede6]10[/ff2bede6] seconds.</eng>
+				</desc>
+			</Godlike_Lifesteal_or_Bonus_Suppression_Damage_on_orb_pickup>
+			<Godlike_Chance_to_Slow_or_Stun_on_hit>
+				<desc>
+					<eng>{artifact_enchant,100} chance to apply [ff2bede6]Slow[/ff2bede6], half the chance to apply [ff2bede6]Stun[/ff2bede6] on [ffc667fc]Warp[/ffc667fc] damage hits</eng>
+				</desc>
+			</Godlike_Chance_to_Slow_or_Stun_on_hit>
+			<Seasonal_Signum_Warp_resist>
+				<desc>
+					<eng>{warp_resist}[ff2bede6]%[/ff2bede6] reduced [ffc667fc]Warp[/ffc667fc] damage taken</eng>
+				</desc>
+			</Seasonal_Signum_Warp_resist>
+			<Godlike_Pull_enemies_on_seasonal_area_entered>
+				<desc>
+					<eng>Interacting with [ffc667fc]Warp Zones[/ffc667fc] creates a Gravity Well, pulling [ff2bede6]5[/ff2bede6] nearby enemies to melee range.</eng>
+				</desc>
+			</Godlike_Pull_enemies_on_seasonal_area_entered>
 		</Enchantment>
 		<unlocks>
 			<finish_mission_hard>
