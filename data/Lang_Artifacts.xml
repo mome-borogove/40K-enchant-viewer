@@ -426,6 +426,18 @@
 			<TA_Vivisector>
 				<eng>Bombing</eng>
 			</TA_Vivisector>
+			<Shotgun_Judgement>
+				<eng>Judgement</eng>
+			</Shotgun_Judgement>
+			<TA_Lifeleech_PS>
+				<eng>Superimposition</eng>
+			</TA_Lifeleech_PS>
+			<TA_ES_Belt>
+				<eng>Calculation</eng>
+			</TA_ES_Belt>
+			<TA_HP_Belt>
+				<eng>Substance</eng>
+			</TA_HP_Belt>
 
 
 
@@ -563,6 +575,9 @@
 			<shield>
 				<eng>Energy Shield</eng>
 			</shield>
+			<shield_percent>
+				<eng>Energy Shield Percent</eng>
+			</shield_percent>
 		</MainStat>
 		<Colors>
 			<Mephiston_Red>
@@ -998,6 +1013,9 @@
 			<Neural_Implant_skull>
 				<eng>Neural Implant</eng>
 			</Neural_Implant_skull>
+			<eye_implant_skull>
+				<eng>Eye Implant</eng>
+			</eye_implant_skull>
 
 			<Force_rod>
 				<eng>Force Rod</eng>
@@ -1083,6 +1101,12 @@
 					<eng>Void Crusade Shards are used to create Void Crusade campaigns on the Command Bridge.</eng>
 				</desc>
 			</map_shard>
+			<void_dust>
+				<eng>Void Material</eng>
+				<desc>
+					<eng>Void Dust can be obtained by turning Shards into Dust on the Shard Exchange panel, and it can be crafted into Shards there as well.</eng>
+				</desc>
+			</void_dust>
 			<Intel>
 				<eng>Intel</eng>
 				<desc>
@@ -1157,6 +1181,12 @@
 			<token_scrap>
 				<eng>Cortex Fragment</eng>
 			</token_scrap>
+			<seasonal_seal>
+				<eng>Seasonal Void Seal</eng>
+			</seasonal_seal>
+			<void_key>
+				<eng>Void Key</eng>
+			</void_key>
 		</Types>
 		<Rarity>
 			<common>
@@ -1876,6 +1906,14 @@
 					<eng>Received during the Skull Throne event.\nThis implant was specially issued to uncover information about a devious Archenemy plot, involving Skull Procurators. It needs to be equipped in order to do so.</eng>
 				</Desc>
 			</Neural_Implant_skull>
+			<Eye_Implant_skull>
+				<Name>
+					<eng>Adaptive Ocular Implant</eng>
+				</Name>
+				<Desc>
+					<eng>Received during the Warhammer Skulls event.\nThis implant was specially issued to uncover information about a devious Archenemy plot, involving Skull Procurators. It needs to be equipped in order to do so.</eng>
+				</Desc>
+			</Eye_Implant_skull>
 
 			<Force_rod>
 				<Name>
@@ -2173,6 +2211,112 @@
 					<eng>Siren's Storm</eng>
 				</Name>
 			</S2_Death_Cult_Blade>
+
+			<S3_pirateinsignia>
+				<Name>
+					<eng>Void Brethren Insignia</eng>
+				</Name>
+			</S3_pirateinsignia>
+			<S3_piratekey>
+				<Name>
+					<eng>Void Plunder Key</eng>
+				</Name>
+			</S3_piratekey>
+			<s3_crus_armor>
+				<Name>
+					<eng>Ward of Thunder</eng>
+				</Name>
+			</s3_crus_armor>
+			<s3_crus_weapon>
+				<Name>
+					<eng>Reverberating Fury</eng>
+				</Name>
+			</s3_crus_weapon>
+			<s3_assassin_armor>
+				<Name>
+					<eng>Eversor's Shelter</eng>
+				</Name>
+			</s3_assassin_armor>
+			<s3_assassin_weapon>
+				<Name>
+					<eng>Blade of the Merciless</eng>
+				</Name>
+			</s3_assassin_weapon>
+			<s3_psyker_weapon>
+				<Name>
+					<eng>Hand of Desolation</eng>
+				</Name>
+			</s3_psyker_weapon>
+			<s3_psyker_weapon2>
+				<Name>
+					<eng>Stormrage Staff</eng>
+				</Name>
+			</s3_psyker_weapon2>
+			<s3_techadept_armor>
+				<Name>
+					<eng>Static-Flux Armor</eng>
+				</Name>
+			</s3_techadept_armor>
+			<s3_techadept_weapon>
+				<Name>
+					<eng>Will of the Omnissiah</eng>
+				</Name>
+			</s3_techadept_weapon>
+			<s3_signum1>
+				<Name>
+					<eng>Signum of Fulmination</eng>
+				</Name>
+			</s3_signum1>
+			<s3_signum2>
+				<Name>
+					<eng>Signum of Rampage</eng>
+				</Name>
+			</s3_signum2>
+			<s3_belt1>
+				<Name>
+					<eng>Tempest's Wrath</eng>
+				</Name>
+			</s3_belt1>
+			<s3_belt2>
+				<Name>
+					<eng>Touch of the Void</eng>
+				</Name>
+			</s3_belt2>
+			<s3_inoculator>
+				<Name>
+					<eng>Genetor's Redeem</eng>
+				</Name>
+			</s3_inoculator>
+			<s3_neural_implant>
+				<Name>
+					<eng>Reach of the Storm</eng>
+				</Name>
+			</s3_neural_implant>
+			<s3_main_implant1>
+				<Name>
+					<eng>Spoil Warden's Bane</eng>
+				</Name>
+			</s3_main_implant1>
+			<s3_main_implant2>
+				<Name>
+					<eng>Fulgur's Alacrity</eng>
+				</Name>
+			</s3_main_implant2>
+			<s3_eye_implant>
+				<Name>
+					<eng>Gaze of Doom</eng>
+				</Name>
+			</s3_eye_implant>
+			<s3_purity_seal1>
+				<Name>
+					<eng>Acolyte's Heed</eng>
+				</Name>
+			</s3_purity_seal1>
+			<s3_purity_seal2>
+				<Name>
+					<eng>Harbinger of Refuge</eng>
+				</Name>
+			</s3_purity_seal2>
 
 			<Normal_Zacsi>
 				<Name>
@@ -2736,6 +2880,46 @@
 					<eng></eng>
 				</desc>
 			</season_2_reward_5_zacsi>
+			<season_3_reward_1_zacsi>
+				<Name>
+					<eng>Epsylon Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_3_reward_1_zacsi>
+			<season_3_reward_2_zacsi>
+				<Name>
+					<eng>Delta Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_3_reward_2_zacsi>
+			<season_3_reward_3_zacsi>
+				<Name>
+					<eng>Omega Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_3_reward_3_zacsi>
+			<season_3_reward_4_zacsi>
+				<Name>
+					<eng>Beta Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_3_reward_4_zacsi>
+			<season_3_reward_5_zacsi>
+				<Name>
+					<eng>Alpha Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_3_reward_5_zacsi>
 			<Consumable_InstantCraft>
 				<Name>
 					<eng>Immediate Crafting</eng>
@@ -3066,6 +3250,31 @@
 					<eng>Warp Shard V</eng>
 				</Name>
 			</gem_s2_5>
+			<gem_s3_1>
+				<Name>
+					<eng>Magistratus Shard</eng>
+				</Name>
+			</gem_s3_1>
+			<gem_s3_2>
+				<Name>
+					<eng>Magistratus Shard II</eng>
+				</Name>
+			</gem_s3_2>
+			<gem_s3_3>
+				<Name>
+					<eng>Magistratus Shard III</eng>
+				</Name>
+			</gem_s3_3>
+			<gem_s3_4>
+				<Name>
+					<eng>Magistratus Shard IV</eng>
+				</Name>
+			</gem_s3_4>
+			<gem_s3_5>
+				<Name>
+					<eng>Magistratus Shard V</eng>
+				</Name>
+			</gem_s3_5>
 			<Rune1>
 				<Name>
 					<eng>Hermeticon Psalm</eng>
@@ -3357,7 +3566,7 @@
 					<eng>Alpha Turret</eng>
 				</Name>
 				<desc>
-					<eng>Alternate function module for your non-combat turret. Regenerates a nearby allied target.</eng>
+					<eng>Defense oriented module for the Necromechanic turret. Rapidly heals a single allied unit in a 20 metres radius.</eng>
 				</desc>
 			</techadeptsummon_necromechanic_turret_alpha_item>
 			<techadeptsummon_necromechanic_turret_gamma_item>
@@ -3365,7 +3574,7 @@
 					<eng>Gamma Turret</eng>
 				</Name>
 				<desc>
-					<eng>Alternate function module for your non-combat turret. It regenerates all nearby allied targets.</eng>
+					<eng>Defense oriented module for the Necromechanic turret. It gives Supreme Damage Reduction and Supreme All-Resist to all allied units in an Aura.</eng>
 				</desc>
 			</techadeptsummon_necromechanic_turret_gamma_item>
 			<techadeptsummon_necromechanic_turret_voltageist_item>
@@ -3373,7 +3582,7 @@
 					<eng>Voltageist Turret</eng>
 				</Name>
 				<desc>
-					<eng>Alternate function module for your non-combat turret. It provides a damage bonus to all nearby allied targets.</eng>
+					<eng>Offense oriented module for the Necromechanic turret.\nIt gives Attack Speed and Cooldown Recovery Rate for [ff00a1ff]Constructs[/ff00a1ff] and Attack Speed to ALL allied units in an Aura.</eng>
 				</desc>
 			</techadeptsummon_necromechanic_turret_voltageist_item>
 			<techadeptsummon_tarantula_turret_boltgun_item>
@@ -3470,6 +3679,14 @@
 					<eng>Crimson Void Shard</eng>
 				</Name>
 			</Map_shard_Crimson>
+			<void_dust>
+				<Name>
+					<eng>Void Dust</eng>
+				</Name>
+				<Desc>
+					<eng>Obtained by crushing Void Shards. Can be used to create Void Shards on the Shard Exchange panel.</eng>
+				</Desc>
+			</void_dust>
 			<intel>
 				<Name>
 					<eng>Intel</eng>
@@ -3520,6 +3737,71 @@
 					<eng>Remnants of mysterious machines, possibly from the Dark Age of Technology.\nCan be exchanged for Favour with Custodian Rebus.</eng>
 				</desc>
 			</token_scrap>
+			<tarot_seal_s3_voidbrethreninsignia_1>
+				<name>
+					<eng>Void Brethren Insignia I</eng>
+				</name>
+				<Desc>
+					<eng>Used to locate hideouts of the Void Brethren. It can grant access to Generic, Hideout, or Pirate Den type missions.</eng>
+				</Desc>
+			</tarot_seal_s3_voidbrethreninsignia_1>
+			<tarot_seal_s3_voidbrethreninsignia_2>
+				<name>
+					<eng>Void Brethren Insignia II</eng>
+				</name>
+				<Desc>
+					<eng>Used to locate hideouts of the Void Brethren. It can grant access to Hideout or Pirate Den type missions.</eng>
+				</Desc>
+			</tarot_seal_s3_voidbrethreninsignia_2>
+			<tarot_seal_s3_voidbrethreninsignia_3>
+				<name>
+					<eng>Void Brethren Insignia III</eng>
+				</name>
+				<Desc>
+					<eng>Used to locate hideouts of the Void Brethren. It can grant access to special Pirate Den type missions.</eng>
+				</Desc>
+			</tarot_seal_s3_voidbrethreninsignia_3>
+			<s3_void_key>
+				<name>
+					<eng>Void Plunder Key</eng>
+				</name>
+				<Desc>
+					<eng>Used to open hidden caches of the Void Brethren. Obtained from defeating a Contraband Servoskull.</eng>
+				</Desc>
+			</s3_void_key>
+			<s3_voidbrethreninsignia_1>
+				<name>
+					<eng>Void Brethren Insignia I</eng>
+				</name>
+				<Desc>
+					<eng>Used to locate hideouts of the Void Brethren. It can grant access to Generic, Hideout, or Pirate Den type missions.</eng>
+				</Desc>
+			</s3_voidbrethreninsignia_1>
+			<s3_voidbrethreninsignia_2>
+				<name>
+					<eng>Void Brethren Insignia II</eng>
+				</name>
+				<Desc>
+					<eng>Used to locate hideouts of the Void Brethren. It can grant access to Hideout or Pirate Den type missions.</eng>
+				</Desc>
+			</s3_voidbrethreninsignia_2>
+			<s3_voidbrethreninsignia_3>
+				<name>
+					<eng>Void Brethren Insignia III</eng>
+				</name>
+				<Desc>
+					<eng>Used to locate hideouts of the Void Brethren. It can grant access to special Pirate Den type missions.</eng>
+				</Desc>
+			</s3_voidbrethreninsignia_3>
+
+			<construct_material>
+				<name>
+					<eng>Tech Fragment</eng>
+				</name>
+				<Desc>
+					<eng>Tech Fragment is used to upgrade the Constructs’ weapons on the Construct Setup panel.</eng>
+				</Desc>
+			</construct_material>
 		</Items>
 		<Enchantment>
 			<critical_hit_chance>
@@ -3826,7 +4108,7 @@
 			</knockdown_tag_skills_uncontrollable_time_bonus>
 			<increased_damage_against_slow_group_enemies>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus against [ff2bede6]Slowed[/ff2bede6], [ff2bede6]Shocked[/ff2bede6], [ff2bede6]Stunned[/ff2bede6] and [ff2bede6]Frozen[/ff2bede6]</eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus against [ff2bede6]Slowed[/ff2bede6], [ff2bede6]Shocked[/ff2bede6], [ff2bede6]Stunned[/ff2bede6].</eng>
 				</desc>
 			</increased_damage_against_slow_group_enemies>
 			<damage_percent_against_chaos_cultist>
@@ -4001,7 +4283,7 @@
 			</slow_shock_efficiency>
 			<damage_reduce_from_salvo_channeled>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction when using Salvo/Channeled skill</eng>
+					<eng>{damage_reduce} Damage Reduction when using Salvo skill</eng>
 				</desc>
 			</damage_reduce_from_salvo_channeled>
 			<dodge_against_ranged>
@@ -4097,7 +4379,7 @@
 			</Chance_to_give_vulnerability_on_hit>
 			<Area_damage_when_stunned_enemy_killed>
 				<desc>
-					<eng>[fffffdcb]Stunned[/fffffdcb] enemies explode on Kill, dealing area damage equivalent to {artifact_enchant,100} of the weapons's Damage</eng>
+					<eng>[fffffdcb]Stunned[/fffffdcb] enemies explode on Kill, dealing {artifact_enchant,100} Base Damage in a 5 meters radius.</eng>
 				</desc>
 			</Area_damage_when_stunned_enemy_killed>
 			<Chance_knockback_and_slow_on_hit>
@@ -4133,7 +4415,7 @@
 			</More_warp_damage_on_low_life>
 			<Chance_to_lightning_bolt_in_area>
 				<desc>
-					<eng>{artifact_enchant,100} chance to create electric arcs on Hit. The arcs hit the two additional enemies.</eng>
+					<eng>{artifact_enchant,100} chance to create electric arcs on Melee Hit. The arcs hit the 6 additional enemies with 6.5 meters for [ff2bede6]350%[/ff2bede6] Base damage and [fffffdcb]Shock[/fffffdcb] them.</eng>
 				</desc>
 			</Chance_to_lightning_bolt_in_area>
 			<Area_damage_after_10_kills>
@@ -4215,7 +4497,7 @@
 
 			<Damage_reduce_in_Green_suppression>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction when Suppression Status is [ff10a809]Protected[/ff10a809].</eng>
+					<eng>{damage_reduce}[ff2bede6]%[/ff2bede6] Damage Reduction when Suppression Status is [ff10a809]Protected[/ff10a809].</eng>
 				</desc>
 			</Damage_reduce_in_Green_suppression>
 			<Heal_on_Crit>
@@ -4301,7 +4583,7 @@
 			</Suppression_per_deflect>
 			<Crit_chance_and_strenght_on_slow_group>
 				<desc>
-					<eng>[ff2bede6]+5%[/ff2bede6] Supreme Critical Hit Chance and [ff2bede6]+10[/ff2bede6] Critical Hit Strength against [ff2bede6]Slowed[/ff2bede6], [ff2bede6]Shocked[/ff2bede6], [ff2bede6]Stunned[/ff2bede6] or [ff2bede6]Frozen[/ff2bede6] targets.</eng>
+					<eng>[ff2bede6]+5%[/ff2bede6] Supreme Critical Hit Chance and [ff2bede6]+10[/ff2bede6] Critical Hit Strength against [ff2bede6]Slowed[/ff2bede6], [ff2bede6]Shocked[/ff2bede6], [ff2bede6]Stunned[/ff2bede6] targets.</eng>
 				</desc>
 			</Crit_chance_and_strenght_on_slow_group>
 
@@ -4445,7 +4727,7 @@
 			</Damage_reduce_based_on_warp_heat>
 			<Reverse_damage_based_on_Warp_heat>
 				<desc>
-					<eng>[ff2bede6]+1%[/ff2bede6] Chance for every 10 points of current Warp Heat to turn incoming damage to healing</eng>
+					<eng>[ff2bede6]+1%[/ff2bede6] Chance for every 20 points of current Warp Heat to turn incoming damage to healing</eng>
 				</desc>
 			</Reverse_damage_based_on_Warp_heat>
 			<Reflect_damage_based_on_Warp_heat>
@@ -4455,7 +4737,7 @@
 			</Reflect_damage_based_on_Warp_heat>
 			<Chance_to_Area_damage_based_on_Warp_Heat>
 				<desc>
-					<eng>[ff2bede6]+1%[/ff2bede6] Chance for every 5 points of Current Warp Heat for enemies to explode on Kill dealing [ff2bede6]100%[/ff2bede6] of the Killing Blow's damage</eng>
+					<eng>[ff2bede6]+1%[/ff2bede6] Chance for every 10 points of Current Warp Heat for enemies to explode on Kill dealing [ff2bede6]100%[/ff2bede6] of the Killing Blow's damage</eng>
 				</desc>
 			</Chance_to_Area_damage_based_on_Warp_Heat>
 			<Chance_to_reduce_Warp_Heat_Cost>
@@ -4525,19 +4807,29 @@
 			</Area_Inferno_on_Damage>
 			<shieldhp_regen>
 				<desc>
-					<eng>{shield_hp_regeneration,100} regeneration of the Energy Shield</eng>
+					<eng>{shield_hp_regeneration}[ff2bede6]%[/ff2bede6] Shield HP regeneration per sec</eng>
 				</desc>
 			</shieldhp_regen>
 			<shield_leech_percent>
 				<desc>
-					<eng>{shield_hp_per_hit_percent}% of damage dealt is gained as Shield Charge</eng>
+					<eng>{shield_hp_per_hit_percent}% Shield Drain</eng>
 				</desc>
 			</shield_leech_percent>
 			<hp_leech_percent>
 				<desc>
-					<eng>{hp_per_hit_percent}% of damage dealt is gained as HP</eng>
+					<eng>{hp_per_hit_percent}% Life Drain</eng>
 				</desc>
 			</hp_leech_percent>
+			<Minion_Lifeleech_Ranged>
+				<desc>
+					<eng>{hp_per_hit_percent}% Life Drain</eng>
+				</desc>
+			</Minion_Lifeleech_Ranged>
+			<Minion_Lifeleech_Melee>
+				<desc>
+					<eng>{hp_per_hit_percent}% Life Drain</eng>
+				</desc>
+			</Minion_Lifeleech_Melee>
 			<dot_damage>
 				<desc>
 					<eng>{dot_damage,100} [fffffdcb]DoT[/fffffdcb] Damage</eng>
@@ -4675,12 +4967,18 @@
 			</Runeword_3_5>
 			<Runeword_3_6>
 				<desc>
-					<eng>{artifact_enchant,100} Damage Against Energy Shield is Reflected to Melee Attackers</eng>
+					<eng>{artifact_enchant,100} Damage taken to Energy Shield is Reflected to Melee attackers as Warp</eng>
 				</desc>
+				<desc_techadept>
+					<eng>{artifact_enchant,100} Damage taken to Energy Shield is Reflected to Melee attackers as Warp.\nAffects [ff00a1ff]Constructs[/ff00a1ff].</eng>
+				</desc_techadept>
 			</Runeword_3_6>
 			<Runeword_3_7>
 				<desc>
-					<eng>{dot_damage,100} Bleeding Damage Bonus against enemies in 3 meter radius</eng>
+					<eng>{dot_damage,100} Bleeding Damage against enemies in 8 metres radius</eng>
+				</desc>
+				<desc>
+					<eng>{dot_damage,100} Bleeding DoT Damage against enemies in 8 metres radius\nAffects [ff00a1ff]Constructs[/ff00a1ff].</eng>
 				</desc>
 			</Runeword_3_7>
 			<Runeword_3_8>
@@ -4700,7 +4998,7 @@
 			</Runeword_3_10>
 			<Runeword_3_11>
 				<desc>
-					<eng>{hp_max,100} Constructs HP</eng>
+					<eng>{hp_max,100} HP for [ff00a1ff]Constructs[/ff00a1ff]</eng>
 				</desc>
 			</Runeword_3_11>
 			<Runeword_3_12>
@@ -4712,11 +5010,17 @@
 				<desc>
 					<eng>{heat_damage,100} Heat Damage Bonus</eng>
 				</desc>
+				<desc_techadept>
+					<eng>{heat_damage,100} Heat Damage Bonus\nAffects [ff00a1ff]Constructs[/ff00a1ff]</eng>
+				</desc_techadept>
 			</Runeword_3_13>
 			<Runeword_3_14>
 				<desc>
 					<eng>{physical_damage,100} Physical Damage Bonus</eng>
 				</desc>
+				<desc_techadept>
+					<eng>{physical_damage,100} Physical Damage Bonus\n Affects [ff00a1ff]Constructs[/ff00a1ff]</eng>
+				</desc_techadept>
 			</Runeword_3_14>
 			<Runeword_3_15>
 				<desc>
@@ -4725,19 +5029,28 @@
 			</Runeword_3_15>
 			<Runeword_3_16>
 				<desc>
-					<eng>[fffffdcb]Shocked[/fffffdcb] enemies explode on Kill dealing area damage equivalent to the killing blow's Damage and [fffffdcb]Shocking[/fffffdcb] enemies in 3 meter radius.</eng>
+					<eng>[fffffdcb]Shocked[/fffffdcb] enemies explode on Kill dealing area damage equivalent to the killing blow's Damage as Heat in a 3 metres radius applying [fffffdcb]Shock[/fffffdcb]</eng>
 				</desc>
+				<desc_techadept>
+					<eng>[fffffdcb]Shocked[/fffffdcb] enemies explode on Kill dealing area damage equivalent to the killing blow's Damage as Heat in a 3 metres radius applying [fffffdcb]Shock[/fffffdcb]\n Affects [ff00a1ff]Constructs[/ff00a1ff]</eng>
+				</desc_techadept>
 			</Runeword_3_16>
 
 			<Runeword_4_1>
 				<desc>
 					<eng>{heat_damage,100} Heat Damage Bonus</eng>
 				</desc>
+				<desc_techadept>
+					<eng>{heat_damage,100} Heat Damage Bonus\nAffects [ff00a1ff]Constructs[/ff00a1ff]</eng>
+				</desc_techadept>
 			</Runeword_4_1>
 			<Runeword_4_2>
 				<desc>
 					<eng>{physical_damage,100} Physical Damage Bonus</eng>
 				</desc>
+				<desc_techadept>
+					<eng>{physical_damage,100} Physical Damage Bonus\n Affects [ff00a1ff]Constructs[/ff00a1ff]</eng>
+				</desc_techadept>
 			</Runeword_4_2>
 			<Runeword_4_3>
 				<desc>
@@ -4751,7 +5064,7 @@
 			</Runeword_4_4>
 			<Runeword_4_5>
 				<desc>
-					<eng>Energy Shield HP is increased by 100% but Maximum HP is reduced by 90%</eng>
+					<eng>Gain [ff2bede6]50%[/ff2bede6] of your max HP as a Regenerating Energy Shield\n[ff2bede6]2%[/ff2bede6] Shield HP regeneration per sec\n[ff2bede6]+100%[/ff2bede6] Energy Shield Hardcap </eng>
 				</desc>
 			</Runeword_4_5>
 			<Runeword_4_6>
@@ -4766,7 +5079,7 @@
 			</Runeword_4_7>
 			<Runeword_4_9>
 				<desc>
-					<eng>{mana_gain_bonus} bonus to {resource} recharge rate</eng>
+					<eng>{mana_gain_bonus,100} bonus to {resource} gain rate</eng>
 				</desc>
 			</Runeword_4_9>
 			<Runeword_4_10>
@@ -4842,7 +5155,7 @@
 			</Runeword_5_3>
 			<Runeword_5_4>
 				<desc>
-					<eng>{skill_double_duration_chance} to all DoT duration</eng>
+					<eng>{skill_double_duration_chance,100} duration to all DoT effects</eng>
 				</desc>
 			</Runeword_5_4>
 			<Runeword_5_5>
@@ -4857,22 +5170,22 @@
 			</Runeword_5_6>
 			<Runeword_5_7>
 				<desc>
-					<eng>{artifact_enchant} HP and Energy Shield HP gained on Hit</eng>
+					<eng>{artifact_enchant}% of damage dealt is gained as HP and Shield Charge</eng>
 				</desc>
 			</Runeword_5_7>
 			<Runeword_5_8>
 				<desc>
-					<eng>Below [ff2bede6]10%[/ff2bede6] HP, the hero becomes Ethereal and gains [ff2bede6]50%[/ff2bede6] Movement Speed for 3 seconds (can only activate once every 10 seconds)</eng>
+					<eng>Gain [ff2bede6]Ethereal[/ff2bede6] and an Inoculator charge when taking damage under 30% HP or when taking a potentially lethal blow.\nEthereal enables moving through enemies with [ff2bede6]+50%[/ff2bede6] Movement Speed while ignoring all damage but also disables the ability to deal direct damage for 5 seconds (15 seconds Cooldown)</eng>
 				</desc>
 			</Runeword_5_8>
 			<Runeword_5_9>
 				<desc>
-					<eng>Inflicting a [fffffdcb]Burning[/fffffdcb] effect on an enemy also puts [fffffdcb]Burning[/fffffdcb] on nearby enemies</eng>
+					<eng>Applying a [fffffdcb]Burn[/fffffdcb] effect on an enemy also applies [fffffdcb]Burn[/fffffdcb] on enemies in a 5 meters radius</eng>
 				</desc>
 			</Runeword_5_9>
 			<Runeword_5_10>
 				<desc>
-					<eng>Inflicting a [fffffdcb]Poison[/fffffdcb] effect on an enemy also puts [fffffdcb]Poison[/fffffdcb] on nearby enemies</eng>
+					<eng>Applying a [fffffdcb]Poison[/fffffdcb] effect on an enemy also applies [fffffdcb]Poison[/fffffdcb] on enemies in a 5 meters radius</eng>
 				</desc>
 			</Runeword_5_10>
 
@@ -4888,7 +5201,7 @@
 			</Runeword_6_3>
 			<Runeword_6_5>
 				<desc>
-					<eng>Inflicting a [fffffdcb]Shock[/fffffdcb] on an enemy creates an explosion dealing Area Damage equal to [ff2bede6]50%[/ff2bede6] of the original Hit and [fffffdcb]Shock[/fffffdcb] to nearby enemies</eng>
+					<eng>[fffffdcb]Shocking[/fffffdcb] an enemy creates a explosion in a 3 meters radius around the target dealing [ff2bede6]120%[/ff2bede6] Base Damage as Heat and applying [fffffdcb]Shock[/fffffdcb]</eng>
 				</desc>
 			</Runeword_6_5>
 			<Runeword_6_7>
@@ -5376,7 +5689,7 @@
 			</Godlike_HP_regen_per_Berserk>
 			<Godlike_life_leech_per_Berserk>
 				<desc>
-					<eng>{hp_regeneration} % of damage dealt is gained as HP per [fffffdcb]Berserk[/fffffdcb] token</eng>
+					<eng>{hp_per_hit_percent} % Life Drain per [fffffdcb]Berserk[/fffffdcb] token</eng>
 				</desc>
 			</Godlike_life_leech_per_Berserk>
 			<Godlike_Resist_equalizer_in_Berserk>
@@ -5819,6 +6132,11 @@
 					<eng>{artifact_enchant,100} chance to apply [fffe7272]Inferno[/fffe7272] for 5 seconds after taking Critical damage</eng>
 				</desc>
 			</Fix_inferno_on_critical_hit_taken>
+			<Explode_on_Kill>
+				<desc>
+					<eng>Enemies explode on Kill dealing {artifact_enchant,100} of Base Damage as Physical in a 4 metres radius, applying [ff2bede6]Physical Vulnerability[/ff2bede6] </eng>
+				</desc>
+			</Explode_on_Kill>
 
 
 			<Demonic_Weapon_Temporary_Cellrot_On_Hit>
@@ -6385,24 +6703,44 @@
 			</Minion_TA_Damage_Vivisector_chainsaw>
 			<Minion_TA_Damage_reduce>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{damage_reduce_hardcap} Supreme Damage Reduction for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Damage_reduce>
+			<Minion_TA_Damage_reduce_minor>
+				<desc>
+					<eng>{damage_reduce} Damage Reduction for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+				</desc>
+			</Minion_TA_Damage_reduce_minor>
 			<Minion_TA_Warp_Resist>
+				<desc>
+					<eng>{warp_resist_hardcap} Supreme Warp Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+				</desc>
+			</Minion_TA_Warp_Resist>
+			<Minion_TA_Warp_Resist_minor>
 				<desc>
 					<eng>{warp_resist} Warp Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
-			</Minion_TA_Warp_Resist>
+			</Minion_TA_Warp_Resist_minor>
 			<Minion_TA_Phys_Resist>
+				<desc>
+					<eng>{physical_resist_hardcap} Supreme Physical Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+				</desc>
+			</Minion_TA_Phys_Resist>
+			<Minion_TA_Phys_Resist_minor>
 				<desc>
 					<eng>{physical_resist} Physical Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
-			</Minion_TA_Phys_Resist>
+			</Minion_TA_Phys_Resist_minor>
 			<Minion_TA_Heat_Resist>
+				<desc>
+					<eng>{heat_resist_hardcap} Supreme Heat Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+				</desc>
+			</Minion_TA_Heat_Resist>
+			<Minion_TA_Heat_Resist_minor>
 				<desc>
 					<eng>{heat_resist} Heat Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
-			</Minion_TA_Heat_Resist>
+			</Minion_TA_Heat_Resist_minor>
 			<minion_movement_speed>
 				<desc>
 					<eng>{movement_speed} Movement Speed for [ff00a1ff]Constructs[/ff00a1ff] </eng>
@@ -6580,253 +6918,6 @@
 				</desc>
 			</Minion_TA_Damage_Flat>
 
-
-			<Minion_TA_Damage_Combustor_Las>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Lasgun Shot[/ff2bede6] Skill of the [ff00a1ff]Psiloi Combustor[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Combustor_Las>
-			<Minion_TA_Damage_Combustor_Auto>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Autogun Shot[/ff2bede6] Skill of the [ff00a1ff]Psiloi Combustor[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Combustor_Auto>
-			<Minion_TA_Damage_Combustor_Melta>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Meltagun Shot[/ff2bede6] Skill of the [ff00a1ff]Psiloi Combustor[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Combustor_Melta>
-			<Minion_TA_Damage_Kataphron_Flamer>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Flamer[/ff2bede6] weapon of the [ff00a1ff]Kataphron Destroyer[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kataphron_Flamer>
-			<Minion_TA_Damage_Kataphron_Gravcannon>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Gravcannon[/ff2bede6] weapon of the [ff00a1ff]Kataphron Destroyer[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kataphron_Gravcannon>
-			<Minion_TA_Damage_Kataphron_Phosphor>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Phosphor Blaster[/ff2bede6] weapon of the [ff00a1ff]Kataphron Destroyer[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kataphron_Phosphor>
-			<Minion_TA_Damage_Kataphron_Plasma>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Plasma cannon[/ff2bede6] weapon of the [ff00a1ff]Kataphron Destroyer[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kataphron_Plasma>
-			<Minion_TA_Damage_Kataphron_Cleave>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Greataxe[/ff2bede6] weapon of the [ff00a1ff]Kataphron Vanguard[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kataphron_Cleave>
-			<Minion_TA_Damage_Kataphron_Strike>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Power Axe[/ff2bede6] weapon of the [ff00a1ff]Kataphron Vanguard[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kataphron_Strike>
-			<Minion_TA_Damage_Kataphron_Charge>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Charge[/ff2bede6] Skill of the [ff00a1ff]Kataphron Vanguard[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kataphron_Charge>
-			<Minion_TA_Damage_Kataphron_AOE>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Canticles of the Omnissiah[/ff2bede6] Skill of the [ff00a1ff]Kataphron Vanguard[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kataphron_AOE>
-			<Minion_TA_Damage_Kastellan_Fist_strike>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Fist Strike[/ff2bede6] Skill of the [ff00a1ff]Kastelan Robot[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kastellan_Fist_strike>
-			<Minion_TA_Damage_Kastellan_Fist_cleave>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Fist Cleave[/ff2bede6] Skill of the [ff00a1ff]Kastelan Robot[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kastellan_Fist_cleave>
-			<Minion_TA_Damage_Kastellan_Fist_shoot>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Phosphor Cannon[/ff2bede6] Weapon of the [ff00a1ff]Kastelan Robot[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kastellan_Fist_shoot>
-			<Minion_TA_Damage_Kastellan_Blaster_burst>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Phosphorus Blast[/ff2bede6] Skill of the Phospor Gun of the [ff00a1ff]Kastelan Robot[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kastellan_Blaster_burst>
-			<Minion_TA_Damage_Kastellan_Blaster_shoot>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Phosphorus Barrage[/ff2bede6] Skill of the Phospor Gun of the [ff00a1ff]Kastelan Robot[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kastellan_Blaster_shoot>
-			<Minion_TA_Damage_Kastellan_Flamer_flame>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Flame Stream[/ff2bede6] Skill of the Flamer of the [ff00a1ff]Kastelan Robot[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kastellan_Flamer_flame>
-			<Minion_TA_Damage_Kastellan_Flamer_shot>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Flame Burst[/ff2bede6] Skill of the Flamer of the [ff00a1ff]Kastelan Robot[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kastellan_Flamer_shot>
-			<Minion_TA_Damage_Kastellan_AOE>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Litany of the Electromancer[/ff2bede6] Skill of the [ff00a1ff]Kastelan Robot[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Kastellan_AOE>
-			<Minion_TA_Tarantula_lasgun>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Lasgun Shoot[/ff2bede6] Skill of the [ff00a1ff]Tarantula Turret[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Tarantula_lasgun>
-			<Minion_TA_Tarantula_bolter>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Boltgun Shoot[/ff2bede6] Skill of the [ff00a1ff]Tarantula Turret[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Tarantula_bolter>
-			<Minion_TA_Tarantula_flamer>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Flame Stream[/ff2bede6] Skill of the [ff00a1ff]Tarantula Turret[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Tarantula_flamer>
-			<Minion_TA_Tarantula_launcher>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Missile Launch[/ff2bede6] Skill of the [ff00a1ff]Tarantula Turret[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Tarantula_launcher>
-			<Minion_TA_Damage_Vivisector_claw>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Claw Strike[/ff2bede6] Skill of the [ff00a1ff]Psiloi Vivisector[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Vivisector_claw>
-			<Minion_TA_Damage_Vivisector_chainsaw>
-				<desc>
-					<eng>{damage} Damage Bonus for the [ff2bede6]Chainsaw Eviscerate[/ff2bede6] Skill of the [ff00a1ff]Psiloi Vivisector[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_Vivisector_chainsaw>
-			<Minion_TA_Damage_reduce>
-				<desc>
-					<eng>{damage_reduce} Damage Reduction for [ff00a1ff]Constructs[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Damage_reduce>
-			<Minion_TA_Warp_Resist>
-				<desc>
-					<eng>{warp_resist} Warp Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Warp_Resist>
-			<Minion_TA_Phys_Resist>
-				<desc>
-					<eng>{physical_resist} Physical Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Phys_Resist>
-			<Minion_TA_Heat_Resist>
-				<desc>
-					<eng>{heat_resist} Heat Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
-				</desc>
-			</Minion_TA_Heat_Resist>
-			<minion_movement_speed>
-				<desc>
-					<eng>{movement_speed} Movement Speed for [ff00a1ff]Constructs[/ff00a1ff] </eng>
-				</desc>
-			</minion_movement_speed>
-			<Minion_TA_HP_minor>
-				<desc>
-					<eng>{hp_max} HP for [ff00A1FF]Contructs[/ff00A1FF] </eng>
-				</desc>
-			</Minion_TA_HP_minor>
-			<Minion_TA_HP_Vivisector>
-				<desc>
-					<eng>{hp_max} Base HP for [ff00A1FF]Psiloi Vivisectors[/ff00A1FF] </eng>
-				</desc>
-			</Minion_TA_HP_Vivisector>
-			<Minion_TA_HP_Cremator>
-				<desc>
-					<eng>{hp_max} Base HP for [ff00A1FF]Psiloi Combustors[/ff00A1FF] </eng>
-				</desc>
-			</Minion_TA_HP_Cremator>
-			<Minion_TA_HP_Kataphron_Vanguard>
-				<desc>
-					<eng>{hp_max} Base HP for [ff00A1FF]Kataphron Vanguards[/ff00A1FF] </eng>
-				</desc>
-			</Minion_TA_HP_Kataphron_Vanguard>
-			<Minion_TA_HP_Kataphron_Destroyer>
-				<desc>
-					<eng>{hp_max} Base HP for [ff00A1FF]Kataphron Destroyers[/ff00A1FF] </eng>
-				</desc>
-			</Minion_TA_HP_Kataphron_Destroyer>
-			<Minion_TA_HP_Tarantula>
-				<desc>
-					<eng>{hp_max} Base HP for [ff00A1FF]Tarantula Turrets[/ff00A1FF] </eng>
-				</desc>
-			</Minion_TA_HP_Tarantula>
-			<Minion_TA_HP_Kastellan>
-				<desc>
-					<eng>{hp_max} Base HP for [ff00A1FF]Kastelan Robots[/ff00A1FF] </eng>
-				</desc>
-			</Minion_TA_HP_Kastellan>
-			<Minion_Damage_Module_Combustor>
-				<desc>
-					<eng>{damage} Damage Bonus for the construct if equipped on[ff00A1FF]Psiloi Combustor[/ff00A1FF] </eng>
-				</desc>
-			</Minion_Damage_Module_Combustor>
-			<Minion_Damage_Module_Kastellan>
-				<desc>
-					<eng>{damage} Damage Bonus for the construct if equipped on[ff00A1FF]Kastelan Robot[/ff00A1FF] </eng>
-				</desc>
-			</Minion_Damage_Module_Kastellan>
-			<Minion_Damage_Module_Kataphron_Destroyer>
-				<desc>
-					<eng>{damage} Damage Bonus for the construct if equipped on [ff00A1FF]Kataphron Destroyer[/ff00A1FF] </eng>
-				</desc>
-			</Minion_Damage_Module_Kataphron_Destroyer>
-			<Minion_Damage_Module_Kataphron_Vanguard>
-				<desc>
-					<eng>{damage} Damage Bonus for the construct if equipped on [ff00A1FF]Kataphron Vanguard[/ff00A1FF] </eng>
-				</desc>
-			</Minion_Damage_Module_Kataphron_Vanguard>
-			<Minion_Damage_Module_Tarantula>
-				<desc>
-					<eng>{damage} Damage Bonus for the construct if equipped on [ff00A1FF]Tarantula Turret[/ff00A1FF] </eng>
-				</desc>
-			</Minion_Damage_Module_Tarantula>
-			<Minion_Damage_Module_Vivisector>
-				<desc>
-					<eng>{damage} Damage Bonus for the construct if equipped on [ff00A1FF]Psiloi Vivisector[/ff00A1FF] </eng>
-				</desc>
-			</Minion_Damage_Module_Vivisector>
-			<Minion_HP_Module_Vivisector>
-				<desc>
-					<eng>{hp_max} HP for the construct if equipped on [ff00A1FF]Psiloi Vivisector[/ff00A1FF] </eng>
-				</desc>
-			</Minion_HP_Module_Vivisector>
-			<Minion_HP_Module_Combustor>
-				<desc>
-					<eng>{hp_max} HP for the construct if equipped on [ff00A1FF]Psiloi Combustor[/ff00A1FF] </eng>
-				</desc>
-			</Minion_HP_Module_Combustor>
-			<Minion_HP_Module_Kastellan>
-				<desc>
-					<eng>{hp_max} HP for the construct if equipped on [ff00A1FF]Kastelan Robot[/ff00A1FF] </eng>
-				</desc>
-			</Minion_HP_Module_Kastellan>
-			<Minion_HP_Module_Kataphron_Destroyer>
-				<desc>
-					<eng>{hp_max} HP for the construct if equipped on [ff00A1FF]Kataphron Destroyer[/ff00A1FF] </eng>
-				</desc>
-			</Minion_HP_Module_Kataphron_Destroyer>
-			<Minion_HP_Module_Kataphron_Vanguard>
-				<desc>
-					<eng>{hp_max} HP for the construct if equipped on [ff00A1FF]Kataphron Vanguard[/ff00A1FF] </eng>
-				</desc>
-			</Minion_HP_Module_Kataphron_Vanguard>
-			<Minion_HP_Module_Tarantula>
-				<desc>
-					<eng>{hp_max} HP for the construct if equipped on [ff00A1FF]Tarantula Turret[/ff00A1FF] </eng>
-				</desc>
-			</Minion_HP_Module_Tarantula>
-
 			<MinionGodlike_Damage_from_reserve>
 				<desc>
 					<eng>{artifact_enchant,100} of Current Reserve is converted to Damage Bonus for the Construct</eng>
@@ -6842,6 +6933,16 @@
 					<eng>{artifact_enchant,100} of Current Reserve is converted to HP increase for the Construct</eng>
 				</desc>
 			</MinionGodlike_HP_from_reserve>
+			<MinionGodlike_HP_Regen>
+				<desc>
+					<eng>{hp_regeneration_percent,100} HP regeneration per second</eng>
+				</desc>
+			</MinionGodlike_HP_Regen>
+			<MinionGodlike_DR>
+				<desc>
+					<eng>{damage_reduce_hardcap} Supreme Damage Reduction</eng>
+				</desc>
+			</MinionGodlike_DR>
 			<MinionGodlike_Knockback_immunity>
 				<desc>
 					<eng>The Construct is immune to [fffffdcb]Knockback[/fffffdcb] effects</eng>
@@ -6939,7 +7040,7 @@
 			</Godlike_Convert_Dmg_To_Warp>
 			<Godlike_Chance_to_Guaranteed_Crit_on_hit>
 				<desc>
-					<eng>{artifact_enchant,100} chance on hit: All strikes are guaranteed critical strikes for [ff2bede6]3[/ff2bede6] seconds</eng>
+					<eng>{artifact_enchant,100} chance on hit: All hits are guaranteed critical strikes for [ff2bede6]3[/ff2bede6] seconds</eng>
 				</desc>
 			</Godlike_Chance_to_Guaranteed_Crit_on_hit>
 			<Godlike_Gain_Innoculator_on_Massacre>
@@ -6997,6 +7098,174 @@
 					<eng>Interacting with [ffc667fc]Warp Zones[/ffc667fc] creates a Gravity Well, pulling [ff2bede6]5[/ff2bede6] nearby enemies to melee range.</eng>
 				</desc>
 			</Godlike_Pull_enemies_on_seasonal_area_entered>
+			<Godlike_Pull_enemies_on_seasonal_area_entered>
+				<desc>
+					<eng>Interacting with [ffc667fc]Warp Zones[/ffc667fc] creates a Gravity Well, pulling [ff2bede6]5[/ff2bede6] nearby enemies to melee range.</eng>
+				</desc>
+			</Godlike_Pull_enemies_on_seasonal_area_entered>
+
+			<godlike_cl_on_hit_in_crowd>
+				<desc>
+					<eng>{chain_lightning_on_hit_taken}[ff2bede6]%[/ff2bede6] chance on hit taken to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] when [ff2bede5]Surrounded[/ff2bede5]</eng>
+				</desc>
+			</godlike_cl_on_hit_in_crowd>
+			<godlike_cl_on_kill>
+				<desc>
+					<eng>{chain_lightning_on_kill}[ff2bede6]%[/ff2bede6] chance to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] on kill</eng>
+				</desc>
+			</godlike_cl_on_kill>
+			<godlike_cl_dodge>
+				<desc>
+					<eng>{artifact_enchant,100} chance to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] when using Dodge</eng>
+				</desc>
+			</godlike_cl_dodge>
+			<godlike_cl_on_dash>
+				<desc>
+					<eng>{artifact_enchant,100} chance to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] after using Dash type Skills</eng>
+				</desc>
+			</godlike_cl_on_dash>
+			<godlike_heat_bonus_for_cl>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] gives a {artifact_enchant,100} Heat Damage Bonus per enemy hit for [ff2bede6]2[/ff2bede6] seconds</eng>
+				</desc>
+			</godlike_heat_bonus_for_cl>
+			<godlike_warp_vuln_for_cl>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] applies [ff2bede6]3[/ff2bede6] stacks of Warp Vulnerability on hit</eng>
+				</desc>
+			</godlike_warp_vuln_for_cl>
+			<godlike_cl_on_resource_spent>
+				<desc>
+					<eng>{artifact_enchant,100} chance to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] when spending Data-flux</eng>
+				</desc>
+			</godlike_cl_on_resource_spent>
+			<godlike_vuln_for_cl>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] applies general Vulnerability on Hit</eng>
+				</desc>
+			</godlike_vuln_for_cl>
+			<godlike_heat_vuln_for_cl>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] applies Heat Vulnerability on hit</eng>
+				</desc>
+			</godlike_heat_vuln_for_cl>
+			<godlike_reset_cl_cd_on_crit>
+				<desc>
+					<eng>{artifact_enchant,100} chance to reset the cooldown of [ff286bf2]Thunderbolt of Authority[/ff286bf2] upon causing a Critical Hit</eng>
+				</desc>
+			</godlike_reset_cl_cd_on_crit>
+			<godlike_vuln_for_cl_weak>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] applies general Vulnerability on Hit</eng>
+				</desc>
+			</godlike_vuln_for_cl_weak>
+			<godlike_cl_on_stun_gadget>
+				<desc>
+					<eng>{artifact_enchant,100} chance to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] upon hitting enemies with the Stun gadget</eng>
+				</desc>
+			</godlike_cl_on_stun_gadget>
+			<godlike_inoculator_trigger_chance_for_cl>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] hits have a {artifact_enchant,100} chance to trigger the Inoculator for free</eng>
+				</desc>
+			</godlike_inoculator_trigger_chance_for_cl>
+			<godlike_cl_longer_stronger>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] only loses [ff2bede6]25%[/ff2bede6] damage per jump and jumps to [ff2bede6]1[/ff2bede6] additional target</eng>
+				</desc>
+			</godlike_cl_longer_stronger>
+			<godlike_cl_on_shield_hit>
+				<desc>
+					<eng>[ff2bede6]+20%[/ff2bede6] to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] on hit when you have Energy Shield active</eng>
+				</desc>
+			</godlike_cl_on_shield_hit>
+			<godlike_cd_reduction_for_cl>
+				<desc>
+					<eng>{artifact_enchant,100} Cooldown Reduction for [ff286bf2]Thunderbolt of Authority[/ff286bf2]</eng>
+				</desc>
+			</godlike_cd_reduction_for_cl>
+			<godlike_cl_farer_stronger>
+				<desc>
+					<eng>[ff2bede6]+50%[/ff2bede6] Jump range and {artifact_enchant} Damage Multiplier for [ff286bf2]Thunderbolt of Authority[/ff286bf2]</eng>
+				</desc>
+			</godlike_cl_farer_stronger>
+			<godlike_hp_on_cl_hit>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] restores {artifact_enchant,100} HP for every enemy it hits</eng>
+				</desc>
+			</godlike_hp_on_cl_hit>
+			<godlike_resist_for_cl>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] grants [ff2bede6]1%[/ff2bede6] Supreme All Resist and [ff2bede6]1%[/ff2bede6] Supreme Damage Reduction on hit for [ff2bede6]2[/ff2bede6] seconds. This effect stacks.</eng>
+				</desc>
+			</godlike_resist_for_cl>
+			<godlike_cl_longer_stronger2_1handed>
+				<desc>
+					<eng>{artifact_enchant,100} Damage Bonus for [ff286bf2]Thunderbolt of Authority[/ff286bf2], jumps to [ff2bede6]+1[/ff2bede6] additional target</eng>
+				</desc>
+			</godlike_cl_longer_stronger2_1handed>
+			<godlike_cl_longer_stronger2_2handed>
+				<desc>
+					<eng>{artifact_enchant,100} Damage Bonus for [ff286bf2]Thunderbolt of Authority[/ff286bf2], jumps to [ff2bede6]+2[/ff2bede6] additional targets</eng>
+				</desc>
+			</godlike_cl_longer_stronger2_2handed>
+			<godlike_burn_for_cl>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] causes [ff2bede6]5[/ff2bede6] stacks of [fffffdcb]Burn[/fffffdcb]</eng>
+				</desc>
+			</godlike_burn_for_cl>
+			<godlike_dmg_bonus_elite_for_cl>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] gains a {damage,100} Damage bonus against Elite, Villain, and Boss enemies</eng>
+				</desc>
+			</godlike_dmg_bonus_elite_for_cl>
+			<godlike_reflect_chance_to_cl>
+				<desc>
+					<eng>[ff2bede6]50%[/ff2bede6] of your Reflect chance is added to your chance to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] on hit taken</eng>
+				</desc>
+			</godlike_reflect_chance_to_cl>
+			<godlike_shield_on_cl_hit>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] grants {artifact_enchant,100} Energy Shield charges per each enemy hit</eng>
+				</desc>
+			</godlike_shield_on_cl_hit>
+			<godlike_supp_for_cl_by_hit_taken>
+				<desc>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] restores [ff2bede6]20%[/ff2bede6] of your maximum Suppression when it's triggered by hits taken</eng>
+				</desc>
+			</godlike_supp_for_cl_by_hit_taken>
+			<godlike_crit_dmg_for_cl>
+				<desc>
+					<eng>[ff2bede6]+66%[/ff2bede6] Critical Damage for [ff286bf2]Thunderbolt of Authority[/ff286bf2]</eng>
+				</desc>
+			</godlike_crit_dmg_for_cl>
+
+			<lightning_on_hit_dealt>
+				<desc>
+					<eng>{chain_lightning_on_hit_dealt}[ff2bede6]%[/ff2bede6] chance to release a [ff286bf2]Thunderbolt of Authority[/ff286bf2] on Hit</eng>
+				</desc>
+			</lightning_on_hit_dealt>
+			<lightning_on_hit_taken>
+				<desc>
+					<eng>{chain_lightning_on_hit_taken}[ff2bede6]%[/ff2bede6] chance to release a [ff286bf2]Thunderbolt of Authority[/ff286bf2] on Hit Taken</eng>
+				</desc>
+			</lightning_on_hit_taken>
+			<lightning_on_inoculator_use>
+				<desc>
+					<eng>{chain_lightning_on_inoculator}[ff2bede6]%[/ff2bede6] chance to release a [ff286bf2]Thunderbolt of Authority[/ff286bf2] on Inoculator Use</eng>
+				</desc>
+			</lightning_on_inoculator_use>
+			<TA_weaponupgrade>
+				<desc>
+					<eng>{damage} Bonus Damage</eng>
+				</desc>
+			</TA_weaponupgrade>
+			<TA_weaponupgrade_hp>
+				<desc>
+					<eng>{hp_max} HP</eng>
+				</desc>
+			</TA_weaponupgrade_hp>
+
 		</Enchantment>
 		<unlocks>
 			<finish_mission_hard>
