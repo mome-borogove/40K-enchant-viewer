@@ -41,6 +41,14 @@ def store_quality(M,D):
 def store_enchants(M,D):
   D['current_item']['enchants'] = [str.lower(e) for e in M[0].split(',')]
 
+# NOTE: The season data from inventoryitems.cfg is currently not used. This
+# is left here merely for future convenience.
+def store_seasons(M,D):
+  # Although a single item doesn't ever exist across seasons (AFIAK), we still
+  # store this as a list because it's possible that an enchant can. Later, we
+  # unify this value with others, and having them all as lists simplifies that.
+  D['current_item']['seasons'] = [ int(M[0]) ]
+
 machine = {
   _S.TOP: [
     (r'([^\s]+)', store_name),
@@ -56,6 +64,7 @@ machine = {
     (r'Rarity=(.*)', store_quality),
     (r'MainEnchant=(.*)', store_enchants),
     (r'GodlikeEnchants=(.*)', store_enchants),
+    (r'Season=(.*)', store_seasons),
     (r'(.*)=(.*)', None),
     (r'', None),
   ],

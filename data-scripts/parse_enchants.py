@@ -26,7 +26,7 @@ class Enchant():
   @classmethod
   def copy(Cls, enchant):
     e = Cls(enchant.name)
-    for attr in ['desc','skill','desc_repl','shortcuts','slots','items','quality','doubled','groups','range']:
+    for attr in ['desc','skill','desc_repl','shortcuts','slots','items','quality','doubled','groups','range','no_roll','seasons']:
       setattr(e, attr, deepcopy(getattr(enchant, attr)))
     return e
 

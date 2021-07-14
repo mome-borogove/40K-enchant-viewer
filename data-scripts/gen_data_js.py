@@ -37,7 +37,8 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   for enchant in enchants:
     if enchant.quality=='godlike' or enchant.quality=='morality':
       enchant.shortcuts = [] # First, blow away all false maps
-  # Create enchant maps for relic, archeo, and morality items
+
+  # Create empty enchant maps for relic, archeo, and morality items
   relic_enchant_map = {}
   archeo_enchant_map = {}
   morality_enchant_map = {}
@@ -56,6 +57,13 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   print('archeo map:',len(archeo_enchant_map),'enchant types')
   print('morality map:',len(morality_enchant_map),'enchant types')
 
+  # Now try to unify enchants from across all rarities.
+  # FIXME: Currently, seasonal tags from archeotech items are ignored.
+  #   This means that if the corresponding enchant in the enchantments.cfg
+  #   file does not have the correct seasonal tag, the item won't show up
+  #   as seasonal. Neocore was bad at this in season 1, but season 2 and 3
+  #   have more or less corrected the issue. Since season 1 is unplayable
+  #   now, this is less of an issue.
   new_enchants = []
   for enchant in enchants:
     if enchant.quality=='godlike':

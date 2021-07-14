@@ -10,8 +10,12 @@ $archeo: rgb(184,49,47);
 $ancient: rgb(243,121,52);
 $relic: rgb(198,151,97);
 $morality: rgb(37,169,132);
-$season1: rgb(254,114,114);
+//$season1: rgb(254,114,114);
+// Make sure season colors are dark enough to cause bootstrap to
+// make the button text white when active
+$season1: rgb(235,62,72);
 $season2: rgb(198,103,252);
+$season3: rgb(45,98,212);
 
 $body-bg: $blackish;
 $body-color: $whiteish;
@@ -27,13 +31,17 @@ $theme-colors: (
   'morality': $morality,
   'season1': $season1,
   'season2': $season2,
+  'season3': $season3,
 );
 
 @import '../bootstrap/scss/bootstrap';
-@import '../bootstrap-vue/src/index.scss';
 
 body {
   font-weight: 300;
+}
+
+#app {
+  height: 100vh;
 }
 
 h1 {
@@ -52,6 +60,11 @@ h1 {
   color: $teal_light;
 }
 
+.btn {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 // Pressing buttons on mobile leaves the "cursor" hovering over the button.
 // Since bootstrap's hover css is identical to the active state, this makes
 // toggling the button indistinguishable from just hovering---which is always
@@ -62,6 +75,33 @@ h1 {
 .btn:hover {
   color: inherit;
   background-color: inherit;
+}
+
+.quality-button, .season-button, .item-button {
+  margin-left: 4px;
+}
+
+// Smaller buttons
+.item-button, .season-button {
+  font-size: 75%;
+  line-height: 1;
+}
+
+.season-button {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.item-button {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+//  border-radius: 10rem;
+}
+
+.button-row {
+  margin-bottom: 4px;
 }
 
 // Table-related formatting
@@ -75,14 +115,23 @@ h1 {
   border-top-color: $teal_dark;
 }
 
-.page-contained {
+#enchant-parent {
+  padding:5px;
+}
+
+#enchant-container {
   height: 677px !important;
+  //height: 100%;
   width: 100%;
   overflow-y: scroll;
 }
 div.page-contained,table {
   margin: 0;
   padding: 0; }
+
+.badge-season {
+  font-weight: 300;
+}
 
 div.details {
   padding: 5px;
@@ -106,31 +155,22 @@ div.details p {
 
 // Enabled items
 
-#enabled_box {
+#itemfilter_box {
   margin-top: 10px;
   border: 1px solid $teal_dark;
 }
 
-#enabled_box .col {
+#itemfilter_box .col {
   padding: 10px;
 }
 
-.enabled_header {
+.itemfilter_header {
   color: $teal_light;
 }
 
 
-.item-button {
-  font-size: 75%;
-  line-height: 1;
-  padding-left: 0.6em;
-  padding-right: 0.6em;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  border-radius: 10rem;
-}
-
 // Slot image map and highlighting
+
 
 #fixed_column {
   max-width: 261px;

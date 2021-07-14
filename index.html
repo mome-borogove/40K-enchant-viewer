@@ -54,43 +54,41 @@
       <div class="col" id="fixed_column">
         <div id="slots">
           <img src="slotmap.jpg" usemap="#slotmap"></img>
-          <a v-for="slot in all_slots"
-             :id="'A_'+String(slot)"
-             class="area area_square"
-             :class="{ 'active': F_slots.includes(slot),
-                       'area_rect': rect_slots.includes(slot),
-                       'area_square': !rect_slots.includes(slot) }"
-             @click="toggle_slot(slot)"></a>
+            <toggle-area v-for="slot in FMap.key_array('slot')"
+                         v-model="F_mask[FMap.get2('slot',slot)]"
+                         :slot="slot"
+                         :rect="rect_slots.includes(slot)"></toggle-area>
           <button class="btn btn-sm btn-ui shadow-none clear-slots"
-                  @click="F_slots=[]; F_items=[];">Clear</button>
-        </div> <!-- /slots -->
+                  @click="clear_slots">Clear</button>
+        </div>
       </div> <!-- /fixed_column -->
-      <div class="col">
-        <p>
+      <div class="col-sm">
+        <div class="button-row">
           <!-- enchant type: -->
-          <button type="button" class="btn btn-outline-primary shadow-none"
-                  v-bind:class="{ 'active': F_qualities.includes('primary') }"
-                  @click="toggle_quality('primary')">
-            Primary</button>
-          <button type="button" class="btn btn-outline-secondary shadow-none"
-                  v-bind:class="{ 'active': F_qualities.includes('secondary') }"
-                  @click="toggle_quality('secondary')">
-            Secondary</button>
-          <button type="button" class="btn btn-outline-relic shadow-none"
-                  v-bind:class="{ 'active': F_qualities.includes('relic') }"
-                  @click="toggle_quality('relic')">
-            Relic</button>
-          <button type="button" class="btn btn-outline-archeo shadow-none"
-                  v-bind:class="{ 'active': F_qualities.includes('archeo') }"
-                  @click="toggle_quality('archeo')">
-            Archeotech</button>
-          <button type="button" class="btn btn-outline-morality shadow-none"
-                  v-bind:class="{ 'active': F_qualities.includes('morality') }"
-                  @click="toggle_quality('morality')">
-            Morality</button>
-        </p>
+          Enchant type:
+          <toggle-button v-for="quality in FMap.key_array('quality')"
+                         v-model="F_mask[FMap.get2('quality',quality)]"
+                         :color="color_map.get(quality)"
+                         class="quality-button">
+            {{capitalize(quality)}}
+          </toggle-button>
+        </div>
+        <div class="button-row">
+          Restricted to:
+          <toggle-button v-model="F_mask[FMap.get2('season',0)]"
+                         color="ui"
+                         class="season-button">
+            Non-season
+          </toggle-button><!--
+          --><toggle-button v-for="season in [1,2,3]"
+                         v-model="F_mask[FMap.get2('season',season)]"
+                         :color="'season'+String(season)"
+                         class="season-button">
+            Season {{season}}
+          </toggle-button>
+        </div>
         <!-- text filter -->
-        <p>
+        <div class="button-row">
           <div class="input-group">
             <div class="input-group-prepend">
               <span class="input-group-text">Filter:</span>
@@ -100,84 +98,83 @@
                      type="text"
                      v-model="F_pattern"
                      >
-              <!-- FIXME debounce="100" and trim flags are missing -->
+              <!-- FIXME old debounce="100" and trim flags are missing -->
             <div class="input-group-append">
               <button class="btn btn-ui" @click="clear_pattern">Clear</button>
             </div>
           </div>
-        </p>
+        </div>
         <!-- enchant table -->
-        <div class="page-contained">
-          <table class="table table-sm" id="enchants">
-            <tbody v-for="(enchant,index) in filtered_enchants">
-            <tr class="entry">
-              <td>
-                <span :class="'text-'+enchant.quality"><i class="fas fa-square"></i></span>
-                <span class="row-spacer"></span>
-                <span v-if="is_seasonal(enchant)">
-                  <span v-for="season in enchant.seasons"
-                        class="badge"
-                        :class=" 'badge-season'+season">Season {{season}}</span>
-                </span>
-                <span v-html="enchant.str"></span>
-              </td><td>
-                <button type="button"
-                        class="btn btn-sm btn-secondary"
-                        data-toggle="collapse"
-                        :data-target="'#details-'+enchant.name+'-'+index"
-                        aria-expanded="false"
-                        >
-                  {{ "Details" }}
-                </button>
-              </td>
-            </tr> <!-- /enchant entry -->
-            <tr class="collapse details"
-                :id="'details-'+enchant.name+'-'+index">
-              <td colspan="2">
-                <div class="details">
-                  <p v-if="enchant.doubled"><span class="detail-header">
-                      Values doubled if on a two-handed weapon.
-                  </span></p>
-                  <p><span class="detail-header">Enchant ID:</span>
-                    {{ enchant.name }}
-                  </p>
-                  <p><span class="detail-header">Valid Items:</span>
-                    {{
-                       (enchant.items==undefined) ?
-                       "(undefined)" :
-                       enchant.items.join(", ")
-                    }}
-                  </p>
-                  <p><span class="detail-header">Exclusion Groups:</span>
-                    {{
-                       (enchant.groups==undefined) ?
-                       "N/A" :
-                       enchant.groups.join(", ")
-                    }}
-                  </p>
-                </div>
-              </td>
-            </tr> <!-- /details -->
-            </tbody>
-          </table>
-        </div> <!-- /enchant table -->
+        <div id="enchant-parent">
+          <div id="enchant-container">
+            <table class="table table-sm" id="enchants">
+              <tbody v-for="(enchant,index) in filtered_enchants">
+              <tr class="entry">
+                <td>
+                  <span :class="'text-'+enchant.quality"><i class="fas fa-square"></i></span>
+                  <span class="row-spacer"></span>
+                  <span v-if="is_seasonal(enchant)">
+                    <span v-for="season in enchant.seasons"
+                          class="badge badge-season"
+                          :class=" 'badge-season'+season">Season {{season}}</span>
+                  </span>
+                  <span v-html="enchant.str"></span>
+                </td><td>
+                  <button type="button"
+                          class="btn btn-sm btn-secondary"
+                          data-toggle="collapse"
+                          :data-target="'#details-'+enchant.name+'-'+index"
+                          aria-expanded="false"
+                          >
+                    {{ "Details" }}
+                  </button>
+                </td>
+              </tr> <!-- /enchant entry -->
+              <tr class="collapse details"
+                  :id="'details-'+enchant.name+'-'+index">
+                <td colspan="2">
+                  <div class="details">
+                    <p v-if="enchant.doubled"><span class="detail-header">
+                        Values doubled if on a two-handed weapon.
+                    </span></p>
+                    <p><span class="detail-header">Enchant ID:</span>
+                      {{ enchant.name }}
+                    </p>
+                    <p><span class="detail-header">Valid Items:</span>
+                      {{
+                         (enchant.items==undefined) ?
+                         "(undefined)" :
+                         enchant.items.join(", ")
+                      }}
+                    </p>
+                    <p><span class="detail-header">Exclusion Groups:</span>
+                      {{
+                         (enchant.groups==undefined) ?
+                         "N/A" :
+                         enchant.groups.join(", ")
+                      }}
+                    </p>
+                  </div>
+                </td>
+              </tr> <!-- /details -->
+              </tbody>
+            </table> <!-- /enchant table -->
+          </div> <!-- /enchant container -->
+        </div> <!-- /enchant parent -->
       </div>
     </div> <!-- main row -->
 
-    <div class="row" v-if="F_slots.length>0" id="enabled_box">
+    <div class="row" v-if="any_slot_selected" id="itemfilter_box">
       <div class="col">
-        <span v-if="F_slots.length>0" class="enabled_header">
+        <span class="itemfilter_header">
           Item-Specific Filters:
         </span>
-        <span v-for="(item,index) in current_items" class="enabled_items">
-          <button type="button"
-                  class="btn btn-sm btn-outline-ui item-button shadow-none"
-                  :class="{
-                    'active': F_items.includes(item),
-                  }"
-                  @click="toggle_item(item)"
-            >{{ item }}</button>
-          <span v-if="index != current_items.length-1"></span>
+        <span v-for="(item,index) in available_items" class="itemfilter_item">
+          <toggle-button v-model="F_mask[FMap.get2('item',item)]"
+                         color="ui"
+                         :class="['btn-sm', 'item-button']">
+            {{ item }}
+          </toggle-button>
         </span>
       </div> <!-- col -->
     </div> <!-- footer row -->

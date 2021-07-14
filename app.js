@@ -1,3 +1,140 @@
+////////////////////////////////////////////////////////////////////////////////
+// Utilities
+
+// Vue 2 has trouble with true maps. It cannot react to changes in them.
+// Since we'd like to use a 2-level map to track the different filters we have,
+// this causes us a bit of a headache.
+//
+// Vue 2 *can*, however, react to changes in arrays, and since the list of keys
+// is essentially static, we elect to solve things by using an additional
+// layer of indirection.
+//
+// We arbitrarily map each key pair to contiguous integers. These can be used
+// as indices into a boolean array which can be held and tracked by Vue.
+//
+// In other words, Vue just sees an array of boolean values that are getting
+// flipped, and we use an un-tracked auxiliary map to assign human names
+// to the indices.
+//
+// In pratice, the idiom will look something like this:
+//     F_mask[ FMap.get2('filter-type', 'filter-value') ]
+// Where F_mask is the boolean array, FMap is this static 2-level auxiliary map,
+// 'filter-type' is the high-level filter category (like 'slot' or 'season'),
+// and 'filter-value' is the value you're filtering on (like 'main_weapon').
+// Sure, it's a little more cumbersome than if Vue 2 had native map support
+// (where the expression would look like "F_mask['filter-type']['filter-value']")
+// but it's good enough.
+//
+// Wheeler and Lampson would be proud.
+var FMap;
+{
+  let _FMap_counter = 0;
+  function _enum(s) { return [s, _FMap_counter++]; }
+  // These are our static keys. Should we need more in the future, add them here.
+  FMap = new Map([
+    ['quality',
+     new Map([
+               'primary','secondary','relic','archeo','puritan','radical',
+             ].map(_enum))],
+    ['slot', new Map(SLOTS.map(_enum))],
+    ['season', new Map([0,1,2,3].map(_enum))],
+    ['item', new Map(SLOTS.map(s=>slot_items.get(s)).flat().sort().map(_enum))],
+  ]);
+  // Shortcut function for 2-level accessor (FMap.get(x).get(y))
+  function _get2(k0, k1) {
+    return this.get(k0).get(k1);
+  }
+  FMap.get2 = _get2;
+  // I use arrays of keys and values a lot, so an Array.from shortcut is helpful.
+  function _getarray(self, key, func) {
+    var a;
+    if( key==undefined ) { // If no key, then flatten the whole FMap
+      return Array.from(self.values()).map(v => Array.from(func(v))).flat();
+    } else {
+      return Array.from(func(self.get(key)));
+    }
+  }
+  function _key_array(key) {
+    return _getarray(this, key, submap => submap.keys());
+  }
+  FMap.key_array = _key_array;
+  function _value_array(key) {
+    return _getarray(this, key, submap => submap.values());
+  }
+  FMap.value_array = _value_array;
+}
+ 
+////////////////////////////////////////////////////////////////////////////////
+// Components
+
+// Reusable filter button
+Vue.component('toggle-button', {
+  model: {
+    prop: 'value',
+    event: 'MouseEvent'
+  },
+  props: {
+    value: Boolean,
+    color: String,
+  },
+  template: `
+    <button type="button"
+            class="btn"
+            :class="['btn-outline-'+color,
+                     {'active': value}]"
+            @click="_click">
+      <slot></slot>
+    </button>`,
+  methods: {
+    _click: function () {
+      this.value = !this.value;
+      this.$emit('MouseEvent', this.value);
+    }
+  },
+});
+
+// Filter "button" for slot imagemap
+Vue.component('toggle-area', {
+  model: {
+    prop: 'value',
+    event: 'MouseEvent'
+  },
+  props: {
+    value: Boolean,
+    slot: String,
+    rect: Boolean,
+  },
+  template: `
+    <a :id="'A_'+slot"
+       class="area area_square"
+       :class="{ 'active': value,
+                 'area_rect': rect,
+                 'area_square': !rect
+               }"
+       @click="_click"></a>`,
+  methods: {
+    _click: function () {
+      this.value = !this.value;
+      this.$emit('MouseEvent', this.value);
+    }
+  },
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Static Data
+var STATIC;
+{
+  var _colors = ['primary','secondary','relic','archeo','morality','morality'];
+  DATA = {
+    color_map: new Map(FMap.key_array('quality').map((q,idx)=>[q,_colors[idx]])),
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// App
+
 // Define a filter object. This provides the enchant table everything it
 // needs to down-select the desired enchants.
 function Filter(pattern, slots, qualities) {
@@ -17,20 +154,29 @@ function get_control_status(control, tag='active') {
 
 var app = new Vue({
   el: "#app",
-  data: {
-    enchants: enchants,
-    F_pattern: "",
-    F_slots: [],
-    F_qualities: ['primary'],
-    F_items: [],
-    enchant_fields: [
-      { key:'str', label:'Enchant Name', sortable:false },
-      { key:'show_details', label:'', sortable:false },
-    ],
+  data: function() {
+    return {
+      enchants: enchants,
+      F_mask: undefined,
+      F_pattern: "",
+
+      enchant_fields: [
+        { key:'str', label:'Enchant Name', sortable:false },
+        { key:'show_details', label:'', sortable:false },
+      ],
+
+    }
+  },
+  created: function() {
+    // Set initial masks
+    this.F_mask = FMap.key_array().map(_ => false);
+    this.$set(this.F_mask, FMap.get2('quality','primary'), true);
+    this.$set(this.F_mask, FMap.get2('season',0), true);
+    this.$set(this.F_mask, FMap.get2('season',3), true);
   },
   computed: {
     all_slots: function() {
-      return SLOTS;
+      return FMap.key_array('slot');
     },
     rect_slots: function() {
       return RECT_SLOTS;
@@ -38,39 +184,47 @@ var app = new Vue({
     version: function() {
       return __version__; // defined in data.js
     },
-    current_items: function() {
-      return this.F_slots
-                 .map(s => slot_items.get(s))
-                 .flat()
-                 .filter((s,i,a) => a.indexOf(s)==i)
-                 .sort();
+    any_slot_selected() {
+      return FMap.value_array('slot').some(i=>this.F_mask[i]);
+    },
+    any_item_selected() {
+      return FMap.value_array('item').some(i=>this.F_mask[i]);
+    },
+    available_items: function() {
+      return SLOTS.filter(s=>this.F_mask[FMap.get2('slot',s)])
+                  .map(s => slot_items.get(s))
+                  .flat()
+                  .sort();
     },
     filtered_enchants: function() {
-      return this.enchants.filter(e => this.filter_function(e, [this.F_pattern, this.F_slots, this.F_qualities, this.F_items]));
+      return this.enchants.filter(e => this.filter_function(e, this.F_pattern, this.F_mask));
     },
+    // Static Data
+    color_map: function() {
+      return DATA.color_map;
+    }
   },
   methods: {
-    filter_function(enchant, args) {
-      let pattern=args[0];
-      let slots=args[1];
-      let qualities=args[2];
-      let items=args[3];
-      // Filter by quality
-      if (!qualities.includes(enchant.quality)) {
+    filter_function(enchant, pattern, mask) {
+      // Quality
+      if( !mask[FMap.get2('quality', enchant.quality)] ) {
         return false;
       }
       // Filter by slot
-      if (slots.length>0) {
-        // Filter by item if any are selected
-        if (items.length>0) {
-          if (!enchant.items.some(x => items.includes(x))) {
+      if( this.any_slot_selected ) {
+        if( this.any_item_selected ) { // slot(s) AND item(s) selected
+          if( !enchant.items.some(i => mask[FMap.get2('item', i)]) ) {
             return false;
           }
-        } else {
-          if (!enchant.slots.some(x => slots.includes(x))) {
+        } else { // Just slot(s), no item(s)
+          if( !enchant.slots.some(s => mask[FMap.get2('slot', s)]) ) {
             return false;
           }
         }
+      }
+      // Filter by season
+      if( !enchant.seasons.some(s => mask[FMap.get2('season',s)]) ) {
+        return false;
       }
       // Filter by text
       if (pattern &&
@@ -97,39 +251,19 @@ var app = new Vue({
     clear_pattern(pattern) {
       this.F_pattern = "";
     },
-    toggle_quality(quality) {
-      // Update filter
-      if (this.F_qualities.includes(quality)) {
-        this.F_qualities.splice(this.F_qualities.indexOf(quality), 1);
-      } else {
-        this.F_qualities.push(quality);
-      }
-    },
-    toggle_slot(slot) {
-      if (this.F_slots.includes(slot)) {
-        this.F_slots.splice(this.F_slots.indexOf(slot), 1);
-        // Also remove all selected items from this slot.
-        let items = this.items_for_selected_slot(slot);
-        for(let i=0; i<items.length; i++) {
-          let index = this.F_items.indexOf(items[i]);
-          if (index>=0) {
-            this.F_items.splice(index,1);
-          }
-        }
-      } else {
-        this.F_slots.push(slot);
-      }
-    },
-    toggle_item(item) {
-      if (this.F_items.includes(item)) {
-        this.F_items.splice(this.F_items.indexOf(item), 1);
-      } else {
-        this.F_items.push(item);
+    clear_slots() {
+      for ([slot,idx] of FMap.get('slot')) {
+        this.$set(this.F_mask, idx, false);
       }
     },
     items_for_selected_slot(slot) {
       return slot_items.get(slot);
     },
+    capitalize(s) {
+      return s.charAt(0).toUpperCase() + s.slice(1);
+    }
   }
 });
 
+
+//app.mount('#app')

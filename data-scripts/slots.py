@@ -2,7 +2,8 @@
 
 SLOTS=[
   'neural_implant', 'eye_implant', 'main_implant', 'purity_seal', 'belt',
-  'body', 'inoculator', 'weapon', 'signum', 'offhand', 'construct'
+  'body', 'inoculator', 'weapon', 'signum', 'offhand'
+#  'body', 'inoculator', 'weapon', 'signum', 'offhand', 'construct'
 ]
 
 ### FIXME: 'inoculator_start'
