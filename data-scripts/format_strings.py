@@ -17,7 +17,7 @@ def format_item_type_map(slot_to_item_types, item_type_map):
   def format_slot_item(slot,item_types):
     s = '[ "'+str(slot)+'"'
     s+= ', '
-    s+= '[' + ', '.join(['"'+s+'"' for s in format_item_types(item_types, item_type_map)]) + '] ]'
+    s+= '[' + ', '.join(['"'+s+'"' for s in sorted(format_item_types(item_types, item_type_map))]) + '] ]'
     return s
   return ',\n'.join([format_slot_item(*_) for _ in slot_to_item_types.items()])
 

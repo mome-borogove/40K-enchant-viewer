@@ -33,6 +33,8 @@
   --archeo: #b8312f;
   --ancient: #f37934;
   --morality: #25a984;
+  --puritan: #25a984;
+  --radical: #25a984;
   --season1: #eb3e48;
   --season2: #c667fc;
   --season3: #2d62d4;
@@ -2009,6 +2011,46 @@ pre code {
   background-color: #b0e0d3;
 }
 
+.table-puritan,
+.table-puritan > th,
+.table-puritan > td {
+  background-color: #c2e7dd;
+}
+.table-puritan th,
+.table-puritan td,
+.table-puritan thead th,
+.table-puritan tbody + tbody {
+  border-color: #8ed2bf;
+}
+
+.table-hover .table-puritan:hover {
+  background-color: #b0e0d3;
+}
+.table-hover .table-puritan:hover > td,
+.table-hover .table-puritan:hover > th {
+  background-color: #b0e0d3;
+}
+
+.table-radical,
+.table-radical > th,
+.table-radical > td {
+  background-color: #c2e7dd;
+}
+.table-radical th,
+.table-radical td,
+.table-radical thead th,
+.table-radical tbody + tbody {
+  border-color: #8ed2bf;
+}
+
+.table-hover .table-radical:hover {
+  background-color: #b0e0d3;
+}
+.table-hover .table-radical:hover > td,
+.table-hover .table-radical:hover > th {
+  background-color: #b0e0d3;
+}
+
 .table-season1,
 .table-season1 > th,
 .table-season1 > td {
@@ -3037,6 +3079,66 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(70, 182, 150, 0.5);
 }
 
+.btn-puritan {
+  color: #fff;
+  background-color: #25a984;
+  border-color: #25a984;
+}
+.btn-puritan:hover {
+  color: #fff;
+  background-color: #1e8a6b;
+  border-color: #1c7f63;
+}
+.btn-puritan:focus, .btn-puritan.focus {
+  color: #fff;
+  background-color: #1e8a6b;
+  border-color: #1c7f63;
+  box-shadow: 0 0 0 0.2rem rgba(70, 182, 150, 0.5);
+}
+.btn-puritan.disabled, .btn-puritan:disabled {
+  color: #fff;
+  background-color: #25a984;
+  border-color: #25a984;
+}
+.btn-puritan:not(:disabled):not(.disabled):active, .btn-puritan:not(:disabled):not(.disabled).active, .show > .btn-puritan.dropdown-toggle {
+  color: #fff;
+  background-color: #1c7f63;
+  border-color: #1a755b;
+}
+.btn-puritan:not(:disabled):not(.disabled):active:focus, .btn-puritan:not(:disabled):not(.disabled).active:focus, .show > .btn-puritan.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(70, 182, 150, 0.5);
+}
+
+.btn-radical {
+  color: #fff;
+  background-color: #25a984;
+  border-color: #25a984;
+}
+.btn-radical:hover {
+  color: #fff;
+  background-color: #1e8a6b;
+  border-color: #1c7f63;
+}
+.btn-radical:focus, .btn-radical.focus {
+  color: #fff;
+  background-color: #1e8a6b;
+  border-color: #1c7f63;
+  box-shadow: 0 0 0 0.2rem rgba(70, 182, 150, 0.5);
+}
+.btn-radical.disabled, .btn-radical:disabled {
+  color: #fff;
+  background-color: #25a984;
+  border-color: #25a984;
+}
+.btn-radical:not(:disabled):not(.disabled):active, .btn-radical:not(:disabled):not(.disabled).active, .show > .btn-radical.dropdown-toggle {
+  color: #fff;
+  background-color: #1c7f63;
+  border-color: #1a755b;
+}
+.btn-radical:not(:disabled):not(.disabled):active:focus, .btn-radical:not(:disabled):not(.disabled).active:focus, .show > .btn-radical.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(70, 182, 150, 0.5);
+}
+
 .btn-season1 {
   color: #fff;
   background-color: #eb3e48;
@@ -3474,6 +3576,56 @@ fieldset:disabled a.btn {
   border-color: #25a984;
 }
 .btn-outline-morality:not(:disabled):not(.disabled):active:focus, .btn-outline-morality:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-morality.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(37, 169, 132, 0.5);
+}
+
+.btn-outline-puritan {
+  color: #25a984;
+  border-color: #25a984;
+}
+.btn-outline-puritan:hover {
+  color: #fff;
+  background-color: #25a984;
+  border-color: #25a984;
+}
+.btn-outline-puritan:focus, .btn-outline-puritan.focus {
+  box-shadow: 0 0 0 0.2rem rgba(37, 169, 132, 0.5);
+}
+.btn-outline-puritan.disabled, .btn-outline-puritan:disabled {
+  color: #25a984;
+  background-color: transparent;
+}
+.btn-outline-puritan:not(:disabled):not(.disabled):active, .btn-outline-puritan:not(:disabled):not(.disabled).active, .show > .btn-outline-puritan.dropdown-toggle {
+  color: #fff;
+  background-color: #25a984;
+  border-color: #25a984;
+}
+.btn-outline-puritan:not(:disabled):not(.disabled):active:focus, .btn-outline-puritan:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-puritan.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(37, 169, 132, 0.5);
+}
+
+.btn-outline-radical {
+  color: #25a984;
+  border-color: #25a984;
+}
+.btn-outline-radical:hover {
+  color: #fff;
+  background-color: #25a984;
+  border-color: #25a984;
+}
+.btn-outline-radical:focus, .btn-outline-radical.focus {
+  box-shadow: 0 0 0 0.2rem rgba(37, 169, 132, 0.5);
+}
+.btn-outline-radical.disabled, .btn-outline-radical:disabled {
+  color: #25a984;
+  background-color: transparent;
+}
+.btn-outline-radical:not(:disabled):not(.disabled):active, .btn-outline-radical:not(:disabled):not(.disabled).active, .show > .btn-outline-radical.dropdown-toggle {
+  color: #fff;
+  background-color: #25a984;
+  border-color: #25a984;
+}
+.btn-outline-radical:not(:disabled):not(.disabled):active:focus, .btn-outline-radical:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-radical.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(37, 169, 132, 0.5);
 }
 
@@ -5505,6 +5657,32 @@ a.badge-morality:focus, a.badge-morality.focus {
   box-shadow: 0 0 0 0.2rem rgba(37, 169, 132, 0.5);
 }
 
+.badge-puritan {
+  color: #fff;
+  background-color: #25a984;
+}
+a.badge-puritan:hover, a.badge-puritan:focus {
+  color: #fff;
+  background-color: #1c7f63;
+}
+a.badge-puritan:focus, a.badge-puritan.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(37, 169, 132, 0.5);
+}
+
+.badge-radical {
+  color: #fff;
+  background-color: #25a984;
+}
+a.badge-radical:hover, a.badge-radical:focus {
+  color: #fff;
+  background-color: #1c7f63;
+}
+a.badge-radical:focus, a.badge-radical.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(37, 169, 132, 0.5);
+}
+
 .badge-season1 {
   color: #fff;
   background-color: #eb3e48;
@@ -5754,6 +5932,30 @@ a.badge-season3:focus, a.badge-season3.focus {
   border-top-color: #b0e0d3;
 }
 .alert-morality .alert-link {
+  color: #0a2e24;
+}
+
+.alert-puritan {
+  color: #135845;
+  background-color: #d3eee6;
+  border-color: #c2e7dd;
+}
+.alert-puritan hr {
+  border-top-color: #b0e0d3;
+}
+.alert-puritan .alert-link {
+  color: #0a2e24;
+}
+
+.alert-radical {
+  color: #135845;
+  background-color: #d3eee6;
+  border-color: #c2e7dd;
+}
+.alert-radical hr {
+  border-top-color: #b0e0d3;
+}
+.alert-radical .alert-link {
   color: #0a2e24;
 }
 
@@ -6229,6 +6431,34 @@ a.badge-season3:focus, a.badge-season3.focus {
   background-color: #b0e0d3;
 }
 .list-group-item-morality.list-group-item-action.active {
+  color: #fff;
+  background-color: #135845;
+  border-color: #135845;
+}
+
+.list-group-item-puritan {
+  color: #135845;
+  background-color: #c2e7dd;
+}
+.list-group-item-puritan.list-group-item-action:hover, .list-group-item-puritan.list-group-item-action:focus {
+  color: #135845;
+  background-color: #b0e0d3;
+}
+.list-group-item-puritan.list-group-item-action.active {
+  color: #fff;
+  background-color: #135845;
+  border-color: #135845;
+}
+
+.list-group-item-radical {
+  color: #135845;
+  background-color: #c2e7dd;
+}
+.list-group-item-radical.list-group-item-action:hover, .list-group-item-radical.list-group-item-action:focus {
+  color: #135845;
+  background-color: #b0e0d3;
+}
+.list-group-item-radical.list-group-item-action.active {
   color: #fff;
   background-color: #135845;
   border-color: #135845;
@@ -7168,6 +7398,26 @@ button.bg-morality:focus {
   background-color: #1c7f63 !important;
 }
 
+.bg-puritan {
+  background-color: #25a984 !important;
+}
+
+a.bg-puritan:hover, a.bg-puritan:focus,
+button.bg-puritan:hover,
+button.bg-puritan:focus {
+  background-color: #1c7f63 !important;
+}
+
+.bg-radical {
+  background-color: #25a984 !important;
+}
+
+a.bg-radical:hover, a.bg-radical:focus,
+button.bg-radical:hover,
+button.bg-radical:focus {
+  background-color: #1c7f63 !important;
+}
+
 .bg-season1 {
   background-color: #eb3e48 !important;
 }
@@ -7299,6 +7549,14 @@ button.bg-season3:focus {
 }
 
 .border-morality {
+  border-color: #25a984 !important;
+}
+
+.border-puritan {
+  border-color: #25a984 !important;
+}
+
+.border-radical {
   border-color: #25a984 !important;
 }
 
@@ -10942,6 +11200,22 @@ a.text-ancient:hover, a.text-ancient:focus {
 }
 
 a.text-morality:hover, a.text-morality:focus {
+  color: #176a53 !important;
+}
+
+.text-puritan {
+  color: #25a984 !important;
+}
+
+a.text-puritan:hover, a.text-puritan:focus {
+  color: #176a53 !important;
+}
+
+.text-radical {
+  color: #25a984 !important;
+}
+
+a.text-radical:hover, a.text-radical:focus {
   color: #176a53 !important;
 }
 

@@ -10,6 +10,8 @@ $archeo: rgb(184,49,47);
 $ancient: rgb(243,121,52);
 $relic: rgb(198,151,97);
 $morality: rgb(37,169,132);
+$puritan: $morality;
+$radical: $morality;
 //$season1: rgb(254,114,114);
 // Make sure season colors are dark enough to cause bootstrap to
 // make the button text white when active
@@ -29,6 +31,8 @@ $theme-colors: (
   'archeo': $archeo,
   'ancient': $ancient,
   'morality': $morality,
+  'puritan': $puritan,
+  'radical': $radical,
   'season1': $season1,
   'season2': $season2,
   'season3': $season3,

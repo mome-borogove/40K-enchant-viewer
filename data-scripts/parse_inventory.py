@@ -29,8 +29,24 @@ def commit_item(M,D):
       D['relic'].append(item)
     elif (('biggodlike' in item['quality']) and ('enchants' in item)):
       D['archeo'].append(item)
+
     elif (('morality' in item['quality']) and ('enchants' in item)):
-      D['morality'].append(item)
+      # While "morality" is a quality, radical and puritan items are effectively
+      # entirely separate item categories, and it's useful to treat them as such.
+      # As a result, we split the 'morality' quality into two new, fake ones.
+      #
+      # Unfortunately, there isn't a given flag for this. Instead, we're forced
+      # to parse the enchant name and extract it from there. I'm fairly sure
+      # that Neocore is also scraping the name this way, so I'm assuming that
+      # they won't give a non-morality enchant a name that starts with
+      # 'blessed' or 'demonic'.
+      if len([_ for _ in item['enchants'] if _.startswith('blessed')])>0:
+        D['puritan'].append(item)
+      elif len([_ for _ in item['enchants'] if _.startswith('demonic')])>0:
+        D['radical'].append(item)
+      else:
+        print('Warning: morality item without tell-tale prefix:',item['name'])
+        # And drop the enchant. What even is this?
   # default: drop the entry
   D['current_item'] = {}
   return _S.TOP 
@@ -77,11 +93,11 @@ machine = {
 def parse_inventory(file):
   fsm = FSM(_S, _S.TOP, [_S.TOP], machine)
   fsm.reset()
-  fsm.data = {'current_item': {}, 'relic': [], 'morality': [], 'archeo': []}
+  fsm.data = {'current_item': {}, 'relic': [], 'archeo': [], 'puritan': [], 'radical': []}
   #fsm.tracing(True)
 
   fsm.parse(file)
-  return fsm.data['relic'], fsm.data['archeo'], fsm.data['morality']
+  return fsm.data['relic'], fsm.data['archeo'], fsm.data['puritan'], fsm.data['radical']
 
 
 if __name__=='__main__':

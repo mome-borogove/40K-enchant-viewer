@@ -18,13 +18,14 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   with open(lang_file) as f:
     ench_str_map,item_type_map = parse_langs(f)
   with open(inventory_file) as f:
-    relic_items, archeo_items, morality_items = parse_inventory(f)
+    relic_items, archeo_items, puritan_items, radical_items = parse_inventory(f)
 
   print(len(enchants),'enchants inloaded')
   print(len(ench_str_map),'strings inloaded')
   print(len(relic_items),'relic items inloaded')
   print(len(archeo_items),'archeo items inloaded')
-  print(len(morality_items),'morality items inloaded')
+  print(len(puritan_items),'puritan items inloaded')
+  print(len(radical_items),'radical items inloaded')
 
   # Filter out some item types (i.e., TA construct items)
   shortcuts = filter_shortcuts(shortcuts)
@@ -38,13 +39,17 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
     if enchant.quality=='godlike' or enchant.quality=='morality':
       enchant.shortcuts = [] # First, blow away all false maps
 
-  # Create empty enchant maps for relic, archeo, and morality items
-  relic_enchant_map = {}
-  archeo_enchant_map = {}
-  morality_enchant_map = {}
-  for map,items in [(relic_enchant_map,relic_items),
-                   (archeo_enchant_map,archeo_items),
-                   (morality_enchant_map,morality_items)]:
+  # Note: once we start dealing with items, we start splitting morality into
+  # two new, fake qualities: puritan and radical. See parse_inventory for
+  # more info.
+
+  # Create empty type maps for relic, archeo, puritan, and radical items
+  # These map enchant names to a list of types scraped from inventoryitems.cfg.
+  relic_typemap, archeo_typemap, puritan_typemap, radical_typemap = {},{},{},{}
+  for map,items in [(relic_typemap,relic_items),
+                   (archeo_typemap,archeo_items),
+                   (puritan_typemap,puritan_items),
+                   (radical_typemap,radical_items)]:
     for item in items:
       for enchant in item['enchants']:
         if enchant not in map:
@@ -53,9 +58,10 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
         # Thanks to PsyHo_GK for reporting this bug
         if t not in map[enchant]:
           map[enchant].append(t)
-  print('relic map:',len(relic_enchant_map),'enchant types')
-  print('archeo map:',len(archeo_enchant_map),'enchant types')
-  print('morality map:',len(morality_enchant_map),'enchant types')
+  print('relic map:',len(relic_typemap),'enchant types')
+  print('archeo map:',len(archeo_typemap),'enchant types')
+  print('puritan map:',len(puritan_typemap),'puritan types')
+  print('radical map:',len(radical_typemap),'radical types')
 
   # Now try to unify enchants from across all rarities.
   # FIXME: Currently, seasonal tags from archeotech items are ignored.
@@ -67,25 +73,38 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   new_enchants = []
   for enchant in enchants:
     if enchant.quality=='godlike':
-      if enchant.name in relic_enchant_map:
-        enchant.items = relic_enchant_map[enchant.name]
+      if enchant.name in relic_typemap:
+        enchant.items = relic_typemap[enchant.name]
         enchant.quality = 'relic'
         new_enchants.append(enchant)
-      if enchant.name in archeo_enchant_map:
+      if enchant.name in archeo_typemap:
         # We create a whole separate enchant for archeotech enchants,
         # otherwise we can't distinguish between relic and archeo enchants.
         e = Enchant.copy(enchant)
-        e.items = archeo_enchant_map[enchant.name]
+        e.items = archeo_typemap[enchant.name]
         e.quality = 'archeo'
         new_enchants.append(e)
-      if enchant.name not in relic_enchant_map and enchant.name not in archeo_enchant_map:
+      if enchant.name not in relic_typemap and enchant.name not in archeo_typemap:
         # Enchants that are ancient-only or simply left unused in the game
         # appear here.
         enchant.items = []
         print('Warning: ignoring unused enchant '+str(enchant.name))
+    # Note that we check for the 'morality' type because the enchants are
+    # originally coming from enchantments.cfg, which doesn't split.
     elif enchant.quality=='morality':
-      if enchant.name in morality_enchant_map:
-        enchant.items = morality_enchant_map[enchant.name]
+      if enchant.name in puritan_typemap:
+        enchant.items = puritan_typemap[enchant.name]
+        # Now we replace it with the appropriate type.
+        # This is safe because an enchant cannot be morality and something else,
+        # nor both puritan and radical.
+        enchant.quality = 'puritan'
+        new_enchants.append(enchant)
+      elif enchant.name in radical_typemap:
+        enchant.items = radical_typemap[enchant.name]
+        # Now we replace it with the appropriate type.
+        # This is safe because an enchant cannot be morality and something else,
+        # nor both puritan and radical.
+        enchant.quality = 'radical'
         new_enchants.append(enchant)
       else:
         # Enchants that are ancient-only or simply left unused in the game

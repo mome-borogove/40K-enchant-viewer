@@ -125,7 +125,7 @@ Vue.component('toggle-area', {
 // Static Data
 var STATIC;
 {
-  var _colors = ['primary','secondary','relic','archeo','morality','morality'];
+  var _colors = ['primary','secondary','relic','archeo','puritan','radical'];
   DATA = {
     color_map: new Map(FMap.key_array('quality').map((q,idx)=>[q,_colors[idx]])),
   }
