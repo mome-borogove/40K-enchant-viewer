@@ -4415,7 +4415,7 @@
 			</More_warp_damage_on_low_life>
 			<Chance_to_lightning_bolt_in_area>
 				<desc>
-					<eng>{artifact_enchant,100} chance to create electric arcs on Melee Hit. The arcs hit the 6 additional enemies with 6.5 meters for [ff2bede6]350%[/ff2bede6] Base damage and [fffffdcb]Shock[/fffffdcb] them.</eng>
+					<eng>{artifact_enchant,100} chance to create electric arcs on Melee Hit. The arcs hit the 6 additional enemies with 6.5 meters for [ff2bede6]350%[/ff2bede6] Base damage as Heat and [fffffdcb]Shock[/fffffdcb] them.</eng>
 				</desc>
 			</Chance_to_lightning_bolt_in_area>
 			<Area_damage_after_10_kills>
@@ -5201,7 +5201,7 @@
 			</Runeword_6_3>
 			<Runeword_6_5>
 				<desc>
-					<eng>[fffffdcb]Shocking[/fffffdcb] an enemy creates a explosion in a 3 meters radius around the target dealing [ff2bede6]120%[/ff2bede6] Base Damage as Heat and applying [fffffdcb]Shock[/fffffdcb]</eng>
+					<eng>[fffffdcb]Shocking[/fffffdcb] an enemy creates an explosion in a 3 meters radius around the target dealing [ff2bede6]120%[/ff2bede6] Base Damage as Heat and applying [fffffdcb]Shock[/fffffdcb]</eng>
 				</desc>
 			</Runeword_6_5>
 			<Runeword_6_7>
