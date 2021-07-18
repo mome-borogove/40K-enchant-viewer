@@ -72,7 +72,7 @@ def format_enchant_desc(enchant, slot_map):
   s = re.sub(r'{deflect}', r'Deflect/Dodge', s)
 
   # {resource} really means the class-specific zeal 
-  s = re.sub(r'{resource}', r'Focus/Adrenaline/Data-flux', s)
+  s = re.sub(r'{resource}', r'Focus/Adrenaline/Warp Heat/Data-flux', s)
 
   # FIXME: Neocore released a bug in 2.3.1 where the string for an AoE effect
   # has the wrong substitution string. This should be changed when it gets
