@@ -174,6 +174,30 @@ var app = new Vue({
     this.$set(this.F_mask, FMap.get2('season',0), true);
     this.$set(this.F_mask, FMap.get2('season',3), true);
   },
+  watch: {
+    // Enforce data dependence constraints
+    // WARNING: Be careful with this. This function *must* have a fixpoint.
+    // Infinite compute loops are not good.
+    F_mask:
+      function (new_mask, old_mask) {
+        // (1) Item type filters should always be cleared
+        for ([slot,s_idx] of FMap.get('slot')) {
+          if( ! new_mask[s_idx] ) {
+            for (item of slot_items.get(slot)) {
+              i_idx = FMap.get2('item',item);
+              new_mask[i_idx] = false;
+            }
+          }
+        }
+        // Now update the entire array.
+        //
+        // In order for constraint updates to converge, this must only be done
+        // *once* here at the end, otherwise elementwise changes to F_mask will
+        // re-trigger the whole watch function (and all of its changes). That
+        // will cause an infinite loop.
+        this.$set(this.F_mask, new_mask);
+      }
+  },
   computed: {
     all_slots: function() {
       return FMap.key_array('slot');
