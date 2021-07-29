@@ -3,12 +3,13 @@
 import re
 import sys
 
-from slots import SLOTS, all_items, construct_slot_map, expand_items, items_from_slots, slots_from_items, filter_shortcuts
-from format_strings import preformat_str, format_enchant_desc, format_enchant, format_item_types, format_item_type_map
-from templates import DATA_TEMPLATE
-from parse_enchants import parse_enchants, Enchant
-from parse_langs import parse_langs
-from parse_inventory import parse_inventory
+from lib40k import parse_enchants, parse_inventory, SLOTS
+# <REFACTOR> Remove the below; they should be internal to lib40k
+from lib40k import parse_langs, Enchant, preformat_str, format_item_types, format_item_type_map
+
+from slots import all_items, construct_slot_map, expand_items, items_from_slots, slots_from_items, filter_shortcuts
+from emit_js import emit_js
+
 
 def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   with open(version_file) as f:
@@ -30,7 +31,9 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   # Filter out some item types (i.e., TA construct items)
   shortcuts = filter_shortcuts(shortcuts)
 
+  # <REFACTOR> Replace this with pre-formatted enchant data
   ench_str_map = {k:preformat_str(v) for k,v in ench_str_map.items()}
+
   slot_map = construct_slot_map(shortcuts)
 
   # Relic and morality enchants are invalid in enchantments.cfg. Instead, we
@@ -137,24 +140,10 @@ def main(version_file, enchant_file, lang_file, inventory_file, output_file):
   # Also filter out enchants that cannot roll. No sense in listing them.
   enchants = [_ for _ in enchants if not _.no_roll]
 
-  enchant_data = ''
-  for enchant in enchants:
-    enchant_data += format_enchant(enchant, ench_str_map)
-
-  # format each slot for javascript
-  slot_strings = '\n'.join(['  "'+s+'",' for s in SLOTS])
-
-  # create the slot->item types javascript map
   slot_to_item_types = {s:items_from_slots([s], slot_map, shortcuts) for s in SLOTS}
   item_type_strings = format_item_type_map(slot_to_item_types, item_type_map)
 
-  with open(output_file,'w') as f:
-    f.write(DATA_TEMPLATE.format(
-              version=version,
-              enchants=enchant_data,
-              slots=slot_strings,
-              item_types=item_type_strings))
-
+  emit_js(output_file, enchants, ench_str_map, slot_to_item_types, item_type_strings, version)
 
 if __name__=='__main__':
   if len(sys.argv)<5:

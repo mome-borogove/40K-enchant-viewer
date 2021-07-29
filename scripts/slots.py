@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# <REFACTOR> Remove this file. Pull it from lib40k.
+
 SLOTS=[
   'neural_implant', 'eye_implant', 'main_implant', 'purity_seal', 'belt',
   'body', 'inoculator', 'weapon', 'signum', 'offhand'
