@@ -1,3 +1,3 @@
 [submodule "scripts/lib40k"]
-	path = scripts/lib40k
+	path = lib40k
 	url = https://github.com/mome-borogove/lib40k.git
