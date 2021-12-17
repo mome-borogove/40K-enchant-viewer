@@ -484,6 +484,12 @@
 			<multi_tarot_card>
 				<eng>%d Tarot Cards used</eng>
 			</multi_tarot_card>
+			<multi_tarot_seal>
+				<eng>%d [ff2bede6]Empyrean Seal[/ff2bede6] used</eng>
+			</multi_tarot_seal>
+			<special_tarot_seal>
+				<eng>%d [ff2bede6]%s[/ff2bede6] used</eng>
+			</special_tarot_seal>
 		</Tarotcard>
 		<Tags>
 			<melee>
@@ -1187,6 +1193,12 @@
 			<void_key>
 				<eng>Void Key</eng>
 			</void_key>
+			<construct_material>
+				<eng>Tech Fragment</eng>
+			</construct_material>
+			<currency>
+				<eng>Currency</eng>
+			</currency>
 		</Types>
 		<Rarity>
 			<common>
@@ -2318,6 +2330,67 @@
 				</Name>
 			</s3_purity_seal2>
 
+			<s4_shotgun>
+				<Name>
+					<eng>The Redeemer</eng>
+				</Name>
+			</s4_shotgun>
+			<s4_sniper_rifle>
+				<Name>
+					<eng>Sight of the Empyrean</eng>
+				</Name>
+			</s4_sniper_rifle>
+			<s4_force_staff>
+				<Name>
+					<eng>Staff of Woes</eng>
+				</Name>
+			</s4_force_staff>
+			<s4_ta_weapon>
+				<Name>
+					<eng>Fortitude of the Mechanicus</eng>
+				</Name>
+			</s4_ta_weapon>
+			<s4_signum>
+				<Name>
+					<eng>Bane of the Unworthy</eng>
+				</Name>
+			</s4_signum>
+			<s4_digital_weapons>
+				<Name>
+					<eng>Executioner's Celerity</eng>
+				</Name>
+			</s4_digital_weapons>
+			<s4_main_implant>
+				<Name>
+					<eng>Empyrean Bulwark</eng>
+				</Name>
+			</s4_main_implant>
+			<s4_neural_implant>
+				<Name>
+					<eng>Deathbringer</eng>
+				</Name>
+			</s4_neural_implant>
+			<s4_rosarius>
+				<Name>
+					<eng>Infinity</eng>
+				</Name>
+			</s4_rosarius>
+			<s4_inoculator>
+				<Name>
+					<eng>Redemption</eng>
+				</Name>
+			</s4_inoculator>
+			<s4_eye_implant>
+				<Name>
+					<eng>Battlemaster's Longevity</eng>
+				</Name>
+			</s4_eye_implant>
+			<s4_purity_seal>
+				<Name>
+					<eng>Seal of the Stalwart</eng>
+				</Name>
+			</s4_purity_seal>			
+
 			<Normal_Zacsi>
 				<Name>
 					<eng>Confiscated Items (Normal)</eng>
@@ -2459,6 +2532,16 @@
 					<eng>Excellent Glory Reward</eng>
 				</Name>
 			</GloryReward_Rank_800_Zacsi>
+			<GloryReward_Rank_1500_Zacsi>
+				<Name>
+					<eng>Supreme Glory Reward</eng>
+				</Name>
+			</GloryReward_Rank_1500_Zacsi>
+			<GloryReward_Rank_2500_Zacsi>
+				<Name>
+					<eng>Ultimate Glory Reward</eng>
+				</Name>
+			</GloryReward_Rank_2500_Zacsi>
 			<GloryReward_leaderboard_11_50_Zacsi>
 				<Name>
 					<eng>Leaderboard Top 50 Reward</eng>
@@ -2920,6 +3003,46 @@
 					<eng></eng>
 				</desc>
 			</season_3_reward_5_zacsi>
+			<season_4_reward_1_zacsi>
+				<Name>
+					<eng>Epsylon Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_4_reward_1_zacsi>
+			<season_4_reward_2_zacsi>
+				<Name>
+					<eng>Delta Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_4_reward_2_zacsi>
+			<season_4_reward_3_zacsi>
+				<Name>
+					<eng>Omega Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_4_reward_3_zacsi>
+			<season_4_reward_4_zacsi>
+				<Name>
+					<eng>Beta Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_4_reward_4_zacsi>
+			<season_4_reward_5_zacsi>
+				<Name>
+					<eng>Alpha Cache</eng>
+				</Name>
+				<desc>
+					<eng></eng>
+				</desc>
+			</season_4_reward_5_zacsi>
 			<Consumable_InstantCraft>
 				<Name>
 					<eng>Immediate Crafting</eng>
@@ -3275,6 +3398,31 @@
 					<eng>Magistratus Shard V</eng>
 				</Name>
 			</gem_s3_5>
+			<gem_s4_1>
+				<Name>
+					<eng>Empyrean Echo Shard</eng>
+				</Name>
+			</gem_s4_1>
+			<gem_s4_2>
+				<Name>
+					<eng>Empyrean Echo Shard II</eng>
+				</Name>
+			</gem_s4_2>
+			<gem_s4_3>
+				<Name>
+					<eng>Empyrean Echo Shard III</eng>
+				</Name>
+			</gem_s4_3>
+			<gem_s4_4>
+				<Name>
+					<eng>Empyrean Echo Shard IV</eng>
+				</Name>
+			</gem_s4_4>
+			<gem_s4_5>
+				<Name>
+					<eng>Empyrean Echo Shard V</eng>
+				</Name>
+			</gem_s4_5>
 			<Rune1>
 				<Name>
 					<eng>Hermeticon Psalm</eng>
@@ -3793,6 +3941,46 @@
 					<eng>Used to locate hideouts of the Void Brethren. It can grant access to special Pirate Den type missions.</eng>
 				</Desc>
 			</s3_voidbrethreninsignia_3>
+			<s4_void_key>
+				<name>
+					<eng>Empyrean Key</eng>
+				</name>
+				<Desc>
+					<eng>Used to open Void Crusade Chests. Obtained from defeating an Empyrean Elite. Only one Empyrean key can be carried at a time.</eng>
+				</Desc>
+			</s4_void_key>
+			<s4_currency>
+				<name>
+					<eng>Empyrean Sliver</eng>
+				</name>
+				<Desc>
+					<eng>Used to buy Seasonal goods at Captain Ragna Van Wynter.</eng>
+				</Desc>
+			</s4_currency>
+			<shop_season_4_1_zacsi>
+				<name>
+					<eng>Empyrean Stash I</eng>
+				</name>
+				<Desc>
+					<eng>Contains a guaranteed Empyrean Artifact with a chance for a second one.</eng>
+				</Desc>
+			</shop_season_4_1_zacsi>
+			<shop_season_4_2_zacsi>
+				<name>
+					<eng>Empyrean Stash II</eng>
+				</name>
+				<Desc>
+					<eng>Contains two guaranteed Empyrean Artifacts with a chance for a third one.</eng>
+				</Desc>
+			</shop_season_4_2_zacsi>
+			<shop_season_4_3_zacsi>
+				<name>
+					<eng>Empyrean Stash III</eng>
+				</name>
+				<Desc>
+					<eng>Contains three guaranteed Empyrean Artifacts with a small chance for a rare Neural Implant.</eng>
+				</Desc>
+			</shop_season_4_3_zacsi>
 
 			<construct_material>
 				<name>
@@ -3802,6 +3990,47 @@
 					<eng>Tech Fragment is used to upgrade the Constructs’ weapons on the Construct Setup panel.</eng>
 				</Desc>
 			</construct_material>
+			<token>
+				<name>
+					<eng>Favour</eng>
+				</name>
+				<Desc>
+					<eng>Special currency that can be used to trade with Custodian Rebus.</eng>
+				</Desc>
+			</token>
+			
+			<UnholyReward1_Zacsi>
+				<Name>
+					<eng>Unholy Cathedral Minor Reward</eng>
+				</Name>
+				<desc>
+					<eng>Reward for completing Wave 5 in the Unholy Cathedral mission.</eng>
+				</desc>
+			</UnholyReward1_Zacsi>
+			<UnholyReward2_Zacsi>
+				<Name>
+					<eng>Unholy Cathedral Major Reward</eng>
+				</Name>
+				<desc>
+					<eng>Reward for completing Wave 8 in the Unholy Cathedral mission.</eng>
+				</desc>
+			</UnholyReward2_Zacsi>
+			<UnholyReward3_Zacsi>
+				<Name>
+					<eng>Unholy Cathedral Complete Reward</eng>
+				</Name>
+				<desc>
+					<eng>Reward for completing Wave 10 in the Unholy Cathedral mission.</eng>
+				</desc>
+			</UnholyReward3_Zacsi>
+			<UnholyRewardExtra_Zacsi>
+				<Name>
+					<eng>Unholy Cathedral Time Reward</eng>
+				</Name>
+				<desc>
+					<eng>Reward for completing Wave 10 in the Unholy Cathedral mission with time remaining (contents improve with each 30 seconds remaining).</eng>
+				</desc>
+			</UnholyRewardExtra_Zacsi>
 		</Items>
 		<Enchantment>
 			<critical_hit_chance>
@@ -4446,12 +4675,12 @@
 
 			<Loot_quantity_minor>
 				<desc>
-					<eng>{loot_chance,*100} Loot quantity </eng>
+					<eng>{loot_chance,*100} Bonus Loot quantity</eng>
 				</desc>
 			</Loot_quantity_minor>
 			<Loot_quality_minor>
 				<desc>
-					<eng>{loot_quality,*100} Loot quality </eng>
+					<eng>{loot_quality,*100} Bonus Loot quality</eng>
 				</desc>
 			</Loot_quality_minor>
 			<Reflect_Deflected_Damage>
@@ -4650,7 +4879,7 @@
 			</More_rockets_demolition_armor>
 			<Area_large_damage_on_Deadly_Strike>
 				<desc>
-					<eng>Single target attacks deal area damage around the target on a One-hit kill</eng>
+					<eng>Single Target One-hit Kills cause an explosion, dealing 100% Base Damage as Physical in a 9 metres radius.</eng>
 				</desc>
 			</Area_large_damage_on_Deadly_Strike>
 			<HP_regen_based_on_Adrenalin>
@@ -4822,12 +5051,12 @@
 			</hp_leech_percent>
 			<Minion_Lifeleech_Ranged>
 				<desc>
-					<eng>{hp_per_hit_percent}% Life Drain</eng>
+					<eng>{hp_per_hit_percent}% Life Drain for Ranged Skills</eng>
 				</desc>
 			</Minion_Lifeleech_Ranged>
 			<Minion_Lifeleech_Melee>
 				<desc>
-					<eng>{hp_per_hit_percent}% Life Drain</eng>
+					<eng>{hp_per_hit_percent}% Life Drain for Melee Skills</eng>
 				</desc>
 			</Minion_Lifeleech_Melee>
 			<dot_damage>
@@ -4870,14 +5099,19 @@
 					<eng>[ff2bede6]1%[/ff2bede6] Supreme Critical Chance and [ff2bede6]1%[/ff2bede6] Critical Strength for 2 seconds on Kill</eng>
 				</desc>
 			</Rune_5>
+			<Rune_6>
+				<desc>
+					<eng>{skill_duration} sec to [fffffdcb]DoT[/fffffdcb] Duration</eng>
+				</desc>
+			</Rune_6>
 			<slow_shock_duration_percent>
 				<desc>
-					<eng>{skill_duration,100} [fffffdcb]Slow[/fffffdcb], [fffffdcb]Shock[/fffffdcb] Duration</eng>
+					<eng>{skill_duration} sec to [fffffdcb]Slow[/fffffdcb], [fffffdcb]Shock[/fffffdcb] Duration</eng>
 				</desc>
 			</slow_shock_duration_percent>
 			<blind_halu_duration_percent>
 				<desc>
-					<eng>{skill_duration,100} [fffffdcb]Blind[/fffffdcb], [fffffdcb]Hallucination[/fffffdcb] Duration</eng>
+					<eng>{skill_duration} sec to [fffffdcb]Blind[/fffffdcb], [fffffdcb]Hallucination[/fffffdcb] Duration</eng>
 				</desc>
 			</blind_halu_duration_percent>
 			<Rune_9>
@@ -4892,7 +5126,7 @@
 			</Rune_10>
 			<stun_duration_percent>
 				<desc>
-					<eng>{skill_duration,100} [fffffdcb]Stun[/fffffdcb] Duration</eng>
+					<eng>{skill_duration} sec to [fffffdcb]Stun[/fffffdcb] Duration</eng>
 				</desc>
 			</stun_duration_percent>
 			<damage_percent_against_burning_enemies>
@@ -4942,7 +5176,7 @@
 			</Rune_23>
 			<Rune_24>
 				<desc>
-					<eng>[ff2bede6]10[/ff2bede6] Shield Charge gained on Hit</eng>
+					<eng>[ff2bede6]+1%[/ff2bede6] Shield Drain</eng>
 				</desc>
 			</Rune_24>
 			<Rune_25>
@@ -5909,7 +6143,7 @@
 			</Godlike_Shock_on_Stun>
 			<Godlike_Shock_on_hit_against_Vulnerable>
 				<desc>
-					<eng>{artifact_enchant,100} chance to [fffffdcb]Shock[/fffffdcb] enemies with [fffffdcb]Vulnerability[/fffffdcb] effect on Hit</eng>
+					<eng>{artifact_enchant,100} chance to [fffffdcb]Shock[/fffffdcb] enemies affected by any [fffffdcb]Vulnerability[/fffffdcb] on Hit</eng>
 				</desc>
 			</Godlike_Shock_on_hit_against_Vulnerable>
 			<Godlike_Vulnerability_duration>
@@ -7226,7 +7460,7 @@
 			</godlike_reflect_chance_to_cl>
 			<godlike_shield_on_cl_hit>
 				<desc>
-					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] grants {artifact_enchant,100} Energy Shield charges per each enemy hit</eng>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] grants {nembonusz;artifact_enchant} Energy Shield charges per each enemy hit</eng>
 				</desc>
 			</godlike_shield_on_cl_hit>
 			<godlike_supp_for_cl_by_hit_taken>
@@ -7255,6 +7489,16 @@
 					<eng>{chain_lightning_on_inoculator}[ff2bede6]%[/ff2bede6] chance to release a [ff286bf2]Thunderbolt of Authority[/ff286bf2] on Inoculator Use</eng>
 				</desc>
 			</lightning_on_inoculator_use>
+			<bonus_damage_against_elite_nemesis>
+				<desc>
+					<eng>{artifact_enchant,100} Bonus Damage against [ffd32f2f]Elite &amp; Empyrean Elite[/ffd32f2f] enemies</eng>
+				</desc>
+			</bonus_damage_against_elite_nemesis>
+			<bonus_damage_reduce_against_elite_nemesis>
+				<desc>
+					<eng>{artifact_enchant}[ff2bede6]%[/ff2bede6] Bonus Damage Reduction against [ffd32f2f]Elite &amp; Empyrean Elite[/ffd32f2f] enemies</eng>
+				</desc>
+			</bonus_damage_reduce_against_elite_nemesis>
 			<TA_weaponupgrade>
 				<desc>
 					<eng>{damage} Bonus Damage</eng>
@@ -7266,6 +7510,97 @@
 				</desc>
 			</TA_weaponupgrade_hp>
 
+			<burst_buff_during_killstreak>
+				<desc>
+					<eng>{artifact_enchant,100} Damage Bonus for [ff2bede6]Burst Shot[/ff2bede6] during a [ffd32f2f]Killstreak[/ffd32f2f] effect</eng>
+				</desc>
+			</burst_buff_during_killstreak>
+			<chance_to_warp_vuln_on_hit_dealt>
+				<desc>
+					<eng>{artifact_enchant,100} Chance to cause [ff2bede6]Warp Vulnerability[/ff2bede6] on Hit</eng>
+				</desc>
+			</chance_to_warp_vuln_on_hit_dealt>
+			<dmg_and_crit_when_no_enemy_near>
+				<desc>
+					<eng>Gain [ff2bede6]50%[/ff2bede6] Damage Bonus and [ff2bede6]15%[/ff2bede6] Critical Hit chance while there are no Enemies within 10m</eng>
+				</desc>
+			</dmg_and_crit_when_no_enemy_near>
+			<minion_dmg_buff_during_killstreak>
+				<desc>
+					<eng>[ff00a1ff]Constructs[/ff00a1ff] Deal {artifact_enchant,100} increased Damage during a [ffd32f2f]Killstreak[/ffd32f2f] effect</eng>
+				</desc>
+			</minion_dmg_buff_during_killstreak>
+			<chance_to_vuln_on_hit_dealt>
+				<desc>
+					<eng>{artifact_enchant,100} chance to cause generic Vulnerability on hit</eng>
+				</desc>
+			</chance_to_vuln_on_hit_dealt>
+			<supreme_speed_on_killstreak>
+				<desc>
+					<eng>Gain [ff2bede6]20%[/ff2bede6] Supreme Movement Speed for [ff2bede6]10[/ff2bede6] seconds upon triggering a [ffd32f2f]Killstreak[/ffd32f2f] effect</eng>
+				</desc>
+			</supreme_speed_on_killstreak>
+			<chance_to_belt_charge_on_killstreak>
+				<desc>
+					<eng>{artifact_enchant,100} chance to gain a charge per [ffd32f2f]Killstreak[/ffd32f2f] effect</eng>
+				</desc>
+			</chance_to_belt_charge_on_killstreak>
+			<chance_to_wardrug_trigger_on_killstreak>
+				<desc>
+					<eng>Triggers the Inoculator for free upon getting a [ffd32f2f]Killstreak[/ffd32f2f] effect</eng>
+				</desc>
+			</chance_to_wardrug_trigger_on_killstreak>
+			<killstreak_buff_double_duration>
+				<desc>
+					<eng>Doubles the duration of all [ffd32f2f]Killstreak[/ffd32f2f] effects</eng>
+				</desc>
+			</killstreak_buff_double_duration>
+			<chance_to_shield_after_struck_by_medium>
+				<desc>
+					<eng>{artifact_enchant,100} chance to gain a Personal Void Shield upon taking damage from [ffd32f2f]Champion &amp; Revenant[/ffd32f2f] Enemies</eng>
+				</desc>
+			</chance_to_shield_after_struck_by_medium>
+			<extend_killstreak_on_medium_kill>
+				<desc>
+					<eng>Killing a [ffd32f2f]Champion[/ffd32f2f] enemy extends the currently active [ffd32f2f]Killstreak[/ffd32f2f] effect by [ff2bede6]1[/ff2bede6] second</eng>
+				</desc>
+			</extend_killstreak_on_medium_kill>
+			<supreme_dr_during_killstreak>
+				<desc>
+					<eng>{artifact_enchant} Supreme Damage Reduction when you have a [ffd32f2f]Killstreak[/ffd32f2f] effect active</eng>
+				</desc>
+			</supreme_dr_during_killstreak>
+			<supreme_crit_chance_vs_nemesis_elite>
+				<desc>
+					<eng>{critical_hit_chance_hardcap,100} Supreme Critical Hit Chance against [ffd32f2f]Elite and Empyrean Elite[/ffd32f2f] Enemies</eng>
+				</desc>
+			</supreme_crit_chance_vs_nemesis_elite>
+			<total_destruction_on_nemesis_kill>
+				<desc>
+					<eng>Killing an [ffd32f2f]Empyrean Elite[/ffd32f2f] triggers the Total Destruction [ffd32f2f]Killstreak[/ffd32f2f] effect</eng>
+				</desc>
+			</total_destruction_on_nemesis_kill>
+			<damage_resist_vs_nemesis_elite>
+				<desc>
+					<eng>{artifact_enchant}[ff2bede6]%[/ff2bede6] Damage Reduction against [ffd32f2f]Empyrean Elites[/ffd32f2f]. [ff2bede6]33%[/ff2bede6] effective against Elites.</eng>
+				</desc>
+			</damage_resist_vs_nemesis_elite>
+			<chance_to_warp_nova_when_struck>
+				<desc>
+					<eng>{artifact_enchant,100} chance to cast a [ffd32f2f]Warp Nova[/ffd32f2f] when struck</eng>
+				</desc>
+			</chance_to_warp_nova_when_struck>
+			<double_bodycount_chance_for_level>
+				<desc>
+					<eng>[ff2bede6]0.5%[/ff2bede6] chance per [ff2bede6]Character Level[/ff2bede6] to gain double [ffd32f2f]Bodycount[/ffd32f2f] values upon killing Enemies.</eng>
+				</desc>
+			</double_bodycount_chance_for_level>
+			<only_crit_after_seasonpool_spell>
+				<desc>
+					<eng>Gain [ff2bede6]100%[/ff2bede6] Critical Hit Chance for {artifact_enchant} seconds upon triggering an [ffd32f2f]Empyrean Echo[/ffd32f2f] spell</eng>
+				</desc>
+			</only_crit_after_seasonpool_spell>
+			
 		</Enchantment>
 		<unlocks>
 			<finish_mission_hard>

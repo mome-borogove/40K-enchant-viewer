@@ -18,6 +18,7 @@ $radical: $morality;
 $season1: rgb(235,62,72);
 $season2: rgb(198,103,252);
 $season3: rgb(45,98,212);
+$season4: rgb(184, 49, 47);
 
 $body-bg: $blackish;
 $body-color: $whiteish;
@@ -36,6 +37,7 @@ $theme-colors: (
   'season1': $season1,
   'season2': $season2,
   'season3': $season3,
+  'season4': $season4,
 );
 
 @import '../bootstrap/scss/bootstrap';

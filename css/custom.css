@@ -38,6 +38,7 @@
   --season1: #eb3e48;
   --season2: #c667fc;
   --season3: #2d62d4;
+  --season4: #b8312f;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -2111,6 +2112,26 @@ pre code {
   background-color: #afc3ef;
 }
 
+.table-season4,
+.table-season4 > th,
+.table-season4 > td {
+  background-color: #ebc5c5;
+}
+.table-season4 th,
+.table-season4 td,
+.table-season4 thead th,
+.table-season4 tbody + tbody {
+  border-color: #da9493;
+}
+
+.table-hover .table-season4:hover {
+  background-color: #e4b2b2;
+}
+.table-hover .table-season4:hover > td,
+.table-hover .table-season4:hover > th {
+  background-color: #e4b2b2;
+}
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -3229,6 +3250,36 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(77, 122, 218, 0.5);
 }
 
+.btn-season4 {
+  color: #fff;
+  background-color: #b8312f;
+  border-color: #b8312f;
+}
+.btn-season4:hover {
+  color: #fff;
+  background-color: #9a2927;
+  border-color: #8f2625;
+}
+.btn-season4:focus, .btn-season4.focus {
+  color: #fff;
+  background-color: #9a2927;
+  border-color: #8f2625;
+  box-shadow: 0 0 0 0.2rem rgba(195, 80, 78, 0.5);
+}
+.btn-season4.disabled, .btn-season4:disabled {
+  color: #fff;
+  background-color: #b8312f;
+  border-color: #b8312f;
+}
+.btn-season4:not(:disabled):not(.disabled):active, .btn-season4:not(:disabled):not(.disabled).active, .show > .btn-season4.dropdown-toggle {
+  color: #fff;
+  background-color: #8f2625;
+  border-color: #852322;
+}
+.btn-season4:not(:disabled):not(.disabled):active:focus, .btn-season4:not(:disabled):not(.disabled).active:focus, .show > .btn-season4.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(195, 80, 78, 0.5);
+}
+
 .btn-outline-primary {
   color: #bbfefa;
   border-color: #bbfefa;
@@ -3702,6 +3753,31 @@ fieldset:disabled a.btn {
 }
 .btn-outline-season3:not(:disabled):not(.disabled):active:focus, .btn-outline-season3:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-season3.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(45, 98, 212, 0.5);
+}
+
+.btn-outline-season4 {
+  color: #b8312f;
+  border-color: #b8312f;
+}
+.btn-outline-season4:hover {
+  color: #fff;
+  background-color: #b8312f;
+  border-color: #b8312f;
+}
+.btn-outline-season4:focus, .btn-outline-season4.focus {
+  box-shadow: 0 0 0 0.2rem rgba(184, 49, 47, 0.5);
+}
+.btn-outline-season4.disabled, .btn-outline-season4:disabled {
+  color: #b8312f;
+  background-color: transparent;
+}
+.btn-outline-season4:not(:disabled):not(.disabled):active, .btn-outline-season4:not(:disabled):not(.disabled).active, .show > .btn-outline-season4.dropdown-toggle {
+  color: #fff;
+  background-color: #b8312f;
+  border-color: #b8312f;
+}
+.btn-outline-season4:not(:disabled):not(.disabled):active:focus, .btn-outline-season4:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-season4.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(184, 49, 47, 0.5);
 }
 
 .btn-link {
@@ -5722,6 +5798,19 @@ a.badge-season3:focus, a.badge-season3.focus {
   box-shadow: 0 0 0 0.2rem rgba(45, 98, 212, 0.5);
 }
 
+.badge-season4 {
+  color: #fff;
+  background-color: #b8312f;
+}
+a.badge-season4:hover, a.badge-season4:focus {
+  color: #fff;
+  background-color: #8f2625;
+}
+a.badge-season4:focus, a.badge-season4.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(184, 49, 47, 0.5);
+}
+
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
@@ -5993,6 +6082,18 @@ a.badge-season3:focus, a.badge-season3.focus {
 }
 .alert-season3 .alert-link {
   color: #0e1f44;
+}
+
+.alert-season4 {
+  color: #601918;
+  background-color: #f1d6d5;
+  border-color: #ebc5c5;
+}
+.alert-season4 hr {
+  border-top-color: #e4b2b2;
+}
+.alert-season4 .alert-link {
+  color: #370e0e;
 }
 
 @keyframes progress-bar-stripes {
@@ -6504,6 +6605,20 @@ a.badge-season3:focus, a.badge-season3.focus {
   color: #fff;
   background-color: #17336e;
   border-color: #17336e;
+}
+
+.list-group-item-season4 {
+  color: #601918;
+  background-color: #ebc5c5;
+}
+.list-group-item-season4.list-group-item-action:hover, .list-group-item-season4.list-group-item-action:focus {
+  color: #601918;
+  background-color: #e4b2b2;
+}
+.list-group-item-season4.list-group-item-action.active {
+  color: #fff;
+  background-color: #601918;
+  border-color: #601918;
 }
 
 .close {
@@ -7448,6 +7563,16 @@ button.bg-season3:focus {
   background-color: #234eab !important;
 }
 
+.bg-season4 {
+  background-color: #b8312f !important;
+}
+
+a.bg-season4:hover, a.bg-season4:focus,
+button.bg-season4:hover,
+button.bg-season4:focus {
+  background-color: #8f2625 !important;
+}
+
 .bg-white {
   background-color: #fff !important;
 }
@@ -7570,6 +7695,10 @@ button.bg-season3:focus {
 
 .border-season3 {
   border-color: #2d62d4 !important;
+}
+
+.border-season4 {
+  border-color: #b8312f !important;
 }
 
 .border-white {
@@ -11241,6 +11370,14 @@ a.text-season2:hover, a.text-season2:focus {
 
 a.text-season3:hover, a.text-season3:focus {
   color: #1f4496 !important;
+}
+
+.text-season4 {
+  color: #b8312f !important;
+}
+
+a.text-season4:hover, a.text-season4:focus {
+  color: #7b211f !important;
 }
 
 .text-body {

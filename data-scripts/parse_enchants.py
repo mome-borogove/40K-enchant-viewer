@@ -123,5 +123,6 @@ def parse_enchants(file):
 if __name__=='__main__':
   with open('enchantments.cfg') as f:
     shortcuts,enchants = parse_enchants(f)
+    #print('\n'.join([_ for _ in shortcuts]))
     print(str(len(shortcuts))+' shortcuts')
     print(str(len(enchants))+' enchants')
