@@ -1005,7 +1005,7 @@
 				<eng>Psychic Focus</eng>
 			</Belt_psyker>
 			<Belt_techadept>
-				<eng>Archeotech Item</eng>
+				<eng>Girdle</eng>
 			</Belt_techadept>
 			<Main_Implant>
 				<eng>Main Implant</eng>
@@ -1022,6 +1022,9 @@
 			<eye_implant_skull>
 				<eng>Eye Implant</eng>
 			</eye_implant_skull>
+			<inoculator_skull>
+				<eng>Inoculator</eng>
+			</inoculator_skull>
 
 			<Force_rod>
 				<eng>Force Rod</eng>
@@ -1926,6 +1929,14 @@
 					<eng>Received during the Warhammer Skulls event.\nThis implant was specially issued to uncover information about a devious Archenemy plot, involving Skull Procurators. It needs to be equipped in order to do so.</eng>
 				</Desc>
 			</Eye_Implant_skull>
+			<inoculator_skull>
+				<Name>
+					<eng>Autosanguine Inoculator</eng>
+				</Name>
+				<Desc>
+					<eng>Received during the Warhammer Skulls event.\nThis inoculator was specially issued to aid in finding and eliminating dormant Archenemy abominations called Skull Procurators. It needs to be equipped in order to function properly.</eng>
+				</Desc>
+			</inoculator_skull>
 
 			<Force_rod>
 				<Name>
@@ -2389,7 +2400,87 @@
 				<Name>
 					<eng>Seal of the Stalwart</eng>
 				</Name>
-			</s4_purity_seal>			
+			</s4_purity_seal>
+			<S5_WarpWeapon>
+				<Name>
+					<eng>Wrath of the Void</eng>
+				</Name>
+			</S5_WarpWeapon>
+			<S5_MeleeSplash>
+				<Name>
+					<eng>Relentless Fury</eng>
+				</Name>
+			</S5_MeleeSplash>
+			<S5_Heavy_Bolter>
+				<Name>
+					<eng>Eternity's Daze</eng>
+				</Name>
+			</S5_Heavy_Bolter>
+			<S5_Comboweapon_assa>
+				<Name>
+					<eng>Rage of the Faceless</eng>
+				</Name>
+			</S5_Comboweapon_assa>
+			<S5_Comboweapon_crus>
+				<Name>
+					<eng>Berserker's Flurry</eng>
+				</Name>
+			</S5_Comboweapon_crus>
+			<S5_Channeled>
+				<Name>
+					<eng>Conduit's Resonance</eng>
+				</Name>
+			</S5_Channeled>
+			<S5_TAweapon>
+				<Name>
+					<eng>Vigor of the Skitarii</eng>
+				</Name>
+			</S5_TAweapon>
+			<S5_TAmisc>
+				<Name>
+					<eng>Adept's Sacrifice</eng>
+				</Name>
+			</S5_TAmisc>
+			<S5_Psykerweapon_1>
+				<Name>
+					<eng>Tranquility</eng>
+				</Name>
+			</S5_Psykerweapon_1>
+			<S5_Psykerweapon_2>
+				<Name>
+					<eng>Craze of the Warpmaster</eng>
+				</Name>
+			</S5_Psykerweapon_2>
+			<S5_Inoculator>
+				<Name>
+					<eng>Echoing Hatred</eng>
+				</Name>
+			</S5_Inoculator>
+			<S5_Belt>
+				<Name>
+					<eng>Harbinger of Judgement</eng>
+				</Name>
+			</S5_Belt>
+			<S5_Neural_Implant>
+				<Name>
+					<eng>Visceral Frenzy</eng>
+				</Name>
+			</S5_Neural_Implant>
+			<S5_Purity_Seal>
+				<Name>
+					<eng>Seal of the Redeemer</eng>
+				</Name>
+			</S5_Purity_Seal>
+			<S5_Armor>
+				<Name>
+					<eng>Slayer's Calamity</eng>
+				</Name>
+			</S5_Armor>
+			<S5_Eye_implant>
+				<Name>
+					<eng>The Emperor's Vision</eng>
+				</Name>
+			</S5_Eye_implant>					
 
 			<Normal_Zacsi>
 				<Name>
@@ -2901,7 +2992,7 @@
 			</season_1_reward_2_zacsi>
 			<season_1_reward_3_zacsi>
 				<Name>
-					<eng>Omega Cache</eng>
+					<eng>Gamma Cache</eng>
 				</Name>
 				<desc>
 					<eng></eng>
@@ -2923,126 +3014,7 @@
 					<eng></eng>
 				</desc>
 			</season_1_reward_5_zacsi>
-			<season_2_reward_1_zacsi>
-				<Name>
-					<eng>Epsylon Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_2_reward_1_zacsi>
-			<season_2_reward_2_zacsi>
-				<Name>
-					<eng>Delta Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_2_reward_2_zacsi>
-			<season_2_reward_3_zacsi>
-				<Name>
-					<eng>Omega Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_2_reward_3_zacsi>
-			<season_2_reward_4_zacsi>
-				<Name>
-					<eng>Beta Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_2_reward_4_zacsi>
-			<season_2_reward_5_zacsi>
-				<Name>
-					<eng>Alpha Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_2_reward_5_zacsi>
-			<season_3_reward_1_zacsi>
-				<Name>
-					<eng>Epsylon Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_3_reward_1_zacsi>
-			<season_3_reward_2_zacsi>
-				<Name>
-					<eng>Delta Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_3_reward_2_zacsi>
-			<season_3_reward_3_zacsi>
-				<Name>
-					<eng>Omega Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_3_reward_3_zacsi>
-			<season_3_reward_4_zacsi>
-				<Name>
-					<eng>Beta Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_3_reward_4_zacsi>
-			<season_3_reward_5_zacsi>
-				<Name>
-					<eng>Alpha Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_3_reward_5_zacsi>
-			<season_4_reward_1_zacsi>
-				<Name>
-					<eng>Epsylon Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_4_reward_1_zacsi>
-			<season_4_reward_2_zacsi>
-				<Name>
-					<eng>Delta Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_4_reward_2_zacsi>
-			<season_4_reward_3_zacsi>
-				<Name>
-					<eng>Omega Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_4_reward_3_zacsi>
-			<season_4_reward_4_zacsi>
-				<Name>
-					<eng>Beta Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_4_reward_4_zacsi>
-			<season_4_reward_5_zacsi>
-				<Name>
-					<eng>Alpha Cache</eng>
-				</Name>
-				<desc>
-					<eng></eng>
-				</desc>
-			</season_4_reward_5_zacsi>
+						
 			<Consumable_InstantCraft>
 				<Name>
 					<eng>Immediate Crafting</eng>
@@ -3064,7 +3036,7 @@
 					<eng>Destruction Amplification</eng>
 				</Name>
 				<desc>
-					<eng>+50% Damage Bonus for the next 5 missions.</eng>
+					<eng>+50% Damage Bonus for the next mission.</eng>
 				</desc>
 			</Consumable_DamageBuff>
 			<Consumable_ExtraLife>
@@ -3072,7 +3044,7 @@
 					<eng>Survival Enhancement</eng>
 				</Name>
 				<desc>
-					<eng>+1 additional Allowed Death for the next 5 missions.</eng>
+					<eng>+1 additional Allowed Death for the next mission.</eng>
 				</desc>
 			</Consumable_ExtraLife>
 			<Consumable_GodlikeChance>
@@ -3080,7 +3052,7 @@
 					<eng>Extreme Fortune</eng>
 				</Name>
 				<desc>
-					<eng>Doubles the chance of finding a Relic item in the next 5 Tarot missions.</eng>
+					<eng>Doubles the chance of finding a Relic item in the next Tarot mission.</eng>
 				</desc>
 			</Consumable_GodlikeChance>
 			<Consumable_GodlikeBetterChance>
@@ -3088,7 +3060,7 @@
 					<eng>Litany of Serendipity</eng>
 				</Name>
 				<desc>
-					<eng>Significantly increases the chance of finding Relic items in the next 3 missions.</eng>
+					<eng>Significantly increases the chance of finding Relic items in the next mission.</eng>
 				</desc>
 			</Consumable_GodlikeBetterChance>
 			<Consumable_LootChance>
@@ -3096,7 +3068,7 @@
 					<eng>Benediction of Abundance</eng>
 				</Name>
 				<desc>
-					<eng>Significantly increases the amount of items dropped in the next 3 missions.</eng>
+					<eng>Significantly increases the amount of items dropped in the next mission.</eng>
 				</desc>
 			</Consumable_LootChance>
 			<Consumable_LootQuality>
@@ -3104,7 +3076,7 @@
 					<eng>Ultimate Fortune</eng>
 				</Name>
 				<desc>
-					<eng>Significantly increases the values of enchants on items found during the next 3 missions.</eng>
+					<eng>Significantly increases the values of enchants on items found during the next mission.</eng>
 				</desc>
 			</Consumable_LootQuality>
 			<Consumable_favour>
@@ -3112,7 +3084,7 @@
 					<eng>Favour Boost</eng>
 				</Name>
 				<desc>
-					<eng>Bestows +30% Favour bonus for the next 5 Warzone missions.</eng>
+					<eng>Bestows +30% Favour bonus for the next Warzone mission.</eng>
 				</desc>
 			</Consumable_favour>
 			<Consumable_xpbonus>
@@ -3120,7 +3092,7 @@
 					<eng>Meme Virus</eng>
 				</Name>
 				<desc>
-					<eng>+100% Experience for the next 5 missions.</eng>
+					<eng>+100% Experience for the next mission.</eng>
 				</desc>
 			</Consumable_xpbonus>
 			<gem1_1>
@@ -3423,6 +3395,31 @@
 					<eng>Empyrean Echo Shard V</eng>
 				</Name>
 			</gem_s4_5>
+			<gem_s5_1>
+				<Name>
+					<eng>Judgement Shard</eng>
+				</Name>
+			</gem_s5_1>
+			<gem_s5_2>
+				<Name>
+					<eng>Judgement Shard II</eng>
+				</Name>
+			</gem_s5_2>
+			<gem_s5_3>
+				<Name>
+					<eng>Judgement Shard III</eng>
+				</Name>
+			</gem_s5_3>
+			<gem_s5_4>
+				<Name>
+					<eng>Judgement Shard IV</eng>
+				</Name>
+			</gem_s5_4>
+			<gem_s5_5>
+				<Name>
+					<eng>Judgement Shard V</eng>
+				</Name>
+			</gem_s5_5>
 			<Rune1>
 				<Name>
 					<eng>Hermeticon Psalm</eng>
@@ -3957,12 +3954,60 @@
 					<eng>Used to buy Seasonal goods at Captain Ragna Van Wynter.</eng>
 				</Desc>
 			</s4_currency>
+			<EmperorsJudgement_Blighthauler1>
+				<name>
+					<eng>Tears of St. Vespasiana</eng>
+				</name>
+				<Desc>
+					<eng>A Holy Relic dropped from a Seasonal Boss.</eng>
+				</Desc>
+			</EmperorsJudgement_Blighthauler1>
+			<EmperorsJudgement_Blighthauler2>
+				<name>
+					<eng>Bone fragment of Chaplain Magrarius</eng>
+				</name>
+				<Desc>
+					<eng>A Holy Relic dropped from a Seasonal Boss.</eng>
+				</Desc>
+			</EmperorsJudgement_Blighthauler2>
+			<EmperorsJudgement_Blighthauler3>
+				<name>
+					<eng>Notes of St. Eustatius</eng>
+				</name>
+				<Desc>
+					<eng>A Holy Relic dropped from a Seasonal Boss.</eng>
+				</Desc>
+			</EmperorsJudgement_Blighthauler3>
+			<EmperorsJudgement_Deathshroud1>
+				<name>
+					<eng>Tears of the Forgotten Sisters</eng>
+				</name>
+				<Desc>
+					<eng>A Holy Relic dropped from a Seasonal Boss.</eng>
+				</Desc>
+			</EmperorsJudgement_Deathshroud1>
+			<EmperorsJudgement_Deathshroud2>
+				<name>
+					<eng>Skull of the Astromartyr</eng>
+				</name>
+				<Desc>
+					<eng>A Holy Relic dropped from a Seasonal Boss.</eng>
+				</Desc>
+			</EmperorsJudgement_Deathshroud2>
+			<EmperorsJudgement_Deathshroud3>
+				<name>
+					<eng>Hallowed Pamphlet</eng>
+				</name>
+				<Desc>
+					<eng>A Holy Relic dropped from a Seasonal Boss.</eng>
+				</Desc>
+			</EmperorsJudgement_Deathshroud3>
 			<shop_season_4_1_zacsi>
 				<name>
 					<eng>Empyrean Stash I</eng>
 				</name>
 				<Desc>
-					<eng>Contains a guaranteed Empyrean Artifact with a chance for a second one.</eng>
+					<eng>Has a high chance to contain an Empyrean Artifact with a slight chance for a second one.</eng>
 				</Desc>
 			</shop_season_4_1_zacsi>
 			<shop_season_4_2_zacsi>
@@ -3970,7 +4015,7 @@
 					<eng>Empyrean Stash II</eng>
 				</name>
 				<Desc>
-					<eng>Contains two guaranteed Empyrean Artifacts with a chance for a third one.</eng>
+					<eng>Contains a guaranteed Empyrean Artifact with a moderate chance for a second one.</eng>
 				</Desc>
 			</shop_season_4_2_zacsi>
 			<shop_season_4_3_zacsi>
@@ -3978,7 +4023,7 @@
 					<eng>Empyrean Stash III</eng>
 				</name>
 				<Desc>
-					<eng>Contains three guaranteed Empyrean Artifacts with a small chance for a rare Neural Implant.</eng>
+					<eng>Contains two guaranteed Empyrean Artifacts with a small chance for a rare Neural Implant or a third random Empyrean Artifact.</eng>
 				</Desc>
 			</shop_season_4_3_zacsi>
 
@@ -4337,7 +4382,7 @@
 			</knockdown_tag_skills_uncontrollable_time_bonus>
 			<increased_damage_against_slow_group_enemies>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus against [ff2bede6]Slowed[/ff2bede6], [ff2bede6]Shocked[/ff2bede6], [ff2bede6]Stunned[/ff2bede6].</eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus against [ff2bede6]Slowed[/ff2bede6], [ff2bede6]Shocked[/ff2bede6], [ff2bede6]Stunned[/ff2bede6] enemies</eng>
 				</desc>
 			</increased_damage_against_slow_group_enemies>
 			<damage_percent_against_chaos_cultist>
@@ -4675,12 +4720,12 @@
 
 			<Loot_quantity_minor>
 				<desc>
-					<eng>{loot_chance,*100} Bonus Loot quantity</eng>
+					<eng>{loot_chance,*100} Bonus Loot Quantity</eng>
 				</desc>
 			</Loot_quantity_minor>
 			<Loot_quality_minor>
 				<desc>
-					<eng>{loot_quality,*100} Bonus Loot quality</eng>
+					<eng>{loot_quality,*100} Bonus Loot Quality</eng>
 				</desc>
 			</Loot_quality_minor>
 			<Reflect_Deflected_Damage>
@@ -4777,7 +4822,7 @@
 
 			<Vulnerability_efficiency_bonus>
 				<desc>
-					<eng>{vulnerability_efficiency,100} effectiveness to [ff2bede6]Vulnerability[/ff2bede6] debuffs</eng>
+					<eng>{vulnerability_efficiency,100} effectiveness to [ff2bede6]Vulnerability[/ff2bede6] debuffs. Does not stack within a single item.</eng>
 				</desc>
 			</Vulnerability_efficiency_bonus>
 			<Damage_after_deflect>
@@ -4996,22 +5041,22 @@
 			</Aoe_damage_bonus_to_Spells>
 			<Damage_against_Inferno>
 				<desc>
-					<eng>[ff2bede6]+10%[/ff2bede6] Damage bonus against enemies affected by [fffe7272]Inferno[/fffe7272]</eng>
+					<eng>[ff2bede6]+10%[/ff2bede6] Damage bonus against enemies affected by [fffffdcb]Burn[/fffffdcb]</eng>
 				</desc>
 			</Damage_against_Inferno>
 			<Minion_chance_to_burn_on_hit>
 				<desc>
-					<eng>All Construct Heat attacks apply [fffe7272]Inferno[/fffe7272] on Hit with a [ff2bede6]+15%[/ff2bede6] chance</eng>
+					<eng>All Construct Heat attacks apply [fffffdcb]Burn[/fffffdcb] on Hit with a [ff2bede6]+15%[/ff2bede6] chance</eng>
 				</desc>
 			</Minion_chance_to_burn_on_hit>
 			<Enrage_on_Inferno>
 				<desc>
-					<eng>[ff2bede6]+40%[/ff2bede6] chance to get an [fffffdcb]Enrage[/fffffdcb] token for each [fffe7272]Inferno[/fffe7272] applied.</eng>
+					<eng>[ff2bede6]+5%[/ff2bede6] chance to get an [fffffdcb]Enrage[/fffffdcb] token for each [fffffdcb]Burn[/fffffdcb] applied.</eng>
 				</desc>
 			</Enrage_on_Inferno>
 			<Berserk_on_Inferno>
 				<desc>
-					<eng>[ff2bede6]+40%[/ff2bede6] chance to get a [fffffdcb]Berserk[/fffffdcb] token for each [fffe7272]Inferno[/fffe7272] applied.</eng>
+					<eng>[ff2bede6]+5%[/ff2bede6] chance to get a [fffffdcb]Berserk[/fffffdcb] token for each [fffffdcb]Burn[/fffffdcb] applied.</eng>
 				</desc>
 			</Berserk_on_Inferno>
 			<Suppression_against_Inferno>
@@ -5031,7 +5076,7 @@
 			</Halved_heat_resist>
 			<Area_Inferno_on_Damage>
 				<desc>
-					<eng>Hitting an enemy affected by [fffe7272]Inferno[/fffe7272] has an 5% chance to deal 100% of the original hit’s damage in a small area, applying [fffe7272]Inferno[/fffe7272]</eng>
+					<eng>Hitting an enemy affected by [fffffdcb]Burn[/fffffdcb] has an 5% chance to deal 100% of the original hit’s damage in a small area, applying [fffffdcb]Burn[/fffffdcb]</eng>
 				</desc>
 			</Area_Inferno_on_Damage>
 			<shieldhp_regen>
@@ -5176,7 +5221,7 @@
 			</Rune_23>
 			<Rune_24>
 				<desc>
-					<eng>[ff2bede6]+1%[/ff2bede6] Shield Drain</eng>
+					<eng>[ff2bede6]+10[/ff2bede6] Energy Shield HP per hit</eng>
 				</desc>
 			</Rune_24>
 			<Rune_25>
@@ -6363,7 +6408,7 @@
 			</Godlike_Convert_Dmg_To_Fire>
 			<Fix_inferno_on_critical_hit_taken>
 				<desc>
-					<eng>{artifact_enchant,100} chance to apply [fffe7272]Inferno[/fffe7272] for 5 seconds after taking Critical damage</eng>
+					<eng>{artifact_enchant,100} chance to apply [fffffdcb]Burn[/fffffdcb] for 5 seconds after taking Critical damage</eng>
 				</desc>
 			</Fix_inferno_on_critical_hit_taken>
 			<Explode_on_Kill>
@@ -6410,7 +6455,7 @@
 			</Demonic_Weapon_Warp_damage>
 			<Demonic_Weapon_Warpheat_level_damage>
 				<desc>
-					<eng>[ff2bede6]+30%[/ff2bede6] Damage Bonus when in [fffffdcb]Imperiled[/fffffdcb] and [ff2bede6]+80%[/ff2bede6] Damage Bonus when in [fffffdcb]Unhinged[/fffffdcb] Warp Heat Status</eng>
+					<eng>[ff2bede6]+30%[/ff2bede6] Damage Bonus when in [fffffdcb]Imperiled[/fffffdcb] and [ff2bede6]+80%[/ff2bede6] Damage Bonus when in [fff3261f]Unhinged[/fff3261f] Warp Heat Status</eng>
 				</desc>
 			</Demonic_Weapon_Warpheat_level_damage>
 			<Demonic_Weapon_Damage_on_Kill>
@@ -7532,7 +7577,7 @@
 			</minion_dmg_buff_during_killstreak>
 			<chance_to_vuln_on_hit_dealt>
 				<desc>
-					<eng>{artifact_enchant,100} chance to cause generic Vulnerability on hit</eng>
+					<eng>{artifact_enchant,100} chance to cause Generic [ff2bede6]Vulnerability[/ff2bede6] on hit</eng>
 				</desc>
 			</chance_to_vuln_on_hit_dealt>
 			<supreme_speed_on_killstreak>
@@ -7590,6 +7635,11 @@
 					<eng>{artifact_enchant,100} chance to cast a [ffd32f2f]Warp Nova[/ffd32f2f] when struck</eng>
 				</desc>
 			</chance_to_warp_nova_when_struck>
+			<chance_to_warp_nova_on_hit_dealt>
+				<desc>
+					<eng>{artifact_enchant,100} chance to cast a [ffc667fc]Warp Nova[/ffc667fc] on hit dealt</eng>
+				</desc>
+			</chance_to_warp_nova_on_hit_dealt>
 			<double_bodycount_chance_for_level>
 				<desc>
 					<eng>[ff2bede6]0.5%[/ff2bede6] chance per [ff2bede6]Character Level[/ff2bede6] to gain double [ffd32f2f]Bodycount[/ffd32f2f] values upon killing Enemies.</eng>
@@ -7600,6 +7650,107 @@
 					<eng>Gain [ff2bede6]100%[/ff2bede6] Critical Hit Chance for {artifact_enchant} seconds upon triggering an [ffd32f2f]Empyrean Echo[/ffd32f2f] spell</eng>
 				</desc>
 			</only_crit_after_seasonpool_spell>
+			<chance_to_vuln_on_hit_taken>
+				<desc>
+					<eng>{artifact_enchant,100} chance to apply Generic [ff2bede6]Vulnerability[/ff2bede6] on hit taken</eng>
+				</desc>
+			</chance_to_vuln_on_hit_taken>
+		##S5 itemek
+			<Godlike_Aura_damage_per_vulnerability>
+				<desc>
+					<eng>Gain an aura that deals [ff2bede6]10%[/ff2bede6] Warp Damage around you per stack. Stacks up to 5 after each [ff2bede6]Vulnerability[/ff2bede6] inflicted</eng>
+				</desc>
+			</Godlike_Aura_damage_per_vulnerability>
+			<Godlike_area_damage_on_skill_hit>
+				<desc>
+					<eng>All skills deal [ff2bede6]40%[/ff2bede6] splash damage in Melee Range</eng>
+				</desc>
+			</Godlike_area_damage_on_skill_hit>
+			<Godlike_Stun_oh_hit>
+				<desc>
+					<eng>{artifact_enchant,100} chance to [ff2bede6]Stun[/ff2bede6] on hit</eng>
+				</desc>
+			</Godlike_Stun_oh_hit>
+			<Godlike_aoe_on_assassin_combo_skill>
+				<desc>
+					<eng>[ff2bede6]50%[/ff2bede6] of [ff2bede6]Assassin Combo[/ff2bede6] Skill damage is dealt in a [ff2bede6]6m[/ff2bede6] radius around the target</eng>
+				</desc>
+			</Godlike_aoe_on_assassin_combo_skill>
+			<Godlike_aoe_combo_skill>
+				<desc>
+					<eng>[ff2bede6]50%[/ff2bede6] of [ff2bede6]Combo[/ff2bede6] Skill damage is dealt in a [ff2bede6]6m[/ff2bede6] radius around the target</eng>
+				</desc>
+			</Godlike_aoe_combo_skill>
+			<Godlike_area_damage_on_channel_hit>
+				<desc>
+					<eng>[ff2bede6]50%[/ff2bede6] of [ff2bede6]Channeled[/ff2bede6] Skill damage is dealt in a [ff2bede6]6m[/ff2bede6] radius around the target</eng>
+				</desc>
+			</Godlike_area_damage_on_channel_hit>
+			<Godlike_Minion_damage_per_enrage>
+				<desc>
+					<eng>[ff00a1ff]Constructs[/ff00a1ff] gain [ff2bede6]+5[/ff2bede6] Base Bamage per active [fffffdcb]Enrage[/fffffdcb] Token</eng>
+				</desc>
+			</Godlike_Minion_damage_per_enrage>
+			<Godlike_damage_reflect_on_minion_death>
+				<desc>
+					<eng>Gain [ff2bede6]+10%[/ff2bede6] Damage Reflect (stacks up to 5) for [ff2bede6]10[/ff2bede6] seconds when a [ff00a1ff]Construct[/ff00a1ff] dies</eng>
+				</desc>
+			</Godlike_damage_reflect_on_minion_death>
+			<Godlike_reduce_warpheat_on_vulnerable_enemy_hit>
+				<desc>
+					<eng>{artifact_enchant,100} chance to reduce Warp Heat by [ff2bede6]10%[/ff2bede6] when hitting enemies affected by [ff2bede6]Vulnerabilities[/ff2bede6]</eng>
+				</desc>
+			</Godlike_reduce_warpheat_on_vulnerable_enemy_hit>
+			<Vulnerability_efficiency_on_high_warpheat>
+				<desc>
+					<eng>[ff2bede6]+50%[/ff2bede6] Vulnerability Effectiveness in [fff3261f]Unhinged[/fff3261f] Warp Heat State</eng>
+				</desc>
+			</Vulnerability_efficiency_on_high_warpheat>
+			<Godlike_AOE_on_Inoculator_use>
+				<desc>
+					<eng>{artifact_enchant,100} chance to cause [ff2bede6]1000%[/ff2bede6] Weapon Damage around the Character when using the Inoculator while having a debuff</eng>
+				</desc>
+			</Godlike_AOE_on_Inoculator_use>
+			<Godlike_Moj_on_hit>
+				<desc>
+					<eng>{artifact_enchant,100} chance to trigger a [ffd9b345]Judgement Spell[/ffd9b345] on hit dealt</eng>
+				</desc>
+			</Godlike_Moj_on_hit>
+			<Godlike_Enrage_from_moj>
+				<desc>
+					<eng>{artifact_enchant,100} chance to gain an [fffffdcb]Enrage[/fffffdcb] token each time a [ffd9b345]Judgement Spell[/ffd9b345] is triggered</eng>
+				</desc>
+			</Godlike_Enrage_from_moj>
+			<Godlike_Berserk_from_moj>
+				<desc>
+					<eng>{artifact_enchant,100} chance to gain a [fffffdcb]Berserk[/fffffdcb] token each time a [ffd9b345]Judgement Spell[/ffd9b345] is triggered</eng>
+				</desc>
+			</Godlike_Berserk_from_moj>
+			<Remove_debuffs_on_inoculator_use>
+				<desc>
+					<eng>Using the Inoculator removes all harmful effects from the Character</eng>
+				</desc>
+			</Remove_debuffs_on_inoculator_use>
+			<Godlike_Focused_on_Champion_or_higher_kill>
+				<desc>
+					<eng>Gain [fffffdcb]Focused[/fffffdcb] State for [ff2bede6]10[/ff2bede6] seconds after killing Champion or stronger enemies</eng>
+				</desc>
+			</Godlike_Focused_on_Champion_or_higher_kill>
+			<critical_hit_strength_per_runeword>
+				<desc>
+					<eng>{critical_hit_strength} Critical Hit Strength per active Psalm Code Doctrine</eng>
+				</desc>
+			</critical_hit_strength_per_runeword>
+			<Area_extent_bonus>
+				<desc>
+					<eng>[ff2bede6]+50%[/ff2bede6] increased radius for Area of Effect skills</eng>
+				</desc>
+			</Area_extent_bonus>
+			<Godlike_Biras_Aura>
+				<desc>
+					<eng>Creates a damaging Aura dealing a lot of Damage per second in a [ff2bede6]25[/ff2bede6] meter Radius and also grants Invulnerability</eng>
+				</desc>
+			</Godlike_Biras_Aura>
 			
 		</Enchantment>
 		<unlocks>
