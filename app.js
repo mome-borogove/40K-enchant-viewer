@@ -37,7 +37,7 @@ var FMap;
                'primary','secondary','relic','archeo','puritan','radical',
              ].map(_enum))],
     ['slot', new Map(SLOTS.map(_enum))],
-    ['season', new Map([0,1,2,3,4].map(_enum))],
+    ['season', new Map([0,1,2,3,4,5].map(_enum))],
     ['item', new Map(SLOTS.map(s=>slot_items.get(s)).flat().sort().map(_enum))],
   ]);
   // Shortcut function for 2-level accessor (FMap.get(x).get(y))
@@ -172,7 +172,7 @@ var app = new Vue({
     this.F_mask = FMap.key_array().map(_ => false);
     this.$set(this.F_mask, FMap.get2('quality','primary'), true);
     this.$set(this.F_mask, FMap.get2('season',0), true);
-    this.$set(this.F_mask, FMap.get2('season',4), true);
+    this.$set(this.F_mask, FMap.get2('season',5), true);
   },
   watch: {
     // Enforce data dependence constraints
