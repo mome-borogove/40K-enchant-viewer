@@ -86,9 +86,9 @@
                          class="season-button">
             Season {{season}}<!--
           -->
-          </toggle-button>
-          <span class="d-inline-block" tabindex="0"  data-toggle="tooltip" data-placement="bottom" data-html="true" title="<i>Looking for Season 6?</i><br>Neocore changed the way they tag seasonal enchants. Season 6 items are disabled while we look for a solution.<br>Sorry!">
-          <toggle-button type="button" class="btn season-button btn-outline-season6" disabled>Season 6</button>
+          </toggle-button><!--
+          --><span class="d-inline-block" tabindex="0"  data-toggle="tooltip" data-placement="bottom" data-html="true" title="<i>Looking for Season 6?</i><br>Neocore changed the way they tag seasonal enchants. Season 6 items are disabled while we look for a solution.<br>Sorry!"><!--
+          --><toggle-button type="button" class="btn season-button btn-outline-season6" disabled>Season 6 (disabled)</button>
           </span>
         </div>
         <!-- text filter -->
@@ -188,10 +188,6 @@
   <!-- -------------------------------------------------------------------- -->
   </body>
 
-  <!-- Pre-computed 40K data and app logic -->
-  <script src="data.js"></script>
-  <script src="app.js"></script>
-
   <!-- Extra Bootstrap Javascript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -202,5 +198,10 @@
       $('[data-toggle="tooltip"]').tooltip()
     })
   </script>
+
+  <!-- Pre-computed 40K data and app logic -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
 
 </html>
