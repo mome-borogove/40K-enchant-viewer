@@ -16,10 +16,27 @@ def parse_langs(file):
     ench_str_map[str.lower(ench.tag)] = ench.find('desc').find('eng').text
 
   # Build the item type string map
-  item_types = artifacts.find('Types')
+  item_types = artifacts.find('Items')
   item_type_map = {}
   for item_type in item_types:
-    item_type_map[str.lower(item_type.tag)] = item_type.find('eng').text
+    # Neocore is anything but consistent in their XML. Originally, we looked
+    # in the 'Types' section, but the Battle Sister update screwed that up.
+    # Instead, all the combo items are named identically, so we have to look in
+    # 'Items'. Except *that* has bugs where some items only have an 'eng' tag
+    # and not a 'Name' tag above it. So we have to do this hacky garbage.
+    name_element = item_type.find('Name')
+    if name_element is None:
+      # ...really?
+      name_element = item_type.find('name')
+    if name_element is None:
+      eng_element = item_type.find('eng')
+    else:
+      eng_element = name_element.find('eng')
+    if eng_element is None:
+      print('Warning: item type',str(item_type.tag),'has no name or text. If this is not an equippable item, it can be ignored.')
+    else:
+      name_string = eng_element.text
+    item_type_map[str.lower(item_type.tag)] = name_string
 
   return ench_str_map, item_type_map
 

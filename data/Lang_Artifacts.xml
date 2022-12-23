@@ -549,7 +549,7 @@
 				<eng>Damage Reduction</eng>
 			</damage_reduce>
 			<all_resist>
-				<eng>All-Resist</eng>
+				<eng>All Resistance</eng>
 			</all_resist>
 			<deflect>
 				<eng>$DEFLECT$</eng>
@@ -983,9 +983,22 @@
 			<Synskin_Armor>
 				<eng>Synskin Armour</eng>
 			</Synskin_Armor>
+			<seraphim_armor>
+					<eng>Seraphim Armour</eng>
+			</seraphim_armor>
+			<dominion_armor>
+					<eng>Dominion Armour</eng>
+			</dominion_armor>
+			<Celestian_armor>
+					<eng>Celestian Armour</eng>
+			</Celestian_armor>
+
 			<Techadept_armour>
 				<eng>Tech-adept Armour</eng>
 			</Techadept_armour>
+			<battle_sister_armor>
+				<eng>Sororitas Armour</eng>
+			</battle_sister_armor>
 			<Purity_Seal>
 				<eng>Purity Seal</eng>
 			</Purity_Seal>
@@ -1007,6 +1020,12 @@
 			<Belt_techadept>
 				<eng>Girdle</eng>
 			</Belt_techadept>
+			<belt_battle_sister>
+				<eng>Banner</eng>
+			</belt_battle_sister>
+			<belt_holy_censer>
+				<eng>Holy Relic</eng>
+			</belt_holy_censer>
 			<Main_Implant>
 				<eng>Main Implant</eng>
 			</Main_Implant>
@@ -1066,6 +1085,40 @@
 			<Voltaic_axe>
 				<eng>Voltaic Axe</eng>
 			</Voltaic_axe>
+								
+			<c_blessed_blade_rod>
+				<eng>Combo Weapon</eng>
+			</c_blessed_blade_rod>
+			<c_bolt_pistol_chainsword>
+				<eng>Combo Weapon</eng>
+			</c_bolt_pistol_chainsword>
+			<c_chainsword_rod>
+				<eng>Combo Weapon</eng>
+			</c_chainsword_rod>
+			<c_inferno_pistol_chainsword>
+				<eng>Combo Weapon</eng>
+			</c_inferno_pistol_chainsword>
+			<c_plasma_pistol_blessed_blade>
+				<eng>Combo Weapon</eng>
+			</c_plasma_pistol_blessed_blade>
+			<c_plasma_pistol_brazier>
+				<eng>Combo Weapon</eng>
+			</c_plasma_pistol_brazier>
+			<c_hand_flamer_brazier>
+				<eng>Combo Weapon</eng>
+			</c_hand_flamer_brazier>
+			<c_hand_flamer_rod>
+				<eng>Combo Weapon</eng>
+			</c_hand_flamer_rod>
+			<flamer>
+				<eng>Rifle</eng>
+			</flamer>
+			<power_halberd>
+				<eng>Polearm</eng>
+			</power_halberd>
+			<power_maul>
+				<eng>Polearm</eng>
+			</power_maul>
 
 			<Inoculator>
 				<eng>Inoculator</eng>
@@ -1201,7 +1254,8 @@
 			</construct_material>
 			<currency>
 				<eng>Currency</eng>
-			</currency>
+			</currency>			
+			
 		</Types>
 		<Rarity>
 			<common>
@@ -1800,6 +1854,22 @@
 					<eng>Necromechanic Raiment</eng>
 				</Name>
 			</Necromechanic_raiment>
+			<seraphim_armor>
+				<Name>
+					<eng>Seraphim Armour</eng>
+				</Name>
+			</seraphim_armor>
+			<dominion_armor>
+				<Name>
+					<eng>Dominion Armour</eng>
+				</Name>
+			</dominion_armor>
+			<Celestian_armor>
+				<Name>
+					<eng>Celestian Armour</eng>
+				</Name>
+			</Celestian_armor>
+
 			<Purity_Seal>
 				<Name>
 					<eng>Purity Seal</eng>
@@ -1897,6 +1967,70 @@
 					<eng>Adds an extra Summoning Skill slot.</eng>
 				</desc>
 			</Belt_technomartyr_girdle>
+			<belt_holy_censer>
+				<Name>
+					<eng>Holy Censer</eng>
+				</Name>
+				<desc>
+					<eng>Adds an extra Act of Faith slot.</eng>
+				</desc>
+			</belt_holy_censer>
+			<belt_damage_banner>
+				<Name>
+					<eng>Banner of Valor</eng>
+				</Name>
+				<desc>
+					<eng>Summons a Holy Standard.</eng>
+				</desc>
+			</belt_damage_banner>
+			<belt_fear_banner>
+				<Name>
+					<eng>Banner of Vengeance</eng>
+				</Name>
+				<desc>
+					<eng>Summons a Holy Standard.</eng>
+				</desc>
+			</belt_fear_banner>
+			<belt_chain_banner>
+				<Name>
+					<eng>Banner of Incandescence</eng>
+				</Name>
+				<desc>
+					<eng>Summons a Holy Standard.</eng>
+				</desc>
+			</belt_chain_banner>
+			<belt_penance_banner>
+				<Name>
+					<eng>Banner of Penitence</eng>
+				</Name>
+				<desc>
+					<eng>Summons a Holy Standard.</eng>
+				</desc>
+			</belt_penance_banner>
+			<belt_concentration_banner>
+				<Name>
+					<eng>Banner of Repugnance</eng>
+				</Name>
+				<desc>
+					<eng>Summons a Holy Standard.</eng>
+				</desc>
+			</belt_concentration_banner>
+			<belt_faith_banner>
+				<Name>
+					<eng>Banner of Piety</eng>
+				</Name>
+				<desc>
+					<eng>Summons a Holy Standard.</eng>
+				</desc>
+			</belt_faith_banner>
+			<belt_heal_banner>
+				<Name>
+					<eng>Banner of Benediction</eng>
+				</Name>
+				<desc>
+					<eng>Summons a Holy Standard.</eng>
+				</desc>
+			</belt_heal_banner>
 
 			<Main_Implant>
 				<Name>
@@ -2093,6 +2227,63 @@
 					<eng>A more advanced shock based weapon that trades a summoning slot for more CC.</eng>
 				</Journal>
 			</Voltaic_axe_2Skill>
+			
+			<c_blessed_blade_rod>
+				<Name>
+					<eng>Blessed Blade &amp; Rod</eng>
+				</Name>
+			</c_blessed_blade_rod>
+			<c_bolt_pistol_chainsword>
+				<Name>
+					<eng>Bolt Pistol &amp; Chainsword</eng>
+				</Name>
+			</c_bolt_pistol_chainsword>
+			<c_chainsword_rod>
+				<Name>
+					<eng>Chainsword &amp; Rod</eng>
+				</Name>
+			</c_chainsword_rod>
+			<c_inferno_pistol_chainsword>
+				<Name>
+					<eng>Inferno Pistol &amp; Chainsword</eng>
+				</Name>
+			</c_inferno_pistol_chainsword>
+			<c_plasma_pistol_blessed_blade>
+				<Name>
+					<eng>Plasma Pistol &amp; Blessed Blade</eng>
+				</Name>
+			</c_plasma_pistol_blessed_blade>
+			<c_plasma_pistol_brazier>
+				<Name>
+					<eng>Plasma Pistol &amp; Brazier</eng>
+				</Name>
+			</c_plasma_pistol_brazier>
+			<c_hand_flamer_rod>
+				<Name>
+					<eng>Hand Flamer &amp; Rod</eng>
+				</Name>
+			</c_hand_flamer_rod>
+			<c_hand_flamer_brazier>
+				<Name>
+					<eng>Hand Flamer &amp; Brazier</eng>
+				</Name>
+			</c_hand_flamer_brazier>
+			<flamer>
+				<Name>
+					<eng>Flamer</eng>
+				</Name>
+			</flamer>
+			<power_maul>
+				<Name>
+					<eng>Power Maul</eng>
+				</Name>
+			</power_maul>
+			<power_halberd>
+				<Name>
+					<eng>Power Halberd</eng>
+				</Name>
+			</power_halberd>
+			
 
 			<Wardrug_Basic>
 				<Name>
@@ -2480,8 +2671,81 @@
 				<Name>
 					<eng>The Emperor's Vision</eng>
 				</Name>
-			</S5_Eye_implant>					
-
+			</S5_Eye_implant>
+			<S6_Melee2h>
+				<Name>
+					<eng>Sacred Slaughter</eng>
+				</Name>
+			</S6_Melee2h>
+			<S6_Ranged2h>
+				<Name>
+					<eng>Destruction's Reach</eng>
+				</Name>
+			</S6_Ranged2h>
+			<S6_Hybrid>
+				<Name>
+					<eng>Fulcrum of Hope</eng>
+				</Name>
+			</S6_Hybrid>
+			<S6_Def_Armor>
+				<Name>
+					<eng>Unbroken Shelter</eng>
+				</Name>
+			</S6_Def_Armor>
+			<S6_Off_Armor>
+				<Name>
+					<eng>Rampage of the Reckless</eng>
+				</Name>
+			</S6_Off_Armor>
+			<S6_Cas_Armor>
+				<Name>
+					<eng>Sage's Solace </eng>
+				</Name>
+			</S6_Cas_Armor>
+			<S6_Off_Implant>
+				<Name>
+					<eng>Warbringer's Frenzy </eng>
+				</Name>
+			</S6_Off_Implant>
+			<S6_Def_Implant>
+				<Name>
+					<eng>Aegis of the Vigilant</eng>
+				</Name>
+			</S6_Def_Implant>
+			<S6_Inoculator>
+				<Name>
+					<eng>Bounty of the Penitent</eng>
+				</Name>
+			</S6_Inoculator>			
+			<enchant_locker_relicS6>
+				<Name>
+					<eng>Enchantment Clamp (Relic)</eng>
+				</Name>
+				<Desc>
+					<eng>On use, this consumable locks your Seasonal Relic Enchantment (4th slot) so it will not be re-rolled for the next 5 missions.</eng>
+				</Desc>
+			</enchant_locker_relicS6>
+			<enchant_locker_archeotechS6>
+				<Name>
+					<eng>Enchantment Clamp (Archeotech)</eng>
+				</Name>
+				<Desc>
+					<eng>On use, this consumable locks your Seasonal Archeotech Enchantment (5th slot) so it will not be re-rolled for the next 5 missions.</eng>
+				</Desc>
+			</enchant_locker_archeotechS6>
+			<enchant_locker_moralityS6>
+				<Name>
+					<eng>Enchantment Clamp (Morality)</eng>
+				</Name>
+				<Desc>
+					<eng>On use, this consumable locks your Seasonal Morality Enchantment (6th slot) so it will not be re-rolled for the next 5 missions.</eng>
+				</Desc>
+			</enchant_locker_moralityS6>
+			<S6_currency>
+				<Name>
+					<eng>Harbinger Badge</eng>
+				</Name>
+			</S6_currency>
 			<Normal_Zacsi>
 				<Name>
 					<eng>Confiscated Items (Normal)</eng>
@@ -2513,6 +2777,16 @@
 					<eng>Gift from the Armoury</eng>
 				</Name>
 			</bounty_reward_3_zacsi>
+			<bounty2_reward_zacsi_boss>
+				<Name>
+					<eng>Gift from the Master Vault</eng>
+				</Name>
+			</bounty2_reward_zacsi_boss>
+			<bounty2_reward_zacsi_final>
+				<Name>
+					<eng>Gift from the Conclave</eng>
+				</Name>
+			</bounty2_reward_zacsi_final>
 
 			<hidden_foes_reward_1_zacsi>
 				<Name>
@@ -3420,6 +3694,31 @@
 					<eng>Judgement Shard V</eng>
 				</Name>
 			</gem_s5_5>
+			<gem_s6_1>
+				<Name>
+					<eng>Escalation Shard</eng>
+				</Name>
+			</gem_s6_1>
+			<gem_s6_2>
+				<Name>
+					<eng>Escalation Shard II</eng>
+				</Name>
+			</gem_s6_2>
+			<gem_s6_3>
+				<Name>
+					<eng>Escalation Shard III</eng>
+				</Name>
+			</gem_s6_3>
+			<gem_s6_4>
+				<Name>
+					<eng>Escalation Shard IV</eng>
+				</Name>
+			</gem_s6_4>
+			<gem_s6_5>
+				<Name>
+					<eng>Escalation Shard V</eng>
+				</Name>
+			</gem_s6_5>
 			<Rune1>
 				<Name>
 					<eng>Hermeticon Psalm</eng>
@@ -3631,7 +3930,7 @@
 					<eng>Kastelan Power Fist</eng>
 				</Name>
 				<desc>
-					<eng>Primary weapon for Kastelan Robots, delivers melee single target attacks.</eng>
+					<eng>Primary weapon for Kastelan Robots, delivers melee AoE attacks.</eng>
 				</desc>
 			</techadeptsummon_kastelan_robot_fists_melee_item>
 			<techadeptsummon_kastelan_robot_fists_ranged_item>
@@ -3679,7 +3978,7 @@
 					<eng>Kataphron Phosphor Blaster</eng>
 				</Name>
 				<desc>
-					<eng>Primary weapon for Kataphron Destroyers, delivers long-range single target attacks.</eng>
+					<eng>Primary weapon for Kataphron Destroyers, delivers long-range AoE attacks.</eng>
 				</desc>
 			</techadeptsummon_kataphron_destroyer_phosphor_blaster_item>
 			<techadeptsummon_kataphron_destroyer_plasma_cannon_item>
@@ -3703,7 +4002,7 @@
 					<eng>Kataphron Power Axe</eng>
 				</Name>
 				<desc>
-					<eng>Primary weapon for Kataphron Vanguards, delivers melee single target attacks.</eng>
+					<eng>Primary weapon for Kataphron Vanguards, delivers melee AoE attacks.</eng>
 				</desc>
 			</techadeptsummon_kataphron_vanguard_axe_single_item>
 			<techadeptsummon_necromechanic_turret_alpha_item>
@@ -3719,7 +4018,7 @@
 					<eng>Gamma Turret</eng>
 				</Name>
 				<desc>
-					<eng>Defense oriented module for the Necromechanic turret. It gives Supreme Damage Reduction and Supreme All-Resist to all allied units in an Aura.</eng>
+					<eng>Defense oriented module for the Necromechanic turret. It gives Supreme Damage Reduction and Supreme All Resistance to all allied units in an Aura.</eng>
 				</desc>
 			</techadeptsummon_necromechanic_turret_gamma_item>
 			<techadeptsummon_necromechanic_turret_voltageist_item>
@@ -4026,6 +4325,46 @@
 					<eng>Contains two guaranteed Empyrean Artifacts with a small chance for a rare Neural Implant or a third random Empyrean Artifact.</eng>
 				</Desc>
 			</shop_season_4_3_zacsi>
+			<shop_season_6_1_zacsi>
+				<name>
+					<eng>Escalation Stash I</eng>
+				</name>
+				<Desc>
+					<eng>Contains a guaranteed Archeotech Relic along with a good amount of random loot, and crafting materials. Also has a chance to contain Seasonal items.</eng>
+				</Desc>
+			</shop_season_6_1_zacsi>
+			<shop_season_6_2_zacsi>
+				<name>
+					<eng>Escalation Stash II</eng>
+				</name>
+				<Desc>
+					<eng>Contains two guaranteed Archeotech Relics along with the contents of the previous Stash. Has a chance to contain Ancient, and Seasonal items.</eng>
+				</Desc>
+			</shop_season_6_2_zacsi>
+			<shop_season_6_3_zacsi>
+				<name>
+					<eng>Escalation Stash III</eng>
+				</name>
+				<Desc>
+					<eng>Contains two guaranteed Archeotech Relics, and a guaranteed Seasonal item along with the contents of the previous Stash. Has a chance to contain Ancient, and bonus Seasonal items.</eng>
+				</Desc>
+			</shop_season_6_3_zacsi>
+			<s6_void_key>
+				<name>
+					<eng>Void Key of Escalation</eng>
+				</name>
+				<Desc>
+					<eng>Used to open Void Crusade Chests. Only one Key of Escalation can be carried at a time.</eng>
+				</Desc>
+			</s6_void_key>
+			<s6_key>
+				<name>
+					<eng>Escalation Cache Key</eng>
+				</name>
+				<Desc>
+					<eng>Used to open Escalation Caches.</eng>
+				</Desc>
+			</s6_key>
 
 			<construct_material>
 				<name>
@@ -4043,7 +4382,7 @@
 					<eng>Special currency that can be used to trade with Custodian Rebus.</eng>
 				</Desc>
 			</token>
-			
+
 			<UnholyReward1_Zacsi>
 				<Name>
 					<eng>Unholy Cathedral Minor Reward</eng>
@@ -4090,12 +4429,12 @@
 			</critical_hit_strength>
 			<resistance_physical>
 				<desc>
-					<eng>{physical_resist} Physical Resistance</eng>
+					<eng>{physical_resist}[ff2bede6]%[/ff2bede6] Physical Resistance</eng>
 				</desc>
 			</resistance_physical>
 			<resistance_heat>
 				<desc>
-					<eng>{heat_resist} Heat Resistance</eng>
+					<eng>{heat_resist}[ff2bede6]%[/ff2bede6] Heat Resistance</eng>
 				</desc>
 			</resistance_heat>
 			<damage_heat>
@@ -4110,7 +4449,7 @@
 			</heat_reflect>
 			<resistance_warp>
 				<desc>
-					<eng>{warp_resist} Warp Resistance</eng>
+					<eng>{warp_resist}[ff2bede6]%[/ff2bede6] Warp Resistance</eng>
 				</desc>
 			</resistance_warp>
 			<Hp_fix>
@@ -4120,7 +4459,7 @@
 			</Hp_fix>
 			<hp_per_hit>
 				<desc>
-					<eng>{hp_per_hit} HP per Hit</eng>
+					<eng>{hp_per_hit} HP gained on Hit</eng>
 				</desc>
 			</hp_per_hit>
 			<supression_resistance_max>
@@ -4135,7 +4474,7 @@
 			</zeal_max>
 			<damage_reduce>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction</eng>
+					<eng>{damage_reduce}[ff2bede6]%[/ff2bede6] Damage Reduction</eng>
 				</desc>
 			</damage_reduce>
 			<ability_offensive>
@@ -4210,14 +4549,12 @@
 			</MaxHP_Percentage>
 			<Relic_in_Exposed>
 				<desc>
-					<eng>{artifact_enchant,100} Chance to get Relic Quality items in Exposed State</eng>
+					<eng>{artifact_enchant,100} Chance to get Relic Quality items in [fffffdcb]Exposed[/fffffdcb] State</eng>
 				</desc>
 			</Relic_in_Exposed>
-
-
 			<overheat_capacity>
 				<desc>
-					<eng>{overheat_capacity,100} Overheat</eng>
+					<eng>{overheat_capacity,100} Overheat capacity for weapons</eng>
 				</desc>
 			</overheat_capacity>
 			<melee_damage_percent>
@@ -4272,7 +4609,7 @@
 			</Allskill_cooldown_percent>
 			<deflect>
 				<desc>
-					<eng>{dodge_chance,100} {deflect}</eng>
+					<eng>{dodge_chance,100} {deflect} Chance</eng>
 				</desc>
 			</deflect>
 			<suppression_damage_percent>
@@ -4352,17 +4689,17 @@
 			</area_and_large_area_tag_skills_damage>
 			<armour_breaking_and_armor_piercing_tag_skills_damage>
 				<desc>
-					<eng>{damage,100} Damage Bonus for [ff2bede5]Armour Piercing, Shield Piercing and Armour Breaking[/ff2bede5] Skills</eng>
+					<eng>{damage,100} Damage Bonus for [ff2bede5]Armour Piercing, Shield Piercing[/ff2bede5] and [ff2bede5]Armour Breaking[/ff2bede5] Skills</eng>
 				</desc>
 			</armour_breaking_and_armor_piercing_tag_skills_damage>
 			<combo_and_death_cult_combo_tag_skills_damage>
 				<desc>
-					<eng>{damage,100} Damage Bonus [ff2bede5]Combo[/ff2bede5] Skills</eng>
+					<eng>{damage,100} Damage Bonus for [ff2bede5]Combo[/ff2bede5] Skills</eng>
 				</desc>
 			</combo_and_death_cult_combo_tag_skills_damage>
 			<assault_tag_skills_damage>
 				<desc>
-					<eng>{damage,100} Damage Bonus [ff2bede5]Assault[/ff2bede5] Skills</eng>
+					<eng>{damage,100} Damage Bonus for [ff2bede5]Assault[/ff2bede5] Skills</eng>
 				</desc>
 			</assault_tag_skills_damage>
 			<cover_damage_bonus>
@@ -4467,7 +4804,7 @@
 			</suppression_regen_in_cover>
 			<resist_all>
 				<desc>
-					<eng>{all_resist} to All Resistances</eng>
+					<eng>{all_resist}[ff2bede6]%[/ff2bede6] to All Resistances</eng>
 				</desc>
 			</resist_all>
 			<hp_per_kill>
@@ -4477,17 +4814,17 @@
 			</hp_per_kill>
 			<melee_damage_reduce>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction (Melee)</eng>
+					<eng>Melee damage reduced by {damage_reduce}</eng>
 				</desc>
 			</melee_damage_reduce>
 			<ranged_damage_reduce>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction (Ranged)</eng>
+					<eng>Ranged damage reduced by {damage_reduce}</eng>
 				</desc>
 			</ranged_damage_reduce>
 			<inoculator_heal_percent>
 				<desc>
-					<eng>{medkit_heal,100} Healing bonus to Inoculator</eng>
+					<eng>{medkit_heal,100} Healing bonus for the Inoculator</eng>
 				</desc>
 			</inoculator_heal_percent>
 			<inoculator_cooldown_reduction>
@@ -4532,7 +4869,7 @@
 			</ammo_capacity_bonus>
 			<overheat_reduction>
 				<desc>
-					<eng>{overheat,100} Overheat</eng>
+					<eng>{overheat,100} Heat cost for weapons</eng>
 				</desc>
 			</overheat_reduction>
 			<resource_cost_reduction>
@@ -4542,7 +4879,7 @@
 			</resource_cost_reduction>
 			<accurate_shooting>
 				<desc>
-					<eng>{spread_angle} Spread</eng>
+					<eng>{spread_angle}° Spread</eng>
 				</desc>
 			</accurate_shooting>
 			<suffered_slow_stun_duration>
@@ -4557,7 +4894,7 @@
 			</slow_shock_efficiency>
 			<damage_reduce_from_salvo_channeled>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction when using Salvo skill</eng>
+					<eng>{damage_reduce}[ff2bede6]%[/ff2bede6] Damage Reduction when using Salvo skill</eng>
 				</desc>
 			</damage_reduce_from_salvo_channeled>
 			<dodge_against_ranged>
@@ -4583,7 +4920,7 @@
 			</Chance_to_enemies_explode>
 			<Bonus_damage_in_medium_range_and_damage_penalty_over_medium_range>
 				<desc>
-					<eng>{artifact_enchant,100} Damage Bonus against targets closer than 10m, [ff2bede6]-20%[/ff2bede6] Damage Bonus at longer ranges</eng>
+					<eng>{artifact_enchant,100} Damage Bonus against targets closer than [ff2bede6]10[/ff2bede6] metres, [ff2bede6]-20%[/ff2bede6] Damage Bonus at longer ranges</eng>
 				</desc>
 			</Bonus_damage_in_medium_range_and_damage_penalty_over_medium_range>
 			<Chance_to_Blind>
@@ -4598,7 +4935,7 @@
 			</Cast_rosarius_force_field_when_stun_or_knockdown_suffered>
 			<Heal_on_kill_daemon>
 				<desc>
-					<eng>{artifact_enchant,100} of missing HP restored on a Daemon Kill</eng>
+					<eng>{nembonusz;artifact_enchant,100} of missing HP restored on a Daemon Kill</eng>
 				</desc>
 			</Heal_on_kill_daemon>
 			<Bonus_damage_after_Blocking>
@@ -4648,12 +4985,12 @@
 			</Chance_to_summon_on_kill>
 			<Chance_to_give_vulnerability_on_hit>
 				<desc>
-					<eng>Random [fffffdcb]Vulnerability[/fffffdcb] (Heat, Warp, Physical) to the target on Hit</eng>
+					<eng>Applies random [fffffdcb]Vulnerability[/fffffdcb] (Heat, Warp, Physical) to the target on Hit</eng>
 				</desc>
 			</Chance_to_give_vulnerability_on_hit>
 			<Area_damage_when_stunned_enemy_killed>
 				<desc>
-					<eng>[fffffdcb]Stunned[/fffffdcb] enemies explode on Kill, dealing {artifact_enchant,100} Base Damage in a 5 meters radius.</eng>
+					<eng>[fffffdcb]Stunned[/fffffdcb] enemies explode on Kill, dealing {nembonusz;artifact_enchant,100} Base Damage in a 5 metres radius.</eng>
 				</desc>
 			</Area_damage_when_stunned_enemy_killed>
 			<Chance_knockback_and_slow_on_hit>
@@ -4689,7 +5026,7 @@
 			</More_warp_damage_on_low_life>
 			<Chance_to_lightning_bolt_in_area>
 				<desc>
-					<eng>{artifact_enchant,100} chance to create electric arcs on Melee Hit. The arcs hit the 6 additional enemies with 6.5 meters for [ff2bede6]350%[/ff2bede6] Base damage as Heat and [fffffdcb]Shock[/fffffdcb] them.</eng>
+					<eng>{artifact_enchant,100} chance to create electric arcs on Melee hits. The arcs hit [ff2bede6]6[/ff2bede6] additional enemies within a [ff2bede6]6.5[/ff2bede6] metres radius for [ff2bede6]350%[/ff2bede6] Base damage as Heat and [fffffdcb]Shock[/fffffdcb] them.</eng>
 				</desc>
 			</Chance_to_lightning_bolt_in_area>
 			<Area_damage_after_10_kills>
@@ -4699,7 +5036,7 @@
 			</Area_damage_after_10_kills>
 			<Chance_to_Stun_After_killing>
 				<desc>
-					<eng>Get {artifact_enchant,100} chance to stun on next attack on Kill</eng>
+					<eng>{nembonusz;artifact_enchant,100} chance to Stun on next attack on Kill</eng>
 				</desc>
 			</Chance_to_Stun_After_killing>
 			<Bonus_Movement_speed_based_on_suppression>
@@ -4709,7 +5046,7 @@
 			</Bonus_Movement_speed_based_on_suppression>
 			<Heal_on_deadly_strikes>
 				<desc>
-					<eng>HP and Suppression gained on Kill equal to [ff2bede6]+100%[/ff2bede6] the killing blow's Damage</eng>
+					<eng>HP and Suppression gained on Kill equal to [ff2bede6]100%[/ff2bede6] of the killing blow's Damage</eng>
 				</desc>
 			</Heal_on_deadly_strikes>
 			<HP_regen_from_missing_HP>
@@ -4745,7 +5082,7 @@
 			</Reflect_Damage_Percent>
 			<Deflect_Bonus_after_Shield_Block>
 				<desc>
-					<eng>{artifact_enchant,100} Supreme {deflect} for 5 seconds after blocking an attack with Shield Block</eng>
+					<eng>{artifact_enchant,100} Supreme {deflect} Chance for 5 seconds after blocking an attack with Shield Block</eng>
 				</desc>
 			</Deflect_Bonus_after_Shield_Block>
 			<Chance_to_AP_Based_on_Deflect>
@@ -4819,10 +5156,9 @@
 					<eng>Inflict [fffffdcb]Bleeding[/fffffdcb] on Critical Hit</eng>
 				</desc>
 			</Bleed_on_Crit>
-
 			<Vulnerability_efficiency_bonus>
 				<desc>
-					<eng>{vulnerability_efficiency,100} effectiveness to [ff2bede6]Vulnerability[/ff2bede6] debuffs. Does not stack within a single item.</eng>
+					<eng>{vulnerability_efficiency,100} [ff2bede6]Vulnerability[/ff2bede6] effectiveness</eng>
 				</desc>
 			</Vulnerability_efficiency_bonus>
 			<Damage_after_deflect>
@@ -4837,7 +5173,7 @@
 			</Stun_after_deflect_in_melee>
 			<Medium_and_Elite_drops_supply_percent>
 				<desc>
-					<eng>Champion and Elite enemies have a [ff2bede6]+15%[/ff2bede6] chance to drop a Supply Charge</eng>
+					<eng>Champion and Elite enemies have a [ff2bede6]15%[/ff2bede6] chance to drop a Supply Charge</eng>
 				</desc>
 			</Medium_and_Elite_drops_supply_percent>
 			<Avoid_Knockback_Knockdown>
@@ -4863,7 +5199,7 @@
 
 			<Chance_to_double_damage_and_healing>
 				<desc>
-					<eng>{artifact_enchant,100} chance to deal double damage and gain HP equal to that amount</eng>
+					<eng>{nembonusz;artifact_enchant,100} chance to deal double damage and gain HP equal to that amount</eng>
 				</desc>
 			</Chance_to_double_damage_and_healing>
 			<Reflect_damage_based_on_missing_HP>
@@ -4888,7 +5224,7 @@
 			</Double_Suppression_damage_on_Crit>
 			<Damage_for_long_penalty_for_short_range>
 				<desc>
-					<eng>[ff2bede6]-20%[/ff2bede6] Damage Bonus against targets closer than 10m, {artifact_enchant,100} Damage Bonus at longer ranges  </eng>
+					<eng>[ff2bede6]-20%[/ff2bede6] Damage Bonus against targets closer than [ff2bede6]10[/ff2bede6] metres, {artifact_enchant,100} Damage Bonus at longer ranges</eng>
 				</desc>
 			</Damage_for_long_penalty_for_short_range>
 			<Zeal_per_Kill>
@@ -4904,12 +5240,12 @@
 			</Damage_against_slowed_shocked_with_chance_to_stun>
 			<HP_and_suppress_gain_per_Zeal_spent>
 				<desc>
-					<eng>[ff2bede6]2%[/ff2bede6] HP and Suppression gained per point of Focus spent</eng>
+					<eng>[ff2bede6]2%[/ff2bede6] HP and Suppression gained per point of {resource} spent</eng>
 				</desc>
 			</HP_and_suppress_gain_per_Zeal_spent>
 			<Special_HP_and_Suppression_regen>
 				<desc>
-					<eng>{artifact_enchant} HP Regeneration for 10 seconds when Suppression drops to either 50% or 10%\n{artifact_enchant} Suppression for 10 seconds when HP drops to either 50% or 10%</eng>
+					<eng>{artifact_enchant} HP Regeneration for 10 seconds when Suppression drops to either 50% or 10%</eng>
 				</desc>
 			</Special_HP_and_Suppression_regen>
 			<Suppression_gain_and_pain_per_deflect>
@@ -4924,7 +5260,7 @@
 			</More_rockets_demolition_armor>
 			<Area_large_damage_on_Deadly_Strike>
 				<desc>
-					<eng>Single Target One-hit Kills cause an explosion, dealing 100% Base Damage as Physical in a 9 metres radius.</eng>
+					<eng>Single Target One-hit Kills cause an explosion, dealing [ff2bede6]100%[/ff2bede6] Base Damage as Physical in a [ff2bede6]9[/ff2bede6] metres radius.</eng>
 				</desc>
 			</Area_large_damage_on_Deadly_Strike>
 			<HP_regen_based_on_Adrenalin>
@@ -5026,7 +5362,7 @@
 			</Chance_to_Area_large_damage_in_force_weapon>
 			<Damage_buff_to_next_spell>
 				<desc>
-					<eng>{artifact_enchant,100} Damage Bonus for the next Psychic Power use on using any Non-Psychic Power Skill\n Stacks up to 5 times</eng>
+					<eng>{artifact_enchant,100} Damage Bonus for the next Psychic Power on using any Non-Psychic Power Skill\n Stacks up to 5 times</eng>
 				</desc>
 			</Damage_buff_to_next_spell>
 			<Damage_reduce_based_on_debuff>
@@ -5066,17 +5402,17 @@
 			</Suppression_against_Inferno>
 			<Vulnerability_duration_bonus>
 				<desc>
-					<eng>{skill_duration} seconds to all [fffffdcb]Vulnerability[/fffffdcb] effect duration</eng>
+					<eng>{skill_duration} duration to all [fffffdcb]Vulnerability[/fffffdcb] effects</eng>
 				</desc>
 			</Vulnerability_duration_bonus>
 			<Halved_heat_resist>
 				<desc>
-					<eng>Enemies have halved resistances against heat attacks</eng>
+					<eng>[ff2bede6]-50%[/ff2bede6] [fffffdcb]Heat[/fffffdcb] Resistance for enemies</eng>
 				</desc>
 			</Halved_heat_resist>
 			<Area_Inferno_on_Damage>
 				<desc>
-					<eng>Hitting an enemy affected by [fffffdcb]Burn[/fffffdcb] has an 5% chance to deal 100% of the original hit’s damage in a small area, applying [fffffdcb]Burn[/fffffdcb]</eng>
+					<eng>Hitting an enemy affected by [fffffdcb]Burn[/fffffdcb] has a [ff2bede6]5%[/ff2bede6] chance to deal [ff2bede6]100%[/ff2bede6] of the original hit’s damage in a small area, applying [fffffdcb]Burn[/fffffdcb]</eng>
 				</desc>
 			</Area_Inferno_on_Damage>
 			<shieldhp_regen>
@@ -5086,22 +5422,22 @@
 			</shieldhp_regen>
 			<shield_leech_percent>
 				<desc>
-					<eng>{shield_hp_per_hit_percent}% Shield Drain</eng>
+					<eng>{shield_hp_per_hit_percent}[ff2bede6]%[/ff2bede6] Shield Drain</eng>
 				</desc>
 			</shield_leech_percent>
 			<hp_leech_percent>
 				<desc>
-					<eng>{hp_per_hit_percent}% Life Drain</eng>
+					<eng>{hp_per_hit_percent}[ff2bede6]%[/ff2bede6] Life Drain</eng>
 				</desc>
 			</hp_leech_percent>
 			<Minion_Lifeleech_Ranged>
 				<desc>
-					<eng>{hp_per_hit_percent}% Life Drain for Ranged Skills</eng>
+					<eng>{hp_per_hit_percent}[ff2bede6]%[/ff2bede6] Life Drain for Ranged Skills</eng>
 				</desc>
 			</Minion_Lifeleech_Ranged>
 			<Minion_Lifeleech_Melee>
 				<desc>
-					<eng>{hp_per_hit_percent}% Life Drain for Melee Skills</eng>
+					<eng>{hp_per_hit_percent}[ff2bede6]%[/ff2bede6] Life Drain for Melee Skills</eng>
 				</desc>
 			</Minion_Lifeleech_Melee>
 			<dot_damage>
@@ -5121,57 +5457,57 @@
 			</shield_hp>
 			<Rune_1>
 				<desc>
-					<eng>[ff2bede6]+3%[/ff2bede6] Supreme Damage Reduction for 2 seconds on Kill</eng>
+					<eng>[ff2bede6]+3%[/ff2bede6] Supreme Damage Reduction for [ff2bede6]2[/ff2bede6] seconds on Kill</eng>
 				</desc>
 			</Rune_1>
 			<Rune_2>
 				<desc>
-					<eng>[ff2bede6]+5%[/ff2bede6] Damage Bonus for 2 seconds on Kill</eng>
+					<eng>[ff2bede6]+5%[/ff2bede6] Damage Bonus for [ff2bede6]2[/ff2bede6] seconds on Kill</eng>
 				</desc>
 			</Rune_2>
 			<Rune_3>
 				<desc>
-					<eng>[ff2bede6]+50[/ff2bede6] Shield Charge gained on Kill</eng>
+					<eng>[ff2bede6]+50[/ff2bede6] Energy Shield gained on Kill</eng>
 				</desc>
 			</Rune_3>
 			<Rune_4>
 				<desc>
-					<eng>[ff2bede6]1%[/ff2bede6] chance to reset Cooldown for all skills on Kill</eng>
+					<eng>[ff2bede6]+1%[/ff2bede6] chance to reset Cooldown for all skills on Kill</eng>
 				</desc>
 			</Rune_4>
 			<Rune_5>
 				<desc>
-					<eng>[ff2bede6]1%[/ff2bede6] Supreme Critical Chance and [ff2bede6]1%[/ff2bede6] Critical Strength for 2 seconds on Kill</eng>
+					<eng>[ff2bede6]+1%[/ff2bede6] Supreme Critical Hit Chance and [ff2bede6]+1[/ff2bede6] Critical Hit Strength for [ff2bede6]2[/ff2bede6] seconds on Kill</eng>
 				</desc>
 			</Rune_5>
 			<Rune_6>
 				<desc>
-					<eng>{skill_duration} sec to [fffffdcb]DoT[/fffffdcb] Duration</eng>
+					<eng>{skill_duration} sec to all [fffffdcb]DoT[/fffffdcb] durations</eng>
 				</desc>
 			</Rune_6>
 			<slow_shock_duration_percent>
 				<desc>
-					<eng>{skill_duration} sec to [fffffdcb]Slow[/fffffdcb], [fffffdcb]Shock[/fffffdcb] Duration</eng>
+					<eng>{skill_duration} sec to [fffffdcb]Slow[/fffffdcb] and [fffffdcb]Shock[/fffffdcb] durations</eng>
 				</desc>
 			</slow_shock_duration_percent>
 			<blind_halu_duration_percent>
 				<desc>
-					<eng>{skill_duration} sec to [fffffdcb]Blind[/fffffdcb], [fffffdcb]Hallucination[/fffffdcb] Duration</eng>
+					<eng>{skill_duration} sec to [fffffdcb]Blind[/fffffdcb] and [fffffdcb]Hallucination[/fffffdcb] durations</eng>
 				</desc>
 			</blind_halu_duration_percent>
 			<Rune_9>
 				<desc>
-					<eng>[ff2bede6]20%[/ff2bede6] Damage Bonus for 2 seconds on Hit Taken</eng>
+					<eng>[ff2bede6]+20%[/ff2bede6] Damage Bonus for [ff2bede6]2[/ff2bede6] seconds on Hit Taken</eng>
 				</desc>
 			</Rune_9>
 			<Rune_10>
 				<desc>
-					<eng>[ff2bede6]20%[/ff2bede6] Movement Speed for 2 seconds on Hit Taken</eng>
+					<eng>[ff2bede6]+20%[/ff2bede6] Movement Speed for [ff2bede6]2[/ff2bede6] seconds on Hit Taken</eng>
 				</desc>
 			</Rune_10>
 			<stun_duration_percent>
 				<desc>
-					<eng>{skill_duration} sec to [fffffdcb]Stun[/fffffdcb] Duration</eng>
+					<eng>{skill_duration} sec to [fffffdcb]Stun[/fffffdcb] duration</eng>
 				</desc>
 			</stun_duration_percent>
 			<damage_percent_against_burning_enemies>
@@ -5186,47 +5522,47 @@
 			</damage_percent_against_poisoned_enemies>
 			<damage_percent_against_blind_halu_enemies>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus against [fffffdcb]Blinded[/fffffdcb], [fffffdcb]Hallucinating[/fffffdcb] enemies</eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus against [fffffdcb]Blinded[/fffffdcb] and [fffffdcb]Hallucinating[/fffffdcb] enemies</eng>
 				</desc>
 			</damage_percent_against_blind_halu_enemies>
 			<Rune_18>
 				<desc>
-					<eng>[ff2bede6]5%[/ff2bede6] Supreme Damage Reduction for 2 seconds on Hit Taken</eng>
+					<eng>[ff2bede6]+5%[/ff2bede6] Supreme Damage Reduction for [ff2bede6]2[/ff2bede6] seconds on Hit Taken</eng>
 				</desc>
 			</Rune_18>
 			<rune_duration_percent>
 				<desc>
-					<eng>{skill_duration,100} to the duration of Psalm-Code effects</eng>
+					<eng>{skill_duration,100} to all Psalm-Code effect durations (does not stack within a single item)</eng>
 				</desc>
 			</rune_duration_percent>
 			<Rune_20>
 				<desc>
-					<eng>[ff2bede6]10%[/ff2bede6] Chance to [fffffdcb]Shock[/fffffdcb] enemies in 3 meter radius on Hit Taken</eng>
+					<eng>[ff2bede6]+10%[/ff2bede6] Chance to [fffffdcb]Shock[/fffffdcb] enemies in [ff2bede6]3[/ff2bede6] metres radius on Hit Taken</eng>
 				</desc>
 			</Rune_20>
 			<Rune_21>
 				<desc>
-					<eng>Reduce the target's Armour by [fffffdcb]5%[/fffffdcb] per Hit for 2 seconds (stacking)</eng>
+					<eng>Reduce the target's Armour by [fffffdcb]5%[/fffffdcb] per Hit for [ff2bede6]2[/ff2bede6] seconds</eng>
 				</desc>
 			</Rune_21>
 			<Rune_22>
 				<desc>
-					<eng>[ff2bede6]10%[/ff2bede6] Chance to [fffffdcb]Slow[/fffffdcb] enemies in 3 meter radius on Kill</eng>
+					<eng>[ff2bede6]+10%[/ff2bede6] Chance to [fffffdcb]Slow[/fffffdcb] enemies in [ff2bede6]3[/ff2bede6] metres radius on Kill</eng>
 				</desc>
 			</Rune_22>
 			<Rune_23>
 				<desc>
-					<eng>[ff2bede6]+1%[/ff2bede6] Damage Bonus for 2 seconds on Hit</eng>
+					<eng>[ff2bede6]+1%[/ff2bede6] Damage Bonus for [ff2bede6]2[/ff2bede6] seconds on Hit</eng>
 				</desc>
 			</Rune_23>
 			<Rune_24>
 				<desc>
-					<eng>[ff2bede6]+10[/ff2bede6] Energy Shield HP per hit</eng>
+					<eng>[ff2bede6]+10[/ff2bede6] Energy Shield gained on hit</eng>
 				</desc>
 			</Rune_24>
 			<Rune_25>
 				<desc>
-					<eng>Increases Damage Reduction soft cap by [ff2bede6]1[/ff2bede6]</eng>
+					<eng>[ff2bede6]+1%[/ff2bede6] Damage Reduction soft cap</eng>
 				</desc>
 			</Rune_25>
 			<Runeword_3_1>
@@ -5236,7 +5572,7 @@
 			</Runeword_3_1>
 			<Runeword_3_3>
 				<desc>
-					<eng>[ff2bede6]+50%[/ff2bede6] Damage Bonus and [ff2bede6]+30%[/ff2bede6] Supreme {deflect} when in [fffffdcb]Surprise[/fffffdcb] state</eng>
+					<eng>[ff2bede6]+50%[/ff2bede6] Damage Bonus and [ff2bede6]+30%[/ff2bede6] Supreme {deflect} Chance when in [fffffdcb]Surprise[/fffffdcb] state</eng>
 				</desc>
 			</Runeword_3_3>
 			<Runeword_3_5>
@@ -5459,12 +5795,12 @@
 			</Runeword_5_8>
 			<Runeword_5_9>
 				<desc>
-					<eng>Applying a [fffffdcb]Burn[/fffffdcb] effect on an enemy also applies [fffffdcb]Burn[/fffffdcb] on enemies in a 5 meters radius</eng>
+					<eng>Applying a [fffffdcb]Burn[/fffffdcb] effect on an enemy also applies [fffffdcb]Burn[/fffffdcb] on enemies in a 5 metres radius</eng>
 				</desc>
 			</Runeword_5_9>
 			<Runeword_5_10>
 				<desc>
-					<eng>Applying a [fffffdcb]Poison[/fffffdcb] effect on an enemy also applies [fffffdcb]Poison[/fffffdcb] on enemies in a 5 meters radius</eng>
+					<eng>Applying a [fffffdcb]Poison[/fffffdcb] effect on an enemy also applies [fffffdcb]Poison[/fffffdcb] on enemies in a 5 metres radius</eng>
 				</desc>
 			</Runeword_5_10>
 
@@ -5480,7 +5816,7 @@
 			</Runeword_6_3>
 			<Runeword_6_5>
 				<desc>
-					<eng>[fffffdcb]Shocking[/fffffdcb] an enemy creates an explosion in a 3 meters radius around the target dealing [ff2bede6]120%[/ff2bede6] Base Damage as Heat and applying [fffffdcb]Shock[/fffffdcb]</eng>
+					<eng>[fffffdcb]Shocking[/fffffdcb] an enemy creates an explosion in a 3 metres radius around the target dealing [ff2bede6]120%[/ff2bede6] Base Damage as Heat and applying [fffffdcb]Shock[/fffffdcb]</eng>
 				</desc>
 			</Runeword_6_5>
 			<Runeword_6_7>
@@ -5516,7 +5852,7 @@
 			</Damage_reduce_hardcap_in_Exposed>
 			<Damage_in_Exposed>
 				<desc>
-					<eng>{damage,100} to Damage Bonus in [ff2bede6]Exposed[/ff2bede6] state</eng>
+					<eng>{damage,100} Damage Bonus in [ff2bede6]Exposed[/ff2bede6] state</eng>
 				</desc>
 			</Damage_in_Exposed>
 			<Movement_speed_in_Exposed>
@@ -5526,7 +5862,7 @@
 			</Movement_speed_in_Exposed>
 			<All_resist_in_green>
 				<desc>
-					<eng>{all_resist} to All Resistances when Suppression Status is [ff10a809]Protected[/ff10a809].</eng>
+					<eng>{all_resist}[ff2bede6]%[/ff2bede6] to All Resistances when Suppression Status is [ff10a809]Protected[/ff10a809].</eng>
 				</desc>
 			</All_resist_in_green>
 			<Damage_in_green>
@@ -5721,22 +6057,22 @@
 			</Knockdown_on_Crit>
 			<All_resist_alone>
 				<desc>
-					<eng>{all_resist} to All Resistances when there is no enemy within 5 meters</eng>
+					<eng>{all_resist}[ff2bede6]%[/ff2bede6] to All Resistances when there is no enemy within 5 metres</eng>
 				</desc>
 			</All_resist_alone>
 			<Damage_reduce_alone>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction when there is no enemy within 5 meters</eng>
+					<eng>{damage_reduce}[ff2bede6]%[/ff2bede6] Damage Reduction when there is no enemy within 5 metres</eng>
 				</desc>
 			</Damage_reduce_alone>
 			<Damage_alone>
 				<desc>
-					<eng>{damage,100} Damage Bonus when there is no enemy within 5 meters</eng>
+					<eng>{damage,100} Damage Bonus when there is no enemy within 5 metres</eng>
 				</desc>
 			</Damage_alone>
 			<Movement_speed_alone>
 				<desc>
-					<eng>{movement_speed} Movement Speed when no enemies are present within 5 meters</eng>
+					<eng>{movement_speed} Movement Speed when no enemies are present within 5 metres</eng>
 				</desc>
 			</Movement_speed_alone>
 			<Execute_chance>
@@ -5766,12 +6102,12 @@
 			</Damage_from_Execution>
 			<All_resist_in_threat>
 				<desc>
-					<eng>{all_resist} to All Resistances when [ff2bede5]Surrounded[/ff2bede5]</eng>
+					<eng>{all_resist}[ff2bede6]%[/ff2bede6] to All Resistances when [ff2bede5]Surrounded[/ff2bede5]</eng>
 				</desc>
 			</All_resist_in_threat>
 			<Damage_reduce_in_threat>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction when [ff2bede5]Surrounded[/ff2bede5]</eng>
+					<eng>{damage_reduce}[ff2bede6]%[/ff2bede6] Damage Reduction when [ff2bede5]Surrounded[/ff2bede5]</eng>
 				</desc>
 			</Damage_reduce_in_threat>
 			<Damage_reduce_hardcap_in_threat>
@@ -5828,12 +6164,12 @@
 			</Godlike_Crit_Chance_per_Enraged>
 			<Godlike_Shock_Aura_in_Enraged>
 				<desc>
-					<eng>When in [fffffdcb]Enraged[/fffffdcb] state enemies within 5 meters are [fffffdcb]Shocked[/fffffdcb]</eng>
+					<eng>When in [fffffdcb]Enraged[/fffffdcb] state enemies within 5 metres are [fffffdcb]Shocked[/fffffdcb]</eng>
 				</desc>
 			</Godlike_Shock_Aura_in_Enraged>
 			<Godlike_Fear_Aura_in_Enraged>
 				<desc>
-					<eng>When in [fffffdcb]Enraged[/fffffdcb] state enemies within 5 meters are [fffffdcb]Feared[/fffffdcb]</eng>
+					<eng>When in [fffffdcb]Enraged[/fffffdcb] state enemies within 5 metres are [fffffdcb]Feared[/fffffdcb]</eng>
 				</desc>
 			</Godlike_Fear_Aura_in_Enraged>
 			<Godlike_Damage_per_Enraged>
@@ -5858,7 +6194,7 @@
 			</Godlike_Shock_on_Hit_in_Enraged>
 			<Godlike_Damage_per_Enraged_special>
 				<desc>
-					<eng>{artifact_enchant,100} to Damage Bonus per Enraged token, attacks remove 1 additional [fffffdcb]Enraged[/fffffdcb] token</eng>
+					<eng>{artifact_enchant,100} Damage Bonus per Enraged token, attacks remove 1 additional [fffffdcb]Enraged[/fffffdcb] token</eng>
 				</desc>
 			</Godlike_Damage_per_Enraged_special>
 			<Godlike_Bonus_Enraged_limit>
@@ -5868,7 +6204,7 @@
 			</Godlike_Bonus_Enraged_limit>
 			<Godlike_Chance_to_keep_Enraged>
 				<desc>
-					<eng>{artifact_enchant,100} chance for attacks to not to remove [fffffdcb]Enraged[/fffffdcb] token</eng>
+					<eng>{artifact_enchant,100} chance to not remove an [fffffdcb]Enraged[/fffffdcb] token on attack</eng>
 				</desc>
 			</Godlike_Chance_to_keep_Enraged>
 			<Godlike_Crit_Strength_per_Enraged>
@@ -5933,7 +6269,7 @@
 			</Godlike_Damage_per_Berserk>
 			<Godlike_Damage_reduce_in_Berserk>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction in [fffffdcb]Berserk[/fffffdcb] state</eng>
+					<eng>{damage_reduce}[ff2bede6]%[/ff2bede6] Damage Reduction in [fffffdcb]Berserk[/fffffdcb] state</eng>
 				</desc>
 			</Godlike_Damage_reduce_in_Berserk>
 			<Godlike_Movement_speed_in_Berserk>
@@ -6048,7 +6384,7 @@
 			</Godlike_Xp_Bonus>
 			<Godlike_Dodge_in_red>
 				<desc>
-					<eng>{dodge_chance,100} {deflect} when Suppression Status is [fff3261f]Overwhelmed[/fff3261f].</eng>
+					<eng>{dodge_chance,100} {deflect} Chance when Suppression Status is [fff3261f]Overwhelmed[/fff3261f].</eng>
 				</desc>
 			</Godlike_Dodge_in_red>
 			<Godlike_Suppression_per_kill_in_yellow>
@@ -6273,7 +6609,7 @@
 			</Godlike_Shield_HP_per_resource>
 			<Godlike_Damage_reflect_on_Shield_Struck>
 				<desc>
-					<eng>{artifact_enchant,100} of Damage Taken to Energy Shield is Reflected back to attacker</eng>
+					<eng>{artifact_enchant,100} of Damage Taken to Energy Shield is Reflected back to the attacker</eng>
 				</desc>
 			</Godlike_Damage_reflect_on_Shield_Struck>
 			<Godlike_Heal_on_Shield_Struck>
@@ -6283,7 +6619,7 @@
 			</Godlike_Heal_on_Shield_Struck>
 			<Godlike_Lower_suppression_damage_on_only_Shield_Struck>
 				<desc>
-					<eng>{suppression_damage_reduce}[ff2bede6]%[/ff2bede6] Suppression Damage Reduction when an Energy Shield is active  </eng>
+					<eng>{suppression_damage_reduce}[ff2bede6]%[/ff2bede6] Suppression Damage Reduction when an Energy Shield is active</eng>
 				</desc>
 			</Godlike_Lower_suppression_damage_on_only_Shield_Struck>
 			<Suppression_Damage_Reduce>
@@ -6373,7 +6709,7 @@
 			</Godlike_Movement_HP_regen_buff_on_Big_Struck>
 			<Godlike_Damage_reduce_on_Big_Struck>
 				<desc>
-					<eng>[ff2bede6]20%[/ff2bede6] Supreme Damage Reduction for 3 seconds on losing at least {artifact_enchant}[ff2bede6]%[/ff2bede6] HP on Hit Taken</eng>
+					<eng>[ff2bede6]+20%[/ff2bede6] Supreme Damage Reduction for 3 seconds on losing at least {nembonusz;artifact_enchant}[ff2bede6]%[/ff2bede6] HP on Hit Taken</eng>
 				</desc>
 			</Godlike_Damage_reduce_on_Big_Struck>
 			<Godlike_Damage_in_threat>
@@ -6388,7 +6724,7 @@
 			</Godlike_Cooldown_in_threat>
 			<Godlike_Assassin_dodge_cheat_in_threat>
 				<desc>
-					<eng>{artifact_enchant,100} {deflect} and free Dodge Moves when [fffffdcb]Surrounded[/fffffdcb]</eng>
+					<eng>{artifact_enchant,100} {deflect} Chance and free Dodge Moves when [fffffdcb]Surrounded[/fffffdcb]</eng>
 				</desc>
 			</Godlike_Assassin_dodge_cheat_in_threat>
 			<Godlike_Warp_Heat_reduction_in_threat>
@@ -6413,11 +6749,9 @@
 			</Fix_inferno_on_critical_hit_taken>
 			<Explode_on_Kill>
 				<desc>
-					<eng>Enemies explode on Kill dealing {artifact_enchant,100} of Base Damage as Physical in a 4 metres radius, applying [ff2bede6]Physical Vulnerability[/ff2bede6] </eng>
+					<eng>Enemies explode on Kill dealing {nembonusz;artifact_enchant,100} of Base Damage as Physical in a 4 metres radius, applying [ff2bede6]Physical Vulnerability[/ff2bede6] </eng>
 				</desc>
 			</Explode_on_Kill>
-
-
 			<Demonic_Weapon_Temporary_Cellrot_On_Hit>
 				<desc>
 					<eng>Disables enemy HP Regeneration on Hit</eng>
@@ -6450,7 +6784,7 @@
 			</Demonic_Weapon_Buff_on_Multikill>
 			<Demonic_Weapon_Warp_damage>
 				<desc>
-					<eng>[ff2bede6]+50%[/ff2bede6] Warp Damage Bonus but Take Damage equal to [ff2bede6]+1%[/ff2bede6] of the Warp Damage Dealt</eng>
+					<eng>[ff2bede6]+50%[/ff2bede6] Warp Damage Bonus but Take Damage equal to [ff2bede6]1%[/ff2bede6] of the Warp Damage Dealt</eng>
 				</desc>
 			</Demonic_Weapon_Warp_damage>
 			<Demonic_Weapon_Warpheat_level_damage>
@@ -6460,7 +6794,7 @@
 			</Demonic_Weapon_Warpheat_level_damage>
 			<Demonic_Weapon_Damage_on_Kill>
 				<desc>
-					<eng>Enemies explode on Kill dealing {artifact_enchant,100} of Base Damage in an Area </eng>
+					<eng>Enemies explode on Kill dealing {nembonusz;artifact_enchant,100} of Base Damage in an Area </eng>
 				</desc>
 			</Demonic_Weapon_Damage_on_Kill>
 			<Demonic_Weapon_Slow_on_Kill>
@@ -6471,7 +6805,7 @@
 
 			<Demonic_Armour_Buff_from_Warp>
 				<desc>
-					<eng>Damage Bonus equal to the % of HP lost on Warp Damage based Hit Taken for 3 seconds</eng>
+					<eng>Upon taking Warp Damage, gain Damage Bonus equal to the HP% lost for 3 seconds</eng>
 				</desc>
 			</Demonic_Armour_Buff_from_Warp>
 			<Demonic_Armour_Damage_from_Bleed_DoT>
@@ -6486,7 +6820,7 @@
 			</Demonic_Armour_Heal_from_Poison_DoT>
 			<Demonic_Armour_Damage_after_stuck>
 				<desc>
-					<eng>+10% Damage Bonus for the next attack for every Hit Taken (maximum 300%)</eng>
+					<eng>[ff2bede6]+10%[/ff2bede6] Damage Bonus for the next attack for every Hit Taken (maximum 300%)</eng>
 				</desc>
 			</Demonic_Armour_Damage_after_stuck>
 			<Demonic_Armour_Stealth_cheat>
@@ -6496,12 +6830,12 @@
 			</Demonic_Armour_Stealth_cheat>
 			<Demonic_Armour_Dodge_on_Dodge>
 				<desc>
-					<eng>+30 Supreme {deflect} for 3 seconds on Dodge Move use (non-stacking)</eng>
+					<eng>[ff2bede6]+30%[/ff2bede6] Supreme {deflect} Chance for [ff2bede6]3[/ff2bede6] seconds on Dodge Move use (non-stacking)</eng>
 				</desc>
 			</Demonic_Armour_Dodge_on_Dodge>
 			<Demonic_Armour_Flee_on_Death>
 				<desc>
-					<eng>Teleports away from a potentially lethal blow in a random direction (10 seconds cooldown)</eng>
+					<eng>Teleports away from a potentially lethal blow in a random direction ([ff2bede6]10[/ff2bede6] seconds cooldown)</eng>
 				</desc>
 			</Demonic_Armour_Flee_on_Death>
 			<Demonic_Armour_Low_HP_DR>
@@ -6517,7 +6851,7 @@
 
 			<Blessed_Weapon_Shock_on_Kill>
 				<desc>
-					<eng>Enemies explode on Kill dealing {artifact_enchant,100} of Base Damage and [fffffdcb]Shocking[/fffffdcb] enemies in an Area</eng>
+					<eng>Enemies explode on Kill dealing {nembonusz;artifact_enchant,100} of Base Damage and [fffffdcb]Shocking[/fffffdcb] enemies in an Area</eng>
 				</desc>
 			</Blessed_Weapon_Shock_on_Kill>
 			<Blessed_Weapon_Heat_and_Burn>
@@ -6542,7 +6876,7 @@
 			</Blessed_Weapon_Blind_on_Kill>
 			<Blessed_Weapon_Damage_Against_Crowd>
 				<desc>
-					<eng>+10% Damage Bonus for each enemy closer than 10 meters (maximum 300%)</eng>
+					<eng>[ff2bede6]+10%[/ff2bede6] Damage Bonus for each enemy closer than 10 metres (maximum 300%)</eng>
 				</desc>
 			</Blessed_Weapon_Damage_Against_Crowd>
 			<Blessed_Weapon_Damage_Against_Types>
@@ -6552,7 +6886,7 @@
 			</Blessed_Weapon_Damage_Against_Types>
 			<Blessed_Weapon_Crit_Chance_nocap>
 				<desc>
-					<eng>+15% Supreme Critical Hit Chance</eng>
+					<eng>[ff2bede6]+15%[/ff2bede6] Supreme Critical Hit Chance</eng>
 				</desc>
 			</Blessed_Weapon_Crit_Chance_nocap>
 			<Blessed_Weapon_Surprise_Buff>
@@ -6583,7 +6917,7 @@
 			</Blessed_Armour_Invulnerability_on_Kill>
 			<Blessed_Armour_Warp_tenth>
 				<desc>
-					<eng>All Warp Damage taken is reduced to by [ff2bede6]90%[/ff2bede6]</eng>
+					<eng>All Warp Damage taken is reduced by [ff2bede6]90%[/ff2bede6]</eng>
 				</desc>
 			</Blessed_Armour_Warp_tenth>
 			<Blessed_Armour_Low_Warp_Damage>
@@ -6593,12 +6927,12 @@
 			</Blessed_Armour_Low_Warp_Damage>
 			<Blessed_Armour_Blind_Plus_Dodge_on_Struck>
 				<desc>
-					<eng>{artifact_enchant,100} Supreme {deflect} and {artifact_enchant,100} chance to [fffffdcb]Blind[/fffffdcb] nearby enemies on {deflect}</eng>
+					<eng>{artifact_enchant,100} Supreme {deflect} Chance and {artifact_enchant,100} chance to [fffffdcb]Blind[/fffffdcb] nearby enemies on {deflect}</eng>
 				</desc>
 			</Blessed_Armour_Blind_Plus_Dodge_on_Struck>
 			<Blessed_Armour_Damage_per_Enemy>
 				<desc>
-					<eng>{artifact_enchant} Damage Reduction for each enemy closer than 10 meters</eng>
+					<eng>{artifact_enchant}[ff2bede6]%[/ff2bede6] Damage Reduction for each enemy closer than 10 metres</eng>
 				</desc>
 			</Blessed_Armour_Damage_per_Enemy>
 			<Blessed_Armour_HP_regen_Cheat>
@@ -6613,7 +6947,7 @@
 			</Blessed_Armour_Shock_on_Struck>
 			<Blessed_Armour_DoT_immunity>
 				<desc>
-					<eng>Immunity to all DoT Effects</eng>
+					<eng>Grants immunity to all DoT Effects</eng>
 				</desc>
 			</Blessed_Armour_DoT_immunity>
 
@@ -6629,7 +6963,7 @@
 			</Godlike_Damage_for_summoned>
 			<Godlike_Damage_reduce_per_Minion>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction for every summoned Constructs</eng>
+					<eng>{damage_reduce}[ff2bede6]%[/ff2bede6] Damage Reduction for every summoned Constructs</eng>
 				</desc>
 			</Godlike_Damage_reduce_per_Minion>
 			<Godlike_Heal_on_Minion_death>
@@ -6684,7 +7018,7 @@
 			</Godlike_Damage_from_Reserve>
 			<Godlike_Minion_Damage_on_kill>
 				<desc>
-					<eng>{artifact_enchant,100} Damage Bonus for [ff00A1FF]Constructs[/ff00A1FF] for 5 seconds when the TechAdept kills an enemy\nStacks up to 20 times</eng>
+					<eng>{artifact_enchant,100} Damage Bonus for [ff00A1FF]Constructs[/ff00A1FF] for 5 seconds when the Player kills an enemy.\nStacks up to 20 times</eng>
 				</desc>
 			</Godlike_Minion_Damage_on_kill>
 			<Godlike_Summon_cost_on_kill>
@@ -6962,7 +7296,7 @@
 			</Minion_TA_Tarantula_flamer>
 			<Minion_TA_Damage_alone>
 				<desc>
-					<eng>{damage,100} Damage Bonus for all [ff00a1ff]Constructs[/ff00a1ff] when there is no enemy within 5 meters</eng>
+					<eng>{damage,100} Damage Bonus for all [ff00a1ff]Constructs[/ff00a1ff] when there is no enemy within 5 metres</eng>
 				</desc>
 			</Minion_TA_Damage_alone>
 			<Minion_TA_Tarantula_launcher>
@@ -6982,47 +7316,47 @@
 			</Minion_TA_Damage_Vivisector_chainsaw>
 			<Minion_TA_Damage_reduce>
 				<desc>
-					<eng>{damage_reduce_hardcap} Supreme Damage Reduction for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{damage_reduce_hardcap}[ff2bede6]%[/ff2bede6] Supreme Damage Reduction for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Damage_reduce>
 			<Minion_TA_Damage_reduce_minor>
 				<desc>
-					<eng>{damage_reduce} Damage Reduction for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{damage_reduce}[ff2bede6]%[/ff2bede6] Damage Reduction for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Damage_reduce_minor>
 			<Minion_TA_Warp_Resist>
 				<desc>
-					<eng>{warp_resist_hardcap} Supreme Warp Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{warp_resist_hardcap}[ff2bede6]%[/ff2bede6] Supreme Warp Resistance for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Warp_Resist>
 			<Minion_TA_Warp_Resist_minor>
 				<desc>
-					<eng>{warp_resist} Warp Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{warp_resist}[ff2bede6]%[/ff2bede6] Warp Resistance for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Warp_Resist_minor>
 			<Minion_TA_Phys_Resist>
 				<desc>
-					<eng>{physical_resist_hardcap} Supreme Physical Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{physical_resist_hardcap}[ff2bede6]%[/ff2bede6] Supreme Physical Resistance for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Phys_Resist>
 			<Minion_TA_Phys_Resist_minor>
 				<desc>
-					<eng>{physical_resist} Physical Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{physical_resist}[ff2bede6]%[/ff2bede6] Physical Resistance for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Phys_Resist_minor>
 			<Minion_TA_Heat_Resist>
 				<desc>
-					<eng>{heat_resist_hardcap} Supreme Heat Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{heat_resist_hardcap}[ff2bede6]%[/ff2bede6] Supreme Heat Resistance for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Heat_Resist>
 			<Minion_TA_Heat_Resist_minor>
 				<desc>
-					<eng>{heat_resist} Heat Resist for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{heat_resist}[ff2bede6]%[/ff2bede6] Heat Resistance for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</Minion_TA_Heat_Resist_minor>
 			<minion_movement_speed>
 				<desc>
-					<eng>{movement_speed} Movement Speed for [ff00a1ff]Constructs[/ff00a1ff] </eng>
+					<eng>{movement_speed}[ff2bede6]%[/ff2bede6] Movement Speed for [ff00a1ff]Constructs[/ff00a1ff] </eng>
 				</desc>
 			</minion_movement_speed>
 			<Minion_TA_HP_minor>
@@ -7128,42 +7462,42 @@
 			</Minion_Damage_on_Death_Explosion_Kastelan>
 			<Minion_Damage_against_Afraid>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Feared[/ff2bede6] enemies  </eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Feared[/ff2bede6] enemies</eng>
 				</desc>
 			</Minion_Damage_against_Afraid>
 			<Minion_Damage_against_Bleeding>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Bleeding[/ff2bede6] enemies </eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Bleeding[/ff2bede6] enemies</eng>
 				</desc>
 			</Minion_Damage_against_Bleeding>
 			<Minion_Damage_against_Burning>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Burning[/ff2bede6] enemies </eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Burning[/ff2bede6] enemies</eng>
 				</desc>
 			</Minion_Damage_against_Burning>
 			<Minion_Damage_against_Medium>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Champion[/ff2bede6] enemies </eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Champion[/ff2bede6] enemies</eng>
 				</desc>
 			</Minion_Damage_against_Medium>
 			<Minion_Damage_against_Normal>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Regular[/ff2bede6] enemies </eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Regular[/ff2bede6] enemies</eng>
 				</desc>
 			</Minion_Damage_against_Normal>
 			<Minion_Damage_against_Poisoned>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Poisoned[/ff2bede6] enemies </eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Poisoned[/ff2bede6] enemies</eng>
 				</desc>
 			</Minion_Damage_against_Poisoned>
 			<Minion_Damage_against_Shocked_Slowed>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00A1FF]Constructs[/ff00A1FF] against [ff2bede6]Shocked,Slowed[/ff2bede6] enemies </eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00A1FF]Constructs[/ff00A1FF] against [ff2bede6]Shocked, Slowed[/ff2bede6] enemies</eng>
 				</desc>
 			</Minion_Damage_against_Shocked_Slowed>
 			<Minion_Damage_against_Stunned>
 				<desc>
-					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Stunned[/ff2bede6] enemies </eng>
+					<eng>{per_target_damage_bonus,100} Damage Bonus for [ff00a1ff]Constructs[/ff00a1ff] against [ff2bede6]Stunned[/ff2bede6] enemies</eng>
 				</desc>
 			</Minion_Damage_against_Stunned>
 			<TA_ranged_damage_percent>
@@ -7219,7 +7553,7 @@
 			</MinionGodlike_HP_Regen>
 			<MinionGodlike_DR>
 				<desc>
-					<eng>{damage_reduce_hardcap} Supreme Damage Reduction</eng>
+					<eng>{damage_reduce_hardcap}[ff2bede6]%[/ff2bede6] Supreme Damage Reduction</eng>
 				</desc>
 			</MinionGodlike_DR>
 			<MinionGodlike_Knockback_immunity>
@@ -7254,7 +7588,7 @@
 			</skull_event_enchant_6>
 			<warp_resist>
 				<desc>
-					<eng>{warp_resist} Warp Resistance</eng>
+					<eng>{warp_resist}[ff2bede6]%[/ff2bede6] Warp Resistance</eng>
 				</desc>
 			</warp_resist>
 			<s2_warp_resist>
@@ -7274,7 +7608,7 @@
 			</warp_reflect>
 			<Godlike_All_resist_per_Minion>
 				<desc>
-					<eng>[ff2bede6]+2.5%[/ff2bede6] All Resist for each active [ff00a1ff]Construct[/ff00a1ff]</eng>
+					<eng>[ff2bede6]+2.5%[/ff2bede6] All Resistance for each active [ff00a1ff]Construct[/ff00a1ff]</eng>
 				</desc>
 			</Godlike_All_resist_per_Minion>
 			<Godlike_Xp_Bonus_on_kill>
@@ -7294,7 +7628,7 @@
 			</Movement_speed_on_orb_pickup>
 			<Spawn_orb_on_Medium_Kill>
 				<desc>
-					<eng>{artifact_enchant,100} chance to spawn a [ffc667fc]Warp Fleck[/ffc667fc] on killing a Champion enemy</eng>
+					<eng>{artifact_enchant,100} chance to spawn a [ffc667fc]Warp Fleck[/ffc667fc] on killing a [ff2bede6]Champion[/ff2bede6] enemy</eng>
 				</desc>
 			</Spawn_orb_on_Medium_Kill>
 			<Godlike_Chance_to_gain_Inoculator_on_kill>
@@ -7364,12 +7698,12 @@
 			</Godlike_Lifesteal_or_Bonus_Suppression_Damage_on_orb_pickup>
 			<Godlike_Chance_to_Slow_or_Stun_on_hit>
 				<desc>
-					<eng>{artifact_enchant,100} chance to apply [ff2bede6]Slow[/ff2bede6], half the chance to apply [ff2bede6]Stun[/ff2bede6] on [ffc667fc]Warp[/ffc667fc] damage hits</eng>
+					<eng>{artifact_enchant,100} chance to apply [ff2bede6]Slow[/ff2bede6] on damage dealt, half the chance to apply [ff2bede6]Stun[/ff2bede6] on [ffc667fc]Warp[/ffc667fc] damage dealt</eng>
 				</desc>
 			</Godlike_Chance_to_Slow_or_Stun_on_hit>
 			<Seasonal_Signum_Warp_resist>
 				<desc>
-					<eng>{warp_resist}[ff2bede6]%[/ff2bede6] reduced [ffc667fc]Warp[/ffc667fc] damage taken</eng>
+					<eng>{warp_resist}[ff2bede6]%[/ff2bede6] [ffc667fc]Warp[/ffc667fc] Resistance</eng>
 				</desc>
 			</Seasonal_Signum_Warp_resist>
 			<Godlike_Pull_enemies_on_seasonal_area_entered>
@@ -7440,12 +7774,12 @@
 			</godlike_vuln_for_cl_weak>
 			<godlike_cl_on_stun_gadget>
 				<desc>
-					<eng>{artifact_enchant,100} chance to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] upon hitting enemies with the Stun gadget</eng>
+					<eng>{artifact_enchant,100} chance to trigger [ff286bf2]Thunderbolt of Authority[/ff286bf2] upon hitting enemies with Stun mines</eng>
 				</desc>
 			</godlike_cl_on_stun_gadget>
 			<godlike_inoculator_trigger_chance_for_cl>
 				<desc>
-					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] hits have a {artifact_enchant,100} chance to trigger the Inoculator for free</eng>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] hits have a {nembonusz;artifact_enchant,100} chance to trigger the Inoculator for free</eng>
 				</desc>
 			</godlike_inoculator_trigger_chance_for_cl>
 			<godlike_cl_longer_stronger>
@@ -7465,7 +7799,7 @@
 			</godlike_cd_reduction_for_cl>
 			<godlike_cl_farer_stronger>
 				<desc>
-					<eng>[ff2bede6]+50%[/ff2bede6] Jump range and {artifact_enchant} Damage Multiplier for [ff286bf2]Thunderbolt of Authority[/ff286bf2]</eng>
+					<eng>[ff2bede6]+50%[/ff2bede6] Jump range and {artifact_enchant}[ff2bede6]x[/ff2bede6] Damage Multiplier for [ff286bf2]Thunderbolt of Authority[/ff286bf2]</eng>
 				</desc>
 			</godlike_cl_farer_stronger>
 			<godlike_hp_on_cl_hit>
@@ -7475,7 +7809,7 @@
 			</godlike_hp_on_cl_hit>
 			<godlike_resist_for_cl>
 				<desc>
-					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] grants [ff2bede6]1%[/ff2bede6] Supreme All Resist and [ff2bede6]1%[/ff2bede6] Supreme Damage Reduction on hit for [ff2bede6]2[/ff2bede6] seconds. This effect stacks.</eng>
+					<eng>[ff286bf2]Thunderbolt of Authority[/ff286bf2] grants [ff2bede6]1%[/ff2bede6] Supreme All Resistance and [ff2bede6]1%[/ff2bede6] Supreme Damage Reduction on hit for [ff2bede6]2[/ff2bede6] seconds. This effect stacks.</eng>
 				</desc>
 			</godlike_resist_for_cl>
 			<godlike_cl_longer_stronger2_1handed>
@@ -7572,7 +7906,7 @@
 			</dmg_and_crit_when_no_enemy_near>
 			<minion_dmg_buff_during_killstreak>
 				<desc>
-					<eng>[ff00a1ff]Constructs[/ff00a1ff] Deal {artifact_enchant,100} increased Damage during a [ffd32f2f]Killstreak[/ffd32f2f] effect</eng>
+					<eng>[ff00a1ff]Constructs[/ff00a1ff] deal {artifact_enchant,100} increased Damage during a [ffd32f2f]Killstreak[/ffd32f2f] effect</eng>
 				</desc>
 			</minion_dmg_buff_during_killstreak>
 			<chance_to_vuln_on_hit_dealt>
@@ -7612,7 +7946,7 @@
 			</extend_killstreak_on_medium_kill>
 			<supreme_dr_during_killstreak>
 				<desc>
-					<eng>{artifact_enchant} Supreme Damage Reduction when you have a [ffd32f2f]Killstreak[/ffd32f2f] effect active</eng>
+					<eng>{artifact_enchant}[ff2bede6]%[/ff2bede6] Supreme Damage Reduction when you have a [ffd32f2f]Killstreak[/ffd32f2f] effect active</eng>
 				</desc>
 			</supreme_dr_during_killstreak>
 			<supreme_crit_chance_vs_nemesis_elite>
@@ -7637,7 +7971,7 @@
 			</chance_to_warp_nova_when_struck>
 			<chance_to_warp_nova_on_hit_dealt>
 				<desc>
-					<eng>{artifact_enchant,100} chance to cast a [ffc667fc]Warp Nova[/ffc667fc] on hit dealt</eng>
+					<eng>{artifact_enchant,100} chance to cast a [ffc667fc]Warp Nova[/ffc667fc] on Hit</eng>
 				</desc>
 			</chance_to_warp_nova_on_hit_dealt>
 			<double_bodycount_chance_for_level>
@@ -7655,7 +7989,21 @@
 					<eng>{artifact_enchant,100} chance to apply Generic [ff2bede6]Vulnerability[/ff2bede6] on hit taken</eng>
 				</desc>
 			</chance_to_vuln_on_hit_taken>
-		##S5 itemek
+			<Gem_s6_class_resource_cost_reduction>
+				<desc>
+					<eng>{artifact_enchant,100} Class Resource cost reduction</eng>
+				</desc>
+			</Gem_s6_class_resource_cost_reduction>
+			<Gem_s6_class_resource_gain_from_all_sources>
+				<desc>
+					<eng>{artifact_enchant,100} increased Class Resource gained from all sources</eng>
+				</desc>
+			</Gem_s6_class_resource_gain_from_all_sources>
+			<Gem_s6_class_resource_on_hit>
+				<desc>
+					<eng>{artifact_enchant,100} chance to gain [ff2bede6]5%[/ff2bede6] Class Resource on Hit. This effect can only happen once every 3 seconds.</eng>
+				</desc>
+			</Gem_s6_class_resource_on_hit>
 			<Godlike_Aura_damage_per_vulnerability>
 				<desc>
 					<eng>Gain an aura that deals [ff2bede6]10%[/ff2bede6] Warp Damage around you per stack. Stacks up to 5 after each [ff2bede6]Vulnerability[/ff2bede6] inflicted</eng>
@@ -7688,7 +8036,7 @@
 			</Godlike_area_damage_on_channel_hit>
 			<Godlike_Minion_damage_per_enrage>
 				<desc>
-					<eng>[ff00a1ff]Constructs[/ff00a1ff] gain [ff2bede6]+5[/ff2bede6] Base Bamage per active [fffffdcb]Enrage[/fffffdcb] Token</eng>
+					<eng>[ff00a1ff]Constructs[/ff00a1ff] gain [ff2bede6]+5[/ff2bede6] Base Damage per active [fffffdcb]Enrage[/fffffdcb] Token</eng>
 				</desc>
 			</Godlike_Minion_damage_per_enrage>
 			<Godlike_damage_reflect_on_minion_death>
@@ -7713,7 +8061,7 @@
 			</Godlike_AOE_on_Inoculator_use>
 			<Godlike_Moj_on_hit>
 				<desc>
-					<eng>{artifact_enchant,100} chance to trigger a [ffd9b345]Judgement Spell[/ffd9b345] on hit dealt</eng>
+					<eng>{artifact_enchant,100} chance to trigger a [ffd9b345]Judgement Spell[/ffd9b345] on Hit</eng>
 				</desc>
 			</Godlike_Moj_on_hit>
 			<Godlike_Enrage_from_moj>
@@ -7748,11 +8096,72 @@
 			</Area_extent_bonus>
 			<Godlike_Biras_Aura>
 				<desc>
-					<eng>Creates a damaging Aura dealing a lot of Damage per second in a [ff2bede6]25[/ff2bede6] meter Radius and also grants Invulnerability</eng>
+					<eng>Creates a damaging Aura dealing a lot of Damage per second in a [ff2bede6]25[/ff2bede6] metres Radius and also grants Invulnerability</eng>
 				</desc>
 			</Godlike_Biras_Aura>
-			
+						
+			<Faith_per_kill_in_angelic_form>
+				<desc>
+					<eng>Gain {artifact_enchant} Faith per each kill while in [ffd9b345]Embodied Saint[/ffd9b345] Form</eng>
+				</desc>
+			</Faith_per_kill_in_angelic_form>
+			<Crit_chance_on_banner_use>
+				<desc>
+					<eng>Gain [ff2bede6]+20%[/ff2bede6] Critical Hit Chance after Banner use for {nembonusz;artifact_enchant} seconds</eng>
+				</desc>
+			</Crit_chance_on_banner_use>
+			<Banner_cooldown_flat>
+				<desc>
+					<eng>Banner Cooldown reduced by {cooldown} seconds</eng>
+				</desc>
+			</Banner_cooldown_flat>
+			<Movement_speed_in_angelic_form>
+				<desc>
+					<eng>Gain {movement_speed_nocap,100} Supreme Movement Speed while in [ffd9b345]Embodied Saint[/ffd9b345] Form</eng>
+				</desc>
+			</Movement_speed_in_angelic_form>
+			<Offering_effectiveness>
+				<desc>
+					<eng>{offering_effectiveness,100} Sacred Rite Effectiveness</eng>
+				</desc>
+			</Offering_effectiveness>	
+			<Crit_damage_for_combo_weapons>
+				<desc>
+					<eng>{critical_damage_bonus,100} Critical Hit Damage when using Combo Weapons</eng>
+				</desc>
+			</Crit_damage_for_combo_weapons>
+			<Angelic_form_damage_increased_faith_costs>
+				<desc>
+					<eng>{artifact_enchant,100} Damage while in [ffd9b345]Embodied Saint[/ffd9b345] Form; [ff2bede6]+50%[/ff2bede6] Faith Decay and Saintly Deed Cost</eng>
+				</desc>
+			</Angelic_form_damage_increased_faith_costs>				
+			<Act_of_faith_duration>
+				<desc>
+					<eng>Duration of [ffd9b345]Acts of Faith[/ffd9b345] is increased by {skill_duration} seconds</eng>
+				</desc>
+			</Act_of_faith_duration>
+			<Banner_aura_radius_flat>
+				<desc>
+					<eng>Banner radius increased by {banner_radius} metres</eng>
+				</desc>
+			</Banner_aura_radius_flat>
+			<Banner_hp_added_level>
+				<desc>
+					<eng>Banner HP modifier increased by {banner_hp_level}</eng>
+				</desc>
+			</Banner_hp_added_level>
+			<Banner_duration_flat>
+				<desc>
+					<eng>Banner duration increased by {banner_duration} seconds</eng>
+				</desc>
+			</Banner_duration_flat>	
+			<Nova_on_entering_angelic_form>
+				<desc>
+					<eng>Upon entering [ffd9b345]Embodied Saint[/ffd9b345] Form, you release a Nova that deals [ff2bede6]500%[/ff2bede6] Weapon Damage and Blinds enemies in a [ff2bede6]15m[/ff2bede6] Radius</eng>
+				</desc>
+			</Nova_on_entering_angelic_form>			
 		</Enchantment>
+		
 		<unlocks>
 			<finish_mission_hard>
 				<eng>Complete missions on at least 4 level higher</eng>
@@ -7910,6 +8319,9 @@
 				<eng>to</eng>
 			</to>
 		</Formating>
+
+
+
 	</Artifacts>
 	<Pickupable>
 		<wardrug>

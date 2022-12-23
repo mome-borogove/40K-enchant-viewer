@@ -172,7 +172,8 @@ var app = new Vue({
     this.F_mask = FMap.key_array().map(_ => false);
     this.$set(this.F_mask, FMap.get2('quality','primary'), true);
     this.$set(this.F_mask, FMap.get2('season',0), true);
-    this.$set(this.F_mask, FMap.get2('season',5), true);
+    // Sorry, console users...
+    //this.$set(this.F_mask, FMap.get2('season',5), true);
   },
   watch: {
     // Enforce data dependence constraints

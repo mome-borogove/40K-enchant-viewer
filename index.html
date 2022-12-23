@@ -84,8 +84,12 @@
                          v-model="F_mask[FMap.get2('season',season)]"
                          :color="'season'+String(season)"
                          class="season-button">
-            Season {{season}}
+            Season {{season}}<!--
+          -->
           </toggle-button>
+          <span class="d-inline-block" tabindex="0"  data-toggle="tooltip" data-placement="bottom" data-html="true" title="<i>Looking for Season 6?</i><br>Neocore changed the way they tag seasonal enchants. Season 6 items are disabled while we look for a solution.<br>Sorry!">
+          <toggle-button type="button" class="btn season-button btn-outline-season6" disabled>Season 6</button>
+          </span>
         </div>
         <!-- text filter -->
         <div class="button-row">
@@ -192,6 +196,11 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+  <!-- Enable tooltips -->
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
 </html>
